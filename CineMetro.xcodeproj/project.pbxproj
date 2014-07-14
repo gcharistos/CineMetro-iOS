@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F17D9091969FBE5006ECF59 /* MapSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F17D9081969FBE5006ECF59 /* MapSettingsViewController.m */; };
+		1F276BBF19679092008735B1 /* CreateNewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BBE19679092008735B1 /* CreateNewAccountViewController.m */; };
+		1F276BC2196790A8008735B1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BC1196790A8008735B1 /* LoginViewController.m */; };
+		1F276BC419679521008735B1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BC319679521008735B1 /* Parse.framework */; };
+		1F276BC619679529008735B1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BC519679529008735B1 /* FacebookSDK.framework */; };
+		1F276BC819679595008735B1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BC719679594008735B1 /* AudioToolbox.framework */; };
+		1F276BCA196795A6008735B1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BC9196795A6008735B1 /* CFNetwork.framework */; };
+		1F276BCC196795BB008735B1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BCB196795BB008735B1 /* CoreLocation.framework */; };
+		1F276BD0196795D9008735B1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BCF196795D9008735B1 /* libz.dylib */; };
+		1F276BD2196795E3008735B1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD1196795E3008735B1 /* MobileCoreServices.framework */; };
+		1F276BD4196795F1008735B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD3196795F1008735B1 /* QuartzCore.framework */; };
+		1F276BD6196795FD008735B1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD5196795FD008735B1 /* Security.framework */; };
+		1F276BD819679607008735B1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD719679607008735B1 /* StoreKit.framework */; };
+		1F276BDA1967960D008735B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD91967960D008735B1 /* SystemConfiguration.framework */; };
+		1F276BDD1967989C008735B1 /* OrangeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */; };
+		1F276BE0196798AD008735B1 /* PurpleLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BDF196798AD008735B1 /* PurpleLineTableViewController.m */; };
 		1F70653D196768DA009CB35C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653C196768DA009CB35C /* Foundation.framework */; };
 		1F70653F196768DA009CB35C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653E196768DA009CB35C /* CoreGraphics.framework */; };
 		1F706541196768DA009CB35C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F706540196768DA009CB35C /* UIKit.framework */; };
@@ -14,13 +30,22 @@
 		1F706549196768DA009CB35C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F706548196768DA009CB35C /* main.m */; };
 		1F70654D196768DA009CB35C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70654C196768DA009CB35C /* AppDelegate.m */; };
 		1F706550196768DA009CB35C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F70654E196768DA009CB35C /* Main.storyboard */; };
-		1F706553196768DA009CB35C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F706552196768DA009CB35C /* ViewController.m */; };
 		1F706555196768DA009CB35C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F706554196768DA009CB35C /* Images.xcassets */; };
 		1F70655C196768DA009CB35C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70655B196768DA009CB35C /* XCTest.framework */; };
 		1F70655D196768DA009CB35C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653C196768DA009CB35C /* Foundation.framework */; };
 		1F70655E196768DA009CB35C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F706540196768DA009CB35C /* UIKit.framework */; };
 		1F706566196768DA009CB35C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F706564196768DA009CB35C /* InfoPlist.strings */; };
 		1F706568196768DA009CB35C /* CineMetroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F706567196768DA009CB35C /* CineMetroTests.m */; };
+		1F706573196768E8009CB35C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F706572196768E8009CB35C /* MainViewController.m */; };
+		1F706575196769DB009CB35C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F706574196769DB009CB35C /* MapKit.framework */; };
+		1F7065781967706C009CB35C /* RedLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7065771967706C009CB35C /* RedLineTableViewController.m */; };
+		1F70657B1967707B009CB35C /* GreenLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70657A1967707B009CB35C /* GreenLineTableViewController.m */; };
+		1F70657E1967708C009CB35C /* BlueLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70657D1967708C009CB35C /* BlueLineTableViewController.m */; };
+		1F70658419678116009CB35C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70658319678116009CB35C /* MapViewController.m */; };
+		1FABD1E8196806EC00140223 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FABD1E7196806EC00140223 /* SWRevealViewController.m */; };
+		1FB552E9196C456500E11311 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552E8196C456500E11311 /* Accounts.framework */; };
+		1FB552EB196C45CE00E11311 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552EA196C45CE00E11311 /* Social.framework */; };
+		1FFF0BD91974689F00FE59D2 /* red_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FFF0BD81974689F00FE59D2 /* red_tab.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +59,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F17D9071969FBE5006ECF59 /* MapSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSettingsViewController.h; sourceTree = "<group>"; };
+		1F17D9081969FBE5006ECF59 /* MapSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSettingsViewController.m; sourceTree = "<group>"; };
+		1F276BBD19679092008735B1 /* CreateNewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewAccountViewController.h; sourceTree = "<group>"; };
+		1F276BBE19679092008735B1 /* CreateNewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewAccountViewController.m; sourceTree = "<group>"; };
+		1F276BC0196790A8008735B1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		1F276BC1196790A8008735B1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		1F276BC319679521008735B1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		1F276BC519679529008735B1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		1F276BC719679594008735B1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1F276BC9196795A6008735B1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1F276BCB196795BB008735B1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1F276BCF196795D9008735B1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		1F276BD1196795E3008735B1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1F276BD3196795F1008735B1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1F276BD5196795FD008735B1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1F276BD719679607008735B1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1F276BD91967960D008735B1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1F276BDB1967989C008735B1 /* OrangeLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeLineTableViewController.h; sourceTree = "<group>"; };
+		1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeLineTableViewController.m; sourceTree = "<group>"; };
+		1F276BDE196798AD008735B1 /* PurpleLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurpleLineTableViewController.h; sourceTree = "<group>"; };
+		1F276BDF196798AD008735B1 /* PurpleLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurpleLineTableViewController.m; sourceTree = "<group>"; };
 		1F706539196768DA009CB35C /* CineMetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineMetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F70653C196768DA009CB35C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1F70653E196768DA009CB35C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +91,28 @@
 		1F70654B196768DA009CB35C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F70654C196768DA009CB35C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1F70654F196768DA009CB35C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1F706551196768DA009CB35C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1F706552196768DA009CB35C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1F706554196768DA009CB35C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F70655A196768DA009CB35C /* CineMetroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CineMetroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F70655B196768DA009CB35C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1F706563196768DA009CB35C /* CineMetroTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CineMetroTests-Info.plist"; sourceTree = "<group>"; };
 		1F706565196768DA009CB35C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1F706567196768DA009CB35C /* CineMetroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CineMetroTests.m; sourceTree = "<group>"; };
+		1F706572196768E8009CB35C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1F706574196769DB009CB35C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1F7065761967706C009CB35C /* RedLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedLineTableViewController.h; sourceTree = "<group>"; };
+		1F7065771967706C009CB35C /* RedLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedLineTableViewController.m; sourceTree = "<group>"; };
+		1F7065791967707B009CB35C /* GreenLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenLineTableViewController.h; sourceTree = "<group>"; };
+		1F70657A1967707B009CB35C /* GreenLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenLineTableViewController.m; sourceTree = "<group>"; };
+		1F70657C1967708C009CB35C /* BlueLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueLineTableViewController.h; sourceTree = "<group>"; };
+		1F70657D1967708C009CB35C /* BlueLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueLineTableViewController.m; sourceTree = "<group>"; };
+		1F70658219678116009CB35C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		1F70658319678116009CB35C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		1F98CAF9196C790E00A9EB54 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1FABD1E6196806EC00140223 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		1FABD1E7196806EC00140223 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		1FB552E8196C456500E11311 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		1FB552EA196C45CE00E11311 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		1FFF0BD81974689F00FE59D2 /* red_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_tab.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +120,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB552EB196C45CE00E11311 /* Social.framework in Frameworks */,
+				1FB552E9196C456500E11311 /* Accounts.framework in Frameworks */,
+				1F276BDA1967960D008735B1 /* SystemConfiguration.framework in Frameworks */,
+				1F276BD819679607008735B1 /* StoreKit.framework in Frameworks */,
+				1F276BD6196795FD008735B1 /* Security.framework in Frameworks */,
+				1F276BD4196795F1008735B1 /* QuartzCore.framework in Frameworks */,
+				1F276BD2196795E3008735B1 /* MobileCoreServices.framework in Frameworks */,
+				1F276BD0196795D9008735B1 /* libz.dylib in Frameworks */,
+				1F276BCC196795BB008735B1 /* CoreLocation.framework in Frameworks */,
 				1F70653F196768DA009CB35C /* CoreGraphics.framework in Frameworks */,
+				1F276BCA196795A6008735B1 /* CFNetwork.framework in Frameworks */,
+				1F276BC819679595008735B1 /* AudioToolbox.framework in Frameworks */,
+				1F706575196769DB009CB35C /* MapKit.framework in Frameworks */,
 				1F706541196768DA009CB35C /* UIKit.framework in Frameworks */,
 				1F70653D196768DA009CB35C /* Foundation.framework in Frameworks */,
+				1F276BC419679521008735B1 /* Parse.framework in Frameworks */,
+				1F276BC619679529008735B1 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +175,20 @@
 		1F70653B196768DA009CB35C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FB552EA196C45CE00E11311 /* Social.framework */,
+				1FB552E8196C456500E11311 /* Accounts.framework */,
+				1F276BD91967960D008735B1 /* SystemConfiguration.framework */,
+				1F276BD719679607008735B1 /* StoreKit.framework */,
+				1F276BD5196795FD008735B1 /* Security.framework */,
+				1F276BD3196795F1008735B1 /* QuartzCore.framework */,
+				1F276BD1196795E3008735B1 /* MobileCoreServices.framework */,
+				1F276BCF196795D9008735B1 /* libz.dylib */,
+				1F276BCB196795BB008735B1 /* CoreLocation.framework */,
+				1F276BC9196795A6008735B1 /* CFNetwork.framework */,
+				1F276BC719679594008735B1 /* AudioToolbox.framework */,
+				1F276BC519679529008735B1 /* FacebookSDK.framework */,
+				1F276BC319679521008735B1 /* Parse.framework */,
+				1F706574196769DB009CB35C /* MapKit.framework */,
 				1F70653C196768DA009CB35C /* Foundation.framework */,
 				1F70653E196768DA009CB35C /* CoreGraphics.framework */,
 				1F706540196768DA009CB35C /* UIKit.framework */,
@@ -112,12 +200,32 @@
 		1F706542196768DA009CB35C /* CineMetro */ = {
 			isa = PBXGroup;
 			children = (
+				1FFF0BCF1974651B00FE59D2 /* Images */,
+				1FABD1E5196806E000140223 /* SideBar */,
 				1F70654B196768DA009CB35C /* AppDelegate.h */,
 				1F70654C196768DA009CB35C /* AppDelegate.m */,
-				1F70654E196768DA009CB35C /* Main.storyboard */,
-				1F706551196768DA009CB35C /* ViewController.h */,
-				1F706552196768DA009CB35C /* ViewController.m */,
+				1F70657C1967708C009CB35C /* BlueLineTableViewController.h */,
+				1F70657D1967708C009CB35C /* BlueLineTableViewController.m */,
+				1F276BBD19679092008735B1 /* CreateNewAccountViewController.h */,
+				1F276BBE19679092008735B1 /* CreateNewAccountViewController.m */,
+				1F7065791967707B009CB35C /* GreenLineTableViewController.h */,
+				1F70657A1967707B009CB35C /* GreenLineTableViewController.m */,
 				1F706554196768DA009CB35C /* Images.xcassets */,
+				1F276BC0196790A8008735B1 /* LoginViewController.h */,
+				1F276BC1196790A8008735B1 /* LoginViewController.m */,
+				1F70658219678116009CB35C /* MapViewController.h */,
+				1F70658319678116009CB35C /* MapViewController.m */,
+				1F17D9071969FBE5006ECF59 /* MapSettingsViewController.h */,
+				1F17D9081969FBE5006ECF59 /* MapSettingsViewController.m */,
+				1F98CAF9196C790E00A9EB54 /* MainViewController.h */,
+				1F706572196768E8009CB35C /* MainViewController.m */,
+				1F70654E196768DA009CB35C /* Main.storyboard */,
+				1F276BDB1967989C008735B1 /* OrangeLineTableViewController.h */,
+				1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */,
+				1F276BDE196798AD008735B1 /* PurpleLineTableViewController.h */,
+				1F276BDF196798AD008735B1 /* PurpleLineTableViewController.m */,
+				1F7065761967706C009CB35C /* RedLineTableViewController.h */,
+				1F7065771967706C009CB35C /* RedLineTableViewController.m */,
 				1F706543196768DA009CB35C /* Supporting Files */,
 			);
 			path = CineMetro;
@@ -150,6 +258,23 @@
 				1F706564196768DA009CB35C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FABD1E5196806E000140223 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				1FABD1E6196806EC00140223 /* SWRevealViewController.h */,
+				1FABD1E7196806EC00140223 /* SWRevealViewController.m */,
+			);
+			name = SideBar;
+			sourceTree = "<group>";
+		};
+		1FFF0BCF1974651B00FE59D2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1FFF0BD81974689F00FE59D2 /* red_tab.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +356,7 @@
 				1F706555196768DA009CB35C /* Images.xcassets in Resources */,
 				1F706547196768DA009CB35C /* InfoPlist.strings in Resources */,
 				1F706550196768DA009CB35C /* Main.storyboard in Resources */,
+				1FFF0BD91974689F00FE59D2 /* red_tab.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +375,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F706553196768DA009CB35C /* ViewController.m in Sources */,
 				1F70654D196768DA009CB35C /* AppDelegate.m in Sources */,
+				1F276BDD1967989C008735B1 /* OrangeLineTableViewController.m in Sources */,
+				1F7065781967706C009CB35C /* RedLineTableViewController.m in Sources */,
+				1F17D9091969FBE5006ECF59 /* MapSettingsViewController.m in Sources */,
+				1F276BBF19679092008735B1 /* CreateNewAccountViewController.m in Sources */,
+				1F276BE0196798AD008735B1 /* PurpleLineTableViewController.m in Sources */,
+				1F276BC2196790A8008735B1 /* LoginViewController.m in Sources */,
+				1F70658419678116009CB35C /* MapViewController.m in Sources */,
+				1F70657B1967707B009CB35C /* GreenLineTableViewController.m in Sources */,
+				1F70657E1967708C009CB35C /* BlueLineTableViewController.m in Sources */,
 				1F706549196768DA009CB35C /* main.m in Sources */,
+				1F706573196768E8009CB35C /* MainViewController.m in Sources */,
+				1FABD1E8196806EC00140223 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +512,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";
 				INFOPLIST_FILE = "CineMetro/CineMetro-Info.plist";
@@ -389,6 +529,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";
 				INFOPLIST_FILE = "CineMetro/CineMetro-Info.plist";
@@ -456,6 +600,7 @@
 				1F70656D196768DA009CB35C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F70656E196768DA009CB35C /* Build configuration list for PBXNativeTarget "CineMetroTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +609,7 @@
 				1F706570196768DA009CB35C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
