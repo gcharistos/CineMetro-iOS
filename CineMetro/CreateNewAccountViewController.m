@@ -7,6 +7,7 @@
 //
 
 #import "CreateNewAccountViewController.h"
+#import "MainViewController.h"
 #import <Parse/Parse.h>
 
 @interface CreateNewAccountViewController ()
@@ -16,6 +17,7 @@
 @implementation CreateNewAccountViewController
 @synthesize emailTextField;
 @synthesize passwordTextField;
+PFUser *appUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,8 +58,14 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"createSegue"]){
+        UINavigationController *navController = [segue destinationViewController];
+        MainViewController *dest = (MainViewController *)([navController viewControllers][0]);
+        //   MainViewController *dest = segue.destinationViewController;
+        dest.user = appUser;
+        // [self presentViewController:dest animated:YES completion:NULL];
+    }
+
 }
 
 
@@ -108,15 +116,16 @@
              return;
          }
          else{
+             appUser = user;
              // Display an alert view to show the error message
              UIAlertView *alertView =
-             [[UIAlertView alloc] initWithTitle:@"Successful Registration"
+             [[UIAlertView alloc] initWithTitle:@"Successful Registration . Please Check For Confirmation Email"
                                         message:nil
                                        delegate:self
                               cancelButtonTitle:nil
                               otherButtonTitles:@"Ok", nil];
              [alertView show];
-             
+
              [self performSegueWithIdentifier:@"createSegue" sender:self];
          }
          

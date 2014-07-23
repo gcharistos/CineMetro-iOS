@@ -59,7 +59,9 @@ PFUser *appUser;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"loginSegue"]){
-        MainViewController *dest = segue.destinationViewController;
+        UINavigationController *navController = [segue destinationViewController];
+        MainViewController *dest = (MainViewController *)([navController viewControllers][0]);
+     //   MainViewController *dest = segue.destinationViewController;
         dest.user = appUser;
         // [self presentViewController:dest animated:YES completion:NULL];
     }

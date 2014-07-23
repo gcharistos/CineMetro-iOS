@@ -609,7 +609,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="Pwj-r8-9fT" id="ZJl-Tc-foU"/>
                         <outlet property="passwordTextField" destination="FUg-EC-AvE" id="Dfj-NJ-vcX"/>
-                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="createSegue" id="SQR-zd-32l"/>
+                        <segue destination="WHg-J9-2Ny" kind="modal" identifier="createSegue" id="Ygj-DJ-qhf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1P-ct-Pws" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -684,7 +684,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="1wD-F6-Igz" id="Vbs-pi-gtT"/>
                         <outlet property="passwordTextField" destination="E1n-rs-Dgu" id="EeL-CJ-IVQ"/>
-                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="loginSegue" id="NCS-LT-x0I"/>
+                        <segue destination="WHg-J9-2Ny" kind="modal" identifier="loginSegue" id="zOC-aA-1bO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7q-yT-XLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -708,7 +708,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EvW-y4-Ihr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="345" y="38"/>
+            <point key="canvasLocation" x="393" y="27"/>
         </scene>
     </scenes>
     <resources>
@@ -720,7 +720,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SQR-zd-32l"/>
+        <segue reference="Ygj-DJ-qhf"/>
         <segue reference="dWA-O5-TZr"/>
     </inferredMetricsTieBreakers>
 </document>

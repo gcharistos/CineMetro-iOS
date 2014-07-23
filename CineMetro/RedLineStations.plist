@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Stations</key>
+	<array>
+        <dict>
+            <key>Title</key>
+            <string>1η Στάση</string>
+            <key>Subtitle</key>
+            <string>Βαρδάρης</string>
+            <key>Latitude</key>
+            <string>40.641142</string>
+            <key>Longitude</key>
+            <string>22.934721</string>
+        </dict>
+        <dict>
+            <key>Title</key>
+            <string>2η Στάση</string>
+            <key>Subtitle</key>
+            <string>Λιμάνι</string>
+            <key>Latitude</key>
+            <string>40.635650</string>
+            <key>Longitude</key>
+            <string>22.935431</string>
+        </dict>
+        <dict>
+            <key>Title</key>
+            <string>3η Στάση</string>
+            <key>Subtitle</key>
+            <string>Λεωφόρος Νίκης</string>
+            <key>Latitude</key>
+            <string>40.630440</string>
+            <key>Longitude</key>
+            <string>22.942912</string>
+        </dict>
+        <dict>
+            <key>Title</key>
+            <string>4η Στάση</string>
+            <key>Subtitle</key>
+            <string>Πλατεία Αριστοτέλους</string>
+            <key>Latitude</key>
+            <string>40.632804</string>
+            <key>Longitude</key>
+            <string>22.941331</string>
+        </dict>
+        <dict>
+            <key>Title</key>
+            <string>5η Στάση</string>
+            <key>Subtitle</key>
+            <string>Αγίας Σοφίας-Α.Σβώλου</string>
+            <key>Latitude</key>
+            <string>40.632511</string>
+            <key>Longitude</key>
+            <string>22.947489</string>
+        </dict>
+        <dict>
+            <key>Title</key>
+            <string>6η Στάση</string>
+            <key>Subtitle</key>
+            <string>Λευκός Πύργος</string>
+            <key>Latitude</key>
+            <string>40.62638</string>
+            <key>Longitude</key>
+            <string>22.948306</string>
+        </dict>
+    </array>
+</dict>
+</plist>

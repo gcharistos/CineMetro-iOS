@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F137A8619753179001C0F2B /* RedLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F137A8519753179001C0F2B /* RedLineStations.plist */; };
 		1F17D9091969FBE5006ECF59 /* MapSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F17D9081969FBE5006ECF59 /* MapSettingsViewController.m */; };
 		1F276BBF19679092008735B1 /* CreateNewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BBE19679092008735B1 /* CreateNewAccountViewController.m */; };
 		1F276BC2196790A8008735B1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BC1196790A8008735B1 /* LoginViewController.m */; };
@@ -23,6 +24,7 @@
 		1F276BDA1967960D008735B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD91967960D008735B1 /* SystemConfiguration.framework */; };
 		1F276BDD1967989C008735B1 /* OrangeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */; };
 		1F276BE0196798AD008735B1 /* PurpleLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BDF196798AD008735B1 /* PurpleLineTableViewController.m */; };
+		1F370D2C19753ADC003FB972 /* GreenLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F370D2B19753ADC003FB972 /* GreenLineStations.plist */; };
 		1F70653D196768DA009CB35C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653C196768DA009CB35C /* Foundation.framework */; };
 		1F70653F196768DA009CB35C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653E196768DA009CB35C /* CoreGraphics.framework */; };
 		1F706541196768DA009CB35C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F706540196768DA009CB35C /* UIKit.framework */; };
@@ -59,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F137A8519753179001C0F2B /* RedLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RedLineStations.plist; sourceTree = "<group>"; };
 		1F17D9071969FBE5006ECF59 /* MapSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSettingsViewController.h; sourceTree = "<group>"; };
 		1F17D9081969FBE5006ECF59 /* MapSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSettingsViewController.m; sourceTree = "<group>"; };
 		1F276BBD19679092008735B1 /* CreateNewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewAccountViewController.h; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeLineTableViewController.m; sourceTree = "<group>"; };
 		1F276BDE196798AD008735B1 /* PurpleLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurpleLineTableViewController.h; sourceTree = "<group>"; };
 		1F276BDF196798AD008735B1 /* PurpleLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurpleLineTableViewController.m; sourceTree = "<group>"; };
+		1F370D2B19753ADC003FB972 /* GreenLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GreenLineStations.plist; sourceTree = "<group>"; };
 		1F706539196768DA009CB35C /* CineMetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineMetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F70653C196768DA009CB35C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1F70653E196768DA009CB35C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -227,6 +231,8 @@
 				1F7065761967706C009CB35C /* RedLineTableViewController.h */,
 				1F7065771967706C009CB35C /* RedLineTableViewController.m */,
 				1F706543196768DA009CB35C /* Supporting Files */,
+				1F137A8519753179001C0F2B /* RedLineStations.plist */,
+				1F370D2B19753ADC003FB972 /* GreenLineStations.plist */,
 			);
 			path = CineMetro;
 			sourceTree = "<group>";
@@ -355,8 +361,10 @@
 			files = (
 				1F706555196768DA009CB35C /* Images.xcassets in Resources */,
 				1F706547196768DA009CB35C /* InfoPlist.strings in Resources */,
+				1F137A8619753179001C0F2B /* RedLineStations.plist in Resources */,
 				1F706550196768DA009CB35C /* Main.storyboard in Resources */,
 				1FFF0BD91974689F00FE59D2 /* red_tab.png in Resources */,
+				1F370D2C19753ADC003FB972 /* GreenLineStations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
