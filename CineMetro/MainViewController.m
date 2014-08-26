@@ -7,6 +7,8 @@
 //
 
 #import "MainViewController.h"
+#import "LoginViewController.h"
+#import "ProfileViewController.h"
 
 @interface MainViewController ()
 
@@ -15,6 +17,7 @@
 @implementation MainViewController
 @synthesize user;
 @synthesize word;
+int loginStatus;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +31,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainBackground.jpg"]];
+    if(user == nil){
+        UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:@"Welcome to CineMetro" message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:@"Login",nil];
+        welcomeMessage.tag = 100;
+        [welcomeMessage show];
+    }
+
     // Do any additional setup after loading the view.
 }
 
@@ -37,15 +47,48 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+-(void)redirectToProfile{
+    [self performSegueWithIdentifier:@"profileSegue" sender:nil];
+
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"profileSegue"]){
+        ProfileViewController *dest = segue.destinationViewController;
+        dest.user = user;
+    }
+    else if([segue.identifier isEqualToString:@"ProfileLogin"]){
+        LoginViewController *dest = segue.destinationViewController;
+        dest.loginStatus = loginStatus;
+    }
 }
-*/
 
+
+- (IBAction)profileButtonPressed:(id)sender {
+    if(user == nil){
+        UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You Are Currently Offline" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Login",nil];
+        nullUser.tag = 200;
+        [nullUser show];
+    }
+    else{
+        [self performSegueWithIdentifier:@"profileSegue" sender:nil];
+    }
+}
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        if(alertView.tag == 200){
+           loginStatus = 1;
+        }
+        [self performSegueWithIdentifier:@"ProfileLogin" sender:nil];
+    }
+    
+    
+}
 @end

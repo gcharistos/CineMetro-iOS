@@ -18,12 +18,10 @@
 @synthesize blueLabel;
 @synthesize greenLabel;
 @synthesize orangeLabel;
-@synthesize purpleLabel;
 @synthesize redSwitch;
 @synthesize blueSwitch;
 @synthesize greenSwitch;
 @synthesize orangeSwitch;
-@synthesize purpleSwitch;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,9 +51,6 @@
     if([defaults objectForKey:@"orangeLabel"]){
         orangeLabel.hidden = [defaults boolForKey:@"orangeLabel"];
     }
-    if([defaults objectForKey:@"purpleLabel"]){
-        purpleLabel.hidden = [defaults boolForKey:@"purpleLabel"];
-    }
     if([defaults objectForKey:@"redSwitch"]){
         redSwitch.hidden = [defaults boolForKey:@"redSwitch"];
     }
@@ -67,9 +62,6 @@
     }
     if([defaults objectForKey:@"orangeSwitch"]){
         orangeSwitch.hidden = [defaults boolForKey:@"orangeSwitch"];
-    }
-    if([defaults objectForKey:@"purpleSwitch"]){
-        purpleSwitch.hidden = [defaults boolForKey:@"purpleSwitch"];
     }
     if([defaults objectForKey:@"redSwitchState"]){
         redSwitch.on = [defaults boolForKey:@"redSwitchState"];
@@ -83,9 +75,7 @@
     if([defaults objectForKey:@"orangeSwitchState"]){
         orangeSwitch.on = [defaults boolForKey:@"orangeSwitchState"];
     }
-    if([defaults objectForKey:@"purpleSwitchState"]){
-        purpleSwitch.on = [defaults boolForKey:@"purpleSwitchState"];
-    }
+    
 
 
 
@@ -126,8 +116,6 @@
         [defaults setBool:NO forKey:@"greenLabel"];
         orangeLabel.hidden = NO;
         [defaults setBool:NO forKey:@"orangeLabel"];
-        purpleLabel.hidden = NO;
-        [defaults setBool:NO forKey:@"purpleLabel"];
         redSwitch.hidden = NO;
         [defaults setBool:NO forKey:@"redSwitch"];
         blueSwitch.hidden = NO;
@@ -136,8 +124,7 @@
         [defaults setBool:NO forKey:@"greenSwitch"];
         orangeSwitch.hidden = NO;
         [defaults setBool:NO forKey:@"orangeSwitch"];
-        purpleSwitch.hidden = NO;
-        [defaults setBool:NO forKey:@"purpleSwitch"];
+        
     }
     else{ // switch is off . hide other  switches
         [defaults setBool:NO forKey:@"stationSwitch"];
@@ -150,8 +137,6 @@
 
         orangeLabel.hidden = YES;
         [defaults setBool:YES forKey:@"orangeLabel"];
-        purpleLabel.hidden = YES;
-        [defaults setBool:YES forKey:@"purpleLabel"];
         redSwitch.hidden = YES;
         [defaults setBool:YES forKey:@"redSwitch"];
         blueSwitch.hidden = YES;
@@ -160,9 +145,7 @@
         [defaults setBool:YES forKey:@"greenSwitch"];
         orangeSwitch.hidden = YES;
         [defaults setBool:YES forKey:@"orangeSwitch"];
-        purpleSwitch.hidden = YES;
-        [defaults setBool:YES forKey:@"purpleSwitch"];
-    }
+        }
 }
 
 - (IBAction)redSwitchChanged:(UISwitch *)sender {
@@ -212,15 +195,4 @@
 
 }
 
-- (IBAction)purpleSwitchChanged:(UISwitch *)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if(sender.isOn){
-        [defaults setBool:YES forKey:@"purpleSwitchState"];
-    }
-    else{
-        [defaults setBool:NO forKey:@"purpleSwitchState"];
-        
-    }
-
-}
 @end

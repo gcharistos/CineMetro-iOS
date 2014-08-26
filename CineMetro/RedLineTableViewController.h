@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RedLineTableViewController : UITableViewController
+@interface RedLineTableViewController : UITableViewController <UITableViewDataSource ,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end

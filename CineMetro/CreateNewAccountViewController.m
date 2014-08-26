@@ -61,9 +61,7 @@ PFUser *appUser;
     if([segue.identifier isEqualToString:@"createSegue"]){
         UINavigationController *navController = [segue destinationViewController];
         MainViewController *dest = (MainViewController *)([navController viewControllers][0]);
-        //   MainViewController *dest = segue.destinationViewController;
         dest.user = appUser;
-        // [self presentViewController:dest animated:YES completion:NULL];
     }
 
 }
@@ -131,6 +129,12 @@ PFUser *appUser;
          
      }];
 }
+
+- (IBAction)cancelButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 - (BOOL)validateEmailWithString:(NSString*)email
 {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";

@@ -1,69 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>Stations</key>
-        <array>
-            <dict>
-                <key>Title</key>
-                <string>1η Στάση</string>
-                <key>Subtitle</key>
-                <string>Το ξυπόλητο τάγμα (1955)</string>
-                <key>Latitude</key>
-                <string>40.641142</string>
-                <key>Longitude</key>
-                <string>22.934721</string>
-            </dict>
-            <dict>
-                <key>Title</key>
-                <string>2η Στάση</string>
-                <key>Subtitle</key>
-                <string>Λιμάνι</string>
-                <key>Latitude</key>
-                <string>40.635650</string>
-                <key>Longitude</key>
-                <string>22.935431</string>
-            </dict>
-            <dict>
-                <key>Title</key>
-                <string>3η Στάση</string>
-                <key>Subtitle</key>
-                <string>Λεωφόρος Νίκης</string>
-                <key>Latitude</key>
-                <string>40.630440</string>
-                <key>Longitude</key>
-                <string>22.942912</string>
-            </dict>
-            <dict>
-                <key>Title</key>
-                <string>4η Στάση</string>
-                <key>Subtitle</key>
-                <string>Πλατεία Αριστοτέλους</string>
-                <key>Latitude</key>
-                <string>40.632804</string>
-                <key>Longitude</key>
-                <string>22.941331</string>
-            </dict>
-            <dict>
-                <key>Title</key>
-                <string>5η Στάση</string>
-                <key>Subtitle</key>
-                <string>Αγίας Σοφίας-Α.Σβώλου</string>
-                <key>Latitude</key>
-                <string>40.632511</string>
-                <key>Longitude</key>
-                <string>22.947489</string>
-            </dict>
-            <dict>
-                <key>Title</key>
-                <string>6η Στάση</string>
-                <key>Subtitle</key>
-                <string>Λευκός Πύργος</string>
-                <key>Latitude</key>
-                <string>40.62638</string>
-                <key>Longitude</key>
-                <string>22.948306</string>
-            </dict>
-        </array>
-    </dict>
+<dict>
+	<key>Stations</key>
+	<array>
+		<dict>
+			<key>Images</key>
+			<array>
+				<string>green01.jpg</string>
+				<string>green02.jpg</string>
+			</array>
+			<key>text</key>
+			<string>Σκηνοθεσία: Γκρεγκ Τάλλας
+
+Παίζουν: Κωστή Μαρία, Φερμας Νίκος, Φραγκεδάκης Βασίλης
+
+Info: Η αληθινή ιστορία επιβίωσης 160 παιδιών στην Θεσσαλονίκη της Κατοχής. 
+Η ταινία περιδιαβαίνει την Θεσσαλονίκη της δεκαετίας του &apos;50 (Κέντρο και Άνω Πόλη).</string>
+			<key>Title</key>
+			<string>1η Στάση</string>
+			<key>Subtitle</key>
+			<string>Το ξυπόλητο τάγμα (1955)</string>
+			<key>Latitude</key>
+			<string>40.641142</string>
+			<key>Longitude</key>
+			<string>22.934721</string>
+		</dict>
+		<dict>
+			<key>Images</key>
+			<array>
+				<string>green11.jpg</string>
+				<string>green12.jpg</string>
+				<string>green13.jpg</string>
+			</array>
+			<key>text</key>
+			<string>Σκηνοθεσία: Γιάννης Δαλιανίδης
+
+Παίζουν: Ηλιόπουλος Ντίνος, Λάσκαρη Ζώη, Ζερβός Παντελής, Στρατηγός Στέφανος
+
+Info: Δύο αδέρφια προσπαθούν να ισορροπήσουν ανάμεσα στις αισθηματικές τους σχέσεις και την συντηρητικές αρχές της πατρικής οικίας τους. 
+Εξ ολοκλήρου γυρισμένη στην Θεσσαλονίκη: Πανόραμα, περιοχή Ανθέων, Κέντρο Θεσσαλονίκης </string>
+			<key>Title</key>
+			<string>2η Στάση</string>
+			<key>Subtitle</key>
+			<string>Ο ατσίδας (1961)</string>
+			<key>Latitude</key>
+			<string>40.635650</string>
+			<key>Longitude</key>
+			<string>22.935431</string>
+		</dict>
+		<dict>
+			<key>Images</key>
+			<array>
+				<string>green21.jpg</string>
+				<string>green22.jpg</string>
+				<string>green23.jpg</string>
+			</array>
+			<key>text</key>
+			<string>Σκηνοθεσία: Γιάννης Δαλιανίδης
+
+Παίζουν: Βλαχοπούλου Ρένα, Ηλιόπουλος Ντίνος, Καραγιάννη Μάρθα, Ναθαναήλ Έλενα, Βουτσάς Κώστας
+
+Info: Κατά την διάρκεια της ΔΕΘ μια παρέα νέων ανθρώπων περιπλέκεται σε αστείες και ερωτικές περιπέτειες. 
+Η ταινία έχει γυρίσματα σε χώρους όπως ΔΕΘ, Λευκός Πύργος, κ.α.</string>
+			<key>Title</key>
+			<string>3η Στάση</string>
+			<key>Subtitle</key>
+			<string>Κάτι να καίει (1964)</string>
+			<key>Latitude</key>
+			<string>40.630440</string>
+			<key>Longitude</key>
+			<string>22.942912</string>
+		</dict>
+		<dict>
+			<key>Images</key>
+			<array>
+				<string>green31.jpg</string>
+				<string>green32.jpg</string>
+			</array>
+			<key>text</key>
+			<string>Σκηνοθεσία: Τάκης Κανελλόπουλος
+
+Παίζουν: Λαδικού Αλεξάνδρα, Αντωνόπουλος Άγγελος
+
+Info: Ένα ταξίδι με τρένο, μια στάση με ολιγόωρη καθυστέρηση, ένας δυνατός έρωτας δύο ανθρώπων, μια παρένθεση. 4 βραβεία στο Φεστιβάλ Θεσσαλονίκης. 
+Η ταινία γυρίστηκε στην νέα παραλία Θεσσαλονίκης και στην περιοχή Αρετσού (Ν. Κρήνη)</string>
+			<key>Title</key>
+			<string>4η Στάση</string>
+			<key>Subtitle</key>
+			<string>Παρένθεση (1968)</string>
+			<key>Latitude</key>
+			<string>40.632804</string>
+			<key>Longitude</key>
+			<string>22.941331</string>
+		</dict>
+		<dict>
+			<key>Images</key>
+			<array>
+				<string>green41.jpg</string>
+				<string>green42.jpg</string>
+			</array>
+			<key>text</key>
+			<string>Σκηνοθεσία: Παντελής Βούλγαρης
+
+Παίζουν: Τζώρτζογλου Στράτος, Μπαζάκα Θέμις
+
+Info: Η πορεία ενός ταλαντούχου ποδοσφαιριστή, ο οποίος μέσα από νίκες και ήττες, τραυματισμούς και παρασκήνιο, θα καταλάβει ότι η επιτυχία έχει το τίμημά της. 
+Μέρος της ταινίας έχει γυριστεί στην Θεσσαλονίκη: Πλ. Αριστοτέλους, Εύοσμος.</string>
+			<key>Title</key>
+			<string>5η Στάση</string>
+			<key>Subtitle</key>
+			<string>Η Φανέλλα με το Νο9 (1987)</string>
+			<key>Latitude</key>
+			<string>40.632511</string>
+			<key>Longitude</key>
+			<string>22.947489</string>
+		</dict>
+		<dict>
+			<key>Images</key>
+			<array>
+				<string>green51.jpg</string>
+				<string>green52.jpg</string>
+			</array>
+			<key>text</key>
+			<string>Σκηνοθεσία: Θόδωρος Αγγελόπουλος
+
+Παίζουν: Γκαντζ Μπρούνο, Ρενό Ιζαμπέλ, Μπενιβόλιο Φαμπρίτσιο
+
+Info: Ένας μεσήλικας συγγραφέας, που ασχολείται με το έργο του Δ. Σολωμού, αναζητάει τις αναμνήσεις μιας ζωής σε μια περιπλάνηση μιας ημέρας. Γυρισμένη σε αρχοντικό της Βασ. Όλγας, Παλιά Παραλία, Πλ. Αριστοτέλους και Τσιμισκή. </string>
+			<key>Title</key>
+			<string>6η Στάση</string>
+			<key>Subtitle</key>
+			<string>Η Αιωνιότητα και μια μέρα (1998)</string>
+			<key>Latitude</key>
+			<string>40.62638</string>
+			<key>Longitude</key>
+			<string>22.948306</string>
+		</dict>
+		<dict>
+			<key>Images</key>
+			<array>
+				<string>green61.jpg</string>
+				<string>green62.jpg</string>
+				<string>green63.jpg</string>
+			</array>
+			<key>text</key>
+			<string>Σκηνοθεσία: Σύλλας Τζουμέρκας
+
+Παίζουν: Μουτούση Αμαλία, Σαμαράς Θάνος, Τσιριγκούλη Ιωάννα
+
+Info: Οικογενειακό δράμα ως ακτινογραφία της νεοελληνικής κοινωνικής πραγματικότητας. 
+Η ταινία πραγματοποιεί μεγάλο μέρος της δράσης της σε γνωστά σημεία της σημερινής Θεσσαλονίκης: Λεωφόρος Στρατού (ΕΡΤ3), Νέα Παραλία, Αγίος Δημήτριος. </string>
+			<key>Title</key>
+			<string>7η Στάση</string>
+			<key>Subtitle</key>
+			<string>Χώρα Προέλευσης (2010)</string>
+			<key>Latitude</key>
+			<string>40.62638</string>
+			<key>Longitude</key>
+			<string>22.948306</string>
+		</dict>
+		<dict>
+			<key>Images</key>
+			<array>
+				<string>green71.jpg</string>
+				<string>green72.jpg</string>
+				<string>green73.png</string>
+			</array>
+			<key>text</key>
+			<string>Σκηνοθεσία: Γιώργος Παπαιωάνου
+ 
+Παίζουν: Βαϊνας Δημήτρης, Παπαδόπουλος Πάρης, Σφέτσα Όλγα
+
+Info: Σάτιρα θεσσαλονικιώτικων και βορειοελλαδικών κλισέ με πολύ χιούμορ. 
+Τόποι γυρισμάτων: Θεολογική Σχολή ΑΠΘ, Νέο Δημαρχειακό Μέγαρο, Λευκός Πύργος, ΟΣΕ, Τούμπα </string>
+			<key>Title</key>
+			<string>8η Στάση</string>
+			<key>Subtitle</key>
+			<string>Σούπερ Δημήτριος (2011)</string>
+			<key>Latitude</key>
+			<string>40.62638</string>
+			<key>Longitude</key>
+			<string>22.948306</string>
+		</dict>
+	</array>
+	<key>Color</key>
+	<string>green</string>
+	<key>Name</key>
+	<string>Θεσσαλονίκη μέσα απο τον Ελληνικό Κινηματογράφο</string>
+</dict>
 </plist>

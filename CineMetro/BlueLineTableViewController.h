@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BlueLineTableViewController : UITableViewController
+@interface BlueLineTableViewController : UITableViewController<UITableViewDataSource ,UITableViewDelegate>
 
 @end

@@ -26,23 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
--(void)viewDidAppear:(BOOL)animated{
-    self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
 
-}
--(void)viewWillDisappear:(BOOL)animated{
-    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
-        self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-        
-    }
-    [super viewWillDisappear:animated];
-}
+
 
 
 - (void)didReceiveMemoryWarning

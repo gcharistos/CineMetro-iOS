@@ -13,6 +13,9 @@
 @end
 
 @implementation BlueLineTableViewController
+NSInteger  selectedIndex ;
+NSMutableArray *titles;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,22 +29,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
--(void)viewDidAppear:(BOOL)animated{
-    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
-}
--(void)viewWillDisappear:(BOOL)animated{
-    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
-        self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-        
+    NSString *title;
+    selectedIndex = -1;
+    titles = [[NSMutableArray alloc]init];
+    for(int i=0;i<8;i++){
+        title = [[NSString alloc]initWithFormat:@"Στάση %i",i+1];
+        NSLog(title);
+        [titles addObject:title];
     }
-    [super viewWillDisappear:animated];
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -49,18 +48,32 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 0;
+         return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
     return 0;
+    //return titles.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"bCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    UILabel *nameLabel = (UILabel*) [cell viewWithTag:104];
+    nameLabel.text = [titles objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    selectedIndex = indexPath.row;
+    [self performSegueWithIdentifier:@"detailSegue" sender:nil];
+    
 }
 
 /*

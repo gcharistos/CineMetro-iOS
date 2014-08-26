@@ -1,18 +1,18 @@
 //
-//  PurpleLineTableViewController.m
+//  AboutTableViewController.m
 //  CineMetro
 //
-//  Created by George Haristos on 5/7/14.
+//  Created by George Haristos on 24/8/14.
 //  Copyright (c) 2014 George Haristos. All rights reserved.
 //
 
-#import "PurpleLineTableViewController.h"
+#import "AboutTableViewController.h"
 
-@interface PurpleLineTableViewController ()
+@interface AboutTableViewController ()
 
 @end
 
-@implementation PurpleLineTableViewController
+@implementation AboutTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,17 +33,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
--(void)viewDidAppear:(BOOL)animated{
-    self.navigationController.navigationBar.barTintColor = [UIColor purpleColor];
-
-}
--(void)viewWillDisappear:(BOOL)animated{
-    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
-        self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-        
-    }
-    [super viewWillDisappear:animated];
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -56,13 +45,45 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return 3;
+}
+
+- (IBAction)contactButtonPressed:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Send Email to : "
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"geohararnea16@hotmail.com", nil];
+    //set actionsheet tag
+    actionSheet.tag = 100;
+    
+    [actionSheet showInView:self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if ((actionSheet.tag == 100) && (buttonIndex != actionSheet.cancelButtonIndex) ) {
+        NSString *email  = [actionSheet buttonTitleAtIndex:buttonIndex];
+        [self sendEmail:email];
+    }
+    
+}
+
+-(void)sendEmail:(NSString *)emailAddress {
+    NSString *recipients = [NSString stringWithFormat:@"mailto:%@",emailAddress];
+    
+    NSString *body = @"";
+    
+    NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
+    
+    email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
 }
 
 /*

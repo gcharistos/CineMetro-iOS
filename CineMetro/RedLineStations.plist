@@ -4,66 +4,139 @@
 <dict>
 	<key>Stations</key>
 	<array>
-        <dict>
-            <key>Title</key>
-            <string>1η Στάση</string>
-            <key>Subtitle</key>
-            <string>Βαρδάρης</string>
-            <key>Latitude</key>
-            <string>40.641142</string>
-            <key>Longitude</key>
-            <string>22.934721</string>
-        </dict>
-        <dict>
-            <key>Title</key>
-            <string>2η Στάση</string>
-            <key>Subtitle</key>
-            <string>Λιμάνι</string>
-            <key>Latitude</key>
-            <string>40.635650</string>
-            <key>Longitude</key>
-            <string>22.935431</string>
-        </dict>
-        <dict>
-            <key>Title</key>
-            <string>3η Στάση</string>
-            <key>Subtitle</key>
-            <string>Λεωφόρος Νίκης</string>
-            <key>Latitude</key>
-            <string>40.630440</string>
-            <key>Longitude</key>
-            <string>22.942912</string>
-        </dict>
-        <dict>
-            <key>Title</key>
-            <string>4η Στάση</string>
-            <key>Subtitle</key>
-            <string>Πλατεία Αριστοτέλους</string>
-            <key>Latitude</key>
-            <string>40.632804</string>
-            <key>Longitude</key>
-            <string>22.941331</string>
-        </dict>
-        <dict>
-            <key>Title</key>
-            <string>5η Στάση</string>
-            <key>Subtitle</key>
-            <string>Αγίας Σοφίας-Α.Σβώλου</string>
-            <key>Latitude</key>
-            <string>40.632511</string>
-            <key>Longitude</key>
-            <string>22.947489</string>
-        </dict>
-        <dict>
-            <key>Title</key>
-            <string>6η Στάση</string>
-            <key>Subtitle</key>
-            <string>Λευκός Πύργος</string>
-            <key>Latitude</key>
-            <string>40.62638</string>
-            <key>Longitude</key>
-            <string>22.948306</string>
-        </dict>
-    </array>
+		<dict>
+			<key>text</key>
+			<string>Η 1η κινηματογραφική προβολή έγινε το 1897 στο καφέ «Η Τουρκία». Εδώ χτίστηκαν τα σινεμά Σπλέντιντ (μετέπειτα Ίλιον), Πάνθεον, Αττικόν και Ολύμπιον (στη σημερινή οδό Μοναστηρίου), καθώς και τα πορνό σινεμά της πλατείας.
+ 
+195 χαρακτήρες
+</string>
+			<key>Title</key>
+			<string>1η Στάση</string>
+			<key>Subtitle</key>
+			<string>Βαρδάρης</string>
+			<key>Longitude</key>
+			<string>22.934721</string>
+			<key>Latitude</key>
+			<string>40.641142</string>
+			<key>Images</key>
+			<array>
+				<string>red01.jpg</string>
+				<string>red02.jpg</string>
+				<string>red03.jpg</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Μια από τις πιο κινηματογραφικές και κινηματογραφημένες γωνιές του κέντρου. Στο λιμάνι λειτουργεί σήμερα το Μουσείο Κινηματογράφου και η Ταινιοθήκη Θεσσαλονίκης, όπως και οι τέσσερις αίθουσες προβολών του φεστιβάλ.
+
+186 χαρακτήρες
+</string>
+			<key>Title</key>
+			<string>2η Στάση</string>
+			<key>Subtitle</key>
+			<string>Λιμάνι</string>
+			<key>Latitude</key>
+			<string>40.635650</string>
+			<key>Longitude</key>
+			<string>22.935431</string>
+			<key>Images</key>
+			<array>
+				<string>red11.jpg</string>
+				<string>red12.jpg</string>
+				<string>red13.jpg</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Στην Λεωφόρο Νίκης δημιουργείται η πρώτη κινηματογραφική αίθουσα στα Βαλκάνια, το Ολύμπια (1903). Εδώ λειτουργεί από το 1911 ο κινηματογράφος Πατέ με ταινίες της ομώνυμης εταιρείας παραγωγής και ο πλωτός κινηματογράφος Κουρσάλ.
+
+192 χαρακτήρες
+</string>
+			<key>Title</key>
+			<string>3η Στάση</string>
+			<key>Subtitle</key>
+			<string>Λεωφόρος Νίκης</string>
+			<key>Latitude</key>
+			<string>40.630440</string>
+			<key>Longitude</key>
+			<string>22.942912</string>
+			<key>Images</key>
+			<array>
+				<string>red21.jpg</string>
+				<string>red22.jpg</string>
+				<string>red23.jpg</string>
+				<string>red24.jpg</string>
+				<string>red25.jpg</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Στη δεκαετία του ’50 η πλατεία μετρούσε 6 θερινά σινεμά (Ρεξ, Ηλύσια, Ελληνίς, Αιγαίο, Ρίο και Ζέφυρος). Εδώ βρίσκεται και σήμερα η σημερινή έδρα του Φεστιβάλ Κινηματογράφου Θεσσαλονίκης, το κινηματοθέατρο Ολύμπιον.
+
+185 χαρακτήρες
+</string>
+			<key>Title</key>
+			<string>4η Στάση</string>
+			<key>Subtitle</key>
+			<string>Πλατεία Αριστοτέλους</string>
+			<key>Latitude</key>
+			<string>40.632804</string>
+			<key>Longitude</key>
+			<string>22.941331</string>
+			<key>Images</key>
+			<array>
+				<string>red31.jpg</string>
+				<string>red32.jpg</string>
+				<string>red33.jpg</string>
+				<string>red34.jpg</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Μια περιοχή με πολλούς κινηματογράφους: Διονύσια (Αγίας Σοφίας), Έσπερος και Ριβολί (Αλ.Σβώλου), Μακεδονικόν (Φιλ.Εταιρείας) . Εδώ λειτούργησε στη δεκαετία του ’50 παράρτημα Θεσσαλονίκης της κινηματογραφικής σχολής Σταυράκου.
+
+199 χαρακτήρες
+</string>
+			<key>Title</key>
+			<string>5η Στάση</string>
+			<key>Subtitle</key>
+			<string>Αγίας Σοφίας-Α.Σβώλου</string>
+			<key>Latitude</key>
+			<string>40.632511</string>
+			<key>Longitude</key>
+			<string>22.947489</string>
+			<key>Images</key>
+			<array>
+				<string>red41.jpg</string>
+				<string>red42.jpg</string>
+				<string>red43.jpg</string>
+			</array>
+		</dict>
+		<dict>
+			<key>text</key>
+			<string>Από το 1905 ο κήπος του Λευκού Πύργου φιλοξενούσε αίθουσα κινηματογράφου. Εδώ βρίσκεται η Εταιρεία Μακεδονικών Σπουδών, παλιά έδρα του Φεστιβάλ Κινηματογράφου Θεσσαλονίκης και τα σινεμά Παλλάς (σημερινή έδρα της ΚΟΘ) και Αλέξανδρος.
+
+200 χαρακτήρες
+</string>
+			<key>Title</key>
+			<string>6η Στάση</string>
+			<key>Subtitle</key>
+			<string>Λευκός Πύργος</string>
+			<key>Latitude</key>
+			<string>40.62638</string>
+			<key>Longitude</key>
+			<string>22.948306</string>
+			<key>Images</key>
+			<array>
+				<string>red51.jpg</string>
+				<string>red52.jpg</string>
+				<string>red53.jpg</string>
+			</array>
+		</dict>
+	</array>
+	<key>Color</key>
+	<string>red</string>
+	<key>Name</key>
+	<string>Τα σινεμά της πόλης </string>
 </dict>
 </plist>

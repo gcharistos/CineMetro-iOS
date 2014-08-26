@@ -7,12 +7,18 @@
 //
 
 #import "RedLineTableViewController.h"
+#import "RedDetailsViewController.h"
 
 @interface RedLineTableViewController ()
 
 @end
 
 @implementation RedLineTableViewController
+@synthesize nameLabel;
+NSInteger  selectedIndex ;
+NSArray *station;
+NSMutableArray *titles;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,26 +32,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tabBarController.tabBar.tintColor = [UIColor redColor];
-    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
-
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    //initialize selectedIndex variable
+    selectedIndex = -1;
+    titles = [[NSMutableArray alloc]init];
+    NSString *title;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"RedLineStations" ofType:@"plist"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSArray *anns = [dict objectForKey:@"Stations"];
+    [nameLabel setText:[dict objectForKey:@"Name"]];
+    station = anns; // initialize station variable
+    for(int i=0;i<anns.count;i++){
+        title = [[anns objectAtIndex:i]objectForKey:@"Title"];
+        NSLog(title);
+        [titles addObject:title];
+    }
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
--(void)viewDidAppear:(BOOL)animated{
-    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
 
-}
--(void)viewWillDisappear:(BOOL)animated{
-    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
-        self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
 
-    }
-    [super viewWillDisappear:animated];
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -58,25 +70,34 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return titles.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+   static NSString *cellIdentifier = @"rCell";
+     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    UILabel *namelabel = (UILabel*) [cell viewWithTag:104];
+    UIImageView *imageview = (UIImageView *)[cell viewWithTag:105];
+    UILabel *stationNameLabel = (UILabel*) [cell viewWithTag:106];
+    UIImage *image = [UIImage imageNamed:[[[station objectAtIndex:indexPath.row]objectForKey:@"Images"]objectAtIndex:0]];
+    imageview.image = image;
+    namelabel.text = [titles objectAtIndex:indexPath.row];
+    stationNameLabel.text = [[station objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
     return cell;
 }
-*/
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    selectedIndex = indexPath.row;
+    [self performSegueWithIdentifier:@"detailSegue" sender:nil];
+
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -116,15 +137,17 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"detailSegue"]){
+      RedDetailsViewController *dest = segue.destinationViewController;
+      dest.station = [station objectAtIndex:selectedIndex];
+    }
 }
-*/
+
 
 @end

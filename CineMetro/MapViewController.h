@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController<MKMapViewDelegate>
+@interface MapViewController : UIViewController<MKMapViewDelegate,UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIButton *sidebarButton;
+- (IBAction)settingsButtonPressed:(id)sender;
 
 @end

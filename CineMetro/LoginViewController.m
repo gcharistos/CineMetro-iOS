@@ -17,6 +17,7 @@
 @implementation LoginViewController
 @synthesize emailTextField;
 @synthesize passwordTextField;
+@synthesize loginStatus;
 PFUser *appUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -34,6 +35,7 @@ PFUser *appUser;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
 
 
 - (void)didReceiveMemoryWarning
@@ -61,9 +63,11 @@ PFUser *appUser;
     if([segue.identifier isEqualToString:@"loginSegue"]){
         UINavigationController *navController = [segue destinationViewController];
         MainViewController *dest = (MainViewController *)([navController viewControllers][0]);
-     //   MainViewController *dest = segue.destinationViewController;
         dest.user = appUser;
-        // [self presentViewController:dest animated:YES completion:NULL];
+        if(loginStatus == 1){
+            [dest redirectToProfile];
+        }
+        
     }
 }
 
@@ -85,8 +89,8 @@ PFUser *appUser;
                                             // Show the alert view
                                             [alertView show];
                                             appUser = user;
-                          //                  NSLog(appUser.username);
                                             [self performSegueWithIdentifier:@"loginSegue" sender:self];
+                                            
                                         }
                                         else{
                                             UIAlertView *alertView = nil;
@@ -102,5 +106,8 @@ PFUser *appUser;
 
                                         }
                                     }];
+}
+- (IBAction)cancelButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
