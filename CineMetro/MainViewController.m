@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "LoginViewController.h"
 #import "ProfileViewController.h"
+#import "Reachability.h"
 
 @interface MainViewController ()
 
@@ -52,6 +53,33 @@ int loginStatus;
 
 }
 
+- (BOOL)checkForNetwork
+{
+    // check if we've got network connectivity
+    Reachability *myNetwork = [Reachability reachabilityWithHostName:@"www.google.com"];
+    NetworkStatus myStatus = [myNetwork currentReachabilityStatus];
+    BOOL status;
+    switch (myStatus) {
+        case NotReachable:{
+            status = false;
+            break;
+        }
+        case ReachableViaWWAN:{
+            status = true;
+            break;
+        }
+        case ReachableViaWiFi:{
+            status = true;
+            break;
+        }
+        default:
+            status = false;
+            break;
+    }
+    return  status;
+}
+
+
 
 #pragma mark - Navigation
 
@@ -86,7 +114,14 @@ int loginStatus;
         if(alertView.tag == 200){
            loginStatus = 1;
         }
-        [self performSegueWithIdentifier:@"ProfileLogin" sender:nil];
+        if([self checkForNetwork] == true){
+          [self performSegueWithIdentifier:@"ProfileLogin" sender:nil];
+        }
+        else{
+            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You don't have Internet Connection.Please Enable it to Login " delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
+            nullUser.tag = 400;
+            [nullUser show];
+        }
     }
     
     

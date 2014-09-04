@@ -8,8 +8,8 @@
 
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
-#import "SWRevealViewController.h"
 #import "MapDetailsViewController.h"
+#import "ViewController1.h"
 
 
 @interface MapViewController ()
@@ -17,7 +17,7 @@
 @end
 
 @implementation MapViewController
-@synthesize mapView;
+@synthesize mapview;
 UIBarButtonItem *sidebarButton;
 NSMutableArray *redPins ;
 MKPolyline *polyline;
@@ -37,7 +37,7 @@ NSDictionary *currentDB;
 {
     [super viewDidLoad];
     visibleLine = -1;
-    mapView.delegate = self;
+    mapview.delegate = self;
     redPins = [[NSMutableArray alloc]init];
     //set region of map
     [self setRegion];
@@ -46,6 +46,7 @@ NSDictionary *currentDB;
     
    
 }
+
 
 -(void)UploadRedLine{
     redPins = [[NSMutableArray alloc]init];
@@ -64,7 +65,7 @@ NSDictionary *currentDB;
         myAnnotation.coordinate = theCoordinate;
         myAnnotation.title = [[anns objectAtIndex:i] objectForKey:@"Title"];
         myAnnotation.subtitle = [[anns objectAtIndex:i] objectForKey:@"Subtitle"];
-        [mapView addAnnotation:myAnnotation];
+        [mapview addAnnotation:myAnnotation];
         [redPins addObject:myAnnotation];
     }
     
@@ -85,7 +86,7 @@ NSDictionary *currentDB;
     
     // create a polyline with all cooridnates
     polyline = [MKPolyline polylineWithCoordinates:coordinates count:pins.count];
-    [self.mapView addOverlay:polyline];
+    [self.mapview addOverlay:polyline];
     
     
     
@@ -105,6 +106,9 @@ NSDictionary *currentDB;
 //set custom annotation view to support callout accessory control mode
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
+    if(annotation == mapView.userLocation){
+        return nil;
+    }
     MKAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
     annotationView.canShowCallout = YES;
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
@@ -122,13 +126,30 @@ NSDictionary *currentDB;
     CLLocationCoordinate2D coord = {40.641142,22.934721};
     MKCoordinateSpan span = {0.05,0.05};
     MKCoordinateRegion region = {coord, span};
-    [self.mapView setRegion:region];
+    [self.mapview setRegion:region];
+}
+
+
+
+-(void)showUserLocation{
+    if([CLLocationManager locationServicesEnabled]){
+      mapview.showsUserLocation = YES;
+    }
+    else{
+        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:@"" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [disabled show];
+    }
+
 }
 
 //if annotation info button pressed go to details
 - (void)mapView:(MKMapView *)mapView
  annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    [self performSegueWithIdentifier:@"showDetails" sender:nil];
+  //  [self performSegueWithIdentifier:@"showDetails" sender:nil];
+    MKPointAnnotation *annotationTapped = (MKPointAnnotation *)view.annotation;
+    self.popViewController = [[ViewController1 alloc] initWithNibName:@"ViewController1" bundle:nil];
+    
+    [self.popViewController showInView:self.view withAnnotation:annotationTapped withController:self animated:YES];
     
 }
 
@@ -143,8 +164,8 @@ NSDictionary *currentDB;
         [self UploadRedLine];
     }
     else if(buttonIndex != 0) {
-        [mapView removeAnnotations:redPins];
-        [mapView removeOverlay:polyline];
+        [mapview removeAnnotations:redPins];
+        [mapview removeOverlay:polyline];
     }
     
 }

@@ -8,6 +8,7 @@
 
 #import "RedLineTableViewController.h"
 #import "RedDetailsViewController.h"
+#import "CustomTableViewCell.h"
 
 @interface RedLineTableViewController ()
 
@@ -48,6 +49,7 @@ NSMutableArray *titles;
         NSLog(title);
         [titles addObject:title];
     }
+      
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -56,6 +58,12 @@ NSMutableArray *titles;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+-(void)onSwipeLeft:(UISwipeGestureRecognizer *)recognizer{
+    NSLog(@"SDADASD");
+}
+
+
 
 
 
@@ -83,7 +91,27 @@ NSMutableArray *titles;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
    static NSString *cellIdentifier = @"rCell";
-     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+     CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    // Add utility buttons
+    NSMutableArray *leftUtilityButtons = [NSMutableArray new];
+    
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:1.0f blue:0.35f alpha:0.7]
+                                                icon:[UIImage imageNamed:@"like.png"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:1.0f blue:0.35f alpha:0.7]
+                                                icon:[UIImage imageNamed:@"message.png"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:1.0f blue:0.35f alpha:0.7]
+                                                icon:[UIImage imageNamed:@"facebook.png"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:1.0f blue:0.35f alpha:0.7]
+                                                icon:[UIImage imageNamed:@"twitter.png"]];
+    
+    cell.leftUtilityButtons = leftUtilityButtons;
+    cell.delegate = self;
+    
+   
     UILabel *namelabel = (UILabel*) [cell viewWithTag:104];
     UIImageView *imageview = (UIImageView *)[cell viewWithTag:105];
     UILabel *stationNameLabel = (UILabel*) [cell viewWithTag:106];
@@ -98,6 +126,39 @@ NSMutableArray *titles;
     [self performSegueWithIdentifier:@"detailSegue" sender:nil];
 
 }
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index {
+    
+    switch (index) {
+        case 0:
+        {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Bookmark" message:@"Save to favorites successfully" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alertView show];
+            break;
+        }
+        case 1:
+        {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Email sent" message:@"Just sent the image to your INBOX" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alertView show];
+            break;
+        }
+        case 2:
+        {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Facebook Sharing" message:@"Just shared the pattern image on Facebook" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alertView show];
+            break;
+        }
+        case 3:
+        {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Twitter Sharing" message:@"Just shared the pattern image on Twitter" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alertView show];
+        }
+        default:
+            break;
+    }
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.
