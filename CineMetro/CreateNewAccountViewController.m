@@ -15,6 +15,7 @@
 @end
 
 @implementation CreateNewAccountViewController
+@synthesize profilePhoto;
 @synthesize emailTextField;
 @synthesize passwordTextField;
 PFUser *appUser;
@@ -51,6 +52,48 @@ PFUser *appUser;
     [super touchesBegan:touches withEvent:event];
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+// pick photo from camera and initialize cameraPhoto variable
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *chosenImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    profilePhoto.image = chosenImage;
+    profilePhoto.layer.cornerRadius = profilePhoto.frame.size.width / 2;
+    profilePhoto.clipsToBounds = YES;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
+- (IBAction)takePhoto:(id)sender {
+    
+    //Simulator doesn't have camera . print error message
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"errorMessage",@"Message")
+                                                              message:@"Device has no camera"
+                                                             delegate:nil
+                                                    cancelButtonTitle:NSLocalizedString(@"ok",@"Message")
+                                                    otherButtonTitles: nil];
+        
+        [myAlertView show];
+        return; // end process
+        
+    }
+    
+    
+    UIImagePickerController  *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = NO;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+
+
 
 
 #pragma mark - Navigation
@@ -71,6 +114,10 @@ PFUser *appUser;
     PFUser *user = [[PFUser alloc]init];
     user.username = emailTextField.text;
     user.password = passwordTextField.text;
+    NSData *imageData = UIImageJPEGRepresentation(profilePhoto.image, 0.8);
+    NSString *filename = [NSString stringWithFormat:@"file.jpg"];
+    PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
+    [user setObject:imageFile forKey:@"profileImage"];
     BOOL validateEmail = [self validateEmailWithString:emailTextField.text];
     
     if(validateEmail == NO){

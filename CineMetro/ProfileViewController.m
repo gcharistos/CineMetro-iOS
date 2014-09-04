@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "MainViewController.h"
 
 @interface ProfileViewController ()
 
@@ -14,6 +15,7 @@
 
 @implementation ProfileViewController
 @synthesize user;
+@synthesize imageView;
 @synthesize greenLinePoints;
 @synthesize redLinePoints;
 @synthesize pointsLabel;
@@ -38,7 +40,20 @@
     redLinePoints.text = redlinepoints;
     NSString *greenlinepoints = [NSString stringWithFormat:@"%i",[[user objectForKey:@"GreenLine"]intValue]];
     greenLinePoints.text = greenlinepoints;
-    // Do any additional setup after loading the view.
+    PFFile *image = [user objectForKey:@"profileImage"];
+    //profile image exists  . retrieve it from parse database
+    if(image != nil){
+        [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+            if (!error) {
+                imageView.image = [UIImage imageWithData:data];
+
+                }
+        }];
+
+        imageView.layer.cornerRadius = imageView.frame.size.width / 2;
+        imageView.clipsToBounds = YES;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,4 +73,8 @@
 }
 */
 
+- (IBAction)LogOutPressed:(id)sender {
+    flag = -1;
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+int flag;
 @interface MainViewController : UIViewController<UIAlertViewDelegate>
 @property (nonatomic,strong)  PFUser *user;
 - (IBAction)profileButtonPressed:(id)sender;

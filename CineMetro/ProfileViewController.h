@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *redLinePoints;
 @property (weak, nonatomic) IBOutlet UILabel *greenLinePoints;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)LogOutPressed:(id)sender;
 
 @end

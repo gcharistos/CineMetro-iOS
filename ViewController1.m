@@ -73,6 +73,8 @@ MapViewController *viewController;
     MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
     destination.name = currentAnnotation.title;
     [destination openInMapsWithLaunchOptions:nil];
+    [self removeAnimate];
+
 }
 
 -(IBAction)userLocation:(id)sender{

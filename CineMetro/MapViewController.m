@@ -70,7 +70,7 @@ NSDictionary *currentDB;
     }
     
     //draw red line
-    [self drawLine:redPins];
+    //[self drawLine:redPins];
     
 }
 - (void)drawLine:(NSMutableArray *)pins {

@@ -32,14 +32,23 @@ int loginStatus;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    flag = 0;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainBackground.jpg"]];
     if(user == nil){
-        UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:@"Welcome to CineMetro" message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:@"Login",nil];
+        UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:@"Welcome to CineMetro" message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:@"Log In",@"Sign Up",nil];
         welcomeMessage.tag = 100;
         [welcomeMessage show];
     }
 
     // Do any additional setup after loading the view.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    //log out button pressed . set user to nil 
+    if(flag == -1){
+        flag = 1;
+        user = nil;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,7 +108,7 @@ int loginStatus;
 
 - (IBAction)profileButtonPressed:(id)sender {
     if(user == nil){
-        UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You Are Currently Offline" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Login",nil];
+        UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You Are Currently Offline" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Log In",@"Sign Up",nil];
         nullUser.tag = 200;
         [nullUser show];
     }
@@ -109,7 +118,7 @@ int loginStatus;
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 1)
+    if (buttonIndex == 1) // login
     {
         if(alertView.tag == 200){
            loginStatus = 1;
@@ -118,10 +127,21 @@ int loginStatus;
           [self performSegueWithIdentifier:@"ProfileLogin" sender:nil];
         }
         else{
-            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You don't have Internet Connection.Please Enable it to Login " delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
+            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You don't have Internet Connection.Please Enable it to Log In " delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
             nullUser.tag = 400;
             [nullUser show];
         }
+    }
+    else if(buttonIndex == 2){ // sign up
+        if([self checkForNetwork] == true){
+            [self performSegueWithIdentifier:@"createAccount" sender:nil];
+        }
+        else{
+            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You don't have Internet Connection.Please Enable it to Sign Up " delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
+            nullUser.tag = 400;
+            [nullUser show];
+        }
+
     }
     
     
