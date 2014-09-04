@@ -9,6 +9,7 @@
 #import "CreateNewAccountViewController.h"
 #import "MainViewController.h"
 #import <Parse/Parse.h>
+#import "MBProgressHUD.h"
 
 @interface CreateNewAccountViewController ()
 
@@ -114,10 +115,19 @@ PFUser *appUser;
     PFUser *user = [[PFUser alloc]init];
     user.username = emailTextField.text;
     user.password = passwordTextField.text;
-    NSData *imageData = UIImageJPEGRepresentation(profilePhoto.image, 0.8);
+    NSData *imageData = UIImageJPEGRepresentation(profilePhoto.image, 0.05f);
     NSString *filename = [NSString stringWithFormat:@"file.jpg"];
     PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
     [user setObject:imageFile forKey:@"profileImage"];
+    [user setObject:@0 forKey:@"redLine"];
+    [user setObject:@0 forKey:@"GreenLine"];
+    [user setObject:@0 forKey:@"orangeLine"];
+    [user setObject:@0 forKey:@"blueLine"];
+
+    MBProgressHUD *createAccount = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    createAccount.labelText = @"Creating Account";
+    createAccount.mode = MBProgressHUDModeIndeterminate;
+    [createAccount show:YES];
     BOOL validateEmail = [self validateEmailWithString:emailTextField.text];
     
     if(validateEmail == NO){
@@ -132,6 +142,7 @@ PFUser *appUser;
     }
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
      {
+         [createAccount hide:YES];
          if (error) // Something went wrong
          {
              if([emailTextField.text length] == 0 || [passwordTextField.text length] == 0){
