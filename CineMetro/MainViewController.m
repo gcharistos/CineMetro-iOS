@@ -32,7 +32,6 @@ int loginStatus;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    flag = 0;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainBackground.jpg"]];
     if(user == nil){
         UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:@"Welcome to CineMetro" message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:@"Log In",@"Sign Up",nil];
@@ -43,13 +42,13 @@ int loginStatus;
     // Do any additional setup after loading the view.
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    //log out button pressed . set user to nil 
-    if(flag == -1){
-        flag = 1;
+-(void)LogOut{
+//log out button pressed . set user to nil
+        NSLog(@"YES");
         user = nil;
-    }
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

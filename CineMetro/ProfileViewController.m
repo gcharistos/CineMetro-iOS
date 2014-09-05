@@ -74,7 +74,8 @@
 */
 
 - (IBAction)LogOutPressed:(id)sender {
-    flag = -1;
+    MainViewController *dest = (MainViewController *)[[self.navigationController viewControllers]objectAtIndex:0];
+    [dest LogOut];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

@@ -124,13 +124,10 @@ PFUser *appUser;
     [user setObject:@0 forKey:@"orangeLine"];
     [user setObject:@0 forKey:@"blueLine"];
 
-    MBProgressHUD *createAccount = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    createAccount.labelText = @"Creating Account";
-    createAccount.mode = MBProgressHUDModeIndeterminate;
-    [createAccount show:YES];
+    
     BOOL validateEmail = [self validateEmailWithString:emailTextField.text];
     
-    if(validateEmail == NO){
+    if(validateEmail == NO ){
         UIAlertView *alertView =
         [[UIAlertView alloc] initWithTitle:@"Email Not Valid"
                                    message:nil
@@ -140,28 +137,37 @@ PFUser *appUser;
         [alertView show];
         return;
     }
+    if([passwordTextField.text length] == 0){
+        UIAlertView *alertView =
+        [[UIAlertView alloc] initWithTitle:@"Password field is Empty"
+                                   message:nil
+                                  delegate:self
+                         cancelButtonTitle:nil
+                         otherButtonTitles:@"Ok", nil];
+        [alertView show];
+        return;
+
+    }
+    PFQuery *query = [[PFQuery alloc]initWithClassName:@"User"];
+    [query whereKey:@"username" equalTo:user.username];
+    NSArray *results = [query findObjects:nil];
+    if([results count] != 0){
+        NSLog(@"EXISTS");
+        return;
+    }
+    
+    MBProgressHUD *createAccount = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    createAccount.labelText = @"Creating Account";
+    createAccount.mode = MBProgressHUDModeIndeterminate;
+    [createAccount show:YES];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
      {
          [createAccount hide:YES];
          if (error) // Something went wrong
          {
-             if([emailTextField.text length] == 0 || [passwordTextField.text length] == 0){
-                 // Display an alert view to show the error message
-                 UIAlertView *alertView =
-                 [[UIAlertView alloc] initWithTitle:@"Username Or Password Field Is Empty"
-                                            message:nil
-                                           delegate:self
-                                  cancelButtonTitle:nil
-                                  otherButtonTitles:@"Ok", nil];
-                 [alertView show];
-                 
-                 
-                 return;
-
-             }
-             // Display an alert view to show the error message
+                          // Display an alert view to show the error message
              UIAlertView *alertView =
-             [[UIAlertView alloc] initWithTitle:@"Username Already Exists"
+             [[UIAlertView alloc] initWithTitle:@"Username Already Exists Or Internet Connection not Enabled"
                                         message:nil
                                        delegate:self
                               cancelButtonTitle:nil
