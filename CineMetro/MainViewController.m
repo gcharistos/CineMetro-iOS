@@ -19,6 +19,7 @@
 @synthesize user;
 @synthesize word;
 int loginStatus;
+int flag;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +34,7 @@ int loginStatus;
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainBackground.jpg"]];
-    if(user == nil){
+    if(user == nil && flag == 0){
         UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:@"Welcome to CineMetro" message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:@"Log In",@"Sign Up",nil];
         welcomeMessage.tag = 100;
         [welcomeMessage show];
@@ -42,10 +43,11 @@ int loginStatus;
     // Do any additional setup after loading the view.
 }
 
--(void)LogOut{
+
 //log out button pressed . set user to nil
-        NSLog(@"YES");
-        user = nil;
+-(void)LogOut{
+    user = nil;
+    flag = 1;
 }
 
 
