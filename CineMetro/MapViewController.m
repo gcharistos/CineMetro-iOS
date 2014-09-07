@@ -25,6 +25,7 @@
 UIBarButtonItem *sidebarButton;
 NSMutableArray *redPins ;
 NSMutableArray *overlays;
+BOOL showDirections;
 id<MKOverlay> polyline;
 NSInteger visibleLine;
 NSDictionary *currentDB;
@@ -46,6 +47,7 @@ UIColor *lineColor;
     mapview.delegate = self;
     redPins = [[NSMutableArray alloc]init];
     overlays = [[NSMutableArray alloc]init];
+    showDirections = NO;
     //set region of map
     [self setRegion];
 
@@ -56,7 +58,6 @@ UIColor *lineColor;
 
 
 -(void)UploadRedLine{
-    redPins = [[NSMutableArray alloc]init];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"RedLineStations" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     currentDB = dict;
@@ -111,7 +112,9 @@ UIColor *lineColor;
          ^(MKDirectionsResponse *response, NSError *error) {
              if (error) {
                  // Handle error
+                 showDirections = false;
              } else {
+                 showDirections = true;
                  [self showRoute:response];
              }
          }];
@@ -202,7 +205,8 @@ UIColor *lineColor;
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex == 1 ){
-        if(visibleLine == 1){
+        //if user pressed the same line and route is visible exit
+        if(visibleLine == 1 && showDirections){
             return;
         }
         visibleLine = 1;
@@ -210,11 +214,14 @@ UIColor *lineColor;
     }
     else if(buttonIndex != 0) {
         visibleLine  = buttonIndex;
+        //remove annotations from map
         [mapview removeAnnotations:redPins];
-        //remove each overlay from map
-        for(int i=0;i<overlays.count;i++){
-            [mapview removeOverlay:[overlays objectAtIndex:i]];
-        }
+        // remove all annotations from array
+        [redPins removeAllObjects];
+        
+        //remove all overlays from map
+        [mapview removeOverlays:overlays];
+       
         //remove all overlays from array
         [overlays removeAllObjects];
     }
