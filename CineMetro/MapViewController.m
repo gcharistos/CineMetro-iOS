@@ -8,8 +8,12 @@
 
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
+#import "Reachability.h"
+#import <CoreLocation/CoreLocation.h>
 #import "MapDetailsViewController.h"
 #import "ViewController1.h"
+#import <AddressBook/AddressBook.h>
+
 
 
 @interface MapViewController ()
@@ -20,9 +24,11 @@
 @synthesize mapview;
 UIBarButtonItem *sidebarButton;
 NSMutableArray *redPins ;
-MKPolyline *polyline;
+NSMutableArray *overlays;
+id<MKOverlay> polyline;
 int visibleLine;
 NSDictionary *currentDB;
+UIColor *lineColor;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +45,7 @@ NSDictionary *currentDB;
     visibleLine = -1;
     mapview.delegate = self;
     redPins = [[NSMutableArray alloc]init];
+    overlays = [[NSMutableArray alloc]init];
     //set region of map
     [self setRegion];
 
@@ -68,40 +75,74 @@ NSDictionary *currentDB;
         [mapview addAnnotation:myAnnotation];
         [redPins addObject:myAnnotation];
     }
-    
-    //draw red line
-    //[self drawLine:redPins];
-    
-}
-- (void)drawLine:(NSMutableArray *)pins {
-   
-    
-    // create an array of coordinates from allPins
-    CLLocationCoordinate2D coordinates[pins.count];
-    int i = 0;
-    for (MKPointAnnotation *currentPin in pins) {
-        coordinates[i] = currentPin.coordinate;
-        i++;
+    BOOL check = [self checkForNetwork];
+    if(!check || ![CLLocationManager locationServicesEnabled]){
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please Enable Location Services and Internet Connection to Show Route for Line" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    else{
+        lineColor = [UIColor redColor];
+        [self getDirections];
     }
     
-    // create a polyline with all cooridnates
-    polyline = [MKPolyline polylineWithCoordinates:coordinates count:pins.count];
-    [self.mapview addOverlay:polyline];
-    
-    
-    
 }
-//set polyline appearance
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
-    MKPolylineView *polylineView = [[MKPolylineView alloc] initWithPolyline:overlay];
-    NSString *colorDB = [currentDB objectForKey:@"Color"];
-    if([colorDB isEqualToString:@"red"]){
-       polylineView.strokeColor = [UIColor redColor];
+
+//  ************ ONLY WHEN USER ENABLES INTERNET CONNECTION ************ //
+
+- (void)getDirections
+{
+    for(int i=0 ;i<redPins.count-1;i++){
+        MKDirectionsRequest *request =
+        [[MKDirectionsRequest alloc] init];
+        request.transportType =MKDirectionsTransportTypeWalking;
+        MKPointAnnotation *ann = (MKPointAnnotation *)[redPins objectAtIndex:i];
+        MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:ann.coordinate addressDictionary:nil];
+        MKMapItem *item = [[MKMapItem alloc]initWithPlacemark:placemark];
+        request.source = item;
+        MKPointAnnotation *ann1 = (MKPointAnnotation *)[redPins objectAtIndex:i+1];
+        MKPlacemark *placemark1 = [[MKPlacemark alloc]initWithCoordinate:ann1.coordinate addressDictionary:nil];
+        MKMapItem *item1 = [[MKMapItem alloc]initWithPlacemark:placemark1];
+        request.destination = item1;
+        request.requestsAlternateRoutes = NO;
+        MKDirections *directions =
+        [[MKDirections alloc] initWithRequest:request];
+        
+        [directions calculateDirectionsWithCompletionHandler:
+         ^(MKDirectionsResponse *response, NSError *error) {
+             if (error) {
+                 // Handle error
+             } else {
+                 [self showRoute:response];
+             }
+         }];
     }
-    polylineView.lineWidth = 7.0;
-    
-    return polylineView;
 }
+
+-(void)showRoute:(MKDirectionsResponse *)response
+{
+    for (MKRoute *route in response.routes)
+    {
+        [mapview
+         addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
+        
+        for (MKRouteStep *step in route.steps)
+        {
+            NSLog(@"%@", step.instructions);
+        }
+    }
+}
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
+{
+    MKPolylineRenderer *renderer =
+    [[MKPolylineRenderer alloc] initWithOverlay:overlay];
+    renderer.strokeColor = lineColor;
+    renderer.lineWidth = 5.0;
+    [overlays addObject:overlay];
+    return renderer;
+}
+
+
 
 //set custom annotation view to support callout accessory control mode
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
@@ -109,10 +150,9 @@ NSDictionary *currentDB;
     if(annotation == mapView.userLocation){
         return nil;
     }
-    MKAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
+    MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
     annotationView.canShowCallout = YES;
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    
     return annotationView;
 }
 
@@ -122,6 +162,8 @@ NSDictionary *currentDB;
     // Dispose of any resources that can be recreated.
 }
 
+
+//Method set initial Region for preview
 -(void)setRegion{
     CLLocationCoordinate2D coord = {40.641142,22.934721};
     MKCoordinateSpan span = {0.05,0.05};
@@ -130,13 +172,13 @@ NSDictionary *currentDB;
 }
 
 
-
+//Method checks if user location services are enabled then show user location to map
 -(void)showUserLocation{
     if([CLLocationManager locationServicesEnabled]){
       mapview.showsUserLocation = YES;
     }
     else{
-        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:@"" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:@"Please Enable Location Services to Show Current Location" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [disabled show];
     }
 
@@ -165,10 +207,42 @@ NSDictionary *currentDB;
     }
     else if(buttonIndex != 0) {
         [mapview removeAnnotations:redPins];
-        [mapview removeOverlay:polyline];
+        //remove each overlay from map
+        for(int i=0;i<overlays.count;i++){
+            [mapview removeOverlay:[overlays objectAtIndex:i]];
+        }
+        //remove all overlays from array
+        [overlays removeAllObjects];
     }
     
 }
+
+- (BOOL)checkForNetwork
+{
+    // check if we've got network connectivity
+    Reachability *myNetwork = [Reachability reachabilityWithHostName:@"www.google.com"];
+    NetworkStatus myStatus = [myNetwork currentReachabilityStatus];
+    BOOL status;
+    switch (myStatus) {
+        case NotReachable:{
+            status = false;
+            break;
+        }
+        case ReachableViaWWAN:{
+            status = true;
+            break;
+        }
+        case ReachableViaWiFi:{
+            status = true;
+            break;
+        }
+        default:
+            status = false;
+            break;
+    }
+    return  status;
+}
+
 
 #pragma mark - Navigation
 

@@ -760,14 +760,6 @@
             </objects>
             <point key="canvasLocation" x="2771" y="494"/>
         </scene>
-        <!--Page View Controller-->
-        <scene sceneID="Iy1-3Q-vxN">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="4aK-7d-eaL" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qf3-68-x3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1019" y="-1503"/>
-        </scene>
         <!--Map View Controller - Map-->
         <scene sceneID="Xxb-hE-wbC">
             <objects>
@@ -814,6 +806,7 @@
         <!--Map Details View Controller-->
         <scene sceneID="aic-gd-aaJ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gvt-BR-Wca" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="6Uz-Y3-C6g" customClass="MapDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6ru-b8-P1i"/>
@@ -852,111 +845,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Y9-Xg-m2h"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gvt-BR-Wca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="526" y="-1562"/>
-        </scene>
-        <!--Map Settings View Controller - Settings-->
-        <scene sceneID="GyD-Bf-nla">
-            <objects>
-                <viewController id="Mqf-b5-Zez" customClass="MapSettingsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7Oi-5d-wyx"/>
-                        <viewControllerLayoutGuide type="bottom" id="MPe-Et-2kN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fnc-Iq-IRF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Στάσεις" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHd-bS-lKX">
-                                <rect key="frame" x="20" y="100" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yH1-m8-pFC">
-                                <rect key="frame" x="136" y="95" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="stationSwitchChanged:" destination="Mqf-b5-Zez" eventType="valueChanged" id="fhb-Dh-KI7"/>
-                                </connections>
-                            </switch>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Κόκκινη" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTV-cE-b1m">
-                                <rect key="frame" x="20" y="166" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Μπλέ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFW-tv-COx">
-                                <rect key="frame" x="20" y="235" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Πράσινη" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-eN-1QL">
-                                <rect key="frame" x="20" y="302" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Πορτοκαλί" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNj-dM-GBh">
-                                <rect key="frame" x="20" y="368" width="82" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fNH-ty-Aoh">
-                                <rect key="frame" x="136" y="156" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="redSwitchChanged:" destination="Mqf-b5-Zez" eventType="valueChanged" id="RAv-VH-2iR"/>
-                                </connections>
-                            </switch>
-                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y0k-Wf-jsT">
-                                <rect key="frame" x="136" y="224" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="blueSwitchChanged:" destination="Mqf-b5-Zez" eventType="valueChanged" id="tlf-zi-87X"/>
-                                </connections>
-                            </switch>
-                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O8Y-q5-K8R">
-                                <rect key="frame" x="136" y="292" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="greenSwitchChanged:" destination="Mqf-b5-Zez" eventType="valueChanged" id="cFI-Jd-cTf"/>
-                                </connections>
-                            </switch>
-                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Szc-T4-jxH">
-                                <rect key="frame" x="136" y="358" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="orangeSwitchChanged:" destination="Mqf-b5-Zez" eventType="valueChanged" id="uNk-5K-MKs"/>
-                                </connections>
-                            </switch>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Settings" id="MXC-hj-I5p"/>
-                    <connections>
-                        <outlet property="blueLabel" destination="mFW-tv-COx" id="pyC-Io-hel"/>
-                        <outlet property="blueSwitch" destination="Y0k-Wf-jsT" id="zHg-bW-6uD"/>
-                        <outlet property="greenLabel" destination="8ZL-eN-1QL" id="tQd-Xb-npe"/>
-                        <outlet property="greenSwitch" destination="O8Y-q5-K8R" id="yQh-e0-KKf"/>
-                        <outlet property="orangeLabel" destination="PNj-dM-GBh" id="dTb-Uv-H3d"/>
-                        <outlet property="orangeSwitch" destination="Szc-T4-jxH" id="2Fm-Z5-FTy"/>
-                        <outlet property="redLabel" destination="lTV-cE-b1m" id="xgA-Ki-tno"/>
-                        <outlet property="redSwitch" destination="fNH-ty-Aoh" id="yub-jg-6Xp"/>
-                        <outlet property="stationSwitch" destination="yH1-m8-pFC" id="OXb-s4-obv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VeQ-lZ-9jL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1496" y="-1419"/>
         </scene>
         <!--Create New Account View Controller-->
         <scene sceneID="Jjh-aU-62V">
