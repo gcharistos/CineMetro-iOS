@@ -26,7 +26,7 @@ UIBarButtonItem *sidebarButton;
 NSMutableArray *redPins ;
 NSMutableArray *overlays;
 id<MKOverlay> polyline;
-int visibleLine;
+NSInteger visibleLine;
 NSDictionary *currentDB;
 UIColor *lineColor;
 
@@ -202,10 +202,14 @@ UIColor *lineColor;
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex == 1 ){
+        if(visibleLine == 1){
+            return;
+        }
         visibleLine = 1;
         [self UploadRedLine];
     }
     else if(buttonIndex != 0) {
+        visibleLine  = buttonIndex;
         [mapview removeAnnotations:redPins];
         //remove each overlay from map
         for(int i=0;i<overlays.count;i++){
