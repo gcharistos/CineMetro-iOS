@@ -25,9 +25,9 @@
 		1F276BD2196795E3008735B1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD1196795E3008735B1 /* MobileCoreServices.framework */; };
 		1F276BD4196795F1008735B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD3196795F1008735B1 /* QuartzCore.framework */; };
 		1F276BD6196795FD008735B1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD5196795FD008735B1 /* Security.framework */; };
-		1F276BD819679607008735B1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD719679607008735B1 /* StoreKit.framework */; };
 		1F276BDA1967960D008735B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD91967960D008735B1 /* SystemConfiguration.framework */; };
 		1F276BDD1967989C008735B1 /* OrangeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */; };
+		1F29B5BF19BDF7D90036B2C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */; };
 		1F370D2C19753ADC003FB972 /* GreenLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F370D2B19753ADC003FB972 /* GreenLineStations.plist */; };
 		1F464DB319B8C85700389827 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F464DB219B8C85700389827 /* CustomTableViewCell.m */; };
 		1F464DD419B8C8B100389827 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F464DC919B8C8B100389827 /* NSMutableArray+SWUtilityButtons.m */; };
@@ -81,15 +81,12 @@
 		1F70653D196768DA009CB35C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653C196768DA009CB35C /* Foundation.framework */; };
 		1F70653F196768DA009CB35C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653E196768DA009CB35C /* CoreGraphics.framework */; };
 		1F706541196768DA009CB35C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F706540196768DA009CB35C /* UIKit.framework */; };
-		1F706547196768DA009CB35C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F706545196768DA009CB35C /* InfoPlist.strings */; };
 		1F706549196768DA009CB35C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F706548196768DA009CB35C /* main.m */; };
 		1F70654D196768DA009CB35C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70654C196768DA009CB35C /* AppDelegate.m */; };
-		1F706550196768DA009CB35C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F70654E196768DA009CB35C /* Main.storyboard */; };
 		1F706555196768DA009CB35C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F706554196768DA009CB35C /* Images.xcassets */; };
 		1F70655C196768DA009CB35C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70655B196768DA009CB35C /* XCTest.framework */; };
 		1F70655D196768DA009CB35C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653C196768DA009CB35C /* Foundation.framework */; };
 		1F70655E196768DA009CB35C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F706540196768DA009CB35C /* UIKit.framework */; };
-		1F706566196768DA009CB35C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F706564196768DA009CB35C /* InfoPlist.strings */; };
 		1F706568196768DA009CB35C /* CineMetroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F706567196768DA009CB35C /* CineMetroTests.m */; };
 		1F706573196768E8009CB35C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F706572196768E8009CB35C /* MainViewController.m */; };
 		1F706575196769DB009CB35C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F706574196769DB009CB35C /* MapKit.framework */; };
@@ -122,6 +119,10 @@
 		1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F996E0719AD15AD004675BB /* TabBarViewController.m */; };
 		1FA9023719B87DDD00149EAD /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA9023519B87DDD00149EAD /* ViewController1.m */; };
 		1FA9023819B87DDD00149EAD /* ViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA9023619B87DDD00149EAD /* ViewController1.xib */; };
+		1FAE04E119BD073800E45EF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE04E019BD073800E45EF4 /* ViewController.m */; };
+		1FAE04E419BD077900E45EF4 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE04E319BD077900E45EF4 /* PageContentViewController.m */; };
+		1FAFB7C119BE4BCC0004B844 /* English.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FAFB7C319BE4BCC0004B844 /* English.strings */; };
+		1FAFB7C619BE4BE60004B844 /* Greek.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FAFB7C819BE4BE60004B844 /* Greek.strings */; };
 		1FB552E9196C456500E11311 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552E8196C456500E11311 /* Accounts.framework */; };
 		1FB552EB196C45CE00E11311 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552EA196C45CE00E11311 /* Social.framework */; };
 		1FF72A82198AC4C30022B08D /* BlueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */; };
@@ -161,10 +162,12 @@
 		1F276BD1196795E3008735B1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1F276BD3196795F1008735B1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1F276BD5196795FD008735B1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		1F276BD719679607008735B1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1F276BD91967960D008735B1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1F276BDB1967989C008735B1 /* OrangeLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeLineTableViewController.h; sourceTree = "<group>"; };
 		1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeLineTableViewController.m; sourceTree = "<group>"; };
+		1F29B5BE19BDF7D90036B2C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F29B5C019BDF7FC0036B2C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		1F29B5C119BDF8000036B2C1 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Main.strings; sourceTree = "<group>"; };
 		1F370D2B19753ADC003FB972 /* GreenLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GreenLineStations.plist; sourceTree = "<group>"; };
 		1F464DB119B8C85700389827 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		1F464DB219B8C85700389827 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
@@ -230,17 +233,14 @@
 		1F70653E196768DA009CB35C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1F706540196768DA009CB35C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1F706544196768DA009CB35C /* CineMetro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CineMetro-Info.plist"; sourceTree = "<group>"; };
-		1F706546196768DA009CB35C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1F706548196768DA009CB35C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1F70654A196768DA009CB35C /* CineMetro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CineMetro-Prefix.pch"; sourceTree = "<group>"; };
 		1F70654B196768DA009CB35C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F70654C196768DA009CB35C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1F70654F196768DA009CB35C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F706554196768DA009CB35C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F70655A196768DA009CB35C /* CineMetroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CineMetroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F70655B196768DA009CB35C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1F706563196768DA009CB35C /* CineMetroTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CineMetroTests-Info.plist"; sourceTree = "<group>"; };
-		1F706565196768DA009CB35C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1F706567196768DA009CB35C /* CineMetroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CineMetroTests.m; sourceTree = "<group>"; };
 		1F706572196768E8009CB35C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1F706574196769DB009CB35C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -281,6 +281,12 @@
 		1FA9023419B87DDD00149EAD /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController1.h; path = ../ViewController1.h; sourceTree = "<group>"; };
 		1FA9023519B87DDD00149EAD /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController1.m; path = ../ViewController1.m; sourceTree = "<group>"; };
 		1FA9023619B87DDD00149EAD /* ViewController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController1.xib; path = ../ViewController1.xib; sourceTree = "<group>"; };
+		1FAE04DF19BD073800E45EF4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1FAE04E019BD073800E45EF4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1FAE04E219BD077900E45EF4 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		1FAE04E319BD077900E45EF4 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		1FAFB7C219BE4BCC0004B844 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/English.strings; sourceTree = "<group>"; };
+		1FAFB7C719BE4BE60004B844 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Greek.strings; sourceTree = "<group>"; };
 		1FB552E8196C456500E11311 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1FB552EA196C45CE00E11311 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1FF72A80198AC4C30022B08D /* BlueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueDetailsViewController.h; sourceTree = "<group>"; };
@@ -297,7 +303,6 @@
 				1FB552EB196C45CE00E11311 /* Social.framework in Frameworks */,
 				1FB552E9196C456500E11311 /* Accounts.framework in Frameworks */,
 				1F276BDA1967960D008735B1 /* SystemConfiguration.framework in Frameworks */,
-				1F276BD819679607008735B1 /* StoreKit.framework in Frameworks */,
 				1F276BD6196795FD008735B1 /* Security.framework in Frameworks */,
 				1F276BD4196795F1008735B1 /* QuartzCore.framework in Frameworks */,
 				1F276BD2196795E3008735B1 /* MobileCoreServices.framework in Frameworks */,
@@ -525,6 +530,10 @@
 		1F706530196768DA009CB35C = {
 			isa = PBXGroup;
 			children = (
+				1FAE04E219BD077900E45EF4 /* PageContentViewController.h */,
+				1FAE04E319BD077900E45EF4 /* PageContentViewController.m */,
+				1FAE04DF19BD073800E45EF4 /* ViewController.h */,
+				1FAE04E019BD073800E45EF4 /* ViewController.m */,
 				1F464DDC19B8CB6600389827 /* images */,
 				1F464DB119B8C85700389827 /* CustomTableViewCell.h */,
 				1F464DB219B8C85700389827 /* CustomTableViewCell.m */,
@@ -551,7 +560,6 @@
 				1FB552EA196C45CE00E11311 /* Social.framework */,
 				1FB552E8196C456500E11311 /* Accounts.framework */,
 				1F276BD91967960D008735B1 /* SystemConfiguration.framework */,
-				1F276BD719679607008735B1 /* StoreKit.framework */,
 				1F276BD5196795FD008735B1 /* Security.framework */,
 				1F276BD3196795F1008735B1 /* QuartzCore.framework */,
 				1F276BD1196795E3008735B1 /* MobileCoreServices.framework */,
@@ -587,8 +595,8 @@
 				1F12C99E19B7D2410024CAD5 /* GreenLine */,
 				1FFF0BCF1974651B00FE59D2 /* Images */,
 				1F12C9A919B7D9680024CAD5 /* External Libraries */,
+				1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */,
 				1F706554196768DA009CB35C /* Images.xcassets */,
-				1F70654E196768DA009CB35C /* Main.storyboard */,
 				1F706543196768DA009CB35C /* Supporting Files */,
 			);
 			path = CineMetro;
@@ -598,7 +606,8 @@
 			isa = PBXGroup;
 			children = (
 				1F706544196768DA009CB35C /* CineMetro-Info.plist */,
-				1F706545196768DA009CB35C /* InfoPlist.strings */,
+				1FAFB7C819BE4BE60004B844 /* Greek.strings */,
+				1FAFB7C319BE4BCC0004B844 /* English.strings */,
 				1F706548196768DA009CB35C /* main.m */,
 				1F70654A196768DA009CB35C /* CineMetro-Prefix.pch */,
 			);
@@ -618,7 +627,6 @@
 			isa = PBXGroup;
 			children = (
 				1F706563196768DA009CB35C /* CineMetroTests-Info.plist */,
-				1F706564196768DA009CB35C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -710,6 +718,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "George Haristos";
 				TargetAttributes = {
+					1F706538196768DA009CB35C = {
+						DevelopmentTeam = 4PL2AJXLL6;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
 					1F706559196768DA009CB35C = {
 						TestTargetID = 1F706538196768DA009CB35C;
 					};
@@ -722,6 +738,7 @@
 			knownRegions = (
 				en,
 				Base,
+				el,
 			);
 			mainGroup = 1F706530196768DA009CB35C;
 			productRefGroup = 1F70653A196768DA009CB35C /* Products */;
@@ -751,10 +768,10 @@
 				1F464DF219B8CB7E00389827 /* facebook@2x.png in Resources */,
 				1F464DF319B8CB7E00389827 /* green-goblin.png in Resources */,
 				1F48BDEE199AB36900BD30C0 /* green62.jpg in Resources */,
+				1F29B5BF19BDF7D90036B2C1 /* Main.storyboard in Resources */,
 				1F464DFE19B8CB8A00389827 /* message@2x.png in Resources */,
 				1F9362A51988F6320088A0BF /* red11.jpg in Resources */,
 				1F48BDE9199AB34B00BD30C0 /* green52.jpg in Resources */,
-				1F706547196768DA009CB35C /* InfoPlist.strings in Resources */,
 				1F48BDDB199AB30300BD30C0 /* green21.jpg in Resources */,
 				1F9362A71988F6320088A0BF /* red13.jpg in Resources */,
 				1FA9023819B87DDD00149EAD /* ViewController1.xib in Resources */,
@@ -765,6 +782,7 @@
 				1F464DF019B8CB7E00389827 /* canvas-orange.jpg in Resources */,
 				1F6AED8619AA5DEA000490DD /* mainBackground.jpg in Resources */,
 				1F48BDE1199AB31900BD30C0 /* green32.jpg in Resources */,
+				1FAFB7C119BE4BCC0004B844 /* English.strings in Resources */,
 				1F464DF919B8CB7E00389827 /* neon-autumn.gif in Resources */,
 				1F9362BF1988F6560088A0BF /* red43.jpg in Resources */,
 				1F9362B01988F63D0088A0BF /* red24.jpg in Resources */,
@@ -785,7 +803,6 @@
 				1F464DF519B8CB7E00389827 /* hotdogs.jpg in Resources */,
 				1F1127DF198AD56200BB0F8E /* BlueLineStations.plist in Resources */,
 				1F48BDEF199AB36900BD30C0 /* green63.jpg in Resources */,
-				1F706550196768DA009CB35C /* Main.storyboard in Resources */,
 				1F48BDD5199AB2E800BD30C0 /* green11.jpg in Resources */,
 				1F93629F1988F6250088A0BF /* red01.jpg in Resources */,
 				1F48BDD0199AB2C400BD30C0 /* green01.jpg in Resources */,
@@ -806,6 +823,7 @@
 				1F48BDD7199AB2E800BD30C0 /* green13.jpg in Resources */,
 				1F464DED19B8CB7E00389827 /* ahoy.jpg in Resources */,
 				1F9362B91988F6490088A0BF /* red34.jpg in Resources */,
+				1FAFB7C619BE4BE60004B844 /* Greek.strings in Resources */,
 				1F48BDD6199AB2E800BD30C0 /* green12.jpg in Resources */,
 				1F370D2C19753ADC003FB972 /* GreenLineStations.plist in Resources */,
 			);
@@ -815,7 +833,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F706566196768DA009CB35C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,6 +857,7 @@
 				1F464DD519B8C8B100389827 /* SWCellScrollView.m in Sources */,
 				1FA9023719B87DDD00149EAD /* ViewController1.m in Sources */,
 				1F464E0119B9182E00389827 /* MBProgressHUD.m in Sources */,
+				1FAE04E119BD073800E45EF4 /* ViewController.m in Sources */,
 				1F70658419678116009CB35C /* MapViewController.m in Sources */,
 				1F6AED7919AA10BF000490DD /* ProfileViewController.m in Sources */,
 				1F242E0A19AA833F00E1698C /* AboutTableViewController.m in Sources */,
@@ -850,6 +868,7 @@
 				1F464DB319B8C85700389827 /* CustomTableViewCell.m in Sources */,
 				1F12C9A819B7D5850024CAD5 /* Reachability.m in Sources */,
 				1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */,
+				1FAE04E419BD077900E45EF4 /* PageContentViewController.m in Sources */,
 				1F70657E1967708C009CB35C /* BlueLineTableViewController.m in Sources */,
 				1F706549196768DA009CB35C /* main.m in Sources */,
 				1F706573196768E8009CB35C /* MainViewController.m in Sources */,
@@ -875,28 +894,32 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1F706545196768DA009CB35C /* InfoPlist.strings */ = {
+		1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1F706546196768DA009CB35C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		1F70654E196768DA009CB35C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1F70654F196768DA009CB35C /* Base */,
+				1F29B5BE19BDF7D90036B2C1 /* Base */,
+				1F29B5C019BDF7FC0036B2C1 /* en */,
+				1F29B5C119BDF8000036B2C1 /* el */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1F706564196768DA009CB35C /* InfoPlist.strings */ = {
+		1FAFB7C319BE4BCC0004B844 /* English.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1F706565196768DA009CB35C /* en */,
+				1FAFB7C219BE4BCC0004B844 /* en */,
 			);
-			name = InfoPlist.strings;
+			name = English.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		1FAFB7C819BE4BE60004B844 /* Greek.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FAFB7C719BE4BE60004B844 /* el */,
+			);
+			name = Greek.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -977,6 +1000,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -984,6 +1008,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";
 				INFOPLIST_FILE = "CineMetro/CineMetro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -994,6 +1019,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1001,6 +1027,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";
 				INFOPLIST_FILE = "CineMetro/CineMetro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

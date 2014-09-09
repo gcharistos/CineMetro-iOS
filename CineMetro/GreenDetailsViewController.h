@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *textview;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)rateButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *movieTitle;
 
 @end

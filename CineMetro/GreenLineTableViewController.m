@@ -37,18 +37,6 @@ NSInteger  selectedIndex ;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
-    titles = [[NSMutableArray alloc]init];
-    NSString *title;
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"GreenLineStations" ofType:@"plist"];
-    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
-    NSArray *anns = [dict objectForKey:@"Stations"];
-    [nameLabel setText:[dict objectForKey:@"Name"]];
-    station = anns; // initialize station variable
-    for(int i=0;i<anns.count;i++){
-        title = [[anns objectAtIndex:i]objectForKey:@"Title"];
-        NSLog(title);
-        [titles addObject:title];
-    }
     
 
 
@@ -58,6 +46,22 @@ NSInteger  selectedIndex ;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    titles = [[NSMutableArray alloc]init];
+    selectedIndex = -1;
+    NSString *title;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"GreenLineStations" ofType:@"plist"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSArray *anns = [dict objectForKey:@"Stations"];
+    [nameLabel setText:[dict objectForKey:@"Name"]];
+    station = anns; // initialize station variable
+    for(int i=0;i<anns.count;i++){
+        title = [[anns objectAtIndex:i]objectForKey:@"Title"];
+        [titles addObject:title];
+    }
+
 }
 
 
@@ -99,7 +103,7 @@ NSInteger  selectedIndex ;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     selectedIndex = indexPath.row;
-    [self performSegueWithIdentifier:@"detailSegue" sender:nil];
+    [self performSegueWithIdentifier:@"detailSegue2" sender:nil];
     
 }
 
@@ -147,7 +151,7 @@ NSInteger  selectedIndex ;
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"detailSegue"]){
+    if([segue.identifier isEqualToString:@"detailSegue2"]){
         GreenDetailsViewController *dest = segue.destinationViewController;
         dest.position = selectedIndex;
     }}

@@ -35,8 +35,18 @@ NSMutableArray *titles;
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
     //initialize selectedIndex variable
     selectedIndex = -1;
+
     titles = [[NSMutableArray alloc]init];
     NSString *title;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"RedLineStations" ofType:@"plist"];
@@ -46,18 +56,13 @@ NSMutableArray *titles;
     station = anns; // initialize station variable
     for(int i=0;i<anns.count;i++){
         title = [[anns objectAtIndex:i]objectForKey:@"Title"];
-        NSLog(title);
         [titles addObject:title];
     }
-      
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView reloadData];
+
 }
+
+
 
 -(void)onSwipeLeft:(UISwipeGestureRecognizer *)recognizer{
     NSLog(@"SDADASD");
@@ -123,7 +128,7 @@ NSMutableArray *titles;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     selectedIndex = indexPath.row;
-    [self performSegueWithIdentifier:@"detailSegue" sender:nil];
+    [self performSegueWithIdentifier:@"detailSegue1" sender:nil];
 
 }
 
@@ -204,7 +209,7 @@ NSMutableArray *titles;
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"detailSegue"]){
+    if([segue.identifier isEqualToString:@"detailSegue1"]){
       RedDetailsViewController *dest = segue.destinationViewController;
       dest.station = [station objectAtIndex:selectedIndex];
     }

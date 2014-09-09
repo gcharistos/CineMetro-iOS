@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RedDetailsViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>
+@interface RedDetailsViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate,UIScrollViewDelegate>
 @property NSDictionary *station;
 @property (weak, nonatomic) IBOutlet UITextView *textview;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 - (IBAction)rateButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *theaterTitle;
 
 @end

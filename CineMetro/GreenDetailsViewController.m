@@ -7,6 +7,7 @@
 //
 
 #import "GreenDetailsViewController.h"
+#import "ViewController.h"
 
 @interface GreenDetailsViewController ()
 @property NSInteger position1;
@@ -17,6 +18,7 @@
 @synthesize position1;
 @synthesize position;
 @synthesize textview;
+@synthesize movieTitle;
 NSMutableArray *images;
 NSArray *currentList;
 
@@ -41,10 +43,13 @@ NSArray *currentList;
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     NSArray *anns = [dict objectForKey:@"Stations"];
     currentList = anns;
-    self.navigationItem.title =[[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
+    //self.navigationItem.title =[[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
+    movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
     textview.text = [[anns objectAtIndex:position1]objectForKey:@"text"];
     images = [[anns objectAtIndex:position1]objectForKey:@"Images"];
-    NSLog(@"%i",images.count);
+
+    [self performSegueWithIdentifier:@"showPhotos" sender:self];
+
 
     // Do any additional setup after loading the view.
 }
@@ -57,11 +62,17 @@ NSArray *currentList;
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(alertView.tag == 100 && buttonIndex != 0){
-        NSLog(@"%i",buttonIndex);
         UIAlertView *rate = [[UIAlertView alloc]initWithTitle:@"Ευχαριστούμε Πολύ" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [rate show];
         
     }
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    if(images.count == 0 && [identifier isEqualToString:@"showPhotos"]){
+        return NO;
+    }
+    return YES;
 }
 
 
@@ -90,16 +101,30 @@ NSArray *currentList;
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if([segue.identifier isEqualToString:@"showPhotos"]){
+        ViewController *dest = segue.destinationViewController;
+        if(images.count != 0){
+            dest.pageImages = [[NSArray alloc]initWithArray:images];
+        }
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+
+   
 }
-*/
+
+-(void)viewDidDisappear:(BOOL)animated{
+    images = nil;
+   // [[[self childViewControllers]objectAtIndex:0] removeFromParentViewController];
+    
+}
+
 
 
 @end

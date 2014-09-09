@@ -1,0 +1,207 @@
+
+/* Class = "IBUILabel"; text = "Login"; ObjectID = "189-hT-MYi"; */
+"189-hT-MYi.text" = "Login";
+
+/* Class = "IBUILabel"; text = "Soon"; ObjectID = "1T0-Gu-Jjr"; */
+"1T0-Gu-Jjr.text" = "Soon";
+
+/* Class = "IBUILabel"; text = "CineMetro"; ObjectID = "1vY-nk-4C6"; */
+"1vY-nk-4C6.text" = "CineMetro";
+
+/* Class = "IBUITextField"; placeholder = "Username"; ObjectID = "1wD-F6-Igz"; */
+"1wD-F6-Igz.placeholder" = "Username";
+
+/* Class = "IBUILabel"; text = "Create New Account"; ObjectID = "261-R0-g54"; */
+"261-R0-g54.text" = "Create New Account";
+
+/* Class = "IBUIButton"; normalTitle = "About"; ObjectID = "2ef-NK-vV9"; */
+"2ef-NK-vV9.normalTitle" = "About";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "3ae-zk-Ss6"; */
+"3ae-zk-Ss6.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "6qp-2v-BVI"; */
+"6qp-2v-BVI.text" = "Label";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "71W-IK-XET"; */
+"71W-IK-XET.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "IBUILabel"; text = "Email : "; ObjectID = "7bO-vM-HB9"; */
+"7bO-vM-HB9.text" = "Email : ";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "8Sv-dA-JRY"; */
+"8Sv-dA-JRY.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "IBUILabel"; text = "Show Map Station Data"; ObjectID = "ALj-sS-2wZ"; */
+"ALj-sS-2wZ.text" = "Show Map Station Data";
+
+/* Class = "IBUILabel"; text = " /  6"; ObjectID = "Ak1-Ct-MFY"; */
+"Ak1-Ct-MFY.text" = " /  6";
+
+/* Class = "IBUITabBarItem"; title = "Orange Line"; ObjectID = "At7-dz-FVU"; */
+"At7-dz-FVU.title" = "Orange Line";
+
+/* Class = "IBUILabel"; text = "Points : "; ObjectID = "AwB-DR-FYX"; */
+"AwB-DR-FYX.text" = "Points : ";
+
+/* Class = "IBUINavigationItem"; title = "Home"; ObjectID = "CnT-2d-9IJ"; */
+"CnT-2d-9IJ.title" = "Home";
+
+/* Class = "IBUITextField"; placeholder = "Password"; ObjectID = "E1n-rs-Dgu"; */
+"E1n-rs-Dgu.placeholder" = "Password";
+
+/* Class = "IBUILabel"; text = "Red Line : "; ObjectID = "Ee5-R7-1P7"; */
+"Ee5-R7-1P7.text" = "Red Line : ";
+
+/* Class = "IBUILabel"; text = "Άδειες "; ObjectID = "FIL-VT-FZP"; */
+"FIL-VT-FZP.text" = "Άδειες ";
+
+/* Class = "IBUITextField"; placeholder = "Passsword"; ObjectID = "FUg-EC-AvE"; */
+"FUg-EC-AvE.placeholder" = "Passsword";
+
+/* Class = "IBUILabel"; text = " /  8"; ObjectID = "IuH-3p-QDa"; */
+"IuH-3p-QDa.text" = " /  8";
+
+/* Class = "IBUIButton"; normalTitle = "Take Profile Photo"; ObjectID = "K4w-Ff-f8y"; */
+"K4w-Ff-f8y.normalTitle" = "Take Profile Photo";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "Mbc-ep-OL5"; */
+"Mbc-ep-OL5.text" = "Label";
+
+/* Class = "IBUIBarButtonItem"; title = "Rate"; ObjectID = "Mwz-GD-7r2"; */
+"Mwz-GD-7r2.title" = "Rate";
+
+/* Class = "IBUILabel"; text = "Green Line : "; ObjectID = "NTU-Ek-nnz"; */
+"NTU-Ek-nnz.text" = "Green Line : ";
+
+/* Class = "IBUITabBarItem"; title = "Red Line"; ObjectID = "NUQ-Vq-nJi"; */
+"NUQ-Vq-nJi.title" = "Red Line";
+
+/* Class = "IBUIButton"; normalTitle = "Log Out"; ObjectID = "O93-cU-edO"; */
+"O93-cU-edO.normalTitle" = "Log Out";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "OqF-sr-I6V"; */
+"OqF-sr-I6V.text" = "Label";
+
+/* Class = "IBUITextField"; placeholder = "Email"; ObjectID = "Pwj-r8-9fT"; */
+"Pwj-r8-9fT.placeholder" = "Email";
+
+/* Class = "IBUILabel"; text = "Stations Unlocked : "; ObjectID = "QeY-LX-rWq"; */
+"QeY-LX-rWq.text" = "Stations Unlocked : ";
+
+/* Class = "IBUIButton"; normalTitle = "Login"; ObjectID = "VDX-4Z-9hG"; */
+"VDX-4Z-9hG.normalTitle" = "Login";
+
+/* Class = "IBUINavigationItem"; title = "Navigation"; ObjectID = "VaG-AI-vlh"; */
+"VaG-AI-vlh.title" = "Navigation";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "VvR-Vu-iHK"; */
+"VvR-Vu-iHK.text" = "Label";
+
+/* Class = "IBUILabel"; text = "George Haristos"; ObjectID = "WGu-gJ-jbu"; */
+"WGu-gJ-jbu.text" = "George Haristos";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "XGk-TS-3pH"; */
+"XGk-TS-3pH.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Blue Line : "; ObjectID = "Z4j-dH-Vr1"; */
+"Z4j-dH-Vr1.text" = "Blue Line : ";
+
+/* Class = "IBUILabel"; text = "Total : "; ObjectID = "aKl-d3-jx0"; */
+"aKl-d3-jx0.text" = "Total : ";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "bG5-Dd-2Oq"; */
+"bG5-Dd-2Oq.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "bKi-NP-eRF"; */
+"bKi-NP-eRF.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "cc0-ni-UIo"; */
+"cc0-ni-UIo.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "dOU-LY-BXD"; */
+"dOU-LY-BXD.text" = "Label";
+
+/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "ee3-nk-PJH"; */
+"ee3-nk-PJH.normalTitle" = "Cancel";
+
+/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "fAS-UG-Cvd"; */
+"fAS-UG-Cvd.normalTitle" = "Cancel";
+
+/* Class = "IBUILabel"; text = "Προγραμματιστής  "; ObjectID = "fVP-y5-oXE"; */
+"fVP-y5-oXE.text" = "Προγραμματιστής  ";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "hJA-V2-HT7"; */
+"hJA-V2-HT7.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "IBUINavigationItem"; title = "About"; ObjectID = "hwI-e9-RFb"; */
+"hwI-e9-RFb.title" = "About";
+
+/* Class = "IBUIBarButtonItem"; title = "Profile"; ObjectID = "izI-d6-cCF"; */
+"izI-d6-cCF.title" = "Profile";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "jDC-98-ktb"; */
+"jDC-98-ktb.text" = "Label";
+
+/* Class = "IBUILabel"; text = "v 1.0"; ObjectID = "kcj-Lr-J9b"; */
+"kcj-Lr-J9b.text" = "v 1.0";
+
+/* Class = "IBUIButton"; normalTitle = "Lines"; ObjectID = "kdV-sb-6ii"; */
+"kdV-sb-6ii.normalTitle" = "Lines";
+
+/* Class = "IBUIBarButtonItem"; title = "Rate"; ObjectID = "lgw-wR-jbP"; */
+"lgw-wR-jbP.title" = "Rate";
+
+/* Class = "IBUILabel"; text = "Επικοινωνία  "; ObjectID = "mlN-ip-7UX"; */
+"mlN-ip-7UX.text" = "Επικοινωνία  ";
+
+/* Class = "IBUINavigationItem"; title = "Lines"; ObjectID = "oNA-oD-L7i"; */
+"oNA-oD-L7i.title" = "Lines";
+
+/* Class = "IBUILabel"; text = "Orange Line : "; ObjectID = "q9k-v7-ZCk"; */
+"q9k-v7-ZCk.text" = "Orange Line : ";
+
+/* Class = "IBUILabel"; text = "Έκδοση  "; ObjectID = "qa5-5Z-ha7"; */
+"qa5-5Z-ha7.text" = "Έκδοση  ";
+
+/* Class = "IBUIButton"; normalTitle = "Send Email"; ObjectID = "qab-B0-msV"; */
+"qab-B0-msV.normalTitle" = "Send Email";
+
+/* Class = "IBUIButton"; normalTitle = "FootPrint"; ObjectID = "rbH-4a-2g3"; */
+"rbH-4a-2g3.normalTitle" = "FootPrint";
+
+/* Class = "IBUIButton"; normalTitle = "Sign Up"; ObjectID = "rlz-9m-RJk"; */
+"rlz-9m-RJk.normalTitle" = "Sign Up";
+
+/* Class = "IBUITabBarItem"; title = "Green Line"; ObjectID = "sLo-Er-z5V"; */
+"sLo-Er-z5V.title" = "Green Line";
+
+/* Class = "IBUIBarButtonItem"; title = "Settings"; ObjectID = "si6-Ax-lzK"; */
+"si6-Ax-lzK.title" = "Settings";
+
+/* Class = "IBUIButton"; normalTitle = "Directions"; ObjectID = "snE-ey-u6j"; */
+"snE-ey-u6j.normalTitle" = "Directions";
+
+/* Class = "IBUINavigationItem"; title = "Profile"; ObjectID = "tS5-Rf-vT0"; */
+"tS5-Rf-vT0.title" = "Profile";
+
+/* Class = "IBUIButton"; normalTitle = "Create"; ObjectID = "uZF-pP-K45"; */
+"uZF-pP-K45.normalTitle" = "Create";
+
+/* Class = "IBUIButton"; normalTitle = "Navigation"; ObjectID = "wIw-Ul-11C"; */
+"wIw-Ul-11C.normalTitle" = "Navigation";
+
+/* Class = "IBUIButton"; normalTitle = "Update"; ObjectID = "wql-3i-ECn"; */
+"wql-3i-ECn.normalTitle" = "Update";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "yGp-hw-JsV"; */
+"yGp-hw-JsV.text" = "Label";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "yZ9-gs-e65"; */
+"yZ9-gs-e65.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "ytf-OK-cjh"; */
+"ytf-OK-cjh.text" = "Title";
+
+/* Class = "IBUITabBarItem"; title = "Blue Line"; ObjectID = "zcJ-cJ-ymF"; */
+"zcJ-cJ-ymF.title" = "Blue Line";
