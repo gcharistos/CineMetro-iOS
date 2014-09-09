@@ -7,6 +7,7 @@
 //
 
 #import "PageContentViewController.h"
+#import "ShowImageViewController.h"
 
 @interface PageContentViewController ()
 
@@ -27,10 +28,17 @@
 {
     [super viewDidLoad];
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
-
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tappedImage:)];
+    [self.view addGestureRecognizer:gesture];
     // Do any additional setup after loading the view.
 }
 
+-(void)tappedImage:(UITapGestureRecognizer *)sender{
+    NSLog(@"tAPPED %@",self.imageFile);
+    self.popViewController = [[ShowImageViewController alloc] initWithNibName:@"ShowImageViewController" bundle:nil];
+    
+    [self.popViewController showInView:self.parentViewController.parentViewController.navigationController.view withImage:self.imageFile withController:self animated:YES];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

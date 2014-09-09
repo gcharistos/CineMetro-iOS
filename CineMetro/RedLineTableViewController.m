@@ -35,7 +35,7 @@ NSMutableArray *titles;
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
+    self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

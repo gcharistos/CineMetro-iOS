@@ -1,25 +1,18 @@
 //
-//  GreenLineTableViewController.m
+//  ShowPeopleTableViewController.m
 //  CineMetro
 //
-//  Created by George Haristos on 5/7/14.
+//  Created by George Haristos on 10/9/14.
 //  Copyright (c) 2014 George Haristos. All rights reserved.
 //
 
-#import "GreenLineTableViewController.h"
-#import "GreenDetailsViewController.h"
+#import "ShowPeopleTableViewController.h"
 
-@interface GreenLineTableViewController ()
+@interface ShowPeopleTableViewController ()
 
 @end
 
-@implementation GreenLineTableViewController
-@synthesize nameLabel;
-NSMutableArray *titles;
-NSArray *station;
-NSInteger  selectedIndex ;
-
-
+@implementation ShowPeopleTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,38 +27,12 @@ NSInteger  selectedIndex ;
 {
     [super viewDidLoad];
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
-
-    
-
-
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
--(void)viewWillAppear:(BOOL)animated{
-    titles = [[NSMutableArray alloc]init];
-    selectedIndex = -1;
-    NSString *title;
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"GreenLineStations" ofType:@"plist"];
-    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
-    NSArray *anns = [dict objectForKey:@"Stations"];
-    [nameLabel setText:[dict objectForKey:@"Name"]];
-    station = anns; // initialize station variable
-    for(int i=0;i<anns.count;i++){
-        title = [[anns objectAtIndex:i]objectForKey:@"Title"];
-        [titles addObject:title];
-    }
-
-}
-
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -84,29 +51,20 @@ NSInteger  selectedIndex ;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return titles.count;
+    return 2;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"gCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    UILabel *namelabel = (UILabel*) [cell viewWithTag:105];
-    UIImageView *imageview = (UIImageView *)[cell viewWithTag:106];
-    UILabel *stationNameLabel = (UILabel*) [cell viewWithTag:104];
-    UIImage *image = [UIImage imageNamed:[[[station objectAtIndex:indexPath.row]objectForKey:@"Images"]objectAtIndex:0]];
-    imageview.image = image;
-    namelabel.text = [titles objectAtIndex:indexPath.row];
-    stationNameLabel.text = [[station objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
+    static NSString *identifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    selectedIndex = indexPath.row;
-    [self performSegueWithIdentifier:@"detailSegue2" sender:nil];
-    
-}
 
 /*
 // Override to support conditional editing of the table view.
@@ -146,16 +104,15 @@ NSInteger  selectedIndex ;
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"detailSegue2"]){
-        GreenDetailsViewController *dest = segue.destinationViewController;
-        dest.position = selectedIndex;
-    }}
-
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

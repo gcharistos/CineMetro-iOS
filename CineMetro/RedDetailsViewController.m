@@ -15,9 +15,9 @@
 
 @implementation RedDetailsViewController
 @synthesize station;
+@synthesize textview;
 @synthesize tableview;
 @synthesize title;
-@synthesize textview;
 @synthesize theaterTitle;
 NSMutableArray *images;
 NSArray *currentList;
@@ -39,8 +39,7 @@ NSArray *currentList;
     //set navigation bar title
    // self.navigationItem.title =[station objectForKey:@"Subtitle"];
     theaterTitle.text = [station objectForKey:@"Subtitle"];
-
-    textview.text = [station objectForKey:@"text"];
+    textview.text  = [station objectForKey:@"text"];
     images = [station objectForKey:@"Images"];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
 
@@ -84,21 +83,6 @@ NSArray *currentList;
 
 
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return images.count;
-}
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifier = @"tCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    UIImageView *imageview = (UIImageView *)[cell viewWithTag:108];
-    imageview.image =[UIImage imageNamed:[images objectAtIndex:indexPath.row]];
-    return cell;
-}
 
 
 

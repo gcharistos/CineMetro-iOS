@@ -76,6 +76,8 @@
 - (IBAction)LogOutPressed:(id)sender {
     MainViewController *dest = (MainViewController *)[[self.navigationController viewControllers]objectAtIndex:0];
     [dest LogOut];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Logged Out" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

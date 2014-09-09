@@ -7,6 +7,8 @@
 //
 
 #import "GreenDetailsViewController.h"
+#import "ShowPeopleTableViewController.h"
+#import "ShowTextViewController.h"
 #import "ViewController.h"
 
 @interface GreenDetailsViewController ()
@@ -17,10 +19,10 @@
 @implementation GreenDetailsViewController
 @synthesize position1;
 @synthesize position;
-@synthesize textview;
 @synthesize movieTitle;
 NSMutableArray *images;
 NSArray *currentList;
+NSArray *titles;
 
 
 
@@ -43,11 +45,9 @@ NSArray *currentList;
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     NSArray *anns = [dict objectForKey:@"Stations"];
     currentList = anns;
-    //self.navigationItem.title =[[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
     movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
-    textview.text = [[anns objectAtIndex:position1]objectForKey:@"text"];
     images = [[anns objectAtIndex:position1]objectForKey:@"Images"];
-
+    titles = [[NSArray alloc]initWithObjects:@"Σκηνοθέτης",@"Πρωταγωνιστές",@"Πληροφορίες", nil];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
 
 
@@ -81,15 +81,24 @@ NSArray *currentList;
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return images.count;
+    return titles.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"tCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    UIImageView *imageview = (UIImageView *)[cell viewWithTag:108];
-    imageview.image =[ UIImage imageNamed:[images objectAtIndex:indexPath.row]];
+    UILabel *label = (UILabel *)[cell viewWithTag:108];
+    label.text = [titles objectAtIndex:indexPath.row];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row == 0 || indexPath.row == 1){
+        [self performSegueWithIdentifier:@"showPeople" sender:nil];
+    }
+    else if(indexPath.row == 2){
+        [self performSegueWithIdentifier:@"showText" sender:nil];
+    }
 }
 
 
@@ -112,6 +121,13 @@ NSArray *currentList;
         if(images.count != 0){
             dest.pageImages = [[NSArray alloc]initWithArray:images];
         }
+    }
+    else if([segue.identifier isEqualToString:@"showPeople"]){
+        ShowPeopleTableViewController *dest = segue.destinationViewController;
+    }
+    else if([segue.identifier isEqualToString:@"showText"]){
+        ShowTextViewController *dest = segue.destinationViewController;
+        dest.text = [[currentList objectAtIndex:position1]objectForKey:@"text"];
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.

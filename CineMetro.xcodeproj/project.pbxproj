@@ -27,6 +27,8 @@
 		1F276BD6196795FD008735B1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD5196795FD008735B1 /* Security.framework */; };
 		1F276BDA1967960D008735B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD91967960D008735B1 /* SystemConfiguration.framework */; };
 		1F276BDD1967989C008735B1 /* OrangeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */; };
+		1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F28171219BE848E005A5337 /* ShowImageViewController.m */; };
+		1F28171519BE848E005A5337 /* ShowImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F28171319BE848E005A5337 /* ShowImageViewController.xib */; };
 		1F29B5BF19BDF7D90036B2C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */; };
 		1F370D2C19753ADC003FB972 /* GreenLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F370D2B19753ADC003FB972 /* GreenLineStations.plist */; };
 		1F464DB319B8C85700389827 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F464DB219B8C85700389827 /* CustomTableViewCell.m */; };
@@ -126,6 +128,8 @@
 		1FB552E9196C456500E11311 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552E8196C456500E11311 /* Accounts.framework */; };
 		1FB552EB196C45CE00E11311 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552EA196C45CE00E11311 /* Social.framework */; };
 		1FF72A82198AC4C30022B08D /* BlueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */; };
+		1FFBB93919BFC6320035C87B /* ShowPeopleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFBB93819BFC6320035C87B /* ShowPeopleTableViewController.m */; };
+		1FFBB93C19BFC7A60035C87B /* ShowTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFBB93B19BFC7A60035C87B /* ShowTextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +169,9 @@
 		1F276BD91967960D008735B1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1F276BDB1967989C008735B1 /* OrangeLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeLineTableViewController.h; sourceTree = "<group>"; };
 		1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeLineTableViewController.m; sourceTree = "<group>"; };
+		1F28171119BE848E005A5337 /* ShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowImageViewController.h; sourceTree = "<group>"; };
+		1F28171219BE848E005A5337 /* ShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowImageViewController.m; sourceTree = "<group>"; };
+		1F28171319BE848E005A5337 /* ShowImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowImageViewController.xib; sourceTree = "<group>"; };
 		1F29B5BE19BDF7D90036B2C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F29B5C019BDF7FC0036B2C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		1F29B5C119BDF8000036B2C1 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Main.strings; sourceTree = "<group>"; };
@@ -291,6 +298,10 @@
 		1FB552EA196C45CE00E11311 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1FF72A80198AC4C30022B08D /* BlueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueDetailsViewController.h; sourceTree = "<group>"; };
 		1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueDetailsViewController.m; sourceTree = "<group>"; };
+		1FFBB93719BFC6320035C87B /* ShowPeopleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPeopleTableViewController.h; sourceTree = "<group>"; };
+		1FFBB93819BFC6320035C87B /* ShowPeopleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPeopleTableViewController.m; sourceTree = "<group>"; };
+		1FFBB93A19BFC7A60035C87B /* ShowTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTextViewController.h; sourceTree = "<group>"; };
+		1FFBB93B19BFC7A60035C87B /* ShowTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +349,10 @@
 				1F16A31219A3DC1900AC7A68 /* GreenDetailsViewController.h */,
 				1F16A31319A3DC1900AC7A68 /* GreenDetailsViewController.m */,
 				1F370D2B19753ADC003FB972 /* GreenLineStations.plist */,
+				1FFBB93719BFC6320035C87B /* ShowPeopleTableViewController.h */,
+				1FFBB93819BFC6320035C87B /* ShowPeopleTableViewController.m */,
+				1FFBB93A19BFC7A60035C87B /* ShowTextViewController.h */,
+				1FFBB93B19BFC7A60035C87B /* ShowTextViewController.m */,
 			);
 			name = GreenLine;
 			sourceTree = "<group>";
@@ -530,6 +545,9 @@
 		1F706530196768DA009CB35C = {
 			isa = PBXGroup;
 			children = (
+				1F28171119BE848E005A5337 /* ShowImageViewController.h */,
+				1F28171219BE848E005A5337 /* ShowImageViewController.m */,
+				1F28171319BE848E005A5337 /* ShowImageViewController.xib */,
 				1FAE04E219BD077900E45EF4 /* PageContentViewController.h */,
 				1FAE04E319BD077900E45EF4 /* PageContentViewController.m */,
 				1FAE04DF19BD073800E45EF4 /* ViewController.h */,
@@ -774,6 +792,7 @@
 				1F48BDE9199AB34B00BD30C0 /* green52.jpg in Resources */,
 				1F48BDDB199AB30300BD30C0 /* green21.jpg in Resources */,
 				1F9362A71988F6320088A0BF /* red13.jpg in Resources */,
+				1F28171519BE848E005A5337 /* ShowImageViewController.xib in Resources */,
 				1FA9023819B87DDD00149EAD /* ViewController1.xib in Resources */,
 				1F464DF419B8CB7E00389827 /* hodgepodge.png in Resources */,
 				1F48BDE8199AB34B00BD30C0 /* green51.jpg in Resources */,
@@ -860,11 +879,14 @@
 				1FAE04E119BD073800E45EF4 /* ViewController.m in Sources */,
 				1F70658419678116009CB35C /* MapViewController.m in Sources */,
 				1F6AED7919AA10BF000490DD /* ProfileViewController.m in Sources */,
+				1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */,
 				1F242E0A19AA833F00E1698C /* AboutTableViewController.m in Sources */,
+				1FFBB93919BFC6320035C87B /* ShowPeopleTableViewController.m in Sources */,
 				1F70657B1967707B009CB35C /* GreenLineTableViewController.m in Sources */,
 				1F16A31419A3DC1900AC7A68 /* GreenDetailsViewController.m in Sources */,
 				1F93629A1988F1B10088A0BF /* RedDetailsViewController.m in Sources */,
 				1F464DD619B8C8B100389827 /* SWLongPressGestureRecognizer.m in Sources */,
+				1FFBB93C19BFC7A60035C87B /* ShowTextViewController.m in Sources */,
 				1F464DB319B8C85700389827 /* CustomTableViewCell.m in Sources */,
 				1F12C9A819B7D5850024CAD5 /* Reachability.m in Sources */,
 				1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */,

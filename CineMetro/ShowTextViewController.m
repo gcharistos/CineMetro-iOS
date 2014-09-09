@@ -1,20 +1,20 @@
 //
-//  TabBarViewController.m
+//  ShowTextViewController.m
 //  CineMetro
 //
-//  Created by George Haristos on 26/8/14.
+//  Created by George Haristos on 10/9/14.
 //  Copyright (c) 2014 George Haristos. All rights reserved.
 //
 
-#import "TabBarViewController.h"
+#import "ShowTextViewController.h"
 
-@interface TabBarViewController ()
+@interface ShowTextViewController ()
 
 @end
 
-@implementation TabBarViewController
-@synthesize tabBar;
-
+@implementation ShowTextViewController
+@synthesize text;
+@synthesize textview;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    textview.text = text;
     // Do any additional setup after loading the view.
 }
 

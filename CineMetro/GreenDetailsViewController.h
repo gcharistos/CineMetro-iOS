@@ -11,7 +11,6 @@
 @interface GreenDetailsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 
 @property  NSInteger position;
-@property (weak, nonatomic) IBOutlet UITextView *textview;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)rateButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *movieTitle;

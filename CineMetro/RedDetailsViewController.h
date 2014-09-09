@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface RedDetailsViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate,UIScrollViewDelegate>
+@interface RedDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate>
 @property NSDictionary *station;
 @property (weak, nonatomic) IBOutlet UITextView *textview;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
