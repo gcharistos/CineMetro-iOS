@@ -199,7 +199,7 @@ UIColor *lineColor;
 }
 
 - (IBAction)settingsButtonPressed:(id)sender {
-    UIAlertView *settingsAlert = [[UIAlertView alloc]initWithTitle:@"Διαλέξτε Γραμμή  :" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Red Line",@"Green Line",@"Blue Line",@"Orange Line", nil];
+    UIAlertView *settingsAlert = [[UIAlertView alloc]initWithTitle:@"Διαλέξτε Γραμμή  :" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Red Line",@"Green Line",@"Blue Line", nil];
     [settingsAlert show];
 }
 

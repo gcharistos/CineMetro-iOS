@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1F1127DF198AD56200BB0F8E /* BlueLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F1127DE198AD56200BB0F8E /* BlueLineStations.plist */; };
-		1F1127E1198AD57C00BB0F8E /* OrangeLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F1127E0198AD57C00BB0F8E /* OrangeLineStations.plist */; };
 		1F12C9A819B7D5850024CAD5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12C9A719B7D5850024CAD5 /* Reachability.m */; };
 		1F12C9AE19B7DA8A0024CAD5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F12C9AD19B7DA8A0024CAD5 /* Parse.framework */; };
 		1F137A8619753179001C0F2B /* RedLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F137A8519753179001C0F2B /* RedLineStations.plist */; };
@@ -26,7 +25,6 @@
 		1F276BD4196795F1008735B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD3196795F1008735B1 /* QuartzCore.framework */; };
 		1F276BD6196795FD008735B1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD5196795FD008735B1 /* Security.framework */; };
 		1F276BDA1967960D008735B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD91967960D008735B1 /* SystemConfiguration.framework */; };
-		1F276BDD1967989C008735B1 /* OrangeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */; };
 		1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F28171219BE848E005A5337 /* ShowImageViewController.m */; };
 		1F28171519BE848E005A5337 /* ShowImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F28171319BE848E005A5337 /* ShowImageViewController.xib */; };
 		1F29B5BF19BDF7D90036B2C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */; };
@@ -144,7 +142,6 @@
 
 /* Begin PBXFileReference section */
 		1F1127DE198AD56200BB0F8E /* BlueLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlueLineStations.plist; sourceTree = "<group>"; };
-		1F1127E0198AD57C00BB0F8E /* OrangeLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OrangeLineStations.plist; sourceTree = "<group>"; };
 		1F12C9A619B7D5850024CAD5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1F12C9A719B7D5850024CAD5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		1F12C9AD19B7DA8A0024CAD5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -167,8 +164,6 @@
 		1F276BD3196795F1008735B1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1F276BD5196795FD008735B1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		1F276BD91967960D008735B1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		1F276BDB1967989C008735B1 /* OrangeLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeLineTableViewController.h; sourceTree = "<group>"; };
-		1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeLineTableViewController.m; sourceTree = "<group>"; };
 		1F28171119BE848E005A5337 /* ShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowImageViewController.h; sourceTree = "<group>"; };
 		1F28171219BE848E005A5337 /* ShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowImageViewController.m; sourceTree = "<group>"; };
 		1F28171319BE848E005A5337 /* ShowImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowImageViewController.xib; sourceTree = "<group>"; };
@@ -379,16 +374,6 @@
 				1F1127DE198AD56200BB0F8E /* BlueLineStations.plist */,
 			);
 			name = BlueLine;
-			sourceTree = "<group>";
-		};
-		1F12C9A119B7D2B80024CAD5 /* OrangeLine */ = {
-			isa = PBXGroup;
-			children = (
-				1F276BDB1967989C008735B1 /* OrangeLineTableViewController.h */,
-				1F276BDC1967989C008735B1 /* OrangeLineTableViewController.m */,
-				1F1127E0198AD57C00BB0F8E /* OrangeLineStations.plist */,
-			);
-			name = OrangeLine;
 			sourceTree = "<group>";
 		};
 		1F12C9A219B7D2E10024CAD5 /* Map */ = {
@@ -607,7 +592,6 @@
 				1F12C9A419B7D3070024CAD5 /* Profile */,
 				1F12C9A319B7D2FD0024CAD5 /* About */,
 				1F12C9A219B7D2E10024CAD5 /* Map */,
-				1F12C9A119B7D2B80024CAD5 /* OrangeLine */,
 				1F12C9A019B7D2680024CAD5 /* BlueLine */,
 				1F12C99F19B7D25B0024CAD5 /* RedLine */,
 				1F12C99E19B7D2410024CAD5 /* GreenLine */,
@@ -815,7 +799,6 @@
 				1F464DEF19B8CB7E00389827 /* bunting-flag.png in Resources */,
 				1F9362B71988F6490088A0BF /* red32.jpg in Resources */,
 				1F464DF619B8CB7E00389827 /* kiwis.png in Resources */,
-				1F1127E1198AD57C00BB0F8E /* OrangeLineStations.plist in Resources */,
 				1F48BDE4199AB33100BD30C0 /* green41.jpg in Resources */,
 				1F48BDE0199AB31900BD30C0 /* green31.jpg in Resources */,
 				1F464DF119B8CB7E00389827 /* cuadros.png in Resources */,
@@ -864,7 +847,6 @@
 			files = (
 				1F70654D196768DA009CB35C /* AppDelegate.m in Sources */,
 				1F464DD719B8C8B100389827 /* SWTableViewCell.m in Sources */,
-				1F276BDD1967989C008735B1 /* OrangeLineTableViewController.m in Sources */,
 				1F6AED7C19AA53AB000490DD /* MapDetailsViewController.m in Sources */,
 				1FF72A82198AC4C30022B08D /* BlueDetailsViewController.m in Sources */,
 				1F464DD419B8C8B100389827 /* NSMutableArray+SWUtilityButtons.m in Sources */,
