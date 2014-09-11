@@ -40,6 +40,7 @@ NSArray *currentList;
    // self.navigationItem.title =[station objectForKey:@"Subtitle"];
     theaterTitle.text = [station objectForKey:@"Subtitle"];
     textview.text  = [station objectForKey:@"text"];
+    [textview setFont:[UIFont systemFontOfSize:17]];
     images = [station objectForKey:@"Images"];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
 

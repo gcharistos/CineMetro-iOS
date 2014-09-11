@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
     textview.text = text;
+    [textview setFont:[UIFont systemFontOfSize:17]];
     // Do any additional setup after loading the view.
 }
 

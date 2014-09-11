@@ -7,7 +7,7 @@
 //
 
 #import "GreenDetailsViewController.h"
-#import "ShowPeopleTableViewController.h"
+#import "ShowActorsViewController.h"
 #import "ShowTextViewController.h"
 #import "ViewController.h"
 
@@ -47,7 +47,7 @@ NSArray *titles;
     currentList = anns;
     movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
     images = [[anns objectAtIndex:position1]objectForKey:@"Images"];
-    titles = [[NSArray alloc]initWithObjects:@"Σκηνοθέτης",@"Πρωταγωνιστές",@"Πληροφορίες", nil];
+    titles = [[NSArray alloc]initWithObjects:@"Συντελεστές",@"Πληροφορίες", nil];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
 
 
@@ -93,10 +93,11 @@ NSArray *titles;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.row == 0 || indexPath.row == 1){
-        [self performSegueWithIdentifier:@"showPeople" sender:nil];
+    
+    if(indexPath.row == 0){
+        [self performSegueWithIdentifier:@"ShowActors" sender:nil];
     }
-    else if(indexPath.row == 2){
+    else if(indexPath.row == 1){
         [self performSegueWithIdentifier:@"showText" sender:nil];
     }
 }
@@ -122,8 +123,10 @@ NSArray *titles;
             dest.pageImages = [[NSArray alloc]initWithArray:images];
         }
     }
-    else if([segue.identifier isEqualToString:@"showPeople"]){
-        ShowPeopleTableViewController *dest = segue.destinationViewController;
+    else if([segue.identifier isEqualToString:@"ShowActors"]){
+        ShowActorsViewController *dest = segue.destinationViewController;
+        dest.list = [[currentList objectAtIndex:position1]objectForKey:@"Actors"];
+        dest.directlist = [[currentList objectAtIndex:position1]objectForKey:@"Director"];
     }
     else if([segue.identifier isEqualToString:@"showText"]){
         ShowTextViewController *dest = segue.destinationViewController;

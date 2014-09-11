@@ -121,7 +121,6 @@ PFUser *appUser;
     [user setObject:imageFile forKey:@"profileImage"];
     [user setObject:@0 forKey:@"redLine"];
     [user setObject:@0 forKey:@"GreenLine"];
-    [user setObject:@0 forKey:@"orangeLine"];
     [user setObject:@0 forKey:@"blueLine"];
 
     

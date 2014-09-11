@@ -10,12 +10,36 @@
 				<string>green01.jpg</string>
 				<string>green02.jpg</string>
 			</array>
+			<key>Director</key>
+			<dict>
+				<key>Name</key>
+				<string>Γκρεγκ Τάλλας</string>
+				<key>Icon</key>
+				<string>Gregg_Ntallas.jpg</string>
+			</dict>
+			<key>Actors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Κωστή Μαρία</string>
+					<key>Icon</key>
+					<string>kwsti_maria.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Φερμας Νίκος</string>
+					<key>Icon</key>
+					<string>fermas_nikos.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Φραγκεδάκης Βασίλης</string>
+					<key>Icon</key>
+					<string>fragkedakhs_vasilis.jpg</string>
+				</dict>
+			</array>
 			<key>text</key>
-			<string>Σκηνοθεσία: Γκρεγκ Τάλλας
-
-Παίζουν: Κωστή Μαρία, Φερμας Νίκος, Φραγκεδάκης Βασίλης
-
-Info: Η αληθινή ιστορία επιβίωσης 160 παιδιών στην Θεσσαλονίκη της Κατοχής. 
+			<string>Η αληθινή ιστορία επιβίωσης 160 παιδιών στην Θεσσαλονίκη της Κατοχής. 
 Η ταινία περιδιαβαίνει την Θεσσαλονίκη της δεκαετίας του &apos;50 (Κέντρο και Άνω Πόλη).</string>
 			<key>Title</key>
 			<string>1η Στάση</string>
@@ -33,13 +57,43 @@ Info: Η αληθινή ιστορία επιβίωσης 160 παιδιών σ�
 				<string>green12.jpg</string>
 				<string>green13.jpg</string>
 			</array>
+			<key>Director</key>
+			<dict>
+				<key>Name</key>
+				<string>Γιάννης Δαλιανίδης</string>
+				<key>Icon</key>
+				<string>dalianidis.jpg</string>
+			</dict>
 			<key>text</key>
-			<string>Σκηνοθεσία: Γιάννης Δαλιανίδης
-
-Παίζουν: Ηλιόπουλος Ντίνος, Λάσκαρη Ζώη, Ζερβός Παντελής, Στρατηγός Στέφανος
-
-Info: Δύο αδέρφια προσπαθούν να ισορροπήσουν ανάμεσα στις αισθηματικές τους σχέσεις και την συντηρητικές αρχές της πατρικής οικίας τους. 
+			<string>Δύο αδέρφια προσπαθούν να ισορροπήσουν ανάμεσα στις αισθηματικές τους σχέσεις και την συντηρητικές αρχές της πατρικής οικίας τους. 
 Εξ ολοκλήρου γυρισμένη στην Θεσσαλονίκη: Πανόραμα, περιοχή Ανθέων, Κέντρο Θεσσαλονίκης </string>
+			<key>Actors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Ηλιόπουλος Ντίνος</string>
+					<key>Icon</key>
+					<string>eliopoulos.jpeg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Λάσκαρη Ζώη</string>
+					<key>Icon</key>
+					<string>laskari.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Ζερβός Παντελής</string>
+					<key>Icon</key>
+					<string>zervos.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Στρατηγός Στέφανος</string>
+					<key>Icon</key>
+					<string>stratigos.jpg</string>
+				</dict>
+			</array>
 			<key>Title</key>
 			<string>2η Στάση</string>
 			<key>Subtitle</key>
@@ -56,12 +110,48 @@ Info: Δύο αδέρφια προσπαθούν να ισορροπήσουν �
 				<string>green22.jpg</string>
 				<string>green23.jpg</string>
 			</array>
+			<key>Director</key>
+			<dict>
+				<key>Name</key>
+				<string>Γιάννης Δαλιανίδης</string>
+				<key>Icon</key>
+				<string>dalianidis.jpg</string>
+			</dict>
+			<key>Actors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Βλαχοπούλου Ρένα</string>
+					<key>Icon</key>
+					<string>vlaxopoulou.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Ηλιόπουλος Ντίνος</string>
+					<key>Icon</key>
+					<string>eliopoulos.jpeg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Καραγιάννη Μάρθα</string>
+					<key>Icon</key>
+					<string>karagiannh.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Ναθαναήλ Έλενα</string>
+					<key>Icon</key>
+					<string>nathanahl.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Βουτσάς Κώστας</string>
+					<key>Icon</key>
+					<string>voutsas.jpg</string>
+				</dict>
+			</array>
 			<key>text</key>
-			<string>Σκηνοθεσία: Γιάννης Δαλιανίδης
-
-Παίζουν: Βλαχοπούλου Ρένα, Ηλιόπουλος Ντίνος, Καραγιάννη Μάρθα, Ναθαναήλ Έλενα, Βουτσάς Κώστας
-
-Info: Κατά την διάρκεια της ΔΕΘ μια παρέα νέων ανθρώπων περιπλέκεται σε αστείες και ερωτικές περιπέτειες. 
+			<string>Κατά την διάρκεια της ΔΕΘ μια παρέα νέων ανθρώπων περιπλέκεται σε αστείες και ερωτικές περιπέτειες. 
 Η ταινία έχει γυρίσματα σε χώρους όπως ΔΕΘ, Λευκός Πύργος, κ.α.</string>
 			<key>Title</key>
 			<string>3η Στάση</string>
@@ -78,12 +168,30 @@ Info: Κατά την διάρκεια της ΔΕΘ μια παρέα νέων 
 				<string>green31.jpg</string>
 				<string>green32.jpg</string>
 			</array>
+			<key>Actors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Λαδικού Αλεξάνδρα</string>
+					<key>Icon</key>
+					<string>ladikou.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Αντωνόπουλος Άγγελος</string>
+					<key>Icon</key>
+					<string>antwnopoulos.jpg</string>
+				</dict>
+			</array>
+			<key>Director</key>
+			<dict>
+				<key>Name</key>
+				<string>Τάκης Κανελλόπουλος</string>
+				<key>Icon</key>
+				<string>kanelopoulos.jpeg</string>
+			</dict>
 			<key>text</key>
-			<string>Σκηνοθεσία: Τάκης Κανελλόπουλος
-
-Παίζουν: Λαδικού Αλεξάνδρα, Αντωνόπουλος Άγγελος
-
-Info: Ένα ταξίδι με τρένο, μια στάση με ολιγόωρη καθυστέρηση, ένας δυνατός έρωτας δύο ανθρώπων, μια παρένθεση. 4 βραβεία στο Φεστιβάλ Θεσσαλονίκης. 
+			<string>Ένα ταξίδι με τρένο, μια στάση με ολιγόωρη καθυστέρηση, ένας δυνατός έρωτας δύο ανθρώπων, μια παρένθεση. 4 βραβεία στο Φεστιβάλ Θεσσαλονίκης. 
 Η ταινία γυρίστηκε στην νέα παραλία Θεσσαλονίκης και στην περιοχή Αρετσού (Ν. Κρήνη)</string>
 			<key>Title</key>
 			<string>4η Στάση</string>
@@ -100,12 +208,31 @@ Info: Ένα ταξίδι με τρένο, μια στάση με ολιγόωρ
 				<string>green41.jpg</string>
 				<string>green42.jpg</string>
 			</array>
+			<key>Actors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Τζώρτζογλου Στράτος</string>
+					<key>Icon</key>
+					<string>tzortzoglou.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Μπαζάκα Θέμις</string>
+					<key>Icon</key>
+					<string>bazaka.jpg</string>
+				</dict>
+			</array>
+			<key>Director</key>
+			<dict>
+				<key>Name</key>
+				<string>Παντελής Βούλγαρης</string>
+				<key>Icon</key>
+				<string>voulgaris.jpg</string>
+			</dict>
 			<key>text</key>
-			<string>Σκηνοθεσία: Παντελής Βούλγαρης
-
-Παίζουν: Τζώρτζογλου Στράτος, Μπαζάκα Θέμις
-
-Info: Η πορεία ενός ταλαντούχου ποδοσφαιριστή, ο οποίος μέσα από νίκες και ήττες, τραυματισμούς και παρασκήνιο, θα καταλάβει ότι η επιτυχία έχει το τίμημά της. 
+			<string>
+Η πορεία ενός ταλαντούχου ποδοσφαιριστή, ο οποίος μέσα από νίκες και ήττες, τραυματισμούς και παρασκήνιο, θα καταλάβει ότι η επιτυχία έχει το τίμημά της. 
 Μέρος της ταινίας έχει γυριστεί στην Θεσσαλονίκη: Πλ. Αριστοτέλους, Εύοσμος.</string>
 			<key>Title</key>
 			<string>5η Στάση</string>
@@ -122,12 +249,36 @@ Info: Η πορεία ενός ταλαντούχου ποδοσφαιριστή
 				<string>green51.jpg</string>
 				<string>green52.jpg</string>
 			</array>
+			<key>Director</key>
+			<dict>
+				<key>Name</key>
+				<string>Θόδωρος Αγγελόπουλος</string>
+				<key>Icon</key>
+				<string>aggelopoulos.jpg</string>
+			</dict>
+			<key>Actors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Γκαντζ Μπρούνο</string>
+					<key>Icon</key>
+					<string>bruno.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Ρενό Ιζαμπέλ</string>
+					<key>Icon</key>
+					<string>izampel.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Μπενιβόλιο Φαμπρίτσιο</string>
+					<key>Icon</key>
+					<string>bentivolio.jpg</string>
+				</dict>
+			</array>
 			<key>text</key>
-			<string>Σκηνοθεσία: Θόδωρος Αγγελόπουλος
-
-Παίζουν: Γκαντζ Μπρούνο, Ρενό Ιζαμπέλ, Μπενιβόλιο Φαμπρίτσιο
-
-Info: Ένας μεσήλικας συγγραφέας, που ασχολείται με το έργο του Δ. Σολωμού, αναζητάει τις αναμνήσεις μιας ζωής σε μια περιπλάνηση μιας ημέρας. Γυρισμένη σε αρχοντικό της Βασ. Όλγας, Παλιά Παραλία, Πλ. Αριστοτέλους και Τσιμισκή. </string>
+			<string>Ένας μεσήλικας συγγραφέας, που ασχολείται με το έργο του Δ. Σολωμού, αναζητάει τις αναμνήσεις μιας ζωής σε μια περιπλάνηση μιας ημέρας. Γυρισμένη σε αρχοντικό της Βασ. Όλγας, Παλιά Παραλία, Πλ. Αριστοτέλους και Τσιμισκή. </string>
 			<key>Title</key>
 			<string>6η Στάση</string>
 			<key>Subtitle</key>
@@ -144,12 +295,36 @@ Info: Ένας μεσήλικας συγγραφέας, που ασχολείτ�
 				<string>green62.jpg</string>
 				<string>green63.jpg</string>
 			</array>
+			<key>Actors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Μουτούση Αμαλία</string>
+					<key>Icon</key>
+					<string>moutousi.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Σαμαράς Θάνος</string>
+					<key>Icon</key>
+					<string>samaras.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Τσιριγκούλη Ιωάννα</string>
+					<key>Icon</key>
+					<string>tsirigkouli.jpg</string>
+				</dict>
+			</array>
+			<key>Director</key>
+			<dict>
+				<key>Name</key>
+				<string>Σύλλας Τζουμέρκας</string>
+				<key>Icon</key>
+				<string>syllas_tzoumerkas-200x200.jpg</string>
+			</dict>
 			<key>text</key>
-			<string>Σκηνοθεσία: Σύλλας Τζουμέρκας
-
-Παίζουν: Μουτούση Αμαλία, Σαμαράς Θάνος, Τσιριγκούλη Ιωάννα
-
-Info: Οικογενειακό δράμα ως ακτινογραφία της νεοελληνικής κοινωνικής πραγματικότητας. 
+			<string>Οικογενειακό δράμα ως ακτινογραφία της νεοελληνικής κοινωνικής πραγματικότητας. 
 Η ταινία πραγματοποιεί μεγάλο μέρος της δράσης της σε γνωστά σημεία της σημερινής Θεσσαλονίκης: Λεωφόρος Στρατού (ΕΡΤ3), Νέα Παραλία, Αγίος Δημήτριος. </string>
 			<key>Title</key>
 			<string>7η Στάση</string>
@@ -168,12 +343,36 @@ Info: Οικογενειακό δράμα ως ακτινογραφία της �
 				<string>green73.png</string>
 			</array>
 			<key>text</key>
-			<string>Σκηνοθεσία: Γιώργος Παπαιωάνου
- 
-Παίζουν: Βαϊνας Δημήτρης, Παπαδόπουλος Πάρης, Σφέτσα Όλγα
-
-Info: Σάτιρα θεσσαλονικιώτικων και βορειοελλαδικών κλισέ με πολύ χιούμορ. 
+			<string>Σάτιρα θεσσαλονικιώτικων και βορειοελλαδικών κλισέ με πολύ χιούμορ. 
 Τόποι γυρισμάτων: Θεολογική Σχολή ΑΠΘ, Νέο Δημαρχειακό Μέγαρο, Λευκός Πύργος, ΟΣΕ, Τούμπα </string>
+			<key>Director</key>
+			<dict>
+				<key>Name</key>
+				<string>Γιώργος Παπαιωάνου</string>
+				<key>Icon</key>
+				<string>papaiwannou.jpg</string>
+			</dict>
+			<key>Actors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Βαϊνας Δημήτρης</string>
+					<key>Icon</key>
+					<string>vainas.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Παπαδόπουλος Πάρης</string>
+					<key>Icon</key>
+					<string>papadopoulos.jpg</string>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Σφέτσα Όλγα</string>
+					<key>Icon</key>
+					<string>sfetsa.jpg</string>
+				</dict>
+			</array>
 			<key>Title</key>
 			<string>8η Στάση</string>
 			<key>Subtitle</key>
