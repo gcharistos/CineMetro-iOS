@@ -15,5 +15,6 @@
 - (IBAction)cancelButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePhoto;
 - (IBAction)takePhoto:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *addImageButton;
 
 @end

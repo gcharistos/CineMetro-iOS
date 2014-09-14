@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShowTextViewController : UIViewController
+@interface ShowTextViewController : UIViewController<UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textview;
+@property (nonatomic,weak) NSString *movieTitle;
 @property (nonatomic,weak) NSString *text;
+- (IBAction)shareButtonPressed:(id)sender;
 @end

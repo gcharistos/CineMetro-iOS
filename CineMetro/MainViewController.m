@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "LoginViewController.h"
 #import "ProfileViewController.h"
+#import <Pop/POP.h>
 #import "Reachability.h"
 
 @interface MainViewController ()
@@ -16,7 +17,6 @@
 @end
 
 @implementation MainViewController
-@synthesize user;
 @synthesize word;
 int loginStatus;
 int flag;
@@ -38,6 +38,9 @@ int flag;
         UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:@"Welcome to CineMetro" message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:@"Log In",@"Sign Up",nil];
         welcomeMessage.tag = 100;
         [welcomeMessage show];
+
+        
+
     }
 
     // Do any additional setup after loading the view.

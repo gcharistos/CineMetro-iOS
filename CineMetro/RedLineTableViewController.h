@@ -10,7 +10,7 @@
 #import "SWTableViewCell.h"
 
 
-@interface RedLineTableViewController : UITableViewController <UITableViewDataSource ,UITableViewDelegate,UIGestureRecognizerDelegate,SWTableViewCellDelegate>
+@interface RedLineTableViewController : UITableViewController <UITableViewDataSource ,UITableViewDelegate,UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RatingViewController.h"
 @interface RedDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate>
 @property NSDictionary *station;
+@property (strong,nonatomic) RatingViewController *popViewController;
 @property (weak, nonatomic) IBOutlet UITextView *textview;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 - (IBAction)rateButtonPressed:(id)sender;

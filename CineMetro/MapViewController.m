@@ -22,13 +22,14 @@
 
 @implementation MapViewController
 @synthesize mapview;
+@synthesize tableview;
 UIBarButtonItem *sidebarButton;
 NSMutableArray *redPins ;
 NSMutableArray *overlays;
 BOOL showDirections;
 id<MKOverlay> polyline;
 NSInteger visibleLine;
-NSDictionary *currentDB;
+NSArray *currentDB;
 UIColor *lineColor;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -50,18 +51,14 @@ UIColor *lineColor;
     showDirections = NO;
     //set region of map
     [self setRegion];
-
-    
-    
-   
 }
 
 
 -(void)UploadRedLine{
     NSString *path = [[NSBundle mainBundle] pathForResource:@"RedLineStations" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
-    currentDB = dict;
     NSArray *anns = [dict objectForKey:@"Stations"];
+    currentDB = anns;
     
     for(int i = 0; i < [anns count]; i++) {
         float realLatitude = [[[anns objectAtIndex:i] objectForKey:@"Latitude"] floatValue];
@@ -76,15 +73,18 @@ UIColor *lineColor;
         [mapview addAnnotation:myAnnotation];
         [redPins addObject:myAnnotation];
     }
+    [tableview reloadData];
+    [self setRegion];
     BOOL check = [self checkForNetwork];
     if(!check || ![CLLocationManager locationServicesEnabled]){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please Enable Location Services and Internet Connection to Show Route for Line" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
     else{
-        lineColor = [UIColor redColor];
         [self getDirections];
     }
+    lineColor = [UIColor redColor];
+
     
 }
 
@@ -183,6 +183,8 @@ UIColor *lineColor;
     else{
         UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:@"Please Enable Location Services to Show Current Location" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [disabled show];
+
+
     }
 
 }
@@ -200,32 +202,36 @@ UIColor *lineColor;
 
 - (IBAction)settingsButtonPressed:(id)sender {
     UIAlertView *settingsAlert = [[UIAlertView alloc]initWithTitle:@"Διαλέξτε Γραμμή  :" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Red Line",@"Green Line",@"Blue Line", nil];
+    settingsAlert.tag = 100;
     [settingsAlert show];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(buttonIndex == 1 ){
-        //if user pressed the same line and route is visible exit
-        if(visibleLine == 1 && showDirections){
-            return;
+    if(alertView.tag == 100){
+        if(buttonIndex == 1 ){
+            //if user pressed the same line and route is visible exit
+            if(visibleLine == 1 && showDirections){
+                return;
+            }
+            visibleLine = 1;
+            [self UploadRedLine];
         }
-        visibleLine = 1;
-        [self UploadRedLine];
+        else if(buttonIndex != 0) {
+            visibleLine  = buttonIndex;
+            //remove annotations from map
+            [mapview removeAnnotations:redPins];
+            // remove all annotations from array
+            [redPins removeAllObjects];
+            //after delete , reload tableview
+            [tableview reloadData];
+            
+            //remove all overlays from map
+            [mapview removeOverlays:overlays];
+           
+            //remove all overlays from array
+            [overlays removeAllObjects];
+        }
     }
-    else if(buttonIndex != 0) {
-        visibleLine  = buttonIndex;
-        //remove annotations from map
-        [mapview removeAnnotations:redPins];
-        // remove all annotations from array
-        [redPins removeAllObjects];
-        
-        //remove all overlays from map
-        [mapview removeOverlays:overlays];
-       
-        //remove all overlays from array
-        [overlays removeAllObjects];
-    }
-    
 }
 
 - (BOOL)checkForNetwork
@@ -254,6 +260,50 @@ UIColor *lineColor;
     return  status;
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return redPins.count;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    if(redPins.count != 0){
+        tableview.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        return 1;
+    }
+    else{
+        // Display a message when the table is empty
+        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+        
+        messageLabel.text = @"Please Select Line From Settings";
+        messageLabel.textColor = [UIColor orangeColor];
+        messageLabel.numberOfLines = 0;
+        messageLabel.textAlignment = NSTextAlignmentCenter;
+        messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
+        [messageLabel sizeToFit];
+        
+        tableView.backgroundView = messageLabel;
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+    }
+    return 0;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *identifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    UILabel *titleLabel = (UILabel *)[cell viewWithTag:105];
+    UILabel *subtitleLabel = (UILabel *)[cell viewWithTag:106];
+    titleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"Title"];
+    [titleLabel setTextColor:lineColor];
+    subtitleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
+
+    
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [mapview selectAnnotation:[redPins objectAtIndex:indexPath.row] animated:YES];
+}
 
 #pragma mark - Navigation
 

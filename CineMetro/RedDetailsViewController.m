@@ -8,6 +8,7 @@
 
 #import "RedDetailsViewController.h"
 #import "ViewController.h"
+#import "MainViewController.h"
 
 @interface RedDetailsViewController ()
 
@@ -68,9 +69,15 @@ NSArray *currentList;
 
 
 - (IBAction)rateButtonPressed:(id)sender {
-    UIAlertView *rate = [[UIAlertView alloc]initWithTitle:@"Αξιολογήστε την Στάση" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"1",@"2",@"3",@"4",@"5", nil];
-    rate.tag = 100;
-    [rate show];
+    if(user != nil){
+        self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
+        
+        [self.popViewController showInView:self.navigationController.view  withController:self animated:YES];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please Log In to Rate" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{

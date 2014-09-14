@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageview;
 
 - (void)showInView:(UIView *)aView withImage:(NSString *)Image withController:(UIViewController *)controller animated:(BOOL)animated;
+- (IBAction)closeView:(id)sender;
 
 @end

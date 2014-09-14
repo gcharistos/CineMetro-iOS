@@ -8,6 +8,7 @@
 
 #import "GreenDetailsViewController.h"
 #import "ShowActorsViewController.h"
+#import "MainViewController.h"
 #import "ShowTextViewController.h"
 #import "ViewController.h"
 
@@ -55,17 +56,19 @@ NSArray *titles;
 }
 
 - (IBAction)rateButtonPressed:(id)sender {
-    UIAlertView *rate = [[UIAlertView alloc]initWithTitle:@"Αξιολογήστε την Στάση" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"1",@"2",@"3",@"4",@"5", nil];
-    rate.tag = 100;
-    [rate show];
+    if(user != nil){
+      self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
+    
+      [self.popViewController showInView:self.navigationController.view  withController:self animated:YES];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please Log In to Rate" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(alertView.tag == 100 && buttonIndex != 0){
-        UIAlertView *rate = [[UIAlertView alloc]initWithTitle:@"Ευχαριστούμε Πολύ" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [rate show];
-        
-    }
+    
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
@@ -131,6 +134,7 @@ NSArray *titles;
     else if([segue.identifier isEqualToString:@"showText"]){
         ShowTextViewController *dest = segue.destinationViewController;
         dest.text = [[currentList objectAtIndex:position1]objectForKey:@"text"];
+        dest.movieTitle = [[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.

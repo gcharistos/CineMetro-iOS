@@ -18,6 +18,7 @@
 @implementation CreateNewAccountViewController
 @synthesize profilePhoto;
 @synthesize emailTextField;
+@synthesize addImageButton;
 @synthesize passwordTextField;
 PFUser *appUser;
 
@@ -33,7 +34,34 @@ PFUser *appUser;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeProfilePhoto:)];
+    [profilePhoto addGestureRecognizer:gesture];
+        // Do any additional setup after loading the view.
+}
+
+-(void)changeProfilePhoto:(UITapGestureRecognizer *)sender{
+    //Simulator doesn't have camera . print error message
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"errorMessage",@"Message")
+                                                              message:@"Device has no camera"
+                                                             delegate:nil
+                                                    cancelButtonTitle:NSLocalizedString(@"ok",@"Message")
+                                                    otherButtonTitles: nil];
+        
+        [myAlertView show];
+        return; // end process
+        
+    }
+    NSLog(@"SSSSSS");
+    
+    
+    UIImagePickerController  *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = NO;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentViewController:picker animated:YES completion:NULL];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +90,7 @@ PFUser *appUser;
 // pick photo from camera and initialize cameraPhoto variable
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-    profilePhoto.image = chosenImage;
+    profilePhoto.image = chosenImage;    
     profilePhoto.layer.cornerRadius = profilePhoto.frame.size.width / 2;
     profilePhoto.clipsToBounds = YES;
     [picker dismissViewControllerAnimated:YES completion:NULL];
@@ -103,9 +131,7 @@ PFUser *appUser;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"createSegue"]){
-        UINavigationController *navController = [segue destinationViewController];
-        MainViewController *dest = (MainViewController *)([navController viewControllers][0]);
-        dest.user = appUser;
+        user = appUser;
     }
 
 }

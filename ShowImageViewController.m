@@ -30,7 +30,6 @@
 - (void)viewDidLoad
 {
   //  self.view.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:.6];
-    self.popUpView.layer.cornerRadius = 5;
     self.popUpView.layer.shadowOpacity = 0.8;
     self.popUpView.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGestureRecognized:)];
@@ -40,17 +39,23 @@
 }
 
 - (void)showInView:(UIView *)aView withImage:(NSString *)Image withController:(UIViewController *)controller animated:(BOOL)animated{
+
     dispatch_async(dispatch_get_main_queue(), ^{
         viewController = (PageContentViewController *)controller;
-        NSLog(@"PASSED %@",Image);
-        self.imageview.image = [UIImage imageNamed:Image];
         [aView addSubview:self.view];
+        imageview.image = [UIImage imageNamed:Image];
+
         if (animated) {
             [self showAnimate];
         }
     });
 
     
+}
+
+- (IBAction)closeView:(id)sender {
+    [self removeAnimate];
+
 }
 
 -(void)tapGestureRecognized:(UIGestureRecognizer *)sender{

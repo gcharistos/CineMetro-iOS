@@ -63,7 +63,7 @@ PFUser *appUser;
     if([segue.identifier isEqualToString:@"loginSegue"]){
         UINavigationController *navController = [segue destinationViewController];
         MainViewController *dest = (MainViewController *)([navController viewControllers][0]);
-        dest.user = appUser;
+        user = appUser;
         if(loginStatus == 1){
             [dest redirectToProfile];
         }

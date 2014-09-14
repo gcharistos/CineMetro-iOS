@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RatingViewController.h"
 
 @interface GreenDetailsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 
 @property  NSInteger position;
+@property (strong,nonatomic) RatingViewController *popViewController;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)rateButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *movieTitle;

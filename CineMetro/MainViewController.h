@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+PFUser *user;
 @interface MainViewController : UIViewController<UIAlertViewDelegate>
-@property (nonatomic,strong)  PFUser *user;
 - (IBAction)profileButtonPressed:(id)sender;
 @property (nonatomic,strong) NSString *word;
 -(void)redirectToProfile;

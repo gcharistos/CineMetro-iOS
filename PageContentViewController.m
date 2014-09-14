@@ -34,7 +34,6 @@
 }
 
 -(void)tappedImage:(UITapGestureRecognizer *)sender{
-    NSLog(@"tAPPED %@",self.imageFile);
     self.popViewController = [[ShowImageViewController alloc] initWithNibName:@"ShowImageViewController" bundle:nil];
     
     [self.popViewController showInView:self.parentViewController.parentViewController.navigationController.view withImage:self.imageFile withController:self animated:YES];
