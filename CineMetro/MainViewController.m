@@ -33,9 +33,9 @@ int flag;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainBackground.jpg"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bw_background.jpg"]];
     if(user == nil && flag == 0){
-        UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:@"Welcome to CineMetro" message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:@"Log In",@"Sign Up",nil];
+        UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:@"Welcome to CineMetro" message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:NSLocalizedString(@"login", @"word"),NSLocalizedString(@"signup",@"word"),nil];
         welcomeMessage.tag = 100;
         [welcomeMessage show];
 
@@ -112,7 +112,7 @@ int flag;
 
 - (IBAction)profileButtonPressed:(id)sender {
     if(user == nil){
-        UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You Are Currently Offline" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Log In",@"Sign Up",nil];
+        UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You Are Currently Offline" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:NSLocalizedString(@"login",@"word"),NSLocalizedString(@"signup",@"word"),nil];
         nullUser.tag = 200;
         [nullUser show];
     }

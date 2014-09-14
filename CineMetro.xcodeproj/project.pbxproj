@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		1F1127DF198AD56200BB0F8E /* BlueLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F1127DE198AD56200BB0F8E /* BlueLineStations.plist */; };
 		1F12C9A819B7D5850024CAD5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12C9A719B7D5850024CAD5 /* Reachability.m */; };
-		1F12C9AE19B7DA8A0024CAD5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F12C9AD19B7DA8A0024CAD5 /* Parse.framework */; };
 		1F137A8619753179001C0F2B /* RedLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F137A8519753179001C0F2B /* RedLineStations.plist */; };
 		1F16A31419A3DC1900AC7A68 /* GreenDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16A31319A3DC1900AC7A68 /* GreenDetailsViewController.m */; };
 		1F23B8A419A5F2A00092FE9C /* bw_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F23B8A319A5F2A00092FE9C /* bw_background.jpg */; };
 		1F242E0A19AA833F00E1698C /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F242E0919AA833F00E1698C /* AboutTableViewController.m */; };
+		1F275BC319C6106800A1A8AD /* FilmFestivalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F275BC219C6106800A1A8AD /* FilmFestivalViewController.m */; };
+		1F275BCD19C619CF00A1A8AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F275BCF19C619CF00A1A8AD /* Localizable.strings */; };
 		1F276BBF19679092008735B1 /* CreateNewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BBE19679092008735B1 /* CreateNewAccountViewController.m */; };
 		1F276BC2196790A8008735B1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BC1196790A8008735B1 /* LoginViewController.m */; };
 		1F276BC619679529008735B1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BC519679529008735B1 /* FacebookSDK.framework */; };
@@ -28,6 +29,7 @@
 		1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F28171219BE848E005A5337 /* ShowImageViewController.m */; };
 		1F28171519BE848E005A5337 /* ShowImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F28171319BE848E005A5337 /* ShowImageViewController.xib */; };
 		1F29B5BF19BDF7D90036B2C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */; };
+		1F2C0B7819C6001600236C39 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2C0B7719C6001600236C39 /* Parse.framework */; };
 		1F2DC98719C21BCE00265605 /* ShowActorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DC98619C21BCE00265605 /* ShowActorsViewController.m */; };
 		1F2DC9A119C2208B00265605 /* amaliamoutoussihoraproelefsis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC98819C2208B00265605 /* amaliamoutoussihoraproelefsis.jpg */; };
 		1F2DC9A219C2208B00265605 /* antwnopoulos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC98919C2208B00265605 /* antwnopoulos.jpg */; };
@@ -144,8 +146,6 @@
 		1FAE2CEE19C38BE300D006EC /* star_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE2CED19C38BE300D006EC /* star_off.png */; };
 		1FAE2CF019C38C9900D006EC /* 5starsgray.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE2CEF19C38C9900D006EC /* 5starsgray.png */; };
 		1FAE2CF219C3994D00D006EC /* star_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE2CF119C3994D00D006EC /* star_on.png */; };
-		1FAFB7C119BE4BCC0004B844 /* English.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FAFB7C319BE4BCC0004B844 /* English.strings */; };
-		1FAFB7C619BE4BE60004B844 /* Greek.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FAFB7C819BE4BE60004B844 /* Greek.strings */; };
 		1FB552E9196C456500E11311 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552E8196C456500E11311 /* Accounts.framework */; };
 		1FB552EB196C45CE00E11311 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552EA196C45CE00E11311 /* Social.framework */; };
 		1FF72A82198AC4C30022B08D /* BlueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */; };
@@ -167,13 +167,18 @@
 		1F1127DE198AD56200BB0F8E /* BlueLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlueLineStations.plist; sourceTree = "<group>"; };
 		1F12C9A619B7D5850024CAD5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1F12C9A719B7D5850024CAD5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		1F12C9AD19B7DA8A0024CAD5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		1F137A8519753179001C0F2B /* RedLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RedLineStations.plist; sourceTree = "<group>"; };
 		1F16A31219A3DC1900AC7A68 /* GreenDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenDetailsViewController.h; sourceTree = "<group>"; };
 		1F16A31319A3DC1900AC7A68 /* GreenDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenDetailsViewController.m; sourceTree = "<group>"; };
 		1F23B8A319A5F2A00092FE9C /* bw_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bw_background.jpg; sourceTree = "<group>"; };
 		1F242E0819AA833F00E1698C /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTableViewController.h; sourceTree = "<group>"; };
 		1F242E0919AA833F00E1698C /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutTableViewController.m; sourceTree = "<group>"; };
+		1F275BC119C6106800A1A8AD /* FilmFestivalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmFestivalViewController.h; sourceTree = "<group>"; };
+		1F275BC219C6106800A1A8AD /* FilmFestivalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmFestivalViewController.m; sourceTree = "<group>"; };
+		1F275BC619C616AA00A1A8AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		1F275BC719C616F600A1A8AD /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Main.strings; sourceTree = "<group>"; };
+		1F275BCE19C619CF00A1A8AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1F275BD019C619D300A1A8AD /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1F276BBD19679092008735B1 /* CreateNewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewAccountViewController.h; sourceTree = "<group>"; };
 		1F276BBE19679092008735B1 /* CreateNewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewAccountViewController.m; sourceTree = "<group>"; };
 		1F276BC0196790A8008735B1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -191,8 +196,7 @@
 		1F28171219BE848E005A5337 /* ShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowImageViewController.m; path = ../ShowImageViewController.m; sourceTree = "<group>"; };
 		1F28171319BE848E005A5337 /* ShowImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShowImageViewController.xib; path = ../ShowImageViewController.xib; sourceTree = "<group>"; };
 		1F29B5BE19BDF7D90036B2C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1F29B5C019BDF7FC0036B2C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		1F29B5C119BDF8000036B2C1 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Main.strings; sourceTree = "<group>"; };
+		1F2C0B7719C6001600236C39 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		1F2DC98519C21BCE00265605 /* ShowActorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowActorsViewController.h; sourceTree = "<group>"; };
 		1F2DC98619C21BCE00265605 /* ShowActorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowActorsViewController.m; sourceTree = "<group>"; };
 		1F2DC98819C2208B00265605 /* amaliamoutoussihoraproelefsis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = amaliamoutoussihoraproelefsis.jpg; sourceTree = "<group>"; };
@@ -329,14 +333,12 @@
 		1FAE04E319BD077900E45EF4 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PageContentViewController.m; path = ../PageContentViewController.m; sourceTree = "<group>"; };
 		1FAE2CE419C3829A00D006EC /* photo-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-75.png"; sourceTree = "<group>"; };
 		1FAE2CE619C3876900D006EC /* photo-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-32.png"; sourceTree = "<group>"; };
-		1FAE2CE819C38AF400D006EC /* RatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingViewController.h; sourceTree = "<group>"; };
-		1FAE2CE919C38AF400D006EC /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingViewController.m; sourceTree = "<group>"; };
-		1FAE2CEA19C38AF400D006EC /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
+		1FAE2CE819C38AF400D006EC /* RatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RatingViewController.h; path = ../RatingViewController.h; sourceTree = "<group>"; };
+		1FAE2CE919C38AF400D006EC /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RatingViewController.m; path = ../RatingViewController.m; sourceTree = "<group>"; };
+		1FAE2CEA19C38AF400D006EC /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RatingViewController.xib; path = ../RatingViewController.xib; sourceTree = "<group>"; };
 		1FAE2CED19C38BE300D006EC /* star_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_off.png; sourceTree = "<group>"; };
 		1FAE2CEF19C38C9900D006EC /* 5starsgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5starsgray.png; sourceTree = "<group>"; };
 		1FAE2CF119C3994D00D006EC /* star_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_on.png; sourceTree = "<group>"; };
-		1FAFB7C219BE4BCC0004B844 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/English.strings; sourceTree = "<group>"; };
-		1FAFB7C719BE4BE60004B844 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Greek.strings; sourceTree = "<group>"; };
 		1FB552E8196C456500E11311 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1FB552EA196C45CE00E11311 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1FF72A80198AC4C30022B08D /* BlueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueDetailsViewController.h; sourceTree = "<group>"; };
@@ -352,7 +354,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F12C9AE19B7DA8A0024CAD5 /* Parse.framework in Frameworks */,
+				1F2C0B7819C6001600236C39 /* Parse.framework in Frameworks */,
 				1F276BC619679529008735B1 /* FacebookSDK.framework in Frameworks */,
 				1FB552EB196C45CE00E11311 /* Social.framework in Frameworks */,
 				1FB552E9196C456500E11311 /* Accounts.framework in Frameworks */,
@@ -528,6 +530,25 @@
 			name = CreateAccount;
 			sourceTree = "<group>";
 		};
+		1F275BC019C6105700A1A8AD /* FilmFestival */ = {
+			isa = PBXGroup;
+			children = (
+				1F275BC119C6106800A1A8AD /* FilmFestivalViewController.h */,
+				1F275BC219C6106800A1A8AD /* FilmFestivalViewController.m */,
+			);
+			name = FilmFestival;
+			sourceTree = "<group>";
+		};
+		1F275BD119C61E4A00A1A8AD /* StarRating */ = {
+			isa = PBXGroup;
+			children = (
+				1FAE2CE819C38AF400D006EC /* RatingViewController.h */,
+				1FAE2CE919C38AF400D006EC /* RatingViewController.m */,
+				1FAE2CEA19C38AF400D006EC /* RatingViewController.xib */,
+			);
+			name = StarRating;
+			sourceTree = "<group>";
+		};
 		1F464DC719B8C8A200389827 /* SWTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,9 +631,6 @@
 		1F706530196768DA009CB35C = {
 			isa = PBXGroup;
 			children = (
-				1FAE2CE819C38AF400D006EC /* RatingViewController.h */,
-				1FAE2CE919C38AF400D006EC /* RatingViewController.m */,
-				1FAE2CEA19C38AF400D006EC /* RatingViewController.xib */,
 				1F706542196768DA009CB35C /* CineMetro */,
 				1F706561196768DA009CB35C /* CineMetroTests */,
 				1F70653B196768DA009CB35C /* Frameworks */,
@@ -633,7 +651,7 @@
 		1F70653B196768DA009CB35C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F12C9AD19B7DA8A0024CAD5 /* Parse.framework */,
+				1F2C0B7719C6001600236C39 /* Parse.framework */,
 				1FB552EA196C45CE00E11311 /* Social.framework */,
 				1FB552E8196C456500E11311 /* Accounts.framework */,
 				1F276BD91967960D008735B1 /* SystemConfiguration.framework */,
@@ -660,6 +678,8 @@
 			children = (
 				1F70654B196768DA009CB35C /* AppDelegate.h */,
 				1F70654C196768DA009CB35C /* AppDelegate.m */,
+				1F275BD119C61E4A00A1A8AD /* StarRating */,
+				1F275BC019C6105700A1A8AD /* FilmFestival */,
 				1F105D2819C36B76001F5A90 /* PageScrollImageCollection */,
 				1F105D2719C36B3B001F5A90 /* ShowImageSection */,
 				1F12C9AA19B7D9840024CAD5 /* Login */,
@@ -685,8 +705,7 @@
 			isa = PBXGroup;
 			children = (
 				1F706544196768DA009CB35C /* CineMetro-Info.plist */,
-				1FAFB7C819BE4BE60004B844 /* Greek.strings */,
-				1FAFB7C319BE4BCC0004B844 /* English.strings */,
+				1F275BCF19C619CF00A1A8AD /* Localizable.strings */,
 				1F706548196768DA009CB35C /* main.m */,
 				1F70654A196768DA009CB35C /* CineMetro-Prefix.pch */,
 			);
@@ -879,7 +898,6 @@
 				1F48BDF4199AB38300BD30C0 /* green72.jpg in Resources */,
 				1F6AED8619AA5DEA000490DD /* mainBackground.jpg in Resources */,
 				1F48BDE1199AB31900BD30C0 /* green32.jpg in Resources */,
-				1FAFB7C119BE4BCC0004B844 /* English.strings in Resources */,
 				1F9362BF1988F6560088A0BF /* red43.jpg in Resources */,
 				1F9362B01988F63D0088A0BF /* red24.jpg in Resources */,
 				1F137A8619753179001C0F2B /* RedLineStations.plist in Resources */,
@@ -928,8 +946,8 @@
 				1F2DC9AB19C2208B00265605 /* kwsti_maria.jpg in Resources */,
 				1F48BDD7199AB2E800BD30C0 /* green13.jpg in Resources */,
 				1F9362B91988F6490088A0BF /* red34.jpg in Resources */,
+				1F275BCD19C619CF00A1A8AD /* Localizable.strings in Resources */,
 				1F2DC9A519C2208B00265605 /* bruno.jpg in Resources */,
-				1FAFB7C619BE4BE60004B844 /* Greek.strings in Resources */,
 				1F48BDD6199AB2E800BD30C0 /* green12.jpg in Resources */,
 				1F2DC9C419C22EF500265605 /* voulgaris.jpg in Resources */,
 				1F370D2C19753ADC003FB972 /* GreenLineStations.plist in Resources */,
@@ -1002,6 +1020,7 @@
 				1F2DC9BE19C2249200265605 /* HeaderView.m in Sources */,
 				1F6AED7919AA10BF000490DD /* ProfileViewController.m in Sources */,
 				1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */,
+				1F275BC319C6106800A1A8AD /* FilmFestivalViewController.m in Sources */,
 				1F242E0A19AA833F00E1698C /* AboutTableViewController.m in Sources */,
 				1F70657B1967707B009CB35C /* GreenLineTableViewController.m in Sources */,
 				1FAE2CEB19C38AF400D006EC /* RatingViewController.m in Sources */,
@@ -1037,32 +1056,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1F275BCF19C619CF00A1A8AD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F275BCE19C619CF00A1A8AD /* en */,
+				1F275BD019C619D300A1A8AD /* el */,
+			);
+			name = Localizable.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1F29B5BE19BDF7D90036B2C1 /* Base */,
-				1F29B5C019BDF7FC0036B2C1 /* en */,
-				1F29B5C119BDF8000036B2C1 /* el */,
+				1F275BC619C616AA00A1A8AD /* en */,
+				1F275BC719C616F600A1A8AD /* el */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1FAFB7C319BE4BCC0004B844 /* English.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1FAFB7C219BE4BCC0004B844 /* en */,
-			);
-			name = English.strings;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		1FAFB7C819BE4BE60004B844 /* Greek.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1FAFB7C719BE4BE60004B844 /* el */,
-			);
-			name = Greek.strings;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

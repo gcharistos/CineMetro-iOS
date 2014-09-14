@@ -17,9 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIw-Ul-11C">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIw-Ul-11C">
                                 <rect key="frame" x="85" y="120" width="152" height="56"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="75l-Gw-s9q"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
                                 <state key="normal" title="Navigation">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -29,9 +32,12 @@
                                     <segue destination="GPH-Vm-SOP" kind="push" id="6ZJ-Ix-LCn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdV-sb-6ii">
-                                <rect key="frame" x="85" y="187" width="152" height="56"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdV-sb-6ii">
+                                <rect key="frame" x="85" y="205" width="152" height="52"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Krw-gI-gCf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
                                 <state key="normal" title="Lines">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,35 +47,58 @@
                                     <segue destination="VK0-r7-KVM" kind="push" id="6kf-0g-Usd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ef-NK-vV9">
-                                <rect key="frame" x="85" y="315" width="152" height="56"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ef-NK-vV9">
+                                <rect key="frame" x="85" y="290" width="152" height="56"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
                                 <state key="normal" title="About">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="n39-P2-uLH" kind="push" id="zBc-GR-4ld"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CineMetro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vY-nk-4C6">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CineMetro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vY-nk-4C6">
                                 <rect key="frame" x="53" y="62" width="214" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="svZ-RP-4eO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="45"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbH-4a-2g3">
-                                <rect key="frame" x="83" y="251" width="152" height="56"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="21"/>
-                                <state key="normal" title="FootPrint">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rbH-4a-2g3">
+                                <rect key="frame" x="0.0" y="426" width="320" height="54"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="8uV-8y-Jh6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni SvtyTwo SC ITC TT" pointSize="21"/>
+                                <state key="normal" title="Thessaloniki International Film Festival">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="TsI-5D-lyQ" kind="push" id="c9e-ge-VEf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wIw-Ul-11C" firstAttribute="leading" secondItem="kdV-sb-6ii" secondAttribute="leading" id="7W6-Pv-2rt"/>
+                            <constraint firstAttribute="bottom" secondItem="rbH-4a-2g3" secondAttribute="bottom" id="Gk9-OD-6Ka"/>
+                            <constraint firstAttribute="trailing" secondItem="wIw-Ul-11C" secondAttribute="trailing" constant="83" id="KZw-mQ-kZ5"/>
+                            <constraint firstItem="1vY-nk-4C6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="53" id="KaW-gQ-dZC"/>
+                            <constraint firstItem="1vY-nk-4C6" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="62" id="PB0-Vy-6cP"/>
+                            <constraint firstItem="wIw-Ul-11C" firstAttribute="trailing" secondItem="kdV-sb-6ii" secondAttribute="trailing" id="bLb-a3-ft0"/>
+                            <constraint firstItem="wIw-Ul-11C" firstAttribute="top" secondItem="1vY-nk-4C6" secondAttribute="bottom" constant="14" id="it7-Xm-2KC"/>
+                            <constraint firstItem="kdV-sb-6ii" firstAttribute="leading" secondItem="2ef-NK-vV9" secondAttribute="leading" id="mvW-3f-b2H"/>
+                            <constraint firstAttribute="trailing" secondItem="rbH-4a-2g3" secondAttribute="trailing" id="o3n-Vg-v1g"/>
+                            <constraint firstItem="wIw-Ul-11C" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="85" id="uqS-cI-gnm"/>
+                            <constraint firstItem="rbH-4a-2g3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="wM8-jn-cLb"/>
+                            <constraint firstItem="2ef-NK-vV9" firstAttribute="trailing" secondItem="kdV-sb-6ii" secondAttribute="trailing" id="wyP-68-TyH"/>
+                            <constraint firstItem="1vY-nk-4C6" firstAttribute="centerX" secondItem="rbH-4a-2g3" secondAttribute="centerX" id="xuJ-Pd-Oew"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="CnT-2d-9IJ">
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="izI-d6-cCF">
@@ -503,7 +532,7 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="AyZ-JK-Wdh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="UJc-SG-C2j">
                                 <cells>
@@ -538,15 +567,18 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Προγραμματιστής  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVP-y5-oXE">
                                                     <rect key="frame" x="20" y="11" width="146" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="George Haristos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGu-gJ-jbu">
                                                     <rect key="frame" x="189" y="11" width="125" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Gij-g5-LyD">
                                         <rect key="frame" x="0.0" y="187" width="320" height="44"/>
@@ -561,7 +593,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qab-B0-msV">
-                                                    <rect key="frame" x="171" y="7" width="78" height="30"/>
+                                                    <rect key="frame" x="171" y="7" width="99" height="30"/>
                                                     <state key="normal" title="Send Email">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -581,14 +613,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Άδειες " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIL-VT-FZP">
-                                                    <rect key="frame" x="20" y="11" width="55" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="112" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="acA-fV-Ehj" kind="push" id="Sy0-ib-Ye3"/>
                                         </connections>
@@ -605,7 +637,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYL-6w-ieg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="503" y="1256"/>
+            <point key="canvasLocation" x="609" y="1204"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LGl-Je-cLa">
@@ -633,7 +665,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rC-hI-D9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="1337"/>
+            <point key="canvasLocation" x="1061" y="1293"/>
         </scene>
         <!--Blue Line Table View Controller - Blue Line-->
         <scene sceneID="adt-nJ-Hbu">
@@ -799,11 +831,11 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="212"/>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LZS-DU-6Xw">
-                                <rect key="frame" x="0.0" y="284" width="320" height="196"/>
+                                <rect key="frame" x="0.0" y="277" width="320" height="203"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="196" id="kza-Gh-kgt"/>
+                                    <constraint firstAttribute="height" constant="203" id="lAn-XP-2CX"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="c37-03-se1">
@@ -847,13 +879,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LZS-DU-6Xw" firstAttribute="leading" secondItem="vMf-fd-jOo" secondAttribute="leading" id="HEc-nU-fsl"/>
-                            <constraint firstItem="LZS-DU-6Xw" firstAttribute="leading" secondItem="HbI-nJ-Hyd" secondAttribute="leading" id="Nae-2I-xtV"/>
-                            <constraint firstAttribute="trailing" secondItem="LZS-DU-6Xw" secondAttribute="trailing" id="Peo-to-dYp"/>
-                            <constraint firstItem="LZS-DU-6Xw" firstAttribute="top" secondItem="HbI-nJ-Hyd" secondAttribute="bottom" constant="8" symbolic="YES" id="iB1-iZ-VFV"/>
-                            <constraint firstItem="HbI-nJ-Hyd" firstAttribute="top" secondItem="5pW-fC-kId" secondAttribute="bottom" id="oW9-dy-fbs"/>
-                            <constraint firstAttribute="bottom" secondItem="LZS-DU-6Xw" secondAttribute="bottom" id="y4q-KJ-aGJ"/>
-                            <constraint firstItem="LZS-DU-6Xw" firstAttribute="trailing" secondItem="HbI-nJ-Hyd" secondAttribute="trailing" id="yZC-Nv-GLk"/>
+                            <constraint firstItem="LZS-DU-6Xw" firstAttribute="top" secondItem="HbI-nJ-Hyd" secondAttribute="bottom" constant="1" id="EPc-ZA-ET4"/>
+                            <constraint firstAttribute="trailing" secondItem="LZS-DU-6Xw" secondAttribute="trailing" id="Jv0-77-pmx"/>
+                            <constraint firstItem="HbI-nJ-Hyd" firstAttribute="top" secondItem="5pW-fC-kId" secondAttribute="bottom" id="dZB-Ll-u9A"/>
+                            <constraint firstItem="HbI-nJ-Hyd" firstAttribute="trailing" secondItem="LZS-DU-6Xw" secondAttribute="trailing" id="dlz-zg-E7F"/>
+                            <constraint firstItem="HbI-nJ-Hyd" firstAttribute="leading" secondItem="LZS-DU-6Xw" secondAttribute="leading" id="dyn-95-mYx"/>
+                            <constraint firstItem="HbI-nJ-Hyd" firstAttribute="leading" secondItem="vMf-fd-jOo" secondAttribute="leading" id="iNC-k4-FNK"/>
+                            <constraint firstAttribute="bottom" secondItem="LZS-DU-6Xw" secondAttribute="bottom" id="uhz-pA-NPh"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -1000,7 +1032,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1P-ct-Pws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-850" y="1055"/>
+            <point key="canvasLocation" x="-904" y="801"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="flw-Yo-5Mv">
@@ -1071,7 +1103,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7q-yT-XLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-217" y="1165"/>
+            <point key="canvasLocation" x="-455" y="813"/>
+        </scene>
+        <!--Film Festival View Controller-->
+        <scene sceneID="fNY-PR-DOP">
+            <objects>
+                <viewController id="TsI-5D-lyQ" customClass="FilmFestivalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Xc-hN-8DH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lla-0O-kPw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ffv-Sd-FgZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72z-Aj-mwg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="72z-Aj-mwg" secondAttribute="trailing" id="AKo-V2-4sM"/>
+                            <constraint firstItem="72z-Aj-mwg" firstAttribute="top" secondItem="ffv-Sd-FgZ" secondAttribute="top" id="FEe-Gv-Kuk"/>
+                            <constraint firstAttribute="bottom" secondItem="72z-Aj-mwg" secondAttribute="bottom" id="MnZ-Gu-KSI"/>
+                            <constraint firstItem="72z-Aj-mwg" firstAttribute="leading" secondItem="ffv-Sd-FgZ" secondAttribute="leading" id="RoD-iM-Hzf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Vf-7I-fLi"/>
+                    <connections>
+                        <outlet property="textview" destination="72z-Aj-mwg" id="rGS-MB-ngh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sFQ-Zf-Ueb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="781"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tfw-ng-gS4">
@@ -1212,7 +1283,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ygj-DJ-qhf"/>
+        <segue reference="zOC-aA-1bO"/>
         <segue reference="Z46-CE-Thx"/>
     </inferredMetricsTieBreakers>
 </document>

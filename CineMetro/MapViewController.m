@@ -273,8 +273,8 @@ UIColor *lineColor;
         // Display a message when the table is empty
         UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
         
-        messageLabel.text = @"Please Select Line From Settings";
-        messageLabel.textColor = [UIColor orangeColor];
+        messageLabel.text = NSLocalizedString(@"emptytable",@"word");
+        messageLabel.textColor = [UIColor whiteColor];
         messageLabel.numberOfLines = 0;
         messageLabel.textAlignment = NSTextAlignmentCenter;
         messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
@@ -282,6 +282,7 @@ UIColor *lineColor;
         
         tableView.backgroundView = messageLabel;
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        tableview.backgroundColor = [UIColor orangeColor];
         
     }
     return 0;
@@ -291,12 +292,14 @@ UIColor *lineColor;
     
     static NSString *identifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    cell.backgroundColor = lineColor;
     UILabel *titleLabel = (UILabel *)[cell viewWithTag:105];
     UILabel *subtitleLabel = (UILabel *)[cell viewWithTag:106];
     titleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"Title"];
-    [titleLabel setTextColor:lineColor];
+   // [titleLabel setTextColor:lineColor];
+    titleLabel.textColor =[UIColor whiteColor];
     subtitleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
-
+    subtitleLabel.textColor = [UIColor whiteColor];
     
     return cell;
 }
