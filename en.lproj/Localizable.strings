@@ -11,3 +11,12 @@
 "login" = "Log In";
 "signup" = "Sign Up";
 "ok" = "OK";
+"chooseL" = "Choose Line";
+"red" = "Red Line";
+"green" = "Green Line";
+"blue" = "Blue Line";
+"cancel" = "Cancel";
+"enableLocation" = "Please Enable Location Services and Internet Connection to Show Route of Line";
+"enablelocation" = "Please Enable Location Services to Show Current Location";
+"userlocation" = "User Location";
+"directions" = "Directions";

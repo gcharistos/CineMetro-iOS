@@ -14,6 +14,9 @@
 @interface ViewController1 : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *popUpView;
+@property (weak, nonatomic) IBOutlet UIButton *directionsbutton;
+@property (weak, nonatomic) IBOutlet UIButton *locationbutton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelbutton;
 
 - (void)showInView:(UIView *)aView withAnnotation:(MKPointAnnotation *)annotation withController:(UIViewController *)controller animated:(BOOL)animated;
 

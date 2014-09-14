@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController1">
             <connections>
+                <outlet property="cancelbutton" destination="tzp-57-43q" id="Q7R-wm-mZl"/>
+                <outlet property="directionsbutton" destination="kSF-ZH-YsJ" id="SaY-7g-W3O"/>
+                <outlet property="locationbutton" destination="d5c-bI-EJu" id="CBn-sZ-rVV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

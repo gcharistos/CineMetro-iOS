@@ -77,7 +77,7 @@ UIColor *lineColor;
     [self setRegion];
     BOOL check = [self checkForNetwork];
     if(!check || ![CLLocationManager locationServicesEnabled]){
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please Enable Location Services and Internet Connection to Show Route for Line" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enableLocation",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
         [alert show];
     }
     else{
@@ -181,7 +181,7 @@ UIColor *lineColor;
       mapview.showsUserLocation = YES;
     }
     else{
-        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:@"Please Enable Location Services to Show Current Location" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enablelocation",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
         [disabled show];
 
 
@@ -201,7 +201,7 @@ UIColor *lineColor;
 }
 
 - (IBAction)settingsButtonPressed:(id)sender {
-    UIAlertView *settingsAlert = [[UIAlertView alloc]initWithTitle:@"Διαλέξτε Γραμμή  :" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Red Line",@"Green Line",@"Blue Line", nil];
+    UIAlertView *settingsAlert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"chooseL",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"cancel",@"word") otherButtonTitles:NSLocalizedString(@"red", @"word"),NSLocalizedString(@"green",@"word"),NSLocalizedString(@"blue",@"word"), nil];
     settingsAlert.tag = 100;
     [settingsAlert show];
 }

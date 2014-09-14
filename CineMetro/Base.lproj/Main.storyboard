@@ -651,15 +651,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71W-IK-XET">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="448"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71W-IK-XET">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="71W-IK-XET" firstAttribute="top" secondItem="16z-hH-SWT" secondAttribute="top" id="BZm-iq-HxH"/>
+                            <constraint firstAttribute="trailing" secondItem="71W-IK-XET" secondAttribute="trailing" id="Gu9-oO-hPC"/>
+                            <constraint firstItem="71W-IK-XET" firstAttribute="leading" secondItem="16z-hH-SWT" secondAttribute="leading" id="Wii-TL-UWO"/>
+                            <constraint firstAttribute="bottom" secondItem="71W-IK-XET" secondAttribute="bottom" id="bHv-hb-sz3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2cM-Gf-777"/>
                 </viewController>
@@ -1120,19 +1127,18 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72z-Aj-mwg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="72z-Aj-mwg" secondAttribute="trailing" id="AKo-V2-4sM"/>
-                            <constraint firstItem="72z-Aj-mwg" firstAttribute="top" secondItem="ffv-Sd-FgZ" secondAttribute="top" id="FEe-Gv-Kuk"/>
-                            <constraint firstAttribute="bottom" secondItem="72z-Aj-mwg" secondAttribute="bottom" id="MnZ-Gu-KSI"/>
-                            <constraint firstItem="72z-Aj-mwg" firstAttribute="leading" secondItem="ffv-Sd-FgZ" secondAttribute="leading" id="RoD-iM-Hzf"/>
+                            <constraint firstItem="72z-Aj-mwg" firstAttribute="top" secondItem="ffv-Sd-FgZ" secondAttribute="top" id="Hkp-91-QnV"/>
+                            <constraint firstAttribute="bottom" secondItem="72z-Aj-mwg" secondAttribute="bottom" id="Oyl-Vc-Cct"/>
+                            <constraint firstAttribute="trailing" secondItem="72z-Aj-mwg" secondAttribute="trailing" id="WIY-sn-km0"/>
+                            <constraint firstItem="72z-Aj-mwg" firstAttribute="leading" secondItem="ffv-Sd-FgZ" secondAttribute="leading" id="nue-1C-4SN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Vf-7I-fLi"/>

@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     textview.text = NSLocalizedString(@"filmFestival",@"word");
-    [textview setTextColor:[UIColor whiteColor]];
+    [textview setTextColor:[UIColor orangeColor]];
     // Do any additional setup after loading the view.
 }
 

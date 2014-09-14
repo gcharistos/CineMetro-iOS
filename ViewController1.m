@@ -15,6 +15,9 @@
 @end
 
 @implementation ViewController1
+@synthesize cancelbutton;
+@synthesize locationbutton;
+@synthesize directionsbutton;
 MKPointAnnotation *currentAnnotation;
 MapViewController *viewController;
 
@@ -35,6 +38,10 @@ MapViewController *viewController;
     self.popUpView.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGestureRecognized:)];
     [self.view addGestureRecognizer:tapGesture];
+   [cancelbutton setTitle:NSLocalizedString(@"cancel",@"word") forState:UIControlStateNormal];
+    [directionsbutton setTitle:NSLocalizedString(@"directions",@"word") forState:UIControlStateNormal];
+    [locationbutton setTitle:NSLocalizedString(@"userlocation",@"word") forState:UIControlStateNormal];
+
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
