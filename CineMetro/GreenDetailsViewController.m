@@ -10,6 +10,8 @@
 #import "ShowActorsViewController.h"
 #import "MainViewController.h"
 #import "ShowTextViewController.h"
+#import <Social/Social.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 #import "ViewController.h"
 
 @interface GreenDetailsViewController ()
@@ -159,4 +161,34 @@ NSMutableArray *points;
 
 
 
+- (IBAction)twitterButton:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheetOBJ = [SLComposeViewController
+                                                  composeViewControllerForServiceType:SLServiceTypeTwitter];
+        NSString *twittertext = [NSString stringWithFormat:@"#CineMetro #line2station%i\n",position1+1];
+        [tweetSheetOBJ setInitialText:twittertext];
+        [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
+    }
+    else{ // no twitter account
+        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:@"No Twitter Account" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        noaccount.tag = 200;
+        [noaccount show];
+    }
+}
+
+- (IBAction)facebookButton:(id)sender {
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewController *fbSheetOBJ = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        NSString *fbtext = [NSString stringWithFormat:@"#CineMetro #line2station%i\n",position1+1];
+        [fbSheetOBJ setInitialText:fbtext];
+        [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
+    }
+    else{ // no facebook account
+        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:@"No Facebook Account" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        noaccount.tag = 200;
+        [noaccount show];
+    }
+
+}
 @end

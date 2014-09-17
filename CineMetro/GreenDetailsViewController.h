@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)rateButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *movieTitle;
+- (IBAction)twitterButton:(id)sender;
+- (IBAction)facebookButton:(id)sender;
 
 @end

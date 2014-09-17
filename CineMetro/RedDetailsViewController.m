@@ -8,6 +8,8 @@
 
 #import "RedDetailsViewController.h"
 #import "ViewController.h"
+#import <Social/Social.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 #import "MainViewController.h"
 #import <Parse/Parse.h>
 
@@ -44,7 +46,7 @@ NSMutableArray *points;
    // self.navigationItem.title =[station objectForKey:@"Subtitle"];
     theaterTitle.text = [station objectForKey:@"Subtitle"];
     textview.text  = [station objectForKey:@"text"];
-    [textview setFont:[UIFont systemFontOfSize:17]];
+    [textview setFont:[UIFont systemFontOfSize:14]];
     images = [station objectForKey:@"Images"];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
 
@@ -88,6 +90,37 @@ NSMutableArray *points;
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please Log In to Rate" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
+}
+
+- (IBAction)twitterButton:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheetOBJ = [SLComposeViewController
+                                                  composeViewControllerForServiceType:SLServiceTypeTwitter];
+        NSString *twittertext = [NSString stringWithFormat:@"#CineMetro #line1station%i\n",indexPath+1];
+        [tweetSheetOBJ setInitialText:twittertext];
+        [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
+    }
+    else{ // no twitter account
+        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:@"No Twitter Account" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        noaccount.tag = 200;
+        [noaccount show];
+    }
+}
+
+- (IBAction)facebookButton:(id)sender {
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewController *fbSheetOBJ = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        NSString *fbtext = [NSString stringWithFormat:@"#CineMetro #line1station%i\n",indexPath+1];
+        [fbSheetOBJ setInitialText:fbtext];
+        [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
+    }
+    else{ // no facebook account
+        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:@"No Facebook Account" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        noaccount.tag = 200;
+        [noaccount show];
+    }
+    
 }
 
 

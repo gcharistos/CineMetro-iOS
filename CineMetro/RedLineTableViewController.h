@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SWTableViewCell.h"
 
 
 @interface RedLineTableViewController : UITableViewController <UITableViewDataSource ,UITableViewDelegate,UIGestureRecognizerDelegate>

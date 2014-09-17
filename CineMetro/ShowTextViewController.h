@@ -12,5 +12,4 @@
 @property (weak, nonatomic) IBOutlet UITextView *textview;
 @property (nonatomic,weak) NSString *movieTitle;
 @property (nonatomic,weak) NSString *text;
-- (IBAction)shareButtonPressed:(id)sender;
 @end
