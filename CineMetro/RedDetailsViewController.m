@@ -9,6 +9,7 @@
 #import "RedDetailsViewController.h"
 #import "ViewController.h"
 #import "MainViewController.h"
+#import <Parse/Parse.h>
 
 @interface RedDetailsViewController ()
 
@@ -19,9 +20,11 @@
 @synthesize textview;
 @synthesize tableview;
 @synthesize title;
+@synthesize indexPath;
 @synthesize theaterTitle;
 NSMutableArray *images;
 NSArray *currentList;
+NSMutableArray *points;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -70,9 +73,16 @@ NSArray *currentList;
 
 - (IBAction)rateButtonPressed:(id)sender {
     if(user != nil){
-        self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
-        
-        [self.popViewController showInView:self.navigationController.view  withController:self animated:YES];
+        points = [NSMutableArray arrayWithArray:[user objectForKey:@"redLineStations"]];
+        if([[points objectAtIndex:indexPath]intValue] != 0){
+            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"ratedTrue",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        else{
+            self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
+            
+            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:indexPath withName:@"redLineStations" animated:YES];
+        }
     }
     else {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please Log In to Rate" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -80,13 +90,6 @@ NSArray *currentList;
     }
 }
 
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(alertView.tag == 100 && buttonIndex != 0){
-        UIAlertView *rate = [[UIAlertView alloc]initWithTitle:@"Ευχαριστούμε Πολύ" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [rate show];
-
-    }
-}
 
 
 

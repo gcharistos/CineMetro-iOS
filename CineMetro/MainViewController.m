@@ -35,7 +35,7 @@ int flag;
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bw_background.jpg"]];
     if(user == nil && flag == 0){
-        UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:@"Welcome to CineMetro" message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:NSLocalizedString(@"login", @"word"),NSLocalizedString(@"signup",@"word"),nil];
+        UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"welcome",@"word") message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:NSLocalizedString(@"login", @"word"),NSLocalizedString(@"signup",@"word"),nil];
         welcomeMessage.tag = 100;
         [welcomeMessage show];
 
@@ -112,7 +112,7 @@ int flag;
 
 - (IBAction)profileButtonPressed:(id)sender {
     if(user == nil){
-        UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You Are Currently Offline" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:NSLocalizedString(@"login",@"word"),NSLocalizedString(@"signup",@"word"),nil];
+        UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"offline",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:NSLocalizedString(@"login",@"word"),NSLocalizedString(@"signup",@"word"),nil];
         nullUser.tag = 200;
         [nullUser show];
     }
@@ -131,7 +131,7 @@ int flag;
           [self performSegueWithIdentifier:@"ProfileLogin" sender:nil];
         }
         else{
-            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You don't have Internet Connection.Please Enable it to Log In " delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
+            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"loginerror",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil,nil];
             nullUser.tag = 400;
             [nullUser show];
         }
@@ -141,7 +141,7 @@ int flag;
             [self performSegueWithIdentifier:@"createAccount" sender:nil];
         }
         else{
-            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:@"Oops !!" message:@"You don't have Internet Connection.Please Enable it to Sign Up " delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil,nil];
+            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"signuperror",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil,nil];
             nullUser.tag = 400;
             [nullUser show];
         }

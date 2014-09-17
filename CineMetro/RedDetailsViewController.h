@@ -10,6 +10,7 @@
 #import "RatingViewController.h"
 @interface RedDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate>
 @property NSDictionary *station;
+@property NSInteger indexPath;
 @property (strong,nonatomic) RatingViewController *popViewController;
 @property (weak, nonatomic) IBOutlet UITextView *textview;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;

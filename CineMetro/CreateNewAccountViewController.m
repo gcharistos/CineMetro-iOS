@@ -143,11 +143,15 @@ PFUser *appUser;
     user.password = passwordTextField.text;
     NSData *imageData = UIImageJPEGRepresentation(profilePhoto.image, 0.05f);
     NSString *filename = [NSString stringWithFormat:@"file.jpg"];
+    NSArray *redArray = [[NSArray alloc]initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], nil];
+    NSArray *greenArray = [[NSArray alloc]initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], nil];
     PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
     [user setObject:imageFile forKey:@"profileImage"];
     [user setObject:@0 forKey:@"redLine"];
     [user setObject:@0 forKey:@"GreenLine"];
     [user setObject:@0 forKey:@"blueLine"];
+    [user setObject:redArray forKey:@"redLineStations"];
+    [user setObject:greenArray  forKey:@"greenLineStations"];
 
     
     BOOL validateEmail = [self validateEmailWithString:emailTextField.text];
@@ -206,7 +210,7 @@ PFUser *appUser;
              appUser = user;
              // Display an alert view to show the error message
              UIAlertView *alertView =
-             [[UIAlertView alloc] initWithTitle:@"Successful Registration . Please Check For Confirmation Email"
+             [[UIAlertView alloc] initWithTitle:@"Successful Registration"
                                         message:nil
                                        delegate:self
                               cancelButtonTitle:nil

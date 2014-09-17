@@ -24,6 +24,8 @@
 NSMutableArray *images;
 NSArray *currentList;
 NSArray *titles;
+NSMutableArray *points;
+
 
 
 
@@ -57,9 +59,16 @@ NSArray *titles;
 
 - (IBAction)rateButtonPressed:(id)sender {
     if(user != nil){
-      self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
-    
-      [self.popViewController showInView:self.navigationController.view  withController:self animated:YES];
+        points = [NSMutableArray arrayWithArray:[user objectForKey:@"greenLineStations"]];
+        if([[points objectAtIndex:position1]intValue] != 0){
+            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"ratedTrue",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        else{
+            self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
+            
+            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:position1 withName:@"greenLineStations" animated:YES];
+        }
     }
     else {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please Log In to Rate" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];

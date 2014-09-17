@@ -51,11 +51,11 @@ UIColor *lineColor;
     showDirections = NO;
     //set region of map
     [self setRegion];
+    
 }
 
-
--(void)UploadRedLine{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"RedLineStations" ofType:@"plist"];
+-(void)UploadLine:(NSString *)name :(UIColor *)color{
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     NSArray *anns = [dict objectForKey:@"Stations"];
     currentDB = anns;
@@ -75,18 +75,12 @@ UIColor *lineColor;
     }
     [tableview reloadData];
     [self setRegion];
-    BOOL check = [self checkForNetwork];
-    if(!check || ![CLLocationManager locationServicesEnabled]){
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enableLocation",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-        [alert show];
-    }
-    else{
-        [self getDirections];
-    }
-    lineColor = [UIColor redColor];
+    lineColor = color;
 
-    
 }
+
+
+
 
 //  ************ ONLY WHEN USER ENABLES INTERNET CONNECTION ************ //
 
@@ -155,6 +149,16 @@ UIColor *lineColor;
     }
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
     annotationView.canShowCallout = YES;
+    if(visibleLine == 1){
+        annotationView.pinColor = MKPinAnnotationColorRed;
+    }
+    else if(visibleLine == 2){
+        annotationView.pinColor = MKPinAnnotationColorGreen;
+    }
+    else if(visibleLine == 3){
+        annotationView.pinColor = MKPinAnnotationColorPurple;
+    }
+
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     return annotationView;
 }
@@ -206,30 +210,46 @@ UIColor *lineColor;
     [settingsAlert show];
 }
 
+-(void)removeObjectsFromMap{
+    //remove annotations from map
+    [mapview removeAnnotations:redPins];
+    // remove all annotations from array
+    [redPins removeAllObjects];
+    //after delete , reload tableview
+    [tableview reloadData];
+    
+    //remove all overlays from map
+    [mapview removeOverlays:overlays];
+    
+    //remove all overlays from array
+    [overlays removeAllObjects];
+
+}
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(alertView.tag == 100){
         if(buttonIndex == 1 ){
             //if user pressed the same line and route is visible exit
-            if(visibleLine == 1 && showDirections){
+            if(visibleLine == 1){
                 return;
             }
-            visibleLine = 1;
-            [self UploadRedLine];
-        }
-        else if(buttonIndex != 0) {
             visibleLine  = buttonIndex;
-            //remove annotations from map
-            [mapview removeAnnotations:redPins];
-            // remove all annotations from array
-            [redPins removeAllObjects];
-            //after delete , reload tableview
-            [tableview reloadData];
-            
-            //remove all overlays from map
-            [mapview removeOverlays:overlays];
-           
-            //remove all overlays from array
-            [overlays removeAllObjects];
+            [self removeObjectsFromMap];
+            [self UploadLine:@"RedLineStations" :[UIColor redColor]];
+        }
+        else if(buttonIndex == 2){
+            if(visibleLine == 2){
+                return;
+            }
+            visibleLine  = buttonIndex;
+            [self removeObjectsFromMap];
+            [self UploadLine:@"GreenLineStations" :[UIColor greenColor]];
+
+        }
+        else if(buttonIndex == 3) {
+            if(visibleLine == 3){
+                return;
+            }
+            [self removeObjectsFromMap];
         }
     }
 }
@@ -292,14 +312,14 @@ UIColor *lineColor;
     
     static NSString *identifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    cell.backgroundColor = lineColor;
+   // cell.backgroundColor = lineColor;
     UILabel *titleLabel = (UILabel *)[cell viewWithTag:105];
     UILabel *subtitleLabel = (UILabel *)[cell viewWithTag:106];
     titleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"Title"];
-   // [titleLabel setTextColor:lineColor];
-    titleLabel.textColor =[UIColor whiteColor];
+    [titleLabel setTextColor:lineColor];
+   // titleLabel.textColor =[UIColor whiteColor];
     subtitleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
-    subtitleLabel.textColor = [UIColor whiteColor];
+   // subtitleLabel.textColor = [UIColor whiteColor];
     
     return cell;
 }

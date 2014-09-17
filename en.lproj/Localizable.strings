@@ -9,6 +9,11 @@
 
 "emptytable" = "Please Select Line From Settings";
 "login" = "Log In";
+"welcome" = "Welcome to CineMetro";
+"offline" = "You Are Currently Offline";
+"loginerror" = "You don't have Internet Connection.Please Enable it to Log In ";
+"signuperror" = "You don't have Internet Connection.Please Enable it to Sign Up ";
+"rateerror" = "You don't have Internet Connection.Please Enable it to Rate ";
 "signup" = "Sign Up";
 "ok" = "OK";
 "chooseL" = "Choose Line";
@@ -16,7 +21,10 @@
 "green" = "Green Line";
 "blue" = "Blue Line";
 "cancel" = "Cancel";
+"thankyou" = "Thank You";
 "enableLocation" = "Please Enable Location Services and Internet Connection to Show Route of Line";
 "enablelocation" = "Please Enable Location Services to Show Current Location";
 "userlocation" = "User Location";
 "directions" = "Directions";
+"ratedTrue" = "You have Rated Station";
+

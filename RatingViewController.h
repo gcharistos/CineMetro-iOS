@@ -17,9 +17,11 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *star5;
 
-- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller animated:(BOOL)animated;
+- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller withArray:(NSArray *)array  atIndexPath:(NSInteger)indexPath withName:(NSString *)name animated:(BOOL)animated;
 - (IBAction)okButtonPressed:(id)sender;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *stars;
 - (IBAction)cancelButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *okbutton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
 @end

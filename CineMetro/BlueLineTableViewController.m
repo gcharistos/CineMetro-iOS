@@ -13,7 +13,9 @@
 @end
 
 @implementation BlueLineTableViewController
+@synthesize lineName;
 NSInteger  selectedIndex ;
+NSArray *station;
 NSMutableArray *titles;
 
 
@@ -29,15 +31,14 @@ NSMutableArray *titles;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *title;
     selectedIndex = -1;
     titles = [[NSMutableArray alloc]init];
-    for(int i=0;i<8;i++){
-        title = [[NSString alloc]initWithFormat:@"Στάση %i",i+1];
-        NSLog(title);
-        [titles addObject:title];
-    }
-    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"BlueLineStations" ofType:@"plist"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSArray *anns = [dict objectForKey:@"Stations"];
+    station = anns;
+    [lineName setText:[dict objectForKey:@"Name"]];
+
 }
 
 
@@ -56,8 +57,7 @@ NSMutableArray *titles;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
-    //return titles.count;
+    return station.count;
 }
 
 

@@ -144,7 +144,6 @@
 		1FAE2CEB19C38AF400D006EC /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE2CE919C38AF400D006EC /* RatingViewController.m */; };
 		1FAE2CEC19C38AF400D006EC /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE2CEA19C38AF400D006EC /* RatingViewController.xib */; };
 		1FAE2CEE19C38BE300D006EC /* star_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE2CED19C38BE300D006EC /* star_off.png */; };
-		1FAE2CF019C38C9900D006EC /* 5starsgray.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE2CEF19C38C9900D006EC /* 5starsgray.png */; };
 		1FAE2CF219C3994D00D006EC /* star_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE2CF119C3994D00D006EC /* star_on.png */; };
 		1FB552E9196C456500E11311 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552E8196C456500E11311 /* Accounts.framework */; };
 		1FB552EB196C45CE00E11311 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552EA196C45CE00E11311 /* Social.framework */; };
@@ -337,7 +336,6 @@
 		1FAE2CE919C38AF400D006EC /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RatingViewController.m; path = ../RatingViewController.m; sourceTree = "<group>"; };
 		1FAE2CEA19C38AF400D006EC /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RatingViewController.xib; path = ../RatingViewController.xib; sourceTree = "<group>"; };
 		1FAE2CED19C38BE300D006EC /* star_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_off.png; sourceTree = "<group>"; };
-		1FAE2CEF19C38C9900D006EC /* 5starsgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5starsgray.png; sourceTree = "<group>"; };
 		1FAE2CF119C3994D00D006EC /* star_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_on.png; sourceTree = "<group>"; };
 		1FB552E8196C456500E11311 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1FB552EA196C45CE00E11311 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -763,7 +761,6 @@
 				1F6AED8519AA5DEA000490DD /* mainBackground.jpg */,
 				1FAE2CF119C3994D00D006EC /* star_on.png */,
 				1FAE2CED19C38BE300D006EC /* star_off.png */,
-				1FAE2CEF19C38C9900D006EC /* 5starsgray.png */,
 				1FAE2CE419C3829A00D006EC /* photo-75.png */,
 				1FAE2CE619C3876900D006EC /* photo-32.png */,
 				1F65480A19A7466400974CCB /* ButtonStretch@2x.png */,
@@ -941,7 +938,6 @@
 				1FAE2CEE19C38BE300D006EC /* star_off.png in Resources */,
 				1F2DC9A819C2208B00265605 /* fragkedakhs_vasilis.jpg in Resources */,
 				1F9362AE1988F63D0088A0BF /* red22.jpg in Resources */,
-				1FAE2CF019C38C9900D006EC /* 5starsgray.png in Resources */,
 				1F9362C31988F6630088A0BF /* red51.jpg in Resources */,
 				1F2DC9AB19C2208B00265605 /* kwsti_maria.jpg in Resources */,
 				1F48BDD7199AB2E800BD30C0 /* green13.jpg in Resources */,

@@ -78,7 +78,7 @@
 "Mbc-ep-OL5.text" = "Label";
 
 /* Class = "IBUIBarButtonItem"; title = "Rate"; ObjectID = "Mwz-GD-7r2"; */
-"Mwz-GD-7r2.title" = "Αξιολογήστε";
+"Mwz-GD-7r2.title" = "Βαθμολογήστε το";
 
 /* Class = "IBUILabel"; text = "Green Line : "; ObjectID = "NTU-Ek-nnz"; */
 "NTU-Ek-nnz.text" = "Πράσινη Γραμμή : ";
@@ -165,7 +165,7 @@
 "kdV-sb-6ii.normalTitle" = "Γραμμές";
 
 /* Class = "IBUIBarButtonItem"; title = "Rate"; ObjectID = "lgw-wR-jbP"; */
-"lgw-wR-jbP.title" = "Αξιολογήστε";
+"lgw-wR-jbP.title" = "Βαθμολογήστε";
 
 /* Class = "IBUILabel"; text = "Επικοινωνία  "; ObjectID = "mlN-ip-7UX"; */
 "mlN-ip-7UX.text" = "Επικοινωνία  ";
@@ -217,3 +217,4 @@
 
 /* Class = "IBUITabBarItem"; title = "Blue Line"; ObjectID = "zcJ-cJ-ymF"; */
 "zcJ-cJ-ymF.title" = "Μπλέ Γραμμή";
+

@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingViewController">
             <connections>
+                <outlet property="cancelButton" destination="Czk-NI-qAw" id="6kQ-1n-VOS"/>
+                <outlet property="okbutton" destination="Wv1-aq-duL" id="4Jc-9I-mth"/>
                 <outlet property="popUpView" destination="i5M-Pr-FkT" id="KZ7-io-mmc"/>
                 <outlet property="star1" destination="VQD-qz-zDA" id="LCb-Pd-Bux"/>
                 <outlet property="star2" destination="zBM-0S-Gpg" id="OpK-8K-hBM"/>
