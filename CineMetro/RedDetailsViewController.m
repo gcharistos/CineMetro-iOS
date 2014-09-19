@@ -42,8 +42,12 @@ NSMutableArray *points;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIBarButtonItem *ratebutton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"rate",@"word") style:UIBarButtonItemStyleBordered target:self action:@selector(rateButtonPressed:)];
+    
+    UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Upload"] style:UIBarButtonItemStyleBordered target:self action:@selector(shareButtonPressed:)];
+    self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
     [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,600)];
+    [scroller setContentSize:CGSizeMake(320,580)];
     infoLabel.text = NSLocalizedString(@"info",@"word");
     images = [[NSMutableArray alloc]init];
     //set navigation bar title
@@ -75,7 +79,11 @@ NSMutableArray *points;
     return YES;
 }
 
-
+- (IBAction)shareButtonPressed:(id)sender {
+    UIActionSheet *actionsheet = [[UIActionSheet alloc]initWithTitle:NSLocalizedString(@"sharemessage",@"word") delegate:self cancelButtonTitle:NSLocalizedString(@"cancel",@"word") destructiveButtonTitle:nil otherButtonTitles:@"Facebook",@"Twitter", nil];
+    actionsheet.tag = 100;
+    [actionsheet showInView:self.view];
+}
 
 - (IBAction)rateButtonPressed:(id)sender {
     if(user != nil){
@@ -96,7 +104,18 @@ NSMutableArray *points;
     }
 }
 
-- (IBAction)twitterButton:(id)sender {
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(actionSheet.tag == 100){
+        if(buttonIndex == 0){
+            [self facebookButton];
+        }
+        else if(buttonIndex == 1){
+            [self twitterButton];
+        }
+    }
+}
+
+- (void)twitterButton {
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *tweetSheetOBJ = [SLComposeViewController
@@ -112,7 +131,7 @@ NSMutableArray *points;
     }
 }
 
-- (IBAction)facebookButton:(id)sender {
+- (void)facebookButton {
     if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         SLComposeViewController *fbSheetOBJ = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         NSString *fbtext = [NSString stringWithFormat:@"#CineMetro #line1station%i\n",indexPath+1];

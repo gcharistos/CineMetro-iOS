@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RatingViewController.h"
-@interface RedDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate,UIScrollViewDelegate>{
+@interface RedDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate,UIScrollViewDelegate,UIActionSheetDelegate>{
     IBOutlet UIScrollView *scroller;
 }
 @property NSDictionary *station;

@@ -15,7 +15,9 @@
 "signuperror" = "You don't have Internet Connection.Please Enable it to Sign Up ";
 "rateerror" = "You don't have Internet Connection.Please Enable it to Rate ";
 "signup" = "Sign Up";
+"sharemessage" = "Write Something To";
 "rateLogin" = "Please Log In to Rate";
+"rate" = "Rate";
 "ok" = "OK";
 "chooseL" = "Choose Line";
 "red" = "Red Line";

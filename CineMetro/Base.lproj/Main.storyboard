@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WHg-J9-2Ny">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -195,14 +194,14 @@
                         <viewControllerLayoutGuide type="bottom" id="PtC-wX-A3m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="H1D-D5-NX7">
-                        <rect key="frame" x="0.0" y="64" width="320" height="816"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="814"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMx-39-9SV">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="816"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="W83-Nl-z1A">
-                                        <rect key="frame" x="0.0" y="368" width="320" height="105"/>
+                                        <rect key="frame" x="0.0" y="320" width="320" height="105"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4rP-ff-EeD">
                                             <size key="itemSize" width="258" height="95"/>
@@ -239,20 +238,20 @@
                                         </connections>
                                     </collectionView>
                                     <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q09-Yy-NN6">
-                                        <rect key="frame" x="0.0" y="44" width="320" height="219"/>
+                                        <rect key="frame" x="0.0" y="42" width="320" height="219"/>
                                         <connections>
                                             <segue destination="qRU-mK-HBd" kind="embed" identifier="showPhotos" id="aE9-pI-0tH"/>
                                         </connections>
                                     </containerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpr-eJ-C3Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="-2" width="320" height="44"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Ox-Lo-ppP">
-                                        <rect key="frame" x="0.0" y="531" width="320" height="105"/>
+                                        <rect key="frame" x="0.0" y="489" width="320" height="105"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RUY-zg-cGp">
                                             <size key="itemSize" width="258" height="95"/>
@@ -289,50 +288,26 @@
                                         </connections>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug1-i9-oG2">
-                                        <rect key="frame" x="89" y="502" width="142" height="21"/>
+                                        <rect key="frame" x="89" y="460" width="142" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYI-Ja-zWr">
-                                        <rect key="frame" x="0.0" y="690" width="320" height="126"/>
+                                        <rect key="frame" x="0.0" y="668" width="320" height="148"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UF-zx-gqj">
-                                        <rect key="frame" x="106" y="661" width="108" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glg-Jl-vgV">
+                                        <rect key="frame" x="95" y="291" width="130" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eK-xx-AZg">
-                                        <rect key="frame" x="0.0" y="263" width="155" height="39"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Twitter">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="twitterButton:" destination="PX6-O8-zED" eventType="touchUpInside" id="JyK-kG-BWe"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="853-lD-2ou">
-                                        <rect key="frame" x="165" y="263" width="155" height="39"/>
-                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Facebook">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="facebookButton:" destination="PX6-O8-zED" eventType="touchUpInside" id="E17-Ub-muT"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glg-Jl-vgV">
-                                        <rect key="frame" x="95" y="339" width="130" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UF-zx-gqj">
+                                        <rect key="frame" x="106" y="639" width="108" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -342,23 +317,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="pMx-39-9SV" secondAttribute="trailing" constant="-16" id="3d9-wr-DCM"/>
-                            <constraint firstItem="pMx-39-9SV" firstAttribute="top" secondItem="ogB-D1-0D8" secondAttribute="bottom" id="9ov-bB-4nA"/>
-                            <constraint firstItem="pMx-39-9SV" firstAttribute="leading" secondItem="H1D-D5-NX7" secondAttribute="leadingMargin" constant="-16" id="EWp-Tl-ibW"/>
-                            <constraint firstItem="PtC-wX-A3m" firstAttribute="top" secondItem="pMx-39-9SV" secondAttribute="bottom" id="ZZt-TA-Bof"/>
+                            <constraint firstItem="pMx-39-9SV" firstAttribute="leading" secondItem="H1D-D5-NX7" secondAttribute="leadingMargin" constant="-16" id="CrL-Sd-YMC"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="pMx-39-9SV" secondAttribute="bottom" constant="-2" id="I5o-xy-Wwm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pMx-39-9SV" secondAttribute="trailing" constant="-16" id="f0N-KZ-xbz"/>
+                            <constraint firstItem="pMx-39-9SV" firstAttribute="top" secondItem="ogB-D1-0D8" secondAttribute="bottom" id="yC7-u1-0W5"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="Jiu-mc-iq7">
-                        <barButtonItem key="rightBarButtonItem" title="Rate" id="Mwz-GD-7r2">
-                            <connections>
-                                <action selector="rateButtonPressed:" destination="PX6-O8-zED" id="Msz-7U-Clk"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Jiu-mc-iq7"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="880"/>
+                    <size key="freeformSize" width="320" height="878"/>
                     <connections>
                         <outlet property="actorsCollectionView" destination="8Ox-Lo-ppP" id="DOf-CO-bK0"/>
                         <outlet property="actorsLabel" destination="ug1-i9-oG2" id="OXY-bG-Acq"/>
@@ -1186,11 +1155,11 @@
                         <viewControllerLayoutGuide type="bottom" id="5oO-Bn-dwr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DrX-EF-x90">
-                        <rect key="frame" x="0.0" y="64" width="320" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="516"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Um-Ie-6ht">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="516"/>
                                 <subviews>
                                     <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iaC-im-fN5">
                                         <rect key="frame" x="0.0" y="43" width="320" height="220"/>
@@ -1206,41 +1175,19 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxD-QH-a89">
-                                        <rect key="frame" x="0.0" y="263" width="157" height="40"/>
-                                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Twitter">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="twitterButton:" destination="wrM-uC-tFl" eventType="touchUpInside" id="llh-M5-G0j"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mL7-20-vv7">
-                                        <rect key="frame" x="165" y="263" width="157" height="40"/>
-                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Facebook">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="facebookButton:" destination="wrM-uC-tFl" eventType="touchUpInside" id="rSB-xK-yQH"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8z-uc-GUD">
-                                        <rect key="frame" x="95" y="336" width="130" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSq-td-eK0">
-                                        <rect key="frame" x="0.0" y="365" width="320" height="171"/>
+                                        <rect key="frame" x="0.0" y="334" width="320" height="182"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8z-uc-GUD">
+                                        <rect key="frame" x="95" y="305" width="130" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1253,16 +1200,10 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="uAV-xH-Dar">
-                        <barButtonItem key="rightBarButtonItem" title="Rate" id="lgw-wR-jbP">
-                            <connections>
-                                <action selector="rateButtonPressed:" destination="wrM-uC-tFl" id="TpV-HV-CxW"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="uAV-xH-Dar"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="600"/>
+                    <size key="freeformSize" width="320" height="580"/>
                     <connections>
                         <outlet property="infoLabel" destination="o8z-uc-GUD" id="U4z-bj-D26"/>
                         <outlet property="scroller" destination="2Um-Ie-6ht" id="RfB-AP-uT8"/>
@@ -1318,7 +1259,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pTK-eU-Y2U"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LaJ-dd-V9W">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="219"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1341,6 +1282,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Ygj-DJ-qhf"/>
-        <segue reference="aE9-pI-0tH"/>
+        <segue reference="TPj-vl-8q5"/>
     </inferredMetricsTieBreakers>
 </document>
