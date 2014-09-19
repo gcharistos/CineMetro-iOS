@@ -14,4 +14,5 @@ PFUser *user;
 @property (nonatomic,strong) NSString *word;
 -(void)redirectToProfile;
 -(void)LogOut;
+- (IBAction)loginpressed:(id)sender;
 @end

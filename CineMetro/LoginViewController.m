@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "MainViewController.h"
 #import <Parse/Parse.h>
+#import <POP.h>
 
 @interface LoginViewController ()
 
@@ -18,6 +19,7 @@
 @synthesize emailTextField;
 @synthesize passwordTextField;
 @synthesize loginStatus;
+@synthesize okbutton;
 PFUser *appUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,6 +35,8 @@ PFUser *appUser;
 {
     //[super viewDidLoad];
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bw_background.jpg"]];
+
     // Do any additional setup after loading the view.
 }
 
@@ -79,13 +83,12 @@ PFUser *appUser;
                                         
                                         if(user){
                                             UIAlertView *alertView = nil;
-                                            
-                                                                                            // Create an alert view to tell the user
+                                                                                                            // Create an alert view to tell the user
                                                 alertView = [[UIAlertView alloc] initWithTitle:@"Successfull Login"
                                                                                        message:nil
                                                                                       delegate:self
                                                                              cancelButtonTitle:nil
-                                                                             otherButtonTitles:@"Ok", nil];
+                                                                             otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
                                             // Show the alert view
                                             [alertView show];
                                             appUser = user;
@@ -100,7 +103,7 @@ PFUser *appUser;
                                                                                    message:nil
                                                                                   delegate:self
                                                                          cancelButtonTitle:nil
-                                                                         otherButtonTitles:@"Ok", nil];
+                                                                         otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
                                             // Show the alert view
                                             [alertView show];
 

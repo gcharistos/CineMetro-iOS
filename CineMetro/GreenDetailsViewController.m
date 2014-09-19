@@ -22,10 +22,16 @@
 @implementation GreenDetailsViewController
 @synthesize position1;
 @synthesize position;
+@synthesize info;
+@synthesize infoLabel;
 @synthesize movieTitle;
+@synthesize actorsLabel;
+@synthesize directorsLabel;
 NSMutableArray *images;
 NSArray *currentList;
 NSArray *titles;
+NSArray *actors;
+NSArray *directors;
 NSMutableArray *points;
 
 
@@ -43,16 +49,24 @@ NSMutableArray *points;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [scroller  setScrollEnabled:YES];
+    [scroller setContentSize:CGSizeMake(320,880)];
     images = [[NSMutableArray alloc]init];
-    
+    actorsLabel.text = NSLocalizedString(@"actors",@"word");
+    directorsLabel.text = NSLocalizedString(@"director",@"word");
+    infoLabel.text = NSLocalizedString(@"info",@"word");
     position1 = position;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"GreenLineStations" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     NSArray *anns = [dict objectForKey:@"Stations"];
     currentList = anns;
+    actors = [[currentList objectAtIndex:position1]objectForKey:@"Actors"];
+    directors  = [[currentList objectAtIndex:position1]objectForKey:@"Directors"];
+    info.text = [[currentList objectAtIndex:position1]objectForKey:@"text"];
+    [info setFont:[UIFont systemFontOfSize:17]];
     movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
     images = [[anns objectAtIndex:position1]objectForKey:@"Images"];
-    titles = [[NSArray alloc]initWithObjects:@"Συντελεστές",@"Πληροφορίες", nil];
+    titles = [[NSArray alloc]initWithObjects:NSLocalizedString(@"factors",@"word"),NSLocalizedString(@"info",@"word"), nil];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
 
 
@@ -73,7 +87,7 @@ NSMutableArray *points;
         }
     }
     else {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please Log In to Rate" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateLogin",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
         [alert show];
     }
 }
@@ -89,6 +103,37 @@ NSMutableArray *points;
     return YES;
 }
 
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    if(collectionView == self.actorsCollectionView){
+        return actors.count;
+    }
+    return directors.count;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell;
+    if(collectionView == self.actorsCollectionView){
+        static NSString *identifer = @"Cell";
+         cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifer forIndexPath:indexPath];
+        UIImageView *imageview = (UIImageView *)[cell viewWithTag:106];
+        UILabel *label = (UILabel *)[cell viewWithTag:107];
+        imageview.image = [UIImage imageNamed:[[actors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
+        label.text = [[actors objectAtIndex:indexPath.row]objectForKey:@"Name"];
+    }
+    else if(collectionView == self.directorsCollectionView){
+        static NSString *identifer = @"cell";
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifer forIndexPath:indexPath];
+        UIImageView *imageview = (UIImageView *)[cell viewWithTag:104];
+        UILabel *label = (UILabel *)[cell viewWithTag:105];
+        imageview.image = [UIImage imageNamed:[[directors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
+        label.text = [[directors objectAtIndex:indexPath.row]objectForKey:@"Name"];
+    }
+    return cell;
+}
 
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -137,16 +182,7 @@ NSMutableArray *points;
             dest.pageImages = [[NSArray alloc]initWithArray:images];
         }
     }
-    else if([segue.identifier isEqualToString:@"ShowActors"]){
-        ShowActorsViewController *dest = segue.destinationViewController;
-        dest.list = [[currentList objectAtIndex:position1]objectForKey:@"Actors"];
-        dest.directlist = [[currentList objectAtIndex:position1]objectForKey:@"Director"];
-    }
-    else if([segue.identifier isEqualToString:@"showText"]){
-        ShowTextViewController *dest = segue.destinationViewController;
-        dest.text = [[currentList objectAtIndex:position1]objectForKey:@"text"];
-        dest.movieTitle = [[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
-    }
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 
@@ -171,7 +207,7 @@ NSMutableArray *points;
         [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
     }
     else{ // no twitter account
-        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:@"No Twitter Account" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"notwitter",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
         noaccount.tag = 200;
         [noaccount show];
     }
@@ -185,7 +221,7 @@ NSMutableArray *points;
         [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
     }
     else{ // no facebook account
-        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:@"No Facebook Account" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"nofacebook",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
         noaccount.tag = 200;
         [noaccount show];
     }

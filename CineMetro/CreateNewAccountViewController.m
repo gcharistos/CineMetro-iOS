@@ -36,6 +36,8 @@ PFUser *appUser;
     [super viewDidLoad];
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeProfilePhoto:)];
     [profilePhoto addGestureRecognizer:gesture];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bw_background.jpg"]];
+
         // Do any additional setup after loading the view.
 }
 

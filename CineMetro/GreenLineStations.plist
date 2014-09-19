@@ -10,13 +10,15 @@
 				<string>green01.jpg</string>
 				<string>green02.jpg</string>
 			</array>
-			<key>Director</key>
-			<dict>
-				<key>Name</key>
-				<string>Γκρεγκ Τάλλας</string>
-				<key>Icon</key>
-				<string>Gregg_Ntallas.jpg</string>
-			</dict>
+			<key>Directors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Γκρεγκ Τάλλας</string>
+					<key>Icon</key>
+					<string>Gregg_Ntallas.jpg</string>
+				</dict>
+			</array>
 			<key>Actors</key>
 			<array>
 				<dict>
@@ -57,13 +59,15 @@
 				<string>green12.jpg</string>
 				<string>green13.jpg</string>
 			</array>
-			<key>Director</key>
-			<dict>
-				<key>Name</key>
-				<string>Γιάννης Δαλιανίδης</string>
-				<key>Icon</key>
-				<string>dalianidis.jpg</string>
-			</dict>
+			<key>Directors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Γιάννης Δαλιανίδης</string>
+					<key>Icon</key>
+					<string>dalianidis.jpg</string>
+				</dict>
+			</array>
 			<key>text</key>
 			<string>Δύο αδέρφια προσπαθούν να ισορροπήσουν ανάμεσα στις αισθηματικές τους σχέσεις και την συντηρητικές αρχές της πατρικής οικίας τους. 
 Εξ ολοκλήρου γυρισμένη στην Θεσσαλονίκη: Πανόραμα, περιοχή Ανθέων, Κέντρο Θεσσαλονίκης </string>
@@ -110,13 +114,15 @@
 				<string>green22.jpg</string>
 				<string>green23.jpg</string>
 			</array>
-			<key>Director</key>
-			<dict>
-				<key>Name</key>
-				<string>Γιάννης Δαλιανίδης</string>
-				<key>Icon</key>
-				<string>dalianidis.jpg</string>
-			</dict>
+			<key>Directors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Γιάννης Δαλιανίδης</string>
+					<key>Icon</key>
+					<string>dalianidis.jpg</string>
+				</dict>
+			</array>
 			<key>Actors</key>
 			<array>
 				<dict>
@@ -183,6 +189,15 @@
 					<string>antwnopoulos.jpg</string>
 				</dict>
 			</array>
+			<key>Directors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Τάκης Κανελλόπουλος</string>
+					<key>Icon</key>
+					<string>kanelopoulos.jpeg</string>
+				</dict>
+			</array>
 			<key>Director</key>
 			<dict>
 				<key>Name</key>
@@ -223,13 +238,15 @@
 					<string>bazaka.jpg</string>
 				</dict>
 			</array>
-			<key>Director</key>
-			<dict>
-				<key>Name</key>
-				<string>Παντελής Βούλγαρης</string>
-				<key>Icon</key>
-				<string>voulgaris.jpg</string>
-			</dict>
+			<key>Directors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Παντελής Βούλγαρης</string>
+					<key>Icon</key>
+					<string>voulgaris.jpg</string>
+				</dict>
+			</array>
 			<key>text</key>
 			<string>
 Η πορεία ενός ταλαντούχου ποδοσφαιριστή, ο οποίος μέσα από νίκες και ήττες, τραυματισμούς και παρασκήνιο, θα καταλάβει ότι η επιτυχία έχει το τίμημά της. 
@@ -249,13 +266,15 @@
 				<string>green51.jpg</string>
 				<string>green52.jpg</string>
 			</array>
-			<key>Director</key>
-			<dict>
-				<key>Name</key>
-				<string>Θόδωρος Αγγελόπουλος</string>
-				<key>Icon</key>
-				<string>aggelopoulos.jpg</string>
-			</dict>
+			<key>Directors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Θόδωρος Αγγελόπουλος</string>
+					<key>Icon</key>
+					<string>aggelopoulos.jpg</string>
+				</dict>
+			</array>
 			<key>Actors</key>
 			<array>
 				<dict>
@@ -316,13 +335,15 @@
 					<string>tsirigkouli.jpg</string>
 				</dict>
 			</array>
-			<key>Director</key>
-			<dict>
-				<key>Name</key>
-				<string>Σύλλας Τζουμέρκας</string>
-				<key>Icon</key>
-				<string>syllas_tzoumerkas-200x200.jpg</string>
-			</dict>
+			<key>Directors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Σύλλας Τζουμέρκας</string>
+					<key>Icon</key>
+					<string>syllas_tzoumerkas-200x200.jpg</string>
+				</dict>
+			</array>
 			<key>text</key>
 			<string>Οικογενειακό δράμα ως ακτινογραφία της νεοελληνικής κοινωνικής πραγματικότητας. 
 Η ταινία πραγματοποιεί μεγάλο μέρος της δράσης της σε γνωστά σημεία της σημερινής Θεσσαλονίκης: Λεωφόρος Στρατού (ΕΡΤ3), Νέα Παραλία, Αγίος Δημήτριος. </string>
@@ -345,13 +366,15 @@
 			<key>text</key>
 			<string>Σάτιρα θεσσαλονικιώτικων και βορειοελλαδικών κλισέ με πολύ χιούμορ. 
 Τόποι γυρισμάτων: Θεολογική Σχολή ΑΠΘ, Νέο Δημαρχειακό Μέγαρο, Λευκός Πύργος, ΟΣΕ, Τούμπα </string>
-			<key>Director</key>
-			<dict>
-				<key>Name</key>
-				<string>Γιώργος Παπαιωάνου</string>
-				<key>Icon</key>
-				<string>papaiwannou.jpg</string>
-			</dict>
+			<key>Directors</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Γιώργος Παπαιωάνου</string>
+					<key>Icon</key>
+					<string>papaiwannou.jpg</string>
+				</dict>
+			</array>
 			<key>Actors</key>
 			<array>
 				<dict>

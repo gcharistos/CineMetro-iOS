@@ -19,6 +19,7 @@
 
 @implementation RedDetailsViewController
 @synthesize station;
+@synthesize infoLabel;
 @synthesize textview;
 @synthesize tableview;
 @synthesize title;
@@ -41,12 +42,15 @@ NSMutableArray *points;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [scroller  setScrollEnabled:YES];
+    [scroller setContentSize:CGSizeMake(320,600)];
+    infoLabel.text = NSLocalizedString(@"info",@"word");
     images = [[NSMutableArray alloc]init];
     //set navigation bar title
    // self.navigationItem.title =[station objectForKey:@"Subtitle"];
     theaterTitle.text = [station objectForKey:@"Subtitle"];
     textview.text  = [station objectForKey:@"text"];
-    [textview setFont:[UIFont systemFontOfSize:14]];
+    [textview setFont:[UIFont systemFontOfSize:17]];
     images = [station objectForKey:@"Images"];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
 
@@ -87,7 +91,7 @@ NSMutableArray *points;
         }
     }
     else {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Please Log In to Rate" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateLogin",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
         [alert show];
     }
 }
@@ -102,7 +106,7 @@ NSMutableArray *points;
         [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
     }
     else{ // no twitter account
-        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:@"No Twitter Account" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"notwitter",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
         noaccount.tag = 200;
         [noaccount show];
     }
@@ -116,7 +120,7 @@ NSMutableArray *points;
         [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
     }
     else{ // no facebook account
-        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:@"No Facebook Account" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"nofacebook",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
         noaccount.tag = 200;
         [noaccount show];
     }

@@ -53,6 +53,9 @@ int flag;
     flag = 1;
 }
 
+- (IBAction)loginpressed:(id)sender {
+}
+
 
 
 - (void)didReceiveMemoryWarning

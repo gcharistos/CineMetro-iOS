@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "RatingViewController.h"
-@interface RedDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate>
+@interface RedDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate,UIScrollViewDelegate>{
+    IBOutlet UIScrollView *scroller;
+}
 @property NSDictionary *station;
 @property NSInteger indexPath;
 @property (strong,nonatomic) RatingViewController *popViewController;
@@ -18,5 +20,6 @@
 - (IBAction)twitterButton:(id)sender;
 - (IBAction)facebookButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *theaterTitle;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @end

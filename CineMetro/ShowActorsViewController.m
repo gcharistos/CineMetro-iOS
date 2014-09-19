@@ -75,10 +75,10 @@
         HeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
         NSString *title ;
         if(indexPath.section == 0){
-            title = @"Σκηνοθέτης";
+            title = NSLocalizedString(@"director",@"word");
         }
         else{
-            title = @"Ηθοποιοί";
+            title = NSLocalizedString(@"actors",@"word");
         }
         headerView.headerTitle.text = title;
         

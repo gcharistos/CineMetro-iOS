@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @implementation AppDelegate
 
@@ -17,6 +18,10 @@
     [Parse setApplicationId:@"swhW7tnXLp2qdr7ZqbQ1JRCZMuRaQE5CXY12mp7c"
                   clientKey:@"lrNR1Wa2YThA7SjlkitdaCtMmEBJJM69bHcwpifD"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    // Override point for customization after application launch.
+    [FBLoginView class];
+    [FBProfilePictureView class];
+
     // Override point for customization after application launch.
     
     return YES;
@@ -37,6 +42,12 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    
+    return [FBAppCall handleOpenURL:url
+                  sourceApplication:sourceApplication];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

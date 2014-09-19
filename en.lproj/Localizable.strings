@@ -15,6 +15,7 @@
 "signuperror" = "You don't have Internet Connection.Please Enable it to Sign Up ";
 "rateerror" = "You don't have Internet Connection.Please Enable it to Rate ";
 "signup" = "Sign Up";
+"rateLogin" = "Please Log In to Rate";
 "ok" = "OK";
 "chooseL" = "Choose Line";
 "red" = "Red Line";
@@ -27,4 +28,9 @@
 "userlocation" = "User Location";
 "directions" = "Directions";
 "ratedTrue" = "You have Rated Station";
-
+"nofacebook" = "No Facebook Account";
+"notwitter" = "No Twitter Account";
+"director" = "Director";
+"actors" = "Actors";
+"info" = "Info";
+"factors" = "Factors";
