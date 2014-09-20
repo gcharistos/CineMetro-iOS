@@ -10,12 +10,14 @@
 #import <MapKit/MapKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "ViewController1.h"
-@interface MapViewController : UIViewController<MKMapViewDelegate,UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface MapViewController : UIViewController<MKMapViewDelegate,UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>
   @property (weak, nonatomic) IBOutlet MKMapView *mapview;
   @property (weak, nonatomic) IBOutlet UIButton *sidebarButton;
   @property (strong, nonatomic) ViewController1 *popViewController;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property (weak, nonatomic) IBOutlet UIButton *hideButton;
 
   - (IBAction)settingsButtonPressed:(id)sender;
+-(IBAction)showHidePressed:(id)sender;
 -(void)showUserLocation;
 @end

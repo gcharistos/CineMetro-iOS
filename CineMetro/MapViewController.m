@@ -12,6 +12,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "MapDetailsViewController.h"
 #import "ViewController1.h"
+#import <POP.h>
 #import <AddressBook/AddressBook.h>
 
 
@@ -23,6 +24,7 @@
 @implementation MapViewController
 @synthesize mapview;
 @synthesize tableview;
+@synthesize hideButton;
 UIBarButtonItem *sidebarButton;
 NSMutableArray *redPins ;
 NSMutableArray *overlays;
@@ -44,15 +46,54 @@ UIColor *lineColor;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    UIBarButtonItem *ratebutton = [[UIBarButtonItem alloc] initWithTitle:@"Hide" style:UIBarButtonItemStyleBordered target:self action:@selector(showHidePressed:)];
+//    
+//    UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"settings",@"word") style:UIBarButtonItemStyleBordered target:self action:@selector(settingsButtonPressed:)];
+//    self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
+    [hideButton setTitle:NSLocalizedString(@"hideList",@"word") forState:UIControlStateNormal];
     visibleLine = -1;
     mapview.delegate = self;
     redPins = [[NSMutableArray alloc]init];
     overlays = [[NSMutableArray alloc]init];
     showDirections = NO;
+    
     //set region of map
     [self setRegion];
     
 }
+
+
+//method animates tableview whether user wants to show/hide it .
+-(IBAction)showHidePressed:(id)sender {
+    if(tableview.hidden){
+        CATransition *animation = [CATransition animation];
+        animation.type = kCATransitionFade;
+        animation.duration = 0.4;
+        [tableview.layer addAnimation:animation forKey:nil];
+        [hideButton setTitle:NSLocalizedString(@"hideList",@"word") forState:UIControlStateNormal];
+        tableview.hidden = NO;
+    }
+    else {
+//        CATransition *animation = [CATransition animation];
+//        animation.type = kCATransitionFade;
+//        animation.duration = 0.4;
+//        [tableview.layer addAnimation:animation forKey:nil];
+        [[self.navigationItem.rightBarButtonItems objectAtIndex:0]setTitle:@"Show"];
+        CATransition *animation = [CATransition animation];
+        animation.type = kCATransitionFade;
+        animation.duration = 0.4;
+        [tableview.layer addAnimation:animation forKey:nil];
+        [hideButton setTitle:NSLocalizedString(@"showList",@"word") forState:UIControlStateNormal];
+
+        tableview.hidden = YES;
+        //mapview.frame = self.view.frame;
+    }
+}
+
+-(void)swipeTableView:(UISwipeGestureRecognizer *)sender{
+    NSLog(@"sssss");
+    // fade myView out
+   }
 
 -(void)UploadLine:(NSString *)name :(UIColor *)color{
     NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"plist"];
@@ -150,13 +191,13 @@ UIColor *lineColor;
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
     annotationView.canShowCallout = YES;
     if(visibleLine == 1){
-        annotationView.pinColor = MKPinAnnotationColorRed;
+        annotationView.image = [UIImage imageNamed:@"redPin.png"];
     }
     else if(visibleLine == 2){
-        annotationView.pinColor = MKPinAnnotationColorGreen;
+        annotationView.image = [UIImage imageNamed:@"greenPin.png"];
     }
     else if(visibleLine == 3){
-        annotationView.pinColor = MKPinAnnotationColorPurple;
+        annotationView.image = [UIImage imageNamed:@"bluePin.png"];
     }
 
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
@@ -226,7 +267,7 @@ UIColor *lineColor;
 
 }
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(alertView.tag == 100){
+       if(alertView.tag == 100){
         if(buttonIndex == 1 ){
             //if user pressed the same line and route is visible exit
             if(visibleLine == 1){
@@ -249,6 +290,7 @@ UIColor *lineColor;
             if(visibleLine == 3){
                 return;
             }
+            visibleLine  = buttonIndex;
             [self removeObjectsFromMap];
         }
     }
@@ -287,6 +329,7 @@ UIColor *lineColor;
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     if(redPins.count != 0){
         tableview.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        tableview.backgroundView = nil;
         return 1;
     }
     else{

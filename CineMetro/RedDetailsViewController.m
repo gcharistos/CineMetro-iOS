@@ -54,7 +54,7 @@ NSMutableArray *points;
    // self.navigationItem.title =[station objectForKey:@"Subtitle"];
     theaterTitle.text = [station objectForKey:@"Subtitle"];
     textview.text  = [station objectForKey:@"text"];
-    [textview setFont:[UIFont systemFontOfSize:17]];
+    [textview setFont:[UIFont systemFontOfSize:15]];
     images = [station objectForKey:@"Images"];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
 
@@ -95,7 +95,7 @@ NSMutableArray *points;
         else{
             self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
             
-            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:indexPath withName:@"redLineStations" animated:YES];
+            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:indexPath withName:@"redLineStations" withBackground:[UIImage imageNamed:[images objectAtIndex:0]] animated:YES];
         }
     }
     else {

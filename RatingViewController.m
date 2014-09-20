@@ -104,12 +104,13 @@ GreenDetailsViewController *viewController;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller withArray:(NSArray *)array atIndexPath:(NSInteger)indexPath withName:(NSString *)name  animated:(BOOL)animated{
+- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller withArray:(NSArray *)array atIndexPath:(NSInteger)indexPath withName:(NSString *)name withBackground:(UIImage *)image  animated:(BOOL)animated{
     
     dispatch_async(dispatch_get_main_queue(), ^{
        // viewController = (GreenDetailsViewController *)controller;
         [aView addSubview:self.view];
         points = [[NSMutableArray alloc]initWithArray:array];
+        UIImageView *imageview = [[UIImageView alloc]initWithImage:image];
         row = indexPath;
         tableName = name;
         if (animated) {
@@ -119,6 +120,7 @@ GreenDetailsViewController *viewController;
     
     
 }
+
 
 - (IBAction)okButtonPressed:(id)sender {
     [self removeAnimate];

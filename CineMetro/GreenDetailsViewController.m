@@ -68,7 +68,7 @@ NSMutableArray *points;
     actors = [[currentList objectAtIndex:position1]objectForKey:@"Actors"];
     directors  = [[currentList objectAtIndex:position1]objectForKey:@"Directors"];
     info.text = [[currentList objectAtIndex:position1]objectForKey:@"text"];
-    [info setFont:[UIFont systemFontOfSize:17]];
+    [info setFont:[UIFont systemFontOfSize:15]];
     movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
     images = [[anns objectAtIndex:position1]objectForKey:@"Images"];
     titles = [[NSArray alloc]initWithObjects:NSLocalizedString(@"factors",@"word"),NSLocalizedString(@"info",@"word"), nil];
@@ -88,7 +88,7 @@ NSMutableArray *points;
         else{
             self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
             
-            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:position1 withName:@"greenLineStations" animated:YES];
+            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:position1 withName:@"greenLineStations" withBackground:[UIImage imageNamed:[images objectAtIndex:0]] animated:YES];
         }
     }
     else {

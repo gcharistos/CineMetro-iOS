@@ -17,8 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *textview;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 - (IBAction)rateButtonPressed:(id)sender;
-- (IBAction)twitterButton:(id)sender;
-- (IBAction)facebookButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *theaterTitle;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
