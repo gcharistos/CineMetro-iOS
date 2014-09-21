@@ -110,7 +110,6 @@ GreenDetailsViewController *viewController;
        // viewController = (GreenDetailsViewController *)controller;
         [aView addSubview:self.view];
         points = [[NSMutableArray alloc]initWithArray:array];
-        UIImageView *imageview = [[UIImageView alloc]initWithImage:image];
         row = indexPath;
         tableName = name;
         if (animated) {

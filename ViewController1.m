@@ -79,7 +79,7 @@ MapViewController *viewController;
     MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:currentAnnotation.coordinate addressDictionary:nil];
     MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
     destination.name = currentAnnotation.title;
-    [destination openInMapsWithLaunchOptions:nil];
+    [destination openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving}];
     [self removeAnimate];
 
 }
@@ -90,7 +90,7 @@ MapViewController *viewController;
 
 }
 
-- (void)showInView:(UIView *)aView withAnnotation:(MKPointAnnotation *)annotation withController:(UIViewController *)controller animated:(BOOL)animated
+- (void)showInView:(UIView *)aView withAnnotation:(MKPointAnnotation *)annotation withController:(UIViewController *)controller  animated:(BOOL)animated
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         currentAnnotation = annotation;

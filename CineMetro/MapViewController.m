@@ -10,7 +10,6 @@
 #import <MapKit/MapKit.h>
 #import "Reachability.h"
 #import <CoreLocation/CoreLocation.h>
-#import "MapDetailsViewController.h"
 #import "ViewController1.h"
 #import <POP.h>
 #import <AddressBook/AddressBook.h>
@@ -33,6 +32,7 @@ id<MKOverlay> polyline;
 NSInteger visibleLine;
 NSArray *currentDB;
 UIColor *lineColor;
+NSMutableArray *distances;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,20 +48,31 @@ UIColor *lineColor;
     [super viewDidLoad];
     self.locationManager.delegate = self;
     self.locationManager = [[CLLocationManager alloc] init];
+    distances = [[NSMutableArray alloc]init];
 //    UIBarButtonItem *ratebutton = [[UIBarButtonItem alloc] initWithTitle:@"Hide" style:UIBarButtonItemStyleBordered target:self action:@selector(showHidePressed:)];
 //    
 //    UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"settings",@"word") style:UIBarButtonItemStyleBordered target:self action:@selector(settingsButtonPressed:)];
 //    self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
     [hideButton setTitle:NSLocalizedString(@"hideList",@"word") forState:UIControlStateNormal];
     visibleLine = -1;
+    self.locationManager = [[CLLocationManager alloc]init];
     mapview.delegate = self;
     redPins = [[NSMutableArray alloc]init];
     overlays = [[NSMutableArray alloc]init];
     showDirections = NO;
-    
     //set region of map
     [self setRegion];
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
 }
 
 
@@ -115,6 +126,7 @@ UIColor *lineColor;
     [tableview reloadData];
     [self setRegion];
     lineColor = color;
+    [self showUserLocation];
 
 }
 
@@ -184,8 +196,6 @@ UIColor *lineColor;
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     if(annotation == mapView.userLocation){
-        NSLog(@"User Location");
-     
         return nil;
     }
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
@@ -222,21 +232,40 @@ UIColor *lineColor;
 
 //Method checks if user location services are enabled then show user location to map
 -(void)showUserLocation{
-    if([CLLocationManager locationServicesEnabled]){
-        NSLog(@"IN !!!!");
-       // [locationManager requestAlwaysAuthorization];
-        [self.locationManager requestWhenInUseAuthorization];
+    if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined){
         [self.locationManager requestAlwaysAuthorization];
-        [self.locationManager startUpdatingLocation];
-        
-        mapview.showsUserLocation = YES;
-        // mapview.showsUserLocation = YES;
     }
-    else{
+    else if([CLLocationManager authorizationStatus]  == kCLAuthorizationStatusAuthorized){
+        mapview.showsUserLocation = YES;
+        self.locationManager.delegate = self;
+        [self.locationManager startUpdatingLocation];
+    }
+   
+    if(![CLLocationManager locationServicesEnabled]){
         UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enablelocation",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
         [disabled show];
+    }
+}
 
-
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    int flag = 0;
+    for(int i=0;i<redPins.count;i++){
+        MKPointAnnotation *theAnnotation = [redPins objectAtIndex:i];
+        CLLocation *pinlocation = [[CLLocation alloc]initWithLatitude:theAnnotation.coordinate.latitude longitude:theAnnotation.coordinate.longitude];
+        CLLocationDistance distance = [pinlocation distanceFromLocation:mapview.userLocation.location];
+        if(distance == -1){
+            flag = 1;
+            [distances removeAllObjects];
+            break;
+        }
+        NSString *string = [NSString stringWithFormat:@"%4.0f m",distance];
+        [distances addObject:[NSString stringWithFormat:@"%@",string]];
+        
+    }
+    if(flag == 0){
+      [self.locationManager stopUpdatingLocation];
+      self.locationManager.delegate = nil;
+      [tableview reloadData];
     }
 
 }
@@ -244,6 +273,8 @@ UIColor *lineColor;
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
     if (status == kCLAuthorizationStatusAuthorized){
         mapview.showsUserLocation = YES;
+        self.locationManager.delegate = self;
+        [self.locationManager startUpdatingLocation];
     }
     
     
@@ -283,6 +314,9 @@ UIColor *lineColor;
     
     //remove all overlays from array
     [overlays removeAllObjects];
+    
+    //remove all distances
+    [distances removeAllObjects];
 
 }
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -381,6 +415,10 @@ UIColor *lineColor;
     [titleLabel setTextColor:lineColor];
    // titleLabel.textColor =[UIColor whiteColor];
     subtitleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
+    UILabel *distanceLabel = (UILabel *)[cell viewWithTag:107];
+    if(distances.count !=0){
+      distanceLabel.text = [distances objectAtIndex:indexPath.row];
+    }
    // subtitleLabel.textColor = [UIColor whiteColor];
     
     return cell;
@@ -395,9 +433,7 @@ UIColor *lineColor;
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"showDetails"]){
-        
-    }
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }

@@ -87,7 +87,6 @@
 		1F60E94319CB568100AA078F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F60E94219CB568100AA078F /* Parse.framework */; };
 		1F65480B19A7466400974CCB /* ButtonStretch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F65480A19A7466400974CCB /* ButtonStretch@2x.png */; };
 		1F6AED7919AA10BF000490DD /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6AED7819AA10BF000490DD /* ProfileViewController.m */; };
-		1F6AED7C19AA53AB000490DD /* MapDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6AED7B19AA53AB000490DD /* MapDetailsViewController.m */; };
 		1F6AED8619AA5DEA000490DD /* mainBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F6AED8519AA5DEA000490DD /* mainBackground.jpg */; };
 		1F70653D196768DA009CB35C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653C196768DA009CB35C /* Foundation.framework */; };
 		1F70653F196768DA009CB35C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653E196768DA009CB35C /* CoreGraphics.framework */; };
@@ -260,8 +259,6 @@
 		1F65480A19A7466400974CCB /* ButtonStretch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonStretch@2x.png"; sourceTree = "<group>"; };
 		1F6AED7719AA10BF000490DD /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		1F6AED7819AA10BF000490DD /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		1F6AED7A19AA53AB000490DD /* MapDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDetailsViewController.h; sourceTree = "<group>"; };
-		1F6AED7B19AA53AB000490DD /* MapDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDetailsViewController.m; sourceTree = "<group>"; };
 		1F6AED8519AA5DEA000490DD /* mainBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mainBackground.jpg; sourceTree = "<group>"; };
 		1F706539196768DA009CB35C /* CineMetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineMetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F70653C196768DA009CB35C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -461,8 +458,6 @@
 				1FA9023419B87DDD00149EAD /* ViewController1.h */,
 				1FA9023519B87DDD00149EAD /* ViewController1.m */,
 				1FA9023619B87DDD00149EAD /* ViewController1.xib */,
-				1F6AED7A19AA53AB000490DD /* MapDetailsViewController.h */,
-				1F6AED7B19AA53AB000490DD /* MapDetailsViewController.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -1004,7 +999,6 @@
 				1FE0F51219C9D5B5000D8841 /* AboutTableViewController.m in Sources */,
 				1F70654D196768DA009CB35C /* AppDelegate.m in Sources */,
 				1F2DC98719C21BCE00265605 /* ShowActorsViewController.m in Sources */,
-				1F6AED7C19AA53AB000490DD /* MapDetailsViewController.m in Sources */,
 				1FF72A82198AC4C30022B08D /* BlueDetailsViewController.m in Sources */,
 				1F7065781967706C009CB35C /* RedLineTableViewController.m in Sources */,
 				1F276BBF19679092008735B1 /* CreateNewAccountViewController.m in Sources */,

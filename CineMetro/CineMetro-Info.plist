@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>YES</string>
+	<string></string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>YES</string>
+	<string></string>
 	<key>FacebookAppID</key>
 	<string>891089577569985</string>
 	<key>FacebookDisplayName</key>
