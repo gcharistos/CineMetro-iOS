@@ -46,6 +46,8 @@ UIColor *lineColor;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.locationManager.delegate = self;
+    self.locationManager = [[CLLocationManager alloc] init];
 //    UIBarButtonItem *ratebutton = [[UIBarButtonItem alloc] initWithTitle:@"Hide" style:UIBarButtonItemStyleBordered target:self action:@selector(showHidePressed:)];
 //    
 //    UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"settings",@"word") style:UIBarButtonItemStyleBordered target:self action:@selector(settingsButtonPressed:)];
@@ -74,10 +76,6 @@ UIColor *lineColor;
         tableview.hidden = NO;
     }
     else {
-//        CATransition *animation = [CATransition animation];
-//        animation.type = kCATransitionFade;
-//        animation.duration = 0.4;
-//        [tableview.layer addAnimation:animation forKey:nil];
         [[self.navigationItem.rightBarButtonItems objectAtIndex:0]setTitle:@"Show"];
         CATransition *animation = [CATransition animation];
         animation.type = kCATransitionFade;
@@ -186,6 +184,8 @@ UIColor *lineColor;
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     if(annotation == mapView.userLocation){
+        NSLog(@"User Location");
+     
         return nil;
     }
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
@@ -223,7 +223,14 @@ UIColor *lineColor;
 //Method checks if user location services are enabled then show user location to map
 -(void)showUserLocation{
     if([CLLocationManager locationServicesEnabled]){
-      mapview.showsUserLocation = YES;
+        NSLog(@"IN !!!!");
+       // [locationManager requestAlwaysAuthorization];
+        [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager requestAlwaysAuthorization];
+        [self.locationManager startUpdatingLocation];
+        
+        mapview.showsUserLocation = YES;
+        // mapview.showsUserLocation = YES;
     }
     else{
         UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enablelocation",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
@@ -233,6 +240,18 @@ UIColor *lineColor;
     }
 
 }
+
+-(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
+    if (status == kCLAuthorizationStatusAuthorized){
+        mapview.showsUserLocation = YES;
+    }
+    
+    
+}
+    
+    
+
+
 
 //if annotation info button pressed go to details
 - (void)mapView:(MKMapView *)mapView

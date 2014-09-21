@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WHg-J9-2Ny">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -791,10 +790,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HbI-nJ-Hyd">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HbI-nJ-Hyd">
                                 <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LZS-DU-6Xw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LZS-DU-6Xw">
                                 <rect key="frame" x="0.0" y="277" width="320" height="203"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -805,27 +804,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PB4-gb-L4a">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PB4-gb-L4a">
                                                     <rect key="frame" x="20" y="2" width="238" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nV-TF-d5z">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nV-TF-d5z">
                                                     <rect key="frame" x="20" y="20" width="280" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="6nV-TF-d5z" firstAttribute="top" secondItem="tkM-AZ-dgz" secondAttribute="topMargin" constant="12" id="5rJ-AR-dNO"/>
-                                                <constraint firstItem="PB4-gb-L4a" firstAttribute="top" secondItem="tkM-AZ-dgz" secondAttribute="topMargin" constant="-6" id="Ahe-R4-KHI"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="PB4-gb-L4a" secondAttribute="bottom" constant="12" id="Zwb-ql-v7E"/>
-                                                <constraint firstItem="6nV-TF-d5z" firstAttribute="centerX" secondItem="tkM-AZ-dgz" secondAttribute="centerX" id="nmr-te-KYy"/>
-                                                <constraint firstItem="6nV-TF-d5z" firstAttribute="leading" secondItem="PB4-gb-L4a" secondAttribute="leading" id="sLP-nu-SKe"/>
-                                                <constraint firstItem="PB4-gb-L4a" firstAttribute="leading" secondItem="tkM-AZ-dgz" secondAttribute="leadingMargin" constant="12" id="wTC-fZ-ofR"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="PB4-gb-L4a" secondAttribute="trailing" constant="54" id="ynz-oo-wb2"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -837,9 +827,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-0d-PBb">
                                 <rect key="frame" x="121" y="64" width="78" height="32"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Hide List">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showHidePressed:" destination="GPH-Vm-SOP" eventType="touchUpInside" id="hFa-tC-PDs"/>
@@ -847,6 +837,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LZS-DU-6Xw" firstAttribute="leading" secondItem="vMf-fd-jOo" secondAttribute="leadingMargin" constant="-16" id="01w-Fw-ukE"/>
+                            <constraint firstItem="MRi-mE-fEk" firstAttribute="top" secondItem="LZS-DU-6Xw" secondAttribute="bottom" id="7iV-JP-3Qs"/>
+                            <constraint firstItem="HbI-nJ-Hyd" firstAttribute="leading" secondItem="vMf-fd-jOo" secondAttribute="leadingMargin" constant="-16" id="LN1-6T-DaI"/>
+                            <constraint firstItem="MRi-mE-fEk" firstAttribute="top" secondItem="HbI-nJ-Hyd" secondAttribute="bottom" id="axp-LR-zxw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LZS-DU-6Xw" secondAttribute="trailing" constant="-16" id="pQc-Cy-eWX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HbI-nJ-Hyd" secondAttribute="trailing" constant="-16" id="v5H-yS-zFH"/>
+                            <constraint firstItem="HbI-nJ-Hyd" firstAttribute="top" secondItem="0Wh-8I-KXA" secondAttribute="bottom" id="ztU-r6-QoY"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Navigation" id="VaG-AI-vlh">
@@ -854,9 +853,8 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4J2-jg-c2L">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Lines">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Lines"/>
                                 <connections>
                                     <action selector="settingsButtonPressed:" destination="GPH-Vm-SOP" eventType="touchUpInside" id="pWH-n9-6dW"/>
                                 </connections>

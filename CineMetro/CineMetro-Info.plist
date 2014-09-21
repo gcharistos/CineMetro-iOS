@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>YES</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>YES</string>
 	<key>FacebookAppID</key>
 	<string>891089577569985</string>
 	<key>FacebookDisplayName</key>
