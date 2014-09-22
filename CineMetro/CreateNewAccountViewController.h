@@ -12,7 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 - (IBAction)createButtonPressed:(UIButton *)sender;
-- (IBAction)cancelButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePhoto;
 - (IBAction)takePhoto:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *addImageButton;

@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 - (IBAction)loginButtonPressed:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
-- (IBAction)cancelButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *okbutton;
 
 @end

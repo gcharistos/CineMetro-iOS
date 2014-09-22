@@ -35,7 +35,6 @@ PFUser *appUser;
 {
     //[super viewDidLoad];
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bw_background.jpg"]];
 
     // Do any additional setup after loading the view.
 }
@@ -77,6 +76,18 @@ PFUser *appUser;
 
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
+    if([passwordTextField.text length] == 0 || [emailTextField.text length] == 0){
+        UIAlertView *alertView =
+        [[UIAlertView alloc] initWithTitle:@"Please fill Username and Password Fields"
+                                   message:nil
+                                  delegate:self
+                         cancelButtonTitle:nil
+                         otherButtonTitles:@"Ok", nil];
+        [alertView show];
+        return;
+        
+    }
+
     [PFUser logInWithUsernameInBackground:emailTextField.text
                                  password:passwordTextField.text
                                     block:^(PFUser *user, NSError *error){
@@ -110,7 +121,5 @@ PFUser *appUser;
                                         }
                                     }];
 }
-- (IBAction)cancelButtonPressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 @end

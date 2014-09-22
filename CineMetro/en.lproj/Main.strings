@@ -189,7 +189,7 @@
 "qab-B0-msV.normalTitle" = "Send Email";
 
 /* Class = "IBUIButton"; normalTitle = "Thessaloniki International Film Festival"; ObjectID = "rbH-4a-2g3"; */
-"rbH-4a-2g3.normalTitle" = "Thessaloniki International Film Festival";
+"rbH-4a-2g3.normalTitle" = "About Festival";
 
 /* Class = "IBUITabBarItem"; title = "Green Line"; ObjectID = "sLo-Er-z5V"; */
 "sLo-Er-z5V.title" = "Green Line";
@@ -220,5 +220,10 @@
 
 /* Class = "IBUITabBarItem"; title = "Blue Line"; ObjectID = "zcJ-cJ-ymF"; */
 "zcJ-cJ-ymF.title" = "Blue Line";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "jjR-nJ-7gm"; */
+"jjR-nJ-7gm.text" = "Thessaloniki International Film Festival";
+
+
 
 

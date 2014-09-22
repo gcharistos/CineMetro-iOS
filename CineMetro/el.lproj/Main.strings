@@ -186,7 +186,7 @@
 "qab-B0-msV.normalTitle" = "Στείλτε Email";
 
 /* Class = "IBUIButton"; normalTitle = "Thessaloniki International Film Festival"; ObjectID = "rbH-4a-2g3"; */
-"rbH-4a-2g3.normalTitle" = "Φεστιβάλ Κινηματογράφου Θεσσαλονίκης";
+"rbH-4a-2g3.normalTitle" = "Σχετικά Με Φεστιβάλ";
 
 /* Class = "IBUITabBarItem"; title = "Green Line"; ObjectID = "sLo-Er-z5V"; */
 "sLo-Er-z5V.title" = "Πράσινη Γραμμή";
@@ -217,4 +217,8 @@
 
 /* Class = "IBUITabBarItem"; title = "Blue Line"; ObjectID = "zcJ-cJ-ymF"; */
 "zcJ-cJ-ymF.title" = "Μπλέ Γραμμή";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "jjR-nJ-7gm"; */
+"jjR-nJ-7gm.text" = "Φεστιβάλ Κινηματογράφου Θεσσαλονίκης";
+
 

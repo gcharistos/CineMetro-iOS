@@ -36,7 +36,6 @@ PFUser *appUser;
     [super viewDidLoad];
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeProfilePhoto:)];
     [profilePhoto addGestureRecognizer:gesture];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bw_background.jpg"]];
 
         // Do any additional setup after loading the view.
 }
@@ -147,17 +146,29 @@ PFUser *appUser;
     NSString *filename = [NSString stringWithFormat:@"file.jpg"];
     NSArray *redArray = [[NSArray alloc]initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], nil];
     NSArray *greenArray = [[NSArray alloc]initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], nil];
-    PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
-    [user setObject:imageFile forKey:@"profileImage"];
+    if(imageData != nil){
+       PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
+        [user setObject:imageFile forKey:@"profileImage"];
+
+    }
     [user setObject:@0 forKey:@"redLine"];
     [user setObject:@0 forKey:@"GreenLine"];
     [user setObject:@0 forKey:@"blueLine"];
     [user setObject:redArray forKey:@"redLineStations"];
     [user setObject:greenArray  forKey:@"greenLineStations"];
-
     
     BOOL validateEmail = [self validateEmailWithString:emailTextField.text];
-    
+    if([passwordTextField.text length] == 0 || [emailTextField.text length] == 0){
+        UIAlertView *alertView =
+        [[UIAlertView alloc] initWithTitle:@"Please fill Username and Password Fields"
+                                   message:nil
+                                  delegate:self
+                         cancelButtonTitle:nil
+                         otherButtonTitles:@"Ok", nil];
+        [alertView show];
+        return;
+        
+    }
     if(validateEmail == NO ){
         UIAlertView *alertView =
         [[UIAlertView alloc] initWithTitle:@"Email Not Valid"
@@ -168,17 +179,7 @@ PFUser *appUser;
         [alertView show];
         return;
     }
-    if([passwordTextField.text length] == 0){
-        UIAlertView *alertView =
-        [[UIAlertView alloc] initWithTitle:@"Password field is Empty"
-                                   message:nil
-                                  delegate:self
-                         cancelButtonTitle:nil
-                         otherButtonTitles:@"Ok", nil];
-        [alertView show];
-        return;
-
-    }
+    
     PFQuery *query = [[PFQuery alloc]initWithClassName:@"User"];
     [query whereKey:@"username" equalTo:user.username];
     NSArray *results = [query findObjects:nil];
@@ -225,9 +226,6 @@ PFUser *appUser;
      }];
 }
 
-- (IBAction)cancelButtonPressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 
 - (BOOL)validateEmailWithString:(NSString*)email

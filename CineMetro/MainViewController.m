@@ -33,7 +33,6 @@ int flag;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bw_background.jpg"]];
     if(user == nil && flag == 0){
         UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"welcome",@"word") message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:NSLocalizedString(@"login", @"word"),NSLocalizedString(@"signup",@"word"),nil];
         welcomeMessage.tag = 100;
@@ -45,6 +44,10 @@ int flag;
 
     // Do any additional setup after loading the view.
 }
+
+
+
+
 
 
 //log out button pressed . set user to nil
