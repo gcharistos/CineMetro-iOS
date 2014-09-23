@@ -221,7 +221,7 @@ NSMutableArray *points;
     {
         SLComposeViewController *tweetSheetOBJ = [SLComposeViewController
                                                   composeViewControllerForServiceType:SLServiceTypeTwitter];
-        NSString *twittertext = [NSString stringWithFormat:@"#CineMetro #line2station%i\n",position1+1];
+        NSString *twittertext = [NSString stringWithFormat:@"#CineMetro #line2station%li\n",position1+1];
         [tweetSheetOBJ setInitialText:twittertext];
         [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
     }
@@ -235,7 +235,7 @@ NSMutableArray *points;
 - (void)facebookButton{
     if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         SLComposeViewController *fbSheetOBJ = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        NSString *fbtext = [NSString stringWithFormat:@"#CineMetro #line2station%i\n",position1+1];
+        NSString *fbtext = [NSString stringWithFormat:@"#CineMetro #line2station%li\n",position1+1];
         [fbSheetOBJ setInitialText:fbtext];
         [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
     }

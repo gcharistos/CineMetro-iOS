@@ -33,7 +33,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bw_background.jpg"]];
     emailLabel.text = [user objectForKey:@"username"];
     NSString *points = [NSString stringWithFormat:@"%i",[[user objectForKey:@"points"]intValue]];
     pointsLabel.text = points;

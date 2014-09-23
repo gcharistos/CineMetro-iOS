@@ -90,20 +90,20 @@ PFUser *appUser;
 
     [PFUser logInWithUsernameInBackground:emailTextField.text
                                  password:passwordTextField.text
-                                    block:^(PFUser *user, NSError *error){
+                                    block:^(PFUser *auser, NSError *error){
                                         
-                                        if(user){
+                                        if(auser){
                                             UIAlertView *alertView = nil;
                                                                                                             // Create an alert view to tell the user
                                                 alertView = [[UIAlertView alloc] initWithTitle:@"Successfull Login"
                                                                                        message:nil
-                                                                                      delegate:self
+                                                                                      delegate:nil
                                                                              cancelButtonTitle:nil
                                                                              otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
                                             // Show the alert view
                                             [alertView show];
-                                            appUser = user;
-                                            [self performSegueWithIdentifier:@"loginSegue" sender:self];
+                                            appUser = auser;
+                                            [self performSegueWithIdentifier:@"loginSegue" sender:nil];
                                             
                                         }
                                         else{

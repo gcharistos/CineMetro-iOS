@@ -29,7 +29,7 @@ BOOL rated;
 NSMutableArray *points;
 NSInteger row;
 NSString *tableName;
-NSInteger selected;
+int  selected;
 GreenDetailsViewController *viewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
