@@ -144,6 +144,14 @@
 		1FB552E9196C456500E11311 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552E8196C456500E11311 /* Accounts.framework */; };
 		1FB552EB196C45CE00E11311 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552EA196C45CE00E11311 /* Social.framework */; };
 		1FBD0D5419CF70D30001280B /* film_movie_camera_play_music-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD0D5319CF70D30001280B /* film_movie_camera_play_music-512.png */; };
+		1FC3290219D2E2D900B69363 /* red61.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FC328FF19D2E2D900B69363 /* red61.jpg */; };
+		1FC3290319D2E2D900B69363 /* red62.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3290019D2E2D900B69363 /* red62.jpg */; };
+		1FC3290419D2E2D900B69363 /* red63.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3290119D2E2D900B69363 /* red63.jpg */; };
+		1FC3290819D2E3B000B69363 /* green03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3290519D2E3B000B69363 /* green03.jpg */; };
+		1FC3290919D2E3B000B69363 /* green04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3290619D2E3B000B69363 /* green04.jpg */; };
+		1FC3290A19D2E3B000B69363 /* green05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3290719D2E3B000B69363 /* green05.jpg */; };
+		1FC3290D19D2E50A00B69363 /* green74.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3290B19D2E50A00B69363 /* green74.png */; };
+		1FC3290E19D2E50A00B69363 /* green75.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3290C19D2E50A00B69363 /* green75.png */; };
 		1FD3F22319CE21BC009BF58E /* greenPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FD3F22219CE21BC009BF58E /* greenPin.png */; };
 		1FD3F22819CE37B1009BF58E /* bluePin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FD3F22619CE37B1009BF58E /* bluePin.png */; };
 		1FD3F22919CE37B1009BF58E /* redPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FD3F22719CE37B1009BF58E /* redPin.png */; };
@@ -333,6 +341,14 @@
 		1FB552E8196C456500E11311 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1FB552EA196C45CE00E11311 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1FBD0D5319CF70D30001280B /* film_movie_camera_play_music-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "film_movie_camera_play_music-512.png"; sourceTree = "<group>"; };
+		1FC328FF19D2E2D900B69363 /* red61.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red61.jpg; sourceTree = "<group>"; };
+		1FC3290019D2E2D900B69363 /* red62.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red62.jpg; sourceTree = "<group>"; };
+		1FC3290119D2E2D900B69363 /* red63.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red63.jpg; sourceTree = "<group>"; };
+		1FC3290519D2E3B000B69363 /* green03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green03.jpg; sourceTree = "<group>"; };
+		1FC3290619D2E3B000B69363 /* green04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green04.jpg; sourceTree = "<group>"; };
+		1FC3290719D2E3B000B69363 /* green05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green05.jpg; sourceTree = "<group>"; };
+		1FC3290B19D2E50A00B69363 /* green74.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green74.png; sourceTree = "<group>"; };
+		1FC3290C19D2E50A00B69363 /* green75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green75.png; sourceTree = "<group>"; };
 		1FD3F22219CE21BC009BF58E /* greenPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenPin.png; sourceTree = "<group>"; };
 		1FD3F22619CE37B1009BF58E /* bluePin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluePin.png; sourceTree = "<group>"; };
 		1FD3F22719CE37B1009BF58E /* redPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redPin.png; sourceTree = "<group>"; };
@@ -563,6 +579,9 @@
 				1F2DC9C719C22FDD00265605 /* syllas_tzoumerkas-200x200.jpg */,
 				1F48BDCE199AB2C400BD30C0 /* green01.jpg */,
 				1F48BDCF199AB2C400BD30C0 /* green02.jpg */,
+				1FC3290519D2E3B000B69363 /* green03.jpg */,
+				1FC3290619D2E3B000B69363 /* green04.jpg */,
+				1FC3290719D2E3B000B69363 /* green05.jpg */,
 				1F2DC9C519C22F6F00265605 /* aggelopoulos.jpg */,
 				1F48BDD2199AB2E800BD30C0 /* green11.jpg */,
 				1F48BDD3199AB2E800BD30C0 /* green12.jpg */,
@@ -582,6 +601,8 @@
 				1F48BDF0199AB38300BD30C0 /* green71.jpg */,
 				1F48BDF1199AB38300BD30C0 /* green72.jpg */,
 				1F48BDF2199AB38300BD30C0 /* green73.png */,
+				1FC3290B19D2E50A00B69363 /* green74.png */,
+				1FC3290C19D2E50A00B69363 /* green75.png */,
 				1F2DC98819C2208B00265605 /* amaliamoutoussihoraproelefsis.jpg */,
 				1F2DC98919C2208B00265605 /* antwnopoulos.jpg */,
 				1F2DC98A19C2208B00265605 /* bazaka.jpg */,
@@ -736,6 +757,9 @@
 				1F9362C01988F6630088A0BF /* red51.jpg */,
 				1F9362C11988F6630088A0BF /* red52.jpg */,
 				1F9362C21988F6630088A0BF /* red53.jpg */,
+				1FC328FF19D2E2D900B69363 /* red61.jpg */,
+				1FC3290019D2E2D900B69363 /* red62.jpg */,
+				1FC3290119D2E2D900B69363 /* red63.jpg */,
 			);
 			name = redStation;
 			sourceTree = "<group>";
@@ -854,9 +878,11 @@
 				1F706555196768DA009CB35C /* Images.xcassets in Resources */,
 				1F2DC9B119C2208B00265605 /* samaras.jpg in Resources */,
 				1F2DC9AA19C2208B00265605 /* karagiannh.jpg in Resources */,
+				1FC3290319D2E2D900B69363 /* red62.jpg in Resources */,
 				1FD3F22319CE21BC009BF58E /* greenPin.png in Resources */,
 				1F9362C41988F6630088A0BF /* red52.jpg in Resources */,
 				1F2DC9B419C2208B00265605 /* tsirigkouli.jpg in Resources */,
+				1FC3290919D2E3B000B69363 /* green04.jpg in Resources */,
 				1F2DC9A319C2208B00265605 /* bazaka.jpg in Resources */,
 				1F9362BE1988F6560088A0BF /* red42.jpg in Resources */,
 				1F2DC9B319C2208B00265605 /* stratigos.jpg in Resources */,
@@ -874,6 +900,7 @@
 				1F9362A51988F6320088A0BF /* red11.jpg in Resources */,
 				1F48BDE9199AB34B00BD30C0 /* green52.jpg in Resources */,
 				1F48BDDB199AB30300BD30C0 /* green21.jpg in Resources */,
+				1FC3290819D2E3B000B69363 /* green03.jpg in Resources */,
 				1F2DC9B719C2208B00265605 /* vlaxopoulou.jpg in Resources */,
 				1F9362A71988F6320088A0BF /* red13.jpg in Resources */,
 				1F2DC9BB19C2213800265605 /* Gregg_Ntallas.jpg in Resources */,
@@ -881,6 +908,7 @@
 				1F28171519BE848E005A5337 /* ShowImageViewController.xib in Resources */,
 				1F2DC9B519C2208B00265605 /* tzortzoglou.jpg in Resources */,
 				1FA9023819B87DDD00149EAD /* ViewController1.xib in Resources */,
+				1FC3290D19D2E50A00B69363 /* green74.png in Resources */,
 				1FAE2CE719C3876900D006EC /* photo-32.png in Resources */,
 				1F2DC9C019C22D5C00265605 /* dalianidis.jpg in Resources */,
 				1F2DC9A919C2208B00265605 /* izampel.jpg in Resources */,
@@ -916,9 +944,11 @@
 				1F2DC9B919C2208B00265605 /* zervos.jpg in Resources */,
 				1F48BDEF199AB36900BD30C0 /* green63.jpg in Resources */,
 				1F2DC9B819C2208B00265605 /* voutsas.jpg in Resources */,
+				1FC3290419D2E2D900B69363 /* red63.jpg in Resources */,
 				1F2DC9A719C2208B00265605 /* fermas_nikos.jpg in Resources */,
 				1F2DC9A419C2208B00265605 /* bentivolio.jpg in Resources */,
 				1F48BDD5199AB2E800BD30C0 /* green11.jpg in Resources */,
+				1FC3290E19D2E50A00B69363 /* green75.png in Resources */,
 				1F93629F1988F6250088A0BF /* red01.jpg in Resources */,
 				1F48BDD0199AB2C400BD30C0 /* green01.jpg in Resources */,
 				1FE4D8B419CB1EBB00C125BB /* Alarm-Tick-icon.png in Resources */,
@@ -933,6 +963,7 @@
 				1F48BDDD199AB30300BD30C0 /* green23.jpg in Resources */,
 				1F9362A11988F6250088A0BF /* red03.jpg in Resources */,
 				1F48BDF5199AB38300BD30C0 /* green73.png in Resources */,
+				1FC3290219D2E2D900B69363 /* red61.jpg in Resources */,
 				1F9362A61988F6320088A0BF /* red12.jpg in Resources */,
 				1F9362AD1988F63D0088A0BF /* red21.jpg in Resources */,
 				1F9362C51988F6630088A0BF /* red53.jpg in Resources */,
@@ -942,6 +973,7 @@
 				1F9362C31988F6630088A0BF /* red51.jpg in Resources */,
 				1F2DC9AB19C2208B00265605 /* kwsti_maria.jpg in Resources */,
 				1F9DB73919CA17F900C3E3FC /* twitter-logo.jpg in Resources */,
+				1FC3290A19D2E3B000B69363 /* green05.jpg in Resources */,
 				1F48BDD7199AB2E800BD30C0 /* green13.jpg in Resources */,
 				1F9362B91988F6490088A0BF /* red34.jpg in Resources */,
 				1F275BCD19C619CF00A1A8AD /* Localizable.strings in Resources */,
