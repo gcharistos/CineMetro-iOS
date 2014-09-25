@@ -159,7 +159,6 @@
 		1FE0F51A19C9D827000D8841 /* LicenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0F51819C9D827000D8841 /* LicenseViewController.xib */; };
 		1FE4D8B419CB1EBB00C125BB /* Alarm-Tick-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE4D8B319CB1EBB00C125BB /* Alarm-Tick-icon.png */; };
 		1FF72A82198AC4C30022B08D /* BlueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */; };
-		1FF9505A19CA401900F22C60 /* fbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF9505919CA401900F22C60 /* fbViewController.m */; };
 		1FFBB93C19BFC7A60035C87B /* ShowTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFBB93B19BFC7A60035C87B /* ShowTextViewController.m */; };
 		36687826E35240D2959EF225 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8630476C0E4E2B87F91772 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -358,8 +357,6 @@
 		1FE4D8B319CB1EBB00C125BB /* Alarm-Tick-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alarm-Tick-icon.png"; sourceTree = "<group>"; };
 		1FF72A80198AC4C30022B08D /* BlueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueDetailsViewController.h; sourceTree = "<group>"; };
 		1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueDetailsViewController.m; sourceTree = "<group>"; };
-		1FF9505819CA401900F22C60 /* fbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fbViewController.h; sourceTree = "<group>"; };
-		1FF9505919CA401900F22C60 /* fbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fbViewController.m; sourceTree = "<group>"; };
 		1FFBB93A19BFC7A60035C87B /* ShowTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTextViewController.h; sourceTree = "<group>"; };
 		1FFBB93B19BFC7A60035C87B /* ShowTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTextViewController.m; sourceTree = "<group>"; };
 		3F77F930E77F45F8932CD087 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -525,8 +522,6 @@
 			children = (
 				1F276BC0196790A8008735B1 /* LoginViewController.h */,
 				1F276BC1196790A8008735B1 /* LoginViewController.m */,
-				1FF9505819CA401900F22C60 /* fbViewController.h */,
-				1FF9505919CA401900F22C60 /* fbViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -1044,7 +1039,6 @@
 				1F70658419678116009CB35C /* MapViewController.m in Sources */,
 				1F2DC9BE19C2249200265605 /* HeaderView.m in Sources */,
 				1F6AED7919AA10BF000490DD /* ProfileViewController.m in Sources */,
-				1FF9505A19CA401900F22C60 /* fbViewController.m in Sources */,
 				1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */,
 				1F275BC319C6106800A1A8AD /* FilmFestivalViewController.m in Sources */,
 				1F70657B1967707B009CB35C /* GreenLineTableViewController.m in Sources */,

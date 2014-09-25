@@ -13,7 +13,6 @@
 @interface MapViewController : UIViewController<MKMapViewDelegate,UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate,CLLocationManagerDelegate>
   @property (weak, nonatomic) IBOutlet MKMapView *mapview;
 @property(nonatomic, retain) CLLocationManager *locationManager;
-  @property (weak, nonatomic) IBOutlet UIButton *sidebarButton;
   @property (strong, nonatomic) ViewController1 *popViewController;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (weak, nonatomic) IBOutlet UIButton *hideButton;

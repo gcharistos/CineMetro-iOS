@@ -232,6 +232,18 @@ NSMutableArray *distances;
 
 //Method checks if user location services are enabled then show user location to map
 -(void)showUserLocation{
+    if(![CLLocationManager locationServicesEnabled]){
+        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enablelocation",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+        [disabled show];
+        return;
+    }
+    else if(![self checkForNetwork]){
+        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:@"Please enable internet connection for user location view" message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+        [disabled show];
+        return;
+
+    }
+    
     if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined){
         [self.locationManager requestAlwaysAuthorization];
     }
@@ -241,10 +253,7 @@ NSMutableArray *distances;
         [self.locationManager startUpdatingLocation];
     }
    
-    if(![CLLocationManager locationServicesEnabled]){
-        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enablelocation",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-        [disabled show];
-    }
+    
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{

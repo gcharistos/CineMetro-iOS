@@ -34,7 +34,7 @@
                                     <segue destination="GPH-Vm-SOP" kind="push" id="6ZJ-Ix-LCn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdV-sb-6ii">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdV-sb-6ii">
                                 <rect key="frame" x="84" y="229" width="152" height="60"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="27"/>
                                 <state key="normal" title="Lines">
@@ -45,17 +45,7 @@
                                     <segue destination="VK0-r7-KVM" kind="push" id="6kf-0g-Usd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ze-Hf-hsa">
-                                <rect key="frame" x="16" y="187" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginpressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YeS-KW-NUC"/>
-                                    <segue destination="bgL-PU-cAw" kind="push" id="NgF-Nb-JbQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rbH-4a-2g3">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rbH-4a-2g3">
                                 <rect key="frame" x="10" y="297" width="301" height="60"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni SvtyTwo SC ITC TT" pointSize="27"/>
                                 <state key="normal" title="About Film Festival">
@@ -74,17 +64,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="k0Z-BC-Zg5" secondAttribute="trailing" constant="-16" id="4ew-Ab-h8a"/>
                             <constraint firstItem="rbH-4a-2g3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-6" id="DqZ-ts-dtY"/>
                             <constraint firstItem="rbH-4a-2g3" firstAttribute="top" secondItem="kdV-sb-6ii" secondAttribute="bottom" constant="8" symbolic="YES" id="GGI-up-YbD"/>
-                            <constraint firstItem="8ze-Hf-hsa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="HhS-gg-fx4"/>
                             <constraint firstItem="kdV-sb-6ii" firstAttribute="centerX" secondItem="k0Z-BC-Zg5" secondAttribute="centerX" id="J3l-7l-edU"/>
                             <constraint firstItem="MdS-Dj-j29" firstAttribute="top" secondItem="rbH-4a-2g3" secondAttribute="bottom" constant="123" id="Kpr-bY-kZw"/>
-                            <constraint firstItem="rbH-4a-2g3" firstAttribute="top" secondItem="8ze-Hf-hsa" secondAttribute="bottom" constant="80" id="NIq-Nb-Vxy"/>
                             <constraint firstItem="k0Z-BC-Zg5" firstAttribute="top" secondItem="XNX-av-0Yy" secondAttribute="bottom" id="OS6-Pf-zXh"/>
                             <constraint firstItem="kdV-sb-6ii" firstAttribute="centerX" secondItem="rbH-4a-2g3" secondAttribute="centerX" id="QDK-f0-CNK"/>
                             <constraint firstItem="wIw-Ul-11C" firstAttribute="trailing" secondItem="kdV-sb-6ii" secondAttribute="trailing" id="TFb-3y-1NI"/>
                             <constraint firstItem="MdS-Dj-j29" firstAttribute="top" secondItem="k0Z-BC-Zg5" secondAttribute="bottom" id="Yfr-rF-1HR"/>
                             <constraint firstItem="kdV-sb-6ii" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="68" id="oPC-MD-uxC"/>
                             <constraint firstItem="k0Z-BC-Zg5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="tLh-5K-Zlx"/>
-                            <constraint firstItem="8ze-Hf-hsa" firstAttribute="top" secondItem="XNX-av-0Yy" secondAttribute="bottom" constant="123" id="xBa-wW-CR8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="CnT-2d-9IJ">
@@ -1099,53 +1086,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EvW-y4-Ihr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-942" y="51"/>
-        </scene>
-        <!--Fb View Controller-->
-        <scene sceneID="PZw-NZ-NMI">
-            <objects>
-                <viewController id="bgL-PU-cAw" customClass="fbViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yie-vf-fxO"/>
-                        <viewControllerLayoutGuide type="bottom" id="tVB-to-cZc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pld-gx-tBn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbA-88-0Kq" customClass="FBLoginView">
-                                <rect key="frame" x="67" y="216" width="187" height="47"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="delegate" destination="bgL-PU-cAw" id="5U2-d0-QZ7"/>
-                                </connections>
-                            </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lh-rQ-KQU">
-                                <rect key="frame" x="99" y="160" width="155" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxj-t3-69b">
-                                <rect key="frame" x="137" y="316" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonpressed:" destination="bgL-PU-cAw" eventType="touchUpInside" id="4WL-i5-kmq"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="EZS-Kq-jej"/>
-                    <connections>
-                        <outlet property="fbview" destination="jbA-88-0Kq" id="NGk-MR-cPQ"/>
-                        <outlet property="label" destination="6lh-rQ-KQU" id="QL5-Ef-zwy"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DGN-IX-ARX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-506" y="71"/>
         </scene>
         <!--Red Details View Controller-->
         <scene sceneID="bIr-Bk-bOA">
