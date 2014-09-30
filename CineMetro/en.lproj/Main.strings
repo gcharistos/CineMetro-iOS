@@ -99,7 +99,7 @@
 "Pwj-r8-9fT.placeholder" = "Email";
 
 /* Class = "IBUILabel"; text = "Stations Unlocked : "; ObjectID = "QeY-LX-rWq"; */
-"QeY-LX-rWq.text" = "Stations Unlocked : ";
+"QeY-LX-rWq.text" = "Stations Rated : ";
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "QjB-Nj-J3r"; */
 "QjB-Nj-J3r.text" = "Label";

@@ -68,6 +68,7 @@ NSMutableArray *points;
     actors = [[currentList objectAtIndex:position1]objectForKey:@"Actors"];
     directors  = [[currentList objectAtIndex:position1]objectForKey:@"Directors"];
     info.text = [[currentList objectAtIndex:position1]objectForKey:@"text"];
+    [info setTextColor:[UIColor whiteColor]];
     [info setFont:[UIFont systemFontOfSize:15]];
     movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
     images = [[anns objectAtIndex:position1]objectForKey:@"Images"];

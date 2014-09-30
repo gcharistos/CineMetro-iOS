@@ -37,6 +37,10 @@ NSMutableArray *titles;
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     NSArray *anns = [dict objectForKey:@"Stations"];
     station = anns;
+    for(int i=0;i<anns.count;i++){
+        NSString  *title = [[anns objectAtIndex:i]objectForKey:@"Title"];
+        [titles addObject:title];
+    }
     [lineName setText:[dict objectForKey:@"Name"]];
 
 }
