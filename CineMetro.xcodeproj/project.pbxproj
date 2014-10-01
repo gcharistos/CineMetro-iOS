@@ -9,6 +9,25 @@
 /* Begin PBXBuildFile section */
 		1F1127DF198AD56200BB0F8E /* BlueLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F1127DE198AD56200BB0F8E /* BlueLineStations.plist */; };
 		1F12C9A819B7D5850024CAD5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12C9A719B7D5850024CAD5 /* Reachability.m */; };
+		1F13175219DCA9EC00DB8316 /* PageContentBlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F13175119DCA9EC00DB8316 /* PageContentBlueViewController.m */; };
+		1F13175519DCAA6400DB8316 /* ContainerBlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F13175419DCAA6400DB8316 /* ContainerBlueViewController.m */; };
+		1F13176919DCB36C00DB8316 /* blue02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13175819DCB36C00DB8316 /* blue02.jpg */; };
+		1F13176A19DCB36C00DB8316 /* blue03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13175919DCB36C00DB8316 /* blue03.jpg */; };
+		1F13176B19DCB36C00DB8316 /* blue04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13175A19DCB36C00DB8316 /* blue04.jpg */; };
+		1F13176C19DCB36C00DB8316 /* blue21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13175B19DCB36C00DB8316 /* blue21.jpg */; };
+		1F13176D19DCB36C00DB8316 /* blue22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13175C19DCB36C00DB8316 /* blue22.jpg */; };
+		1F13176E19DCB36C00DB8316 /* blue23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13175D19DCB36C00DB8316 /* blue23.jpg */; };
+		1F13176F19DCB36C00DB8316 /* blue31.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13175E19DCB36C00DB8316 /* blue31.jpg */; };
+		1F13177019DCB36C00DB8316 /* blue32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13175F19DCB36C00DB8316 /* blue32.jpg */; };
+		1F13177119DCB36C00DB8316 /* blue33.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13176019DCB36C00DB8316 /* blue33.jpg */; };
+		1F13177219DCB36C00DB8316 /* blue34.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13176119DCB36C00DB8316 /* blue34.jpg */; };
+		1F13177319DCB36C00DB8316 /* blue35.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13176219DCB36C00DB8316 /* blue35.jpg */; };
+		1F13177419DCB36C00DB8316 /* blue42.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13176319DCB36C00DB8316 /* blue42.jpg */; };
+		1F13177519DCB36C00DB8316 /* blue43.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13176419DCB36C00DB8316 /* blue43.jpg */; };
+		1F13177619DCB36C00DB8316 /* blue44.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13176519DCB36C00DB8316 /* blue44.jpg */; };
+		1F13177719DCB36C00DB8316 /* blue45.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13176619DCB36C00DB8316 /* blue45.jpg */; };
+		1F13177819DCB36C00DB8316 /* blue46.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13176719DCB36C00DB8316 /* blue46.jpg */; };
+		1F13177A19DCB8A100DB8316 /* blue01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13177919DCB8A100DB8316 /* blue01.jpg */; };
 		1F137A8619753179001C0F2B /* RedLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F137A8519753179001C0F2B /* RedLineStations.plist */; };
 		1F16A31419A3DC1900AC7A68 /* GreenDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16A31319A3DC1900AC7A68 /* GreenDetailsViewController.m */; };
 		1F23B8A419A5F2A00092FE9C /* bw_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F23B8A319A5F2A00092FE9C /* bw_background.jpg */; };
@@ -177,6 +196,27 @@
 		1F1127DE198AD56200BB0F8E /* BlueLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlueLineStations.plist; sourceTree = "<group>"; };
 		1F12C9A619B7D5850024CAD5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1F12C9A719B7D5850024CAD5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1F13175019DCA9EC00DB8316 /* PageContentBlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentBlueViewController.h; sourceTree = "<group>"; };
+		1F13175119DCA9EC00DB8316 /* PageContentBlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentBlueViewController.m; sourceTree = "<group>"; };
+		1F13175319DCAA6400DB8316 /* ContainerBlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerBlueViewController.h; sourceTree = "<group>"; };
+		1F13175419DCAA6400DB8316 /* ContainerBlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerBlueViewController.m; sourceTree = "<group>"; };
+		1F13175819DCB36C00DB8316 /* blue02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue02.jpg; sourceTree = "<group>"; };
+		1F13175919DCB36C00DB8316 /* blue03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue03.jpg; sourceTree = "<group>"; };
+		1F13175A19DCB36C00DB8316 /* blue04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue04.jpg; sourceTree = "<group>"; };
+		1F13175B19DCB36C00DB8316 /* blue21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue21.jpg; sourceTree = "<group>"; };
+		1F13175C19DCB36C00DB8316 /* blue22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue22.jpg; sourceTree = "<group>"; };
+		1F13175D19DCB36C00DB8316 /* blue23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue23.jpg; sourceTree = "<group>"; };
+		1F13175E19DCB36C00DB8316 /* blue31.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue31.jpg; sourceTree = "<group>"; };
+		1F13175F19DCB36C00DB8316 /* blue32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue32.jpg; sourceTree = "<group>"; };
+		1F13176019DCB36C00DB8316 /* blue33.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue33.jpg; sourceTree = "<group>"; };
+		1F13176119DCB36C00DB8316 /* blue34.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue34.jpg; sourceTree = "<group>"; };
+		1F13176219DCB36C00DB8316 /* blue35.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue35.jpg; sourceTree = "<group>"; };
+		1F13176319DCB36C00DB8316 /* blue42.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue42.jpg; sourceTree = "<group>"; };
+		1F13176419DCB36C00DB8316 /* blue43.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue43.jpg; sourceTree = "<group>"; };
+		1F13176519DCB36C00DB8316 /* blue44.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue44.jpg; sourceTree = "<group>"; };
+		1F13176619DCB36C00DB8316 /* blue45.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue45.jpg; sourceTree = "<group>"; };
+		1F13176719DCB36C00DB8316 /* blue46.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue46.jpg; sourceTree = "<group>"; };
+		1F13177919DCB8A100DB8316 /* blue01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue01.jpg; sourceTree = "<group>"; };
 		1F137A8519753179001C0F2B /* RedLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RedLineStations.plist; sourceTree = "<group>"; };
 		1F16A31219A3DC1900AC7A68 /* GreenDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenDetailsViewController.h; sourceTree = "<group>"; };
 		1F16A31319A3DC1900AC7A68 /* GreenDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenDetailsViewController.m; sourceTree = "<group>"; };
@@ -460,6 +500,10 @@
 				1FF72A80198AC4C30022B08D /* BlueDetailsViewController.h */,
 				1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */,
 				1F1127DE198AD56200BB0F8E /* BlueLineStations.plist */,
+				1F13175019DCA9EC00DB8316 /* PageContentBlueViewController.h */,
+				1F13175119DCA9EC00DB8316 /* PageContentBlueViewController.m */,
+				1F13175319DCAA6400DB8316 /* ContainerBlueViewController.h */,
+				1F13175419DCAA6400DB8316 /* ContainerBlueViewController.m */,
 			);
 			name = BlueLine;
 			sourceTree = "<group>";
@@ -542,6 +586,30 @@
 				1F276BBD19679092008735B1 /* CreateNewAccountViewController.h */,
 			);
 			name = CreateAccount;
+			sourceTree = "<group>";
+		};
+		1F13175619DCB32100DB8316 /* blueStation */ = {
+			isa = PBXGroup;
+			children = (
+				1F13177919DCB8A100DB8316 /* blue01.jpg */,
+				1F13175819DCB36C00DB8316 /* blue02.jpg */,
+				1F13175919DCB36C00DB8316 /* blue03.jpg */,
+				1F13175A19DCB36C00DB8316 /* blue04.jpg */,
+				1F13175B19DCB36C00DB8316 /* blue21.jpg */,
+				1F13175C19DCB36C00DB8316 /* blue22.jpg */,
+				1F13175D19DCB36C00DB8316 /* blue23.jpg */,
+				1F13175E19DCB36C00DB8316 /* blue31.jpg */,
+				1F13175F19DCB36C00DB8316 /* blue32.jpg */,
+				1F13176019DCB36C00DB8316 /* blue33.jpg */,
+				1F13176119DCB36C00DB8316 /* blue34.jpg */,
+				1F13176219DCB36C00DB8316 /* blue35.jpg */,
+				1F13176319DCB36C00DB8316 /* blue42.jpg */,
+				1F13176419DCB36C00DB8316 /* blue43.jpg */,
+				1F13176519DCB36C00DB8316 /* blue44.jpg */,
+				1F13176619DCB36C00DB8316 /* blue45.jpg */,
+				1F13176719DCB36C00DB8316 /* blue46.jpg */,
+			);
+			name = blueStation;
 			sourceTree = "<group>";
 		};
 		1F275BC019C6105700A1A8AD /* FilmFestival */ = {
@@ -777,6 +845,7 @@
 				1FAE2CE619C3876900D006EC /* photo-32.png */,
 				1F65480A19A7466400974CCB /* ButtonStretch@2x.png */,
 				1F23B8A319A5F2A00092FE9C /* bw_background.jpg */,
+				1F13175619DCB32100DB8316 /* blueStation */,
 				1F48BDCD199AB08000BD30C0 /* greenStation */,
 				1F93629B1988F60E0088A0BF /* redStation */,
 			);
@@ -886,7 +955,10 @@
 				1F48BDF3199AB38300BD30C0 /* green71.jpg in Resources */,
 				1F48BDE5199AB33100BD30C0 /* green42.jpg in Resources */,
 				1F65480B19A7466400974CCB /* ButtonStretch@2x.png in Resources */,
+				1F13177719DCB36C00DB8316 /* blue45.jpg in Resources */,
+				1F13177219DCB36C00DB8316 /* blue34.jpg in Resources */,
 				1F9362A01988F6250088A0BF /* red02.jpg in Resources */,
+				1F13176C19DCB36C00DB8316 /* blue21.jpg in Resources */,
 				1F2DC9AF19C2208B00265605 /* nathanahl.jpg in Resources */,
 				1F2DC9A119C2208B00265605 /* amaliamoutoussihoraproelefsis.jpg in Resources */,
 				1F2DC9CA19C2307B00265605 /* papaiwannou.jpg in Resources */,
@@ -895,9 +967,11 @@
 				1F9362A51988F6320088A0BF /* red11.jpg in Resources */,
 				1F48BDE9199AB34B00BD30C0 /* green52.jpg in Resources */,
 				1F48BDDB199AB30300BD30C0 /* green21.jpg in Resources */,
+				1F13177A19DCB8A100DB8316 /* blue01.jpg in Resources */,
 				1FC3290819D2E3B000B69363 /* green03.jpg in Resources */,
 				1F2DC9B719C2208B00265605 /* vlaxopoulou.jpg in Resources */,
 				1F9362A71988F6320088A0BF /* red13.jpg in Resources */,
+				1F13177419DCB36C00DB8316 /* blue42.jpg in Resources */,
 				1F2DC9BB19C2213800265605 /* Gregg_Ntallas.jpg in Resources */,
 				1F2DC9B219C2208B00265605 /* sfetsa.jpg in Resources */,
 				1F28171519BE848E005A5337 /* ShowImageViewController.xib in Resources */,
@@ -908,10 +982,13 @@
 				1F2DC9C019C22D5C00265605 /* dalianidis.jpg in Resources */,
 				1F2DC9A919C2208B00265605 /* izampel.jpg in Resources */,
 				1F2DC9AC19C2208B00265605 /* ladikou.jpg in Resources */,
+				1F13176919DCB36C00DB8316 /* blue02.jpg in Resources */,
 				1F48BDE8199AB34B00BD30C0 /* green51.jpg in Resources */,
+				1F13176E19DCB36C00DB8316 /* blue23.jpg in Resources */,
 				1FE0F51A19C9D827000D8841 /* LicenseViewController.xib in Resources */,
 				1F48BDF4199AB38300BD30C0 /* green72.jpg in Resources */,
 				1F6AED8619AA5DEA000490DD /* mainBackground.jpg in Resources */,
+				1F13177519DCB36C00DB8316 /* blue43.jpg in Resources */,
 				1F48BDE1199AB31900BD30C0 /* green32.jpg in Resources */,
 				1F9362BF1988F6560088A0BF /* red43.jpg in Resources */,
 				1F9362B01988F63D0088A0BF /* red24.jpg in Resources */,
@@ -921,6 +998,8 @@
 				1F9DB73519CA137A00C3E3FC /* facebookLogo.png in Resources */,
 				1F5AB66B19D0AEED007F286B /* film.jpg in Resources */,
 				1F9362B81988F6490088A0BF /* red33.jpg in Resources */,
+				1F13176F19DCB36C00DB8316 /* blue31.jpg in Resources */,
+				1F13177619DCB36C00DB8316 /* blue44.jpg in Resources */,
 				1FD3F22819CE37B1009BF58E /* bluePin.png in Resources */,
 				1F2DC9C619C22F6F00265605 /* aggelopoulos.jpg in Resources */,
 				1F9362B61988F6490088A0BF /* red31.jpg in Resources */,
@@ -929,6 +1008,7 @@
 				1F2DC9A619C2208B00265605 /* eliopoulos.jpeg in Resources */,
 				1F48BDDC199AB30300BD30C0 /* green22.jpg in Resources */,
 				1F2DC9B019C2208B00265605 /* papadopoulos.jpg in Resources */,
+				1F13177819DCB36C00DB8316 /* blue46.jpg in Resources */,
 				1F48BDD1199AB2C400BD30C0 /* green02.jpg in Resources */,
 				1F2DC9A219C2208B00265605 /* antwnopoulos.jpg in Resources */,
 				1F9362B71988F6490088A0BF /* red32.jpg in Resources */,
@@ -936,11 +1016,14 @@
 				1F48BDE0199AB31900BD30C0 /* green31.jpg in Resources */,
 				1F2DC9AD19C2208B00265605 /* laskari.jpg in Resources */,
 				1F1127DF198AD56200BB0F8E /* BlueLineStations.plist in Resources */,
+				1F13176D19DCB36C00DB8316 /* blue22.jpg in Resources */,
 				1F2DC9B919C2208B00265605 /* zervos.jpg in Resources */,
 				1F48BDEF199AB36900BD30C0 /* green63.jpg in Resources */,
 				1F2DC9B819C2208B00265605 /* voutsas.jpg in Resources */,
+				1F13177119DCB36C00DB8316 /* blue33.jpg in Resources */,
 				1FC3290419D2E2D900B69363 /* red63.jpg in Resources */,
 				1F2DC9A719C2208B00265605 /* fermas_nikos.jpg in Resources */,
+				1F13176B19DCB36C00DB8316 /* blue04.jpg in Resources */,
 				1F2DC9A419C2208B00265605 /* bentivolio.jpg in Resources */,
 				1F48BDD5199AB2E800BD30C0 /* green11.jpg in Resources */,
 				1FC3290E19D2E50A00B69363 /* green75.png in Resources */,
@@ -951,6 +1034,7 @@
 				1F9362AF1988F63D0088A0BF /* red23.jpg in Resources */,
 				1FAE2CF219C3994D00D006EC /* star_on.png in Resources */,
 				1F9362B11988F63D0088A0BF /* red25.jpg in Resources */,
+				1F13177019DCB36C00DB8316 /* blue32.jpg in Resources */,
 				1FAE2CE519C3829A00D006EC /* photo-75.png in Resources */,
 				1F9362BD1988F6560088A0BF /* red41.jpg in Resources */,
 				1F2DC9B619C2208B00265605 /* vainas.jpg in Resources */,
@@ -963,6 +1047,7 @@
 				1F9362AD1988F63D0088A0BF /* red21.jpg in Resources */,
 				1F9362C51988F6630088A0BF /* red53.jpg in Resources */,
 				1FAE2CEE19C38BE300D006EC /* star_off.png in Resources */,
+				1F13177319DCB36C00DB8316 /* blue35.jpg in Resources */,
 				1F2DC9A819C2208B00265605 /* fragkedakhs_vasilis.jpg in Resources */,
 				1F9362AE1988F63D0088A0BF /* red22.jpg in Resources */,
 				1F9362C31988F6630088A0BF /* red51.jpg in Resources */,
@@ -976,6 +1061,7 @@
 				1F48BDD6199AB2E800BD30C0 /* green12.jpg in Resources */,
 				1F2DC9C419C22EF500265605 /* voulgaris.jpg in Resources */,
 				1F370D2C19753ADC003FB972 /* GreenLineStations.plist in Resources */,
+				1F13176A19DCB36C00DB8316 /* blue03.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,6 +1117,7 @@
 				1FF72A82198AC4C30022B08D /* BlueDetailsViewController.m in Sources */,
 				1F7065781967706C009CB35C /* RedLineTableViewController.m in Sources */,
 				1F276BBF19679092008735B1 /* CreateNewAccountViewController.m in Sources */,
+				1F13175219DCA9EC00DB8316 /* PageContentBlueViewController.m in Sources */,
 				1F2D733119CFA0BB00C60F09 /* AboutViewController.m in Sources */,
 				1F276BC2196790A8008735B1 /* LoginViewController.m in Sources */,
 				1FA9023719B87DDD00149EAD /* ViewController1.m in Sources */,
@@ -1039,6 +1126,7 @@
 				1F70658419678116009CB35C /* MapViewController.m in Sources */,
 				1F2DC9BE19C2249200265605 /* HeaderView.m in Sources */,
 				1F6AED7919AA10BF000490DD /* ProfileViewController.m in Sources */,
+				1F13175519DCAA6400DB8316 /* ContainerBlueViewController.m in Sources */,
 				1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */,
 				1F275BC319C6106800A1A8AD /* FilmFestivalViewController.m in Sources */,
 				1F70657B1967707B009CB35C /* GreenLineTableViewController.m in Sources */,
@@ -1181,7 +1269,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";
 				INFOPLIST_FILE = "CineMetro/CineMetro-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1200,7 +1288,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";
 				INFOPLIST_FILE = "CineMetro/CineMetro-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

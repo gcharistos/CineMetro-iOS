@@ -12,7 +12,7 @@
 #import "ShowTextViewController.h"
 #import <Social/Social.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import "ViewController.h"
+#import "ContainerBlueViewController.h"
 
 @interface BlueDetailsViewController ()
 
@@ -21,7 +21,6 @@
 @implementation BlueDetailsViewController
 @synthesize station;
 @synthesize infoLabel;
-@synthesize textview;
 @synthesize tableview;
 @synthesize title;
 @synthesize indexPath;
@@ -55,16 +54,13 @@ NSMutableArray *points;
     //set navigation bar title
     // self.navigationItem.title =[station objectForKey:@"Subtitle"];
     theaterTitle.text = [station objectForKey:@"Subtitle"];
-    textview.text  = [station objectForKey:@"text"];
-    [textview setTextColor:[UIColor whiteColor]];
-    [textview setFont:[UIFont systemFontOfSize:15]];
     images = [station objectForKey:@"Images"];
-    [self performSegueWithIdentifier:@"showPhotos" sender:self];
+    [self performSegueWithIdentifier:@"showPhotos2" sender:self];
     // Do any additional setup after loading the view.
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
-    if(images.count == 0 && [identifier isEqualToString:@"showPhotos"]){
+    if(images.count == 0 && [identifier isEqualToString:@"showPhotos2"]){
         return NO;
     }
     return YES;
@@ -111,7 +107,7 @@ NSMutableArray *points;
     {
         SLComposeViewController *tweetSheetOBJ = [SLComposeViewController
                                                   composeViewControllerForServiceType:SLServiceTypeTwitter];
-        NSString *twittertext = [NSString stringWithFormat:@"#CineMetro #line1station%li\n",indexPath+1];
+        NSString *twittertext = [NSString stringWithFormat:@"#CineMetro #line1station%li\n",(long)indexPath+1];
         [tweetSheetOBJ setInitialText:twittertext];
         [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
     }
@@ -125,7 +121,7 @@ NSMutableArray *points;
 - (void)facebookButton {
     if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         SLComposeViewController *fbSheetOBJ = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        NSString *fbtext = [NSString stringWithFormat:@"#CineMetro #line1station%li\n",indexPath+1];
+        NSString *fbtext = [NSString stringWithFormat:@"#CineMetro #line1station%li\n",(long)indexPath+1];
         [fbSheetOBJ setInitialText:fbtext];
         [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
     }
@@ -154,10 +150,11 @@ NSMutableArray *points;
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"showPhotos"]){
-        ViewController *dest = segue.destinationViewController;
+    if([segue.identifier isEqualToString:@"showPhotos2"]){
+        ContainerBlueViewController *dest = segue.destinationViewController;
         if(images.count != 0){
             dest.pageImages = [[NSArray alloc]initWithArray:images];
+            NSLog(@"Pass Fucker !!!");
         }
     }
     // Get the new view controller using [segue destinationViewController].

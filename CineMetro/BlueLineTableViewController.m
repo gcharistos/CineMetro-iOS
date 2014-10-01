@@ -73,8 +73,9 @@ NSMutableArray *titles;
     UILabel *namelabel = (UILabel*) [cell viewWithTag:104];
     UIImageView *imageview = (UIImageView *)[cell viewWithTag:105];
     UILabel *stationNameLabel = (UILabel*) [cell viewWithTag:106];
-    UIImage *image = [UIImage imageNamed:[[[station objectAtIndex:indexPath.row]objectForKey:@"Images"]objectAtIndex:0]];
-    imageview.image = image;
+    NSArray *imagedictionary = [[station objectAtIndex:indexPath.row]objectForKey:@"Images"];
+    NSLog(@"%@",[[imagedictionary objectAtIndex:0]objectForKey:@"Image"]);
+    imageview.image = [UIImage imageNamed:[[imagedictionary objectAtIndex:0]objectForKey:@"Image"]];
     namelabel.text = [titles objectAtIndex:indexPath.row];
     stationNameLabel.text = [[station objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
     
