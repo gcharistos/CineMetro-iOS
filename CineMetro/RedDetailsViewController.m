@@ -54,6 +54,7 @@ NSMutableArray *points;
    // self.navigationItem.title =[station objectForKey:@"Subtitle"];
     theaterTitle.text = [station objectForKey:@"Subtitle"];
     textview.text  = [station objectForKey:@"text"];
+    [textview setTextColor:[UIColor whiteColor]];
     [textview setFont:[UIFont systemFontOfSize:15]];
     images = [station objectForKey:@"Images"];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];

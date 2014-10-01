@@ -7,6 +7,7 @@
 //
 
 #import "BlueLineTableViewController.h"
+#import "BlueDetailsViewController.h"
 
 @interface BlueLineTableViewController ()
 
@@ -69,8 +70,13 @@ NSMutableArray *titles;
 {
     static NSString *cellIdentifier = @"bCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    UILabel *nameLabel = (UILabel*) [cell viewWithTag:104];
-    nameLabel.text = [titles objectAtIndex:indexPath.row];
+    UILabel *namelabel = (UILabel*) [cell viewWithTag:104];
+    UIImageView *imageview = (UIImageView *)[cell viewWithTag:105];
+    UILabel *stationNameLabel = (UILabel*) [cell viewWithTag:106];
+    UIImage *image = [UIImage imageNamed:[[[station objectAtIndex:indexPath.row]objectForKey:@"Images"]objectAtIndex:0]];
+    imageview.image = image;
+    namelabel.text = [titles objectAtIndex:indexPath.row];
+    stationNameLabel.text = [[station objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
     
     return cell;
 }
@@ -129,15 +135,18 @@ NSMutableArray *titles;
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"detailSegue"]){
+        BlueDetailsViewController *dest = segue.destinationViewController;
+        dest.station = [station objectAtIndex:selectedIndex];
+        dest.indexPath = selectedIndex;
+    }
 }
-*/
+
 
 @end

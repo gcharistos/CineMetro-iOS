@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RatingViewController.h"
 
-@interface BlueDetailsViewController : UIViewController
+@interface BlueDetailsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate,UIScrollViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIActionSheetDelegate>{
+    IBOutlet UIScrollView *scroller;
 
+}
+@property NSDictionary *station;
+@property NSInteger indexPath;
+@property (strong,nonatomic) RatingViewController *popViewController;
+@property (weak, nonatomic) IBOutlet UITextView *textview;
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
+- (IBAction)rateButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *theaterTitle;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @end
