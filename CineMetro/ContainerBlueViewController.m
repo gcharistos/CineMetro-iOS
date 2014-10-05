@@ -47,9 +47,9 @@
     }
     
     // Create a new view controller and pass suitable data.
-    PageContentBlueViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
+    PageContentBlueViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentBlueViewController"];
     pageContentViewController.imageFile = [self.pageImages[index]objectForKey:@"Image"];
-    //pageContentViewController.textDesc = [self.pageImages[index]objectForKey:@"text"];
+    pageContentViewController.desc = [self.pageImages[index]objectForKey:@"text"];
     pageContentViewController.pageIndex = index;
     
     return pageContentViewController;

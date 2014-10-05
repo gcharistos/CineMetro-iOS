@@ -11,6 +11,7 @@
 @interface PageContentBlueViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property NSUInteger pageIndex;
+@property (strong,nonatomic) NSString *desc;
 @property NSString *imageFile;
 @property (weak, nonatomic) IBOutlet UITextView *textview;
 @end

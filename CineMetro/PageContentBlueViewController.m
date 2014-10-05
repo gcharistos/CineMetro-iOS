@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
-   // self.textview.text = self.textDesc;
+    self.textview.text = self.desc;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
