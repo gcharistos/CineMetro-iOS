@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WHg-J9-2Ny">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -998,7 +999,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D5q-2n-jt9">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D5q-2n-jt9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CineMetro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4W-Pu-EHl">
@@ -1109,6 +1110,12 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zCr-7g-011" firstAttribute="top" secondItem="D5q-2n-jt9" secondAttribute="bottom" id="9Gt-mJ-H4D"/>
+                            <constraint firstItem="D5q-2n-jt9" firstAttribute="top" secondItem="cSd-2b-yBS" secondAttribute="topMargin" id="Htg-bY-44N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D5q-2n-jt9" secondAttribute="trailing" constant="-16" id="N60-r4-LYk"/>
+                            <constraint firstItem="D5q-2n-jt9" firstAttribute="leading" secondItem="cSd-2b-yBS" secondAttribute="leadingMargin" constant="-16" id="XJL-0U-zjH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Wl-Ig-VZd"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -1167,7 +1174,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Um-Ie-6ht">
                                 <rect key="frame" x="0.0" y="44" width="320" height="792"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSq-td-eK0">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSq-td-eK0">
                                         <rect key="frame" x="0.0" y="303" width="320" height="489"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -1189,12 +1196,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qSq-td-eK0" secondAttribute="trailing" id="9IA-Rz-br0"/>
+                                    <constraint firstItem="qSq-td-eK0" firstAttribute="leading" secondItem="2Um-Ie-6ht" secondAttribute="leading" id="Dfd-rp-LVL"/>
+                                    <constraint firstAttribute="bottom" secondItem="qSq-td-eK0" secondAttribute="bottom" id="dzO-0j-2yq"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6ZX-pZ-Stw" firstAttribute="top" secondItem="2Um-Ie-6ht" secondAttribute="bottom" id="8aF-o8-HI7"/>
-                            <constraint firstItem="2Um-Ie-6ht" firstAttribute="top" secondItem="Swd-8B-I7D" secondAttribute="bottom" id="HUq-Uh-FIH"/>
                             <constraint firstItem="Swd-8B-I7D" firstAttribute="leading" secondItem="DrX-EF-x90" secondAttribute="leadingMargin" constant="-16" id="HlR-4W-o5v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Um-Ie-6ht" secondAttribute="trailing" constant="-16" id="Jh5-0X-fIT"/>
                             <constraint firstItem="2Um-Ie-6ht" firstAttribute="leading" secondItem="DrX-EF-x90" secondAttribute="leadingMargin" constant="-16" id="KRu-iX-szO"/>
