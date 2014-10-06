@@ -19,5 +19,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 - (IBAction)rateButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *theaterTitle;
-@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *previousYear;
+@property (weak, nonatomic) IBOutlet UILabel *nextYear;
+@property (weak, nonatomic) IBOutlet UILabel *currentYear;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *forwardButton;
 @end

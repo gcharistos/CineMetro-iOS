@@ -20,7 +20,6 @@
 
 @implementation BlueDetailsViewController
 @synthesize station;
-@synthesize infoLabel;
 @synthesize tableview;
 @synthesize title;
 @synthesize indexPath;
@@ -48,8 +47,7 @@ NSMutableArray *points;
     self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
     
     [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,580)];
-    infoLabel.text = NSLocalizedString(@"info",@"word");
+    [scroller setContentSize:CGSizeMake(320,630)];
     images = [[NSMutableArray alloc]init];
     //set navigation bar title
     // self.navigationItem.title =[station objectForKey:@"Subtitle"];
@@ -154,7 +152,7 @@ NSMutableArray *points;
         ContainerBlueViewController *dest = segue.destinationViewController;
         if(images.count != 0){
             dest.pageImages = [[NSArray alloc]initWithArray:images];
-            NSLog(@"Pass Fucker !!!");
+            dest.parentController = self;
         }
     }
     // Get the new view controller using [segue destinationViewController].
@@ -163,7 +161,6 @@ NSMutableArray *points;
 
 -(void)viewDidDisappear:(BOOL)animated{
     images = nil;
-    // [[[self childViewControllers]objectAtIndex:0] removeFromParentViewController];
     
 }
 

@@ -14,13 +14,17 @@
 @end
 
 @implementation ContainerBlueViewController
-
+@synthesize parentController;
+NSUInteger currentIndex;
+int flag;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    currentIndex = 0;
+    flag = 0;
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.pageViewController.dataSource = self;
-    
+    self.pageViewController.delegate = self;
     PageContentBlueViewController *startingViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
@@ -45,44 +49,57 @@
     if (([self.pageImages count] == 0) || (index >= [self.pageImages count])) {
         return nil;
     }
-    
     // Create a new view controller and pass suitable data.
     PageContentBlueViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentBlueViewController"];
     pageContentViewController.imageFile = [self.pageImages[index]objectForKey:@"Image"];
     pageContentViewController.desc = [self.pageImages[index]objectForKey:@"text"];
+    pageContentViewController.year = [self.pageImages[index]objectForKey:@"year"];
+    pageContentViewController.parent = parentController;
+    if((index+1) != [self.pageImages count]){
+        pageContentViewController.nextyear = [self.pageImages[index+1]objectForKey:@"year"];
+    }
+    else {
+        pageContentViewController.nextyear = @"";
+        
+    }
+    if(index != 0){
+        pageContentViewController.previousyear = [self.pageImages[index-1]objectForKey:@"year"];
+    }
+    else{
+        pageContentViewController.previousyear = @"";
+    }
     pageContentViewController.pageIndex = index;
-    
-    return pageContentViewController;
+
+        return pageContentViewController;
 }
 
 #pragma mark - Page View Controller Data Source
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    NSUInteger index = ((PageContentBlueViewController*) viewController).pageIndex;
-    
-    if ((index == 0) || (index == NSNotFound)) {
+    NSUInteger index = [((PageContentBlueViewController*) viewController) pageIndex];
+
+    if (index == 0) {
         return nil;
     }
-    
     index--;
     return [self viewControllerAtIndex:index];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    NSUInteger index = ((PageContentBlueViewController*) viewController).pageIndex;
-    
-    if (index == NSNotFound) {
-        return nil;
-    }
+    NSUInteger index = [((PageContentBlueViewController*) viewController) pageIndex];
     
     index++;
+    
     if (index == [self.pageImages count]) {
         return nil;
     }
+    
+
     return [self viewControllerAtIndex:index];
 }
+
 
 
 

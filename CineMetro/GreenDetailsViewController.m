@@ -55,7 +55,7 @@ NSMutableArray *points;
     self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
 
     [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,880)];
+    [scroller setContentSize:CGSizeMake(320,1150)];
     images = [[NSMutableArray alloc]init];
     actorsLabel.text = NSLocalizedString(@"actors",@"word");
     directorsLabel.text = NSLocalizedString(@"director",@"word");

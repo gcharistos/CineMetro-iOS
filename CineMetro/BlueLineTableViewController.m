@@ -32,19 +32,26 @@ NSMutableArray *titles;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    selectedIndex = -1;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+}
+-(void)viewWillAppear:(BOOL)animated{
     titles = [[NSMutableArray alloc]init];
+    selectedIndex = -1;
+    NSString *title;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"BlueLineStations" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     NSArray *anns = [dict objectForKey:@"Stations"];
-    station = anns;
+    [lineName setText:[dict objectForKey:@"Name"]];
+    station = anns; // initialize station variable
     for(int i=0;i<anns.count;i++){
-        NSString  *title = [[anns objectAtIndex:i]objectForKey:@"Title"];
+        title = [[anns objectAtIndex:i]objectForKey:@"Title"];
         [titles addObject:title];
     }
-    [lineName setText:[dict objectForKey:@"Name"]];
-
+    
 }
+
 
 
 
@@ -74,7 +81,6 @@ NSMutableArray *titles;
     UIImageView *imageview = (UIImageView *)[cell viewWithTag:105];
     UILabel *stationNameLabel = (UILabel*) [cell viewWithTag:106];
     NSArray *imagedictionary = [[station objectAtIndex:indexPath.row]objectForKey:@"Images"];
-    NSLog(@"%@",[[imagedictionary objectAtIndex:0]objectForKey:@"Image"]);
     imageview.image = [UIImage imageNamed:[[imagedictionary objectAtIndex:0]objectForKey:@"Image"]];
     namelabel.text = [titles objectAtIndex:indexPath.row];
     stationNameLabel.text = [[station objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
