@@ -16,11 +16,10 @@
 @implementation ContainerBlueViewController
 @synthesize parentController;
 NSUInteger currentIndex;
-int flag;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     currentIndex = 0;
-    flag = -1;
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.pageViewController.dataSource = self;
@@ -38,26 +37,31 @@ int flag;
 
     // Do any additional setup after loading the view.
 }
+
+//Method goes to next page view
 - (void)goToNextView{
-    flag++;
-    if(flag == [self.pageImages count]){
+    currentIndex = [[self.pageViewController.viewControllers lastObject] pageIndex];
+    currentIndex++;
+    if(currentIndex == [self.pageImages count]){
         return;
     }
-    PageContentBlueViewController *startingViewController = [self viewControllerAtIndex:flag];
+    PageContentBlueViewController *startingViewController = [self viewControllerAtIndex:currentIndex];
     NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }
-
+//Method goes to previous page view
 -(void)goToPreviousView{
-    if(flag == 0){
+    
+    currentIndex = [[self.pageViewController.viewControllers lastObject] pageIndex];
+    if(currentIndex == 0){
         return;
     }
-    flag--;
-    PageContentBlueViewController *startingViewController = [self viewControllerAtIndex:flag];
+    currentIndex--;
+    PageContentBlueViewController *startingViewController = [self viewControllerAtIndex:currentIndex];
     NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
 }
-
+//Creates page view
 - (PageContentBlueViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     if (([self.pageImages count] == 0) || (index >= [self.pageImages count])) {
@@ -82,14 +86,13 @@ int flag;
     else{
         pageContentViewController.previousyear = @"";
     }
-    flag = index;
     pageContentViewController.pageIndex = index;
 
         return pageContentViewController;
 }
 
 #pragma mark - Page View Controller Data Source
-
+//method for previous page view
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
     NSUInteger index = [((PageContentBlueViewController*) viewController) pageIndex];
@@ -101,13 +104,12 @@ int flag;
 }
 
 
-
+//method for next page view
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
     NSUInteger index = [((PageContentBlueViewController*) viewController) pageIndex];
     
     index++;
-    
     if (index == [self.pageImages count]) {
         return nil;
     }

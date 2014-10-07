@@ -33,14 +33,21 @@ int flag;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if(user == nil && flag == 0){
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *retrieveUser = [userDefaults objectForKey:@"User"];
+    if(retrieveUser == nil && flag == 0){
         UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"welcome",@"word") message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:NSLocalizedString(@"login", @"word"),NSLocalizedString(@"signup",@"word"),nil];
         welcomeMessage.tag = 100;
-        [welcomeMessage show];
-
-        
+        [welcomeMessage show];    }
+    else {
+        PFQuery *userQuery = [PFUser query];
+        [userQuery whereKey:@"username" equalTo:retrieveUser];
+        [userQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            user = [PFUser currentUser];
+        }];
 
     }
+        
 
     // Do any additional setup after loading the view.
 }
@@ -54,10 +61,10 @@ int flag;
 -(void)LogOut{
     user = nil;
     flag = 1;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults removeObjectForKey:@"User"];
 }
 
-- (IBAction)loginpressed:(id)sender {
-}
 
 
 
@@ -96,6 +103,12 @@ int flag;
             break;
     }
     return  status;
+}
+
+-(void) saveProfile{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:user.username forKey:@"User"];
+
 }
 
 

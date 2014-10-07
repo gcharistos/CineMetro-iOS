@@ -67,9 +67,12 @@ PFUser *appUser;
         UINavigationController *navController = [segue destinationViewController];
         MainViewController *dest = (MainViewController *)([navController viewControllers][0]);
         user = appUser;
+        [dest saveProfile];
+
         if(loginStatus == 1){
             [dest redirectToProfile];
         }
+
         
     }
 }

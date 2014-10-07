@@ -127,6 +127,8 @@
 		1F70658419678116009CB35C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70658319678116009CB35C /* MapViewController.m */; };
 		1F7CE6AD19DE0A56004ECCD1 /* blue36.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F7CE6AC19DE0A56004ECCD1 /* blue36.jpg */; };
 		1F7CE6AF19DE0AB2004ECCD1 /* blue41.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F7CE6AE19DE0AB2004ECCD1 /* blue41.jpg */; };
+		1F8412F719E43EAB00FED4C7 /* MapSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8412F519E43EAB00FED4C7 /* MapSettingsViewController.m */; };
+		1F8412F819E43EAB00FED4C7 /* MapSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8412F619E43EAB00FED4C7 /* MapSettingsViewController.xib */; };
 		1F8869C319E2D9AA000FBD56 /* forward-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8869C219E2D9AA000FBD56 /* forward-50.png */; };
 		1F8869C519E2D9C8000FBD56 /* back-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8869C419E2D9C8000FBD56 /* back-50.png */; };
 		1F93629A1988F1B10088A0BF /* RedDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9362991988F1B10088A0BF /* RedDetailsViewController.m */; };
@@ -154,8 +156,6 @@
 		1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F996E0719AD15AD004675BB /* TabBarViewController.m */; };
 		1F9DB73519CA137A00C3E3FC /* facebookLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB73419CA137A00C3E3FC /* facebookLogo.png */; };
 		1F9DB73919CA17F900C3E3FC /* twitter-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB73819CA17F900C3E3FC /* twitter-logo.jpg */; };
-		1FA9023719B87DDD00149EAD /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA9023519B87DDD00149EAD /* ViewController1.m */; };
-		1FA9023819B87DDD00149EAD /* ViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA9023619B87DDD00149EAD /* ViewController1.xib */; };
 		1FAE04E119BD073800E45EF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE04E019BD073800E45EF4 /* ViewController.m */; };
 		1FAE04E419BD077900E45EF4 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE04E319BD077900E45EF4 /* PageContentViewController.m */; };
 		1FAE2CE519C3829A00D006EC /* photo-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE2CE419C3829A00D006EC /* photo-75.png */; };
@@ -341,6 +341,9 @@
 		1F70658319678116009CB35C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		1F7CE6AC19DE0A56004ECCD1 /* blue36.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue36.jpg; sourceTree = "<group>"; };
 		1F7CE6AE19DE0AB2004ECCD1 /* blue41.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue41.jpg; sourceTree = "<group>"; };
+		1F8412F419E43EAB00FED4C7 /* MapSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSettingsViewController.h; sourceTree = "<group>"; };
+		1F8412F519E43EAB00FED4C7 /* MapSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSettingsViewController.m; sourceTree = "<group>"; };
+		1F8412F619E43EAB00FED4C7 /* MapSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSettingsViewController.xib; sourceTree = "<group>"; };
 		1F8869C219E2D9AA000FBD56 /* forward-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-50.png"; sourceTree = "<group>"; };
 		1F8869C419E2D9C8000FBD56 /* back-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-50.png"; sourceTree = "<group>"; };
 		1F9362981988F1B10088A0BF /* RedDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedDetailsViewController.h; sourceTree = "<group>"; };
@@ -371,9 +374,6 @@
 		1F996E0719AD15AD004675BB /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
 		1F9DB73419CA137A00C3E3FC /* facebookLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookLogo.png; sourceTree = "<group>"; };
 		1F9DB73819CA17F900C3E3FC /* twitter-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "twitter-logo.jpg"; sourceTree = "<group>"; };
-		1FA9023419B87DDD00149EAD /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController1.h; path = ../ViewController1.h; sourceTree = "<group>"; };
-		1FA9023519B87DDD00149EAD /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController1.m; path = ../ViewController1.m; sourceTree = "<group>"; };
-		1FA9023619B87DDD00149EAD /* ViewController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController1.xib; path = ../ViewController1.xib; sourceTree = "<group>"; };
 		1FAE04DF19BD073800E45EF4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		1FAE04E019BD073800E45EF4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		1FAE04E219BD077900E45EF4 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageContentViewController.h; path = ../PageContentViewController.h; sourceTree = "<group>"; };
@@ -521,9 +521,9 @@
 			children = (
 				1F70658219678116009CB35C /* MapViewController.h */,
 				1F70658319678116009CB35C /* MapViewController.m */,
-				1FA9023419B87DDD00149EAD /* ViewController1.h */,
-				1FA9023519B87DDD00149EAD /* ViewController1.m */,
-				1FA9023619B87DDD00149EAD /* ViewController1.xib */,
+				1F8412F419E43EAB00FED4C7 /* MapSettingsViewController.h */,
+				1F8412F519E43EAB00FED4C7 /* MapSettingsViewController.m */,
+				1F8412F619E43EAB00FED4C7 /* MapSettingsViewController.xib */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -991,7 +991,6 @@
 				1F2DC9B219C2208B00265605 /* sfetsa.jpg in Resources */,
 				1F28171519BE848E005A5337 /* ShowImageViewController.xib in Resources */,
 				1F2DC9B519C2208B00265605 /* tzortzoglou.jpg in Resources */,
-				1FA9023819B87DDD00149EAD /* ViewController1.xib in Resources */,
 				1FC3290D19D2E50A00B69363 /* green74.png in Resources */,
 				1FAE2CE719C3876900D006EC /* photo-32.png in Resources */,
 				1F2DC9C019C22D5C00265605 /* dalianidis.jpg in Resources */,
@@ -1011,6 +1010,7 @@
 				1F137A8619753179001C0F2B /* RedLineStations.plist in Resources */,
 				1F2DC9C819C22FDD00265605 /* syllas_tzoumerkas-200x200.jpg in Resources */,
 				1F9DB73519CA137A00C3E3FC /* facebookLogo.png in Resources */,
+				1F8412F819E43EAB00FED4C7 /* MapSettingsViewController.xib in Resources */,
 				1F5AB66B19D0AEED007F286B /* film.jpg in Resources */,
 				1F9362B81988F6490088A0BF /* red33.jpg in Resources */,
 				1F13176F19DCB36C00DB8316 /* blue31.jpg in Resources */,
@@ -1136,8 +1136,8 @@
 				1F13175219DCA9EC00DB8316 /* PageContentBlueViewController.m in Sources */,
 				1F2D733119CFA0BB00C60F09 /* AboutViewController.m in Sources */,
 				1F276BC2196790A8008735B1 /* LoginViewController.m in Sources */,
-				1FA9023719B87DDD00149EAD /* ViewController1.m in Sources */,
 				1F464E0119B9182E00389827 /* MBProgressHUD.m in Sources */,
+				1F8412F719E43EAB00FED4C7 /* MapSettingsViewController.m in Sources */,
 				1FAE04E119BD073800E45EF4 /* ViewController.m in Sources */,
 				1F70658419678116009CB35C /* MapViewController.m in Sources */,
 				1F2DC9BE19C2249200265605 /* HeaderView.m in Sources */,

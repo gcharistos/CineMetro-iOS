@@ -8,13 +8,13 @@
             <connections>
                 <outlet property="cancelButton" destination="Czk-NI-qAw" id="6kQ-1n-VOS"/>
                 <outlet property="okbutton" destination="Wv1-aq-duL" id="4Jc-9I-mth"/>
-                <outlet property="popUpView" destination="i5M-Pr-FkT" id="KZ7-io-mmc"/>
+                <outlet property="popUpView" destination="i5M-Pr-FkT" id="IaA-po-s1G"/>
                 <outlet property="star1" destination="VQD-qz-zDA" id="LCb-Pd-Bux"/>
                 <outlet property="star2" destination="zBM-0S-Gpg" id="OpK-8K-hBM"/>
                 <outlet property="star3" destination="XsH-Vb-hpc" id="Is0-vf-wK4"/>
                 <outlet property="star4" destination="Ovj-Ad-uuK" id="472-ch-U5P"/>
                 <outlet property="star5" destination="7Lu-bZ-83m" id="IU3-6m-4S1"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="70C-WT-ENo"/>
                 <outletCollection property="stars" destination="VQD-qz-zDA" id="6De-RE-dse"/>
                 <outletCollection property="stars" destination="zBM-0S-Gpg" id="nyy-SE-z0q"/>
                 <outletCollection property="stars" destination="XsH-Vb-hpc" id="pMd-UT-yZg"/>

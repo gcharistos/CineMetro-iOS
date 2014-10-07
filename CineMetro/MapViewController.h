@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "ViewController1.h"
+#import "MapSettingsViewController.h"
+
 @interface MapViewController : UIViewController<MKMapViewDelegate,UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate,CLLocationManagerDelegate>
   @property (weak, nonatomic) IBOutlet MKMapView *mapview;
 @property(nonatomic, retain) CLLocationManager *locationManager;
-  @property (strong, nonatomic) ViewController1 *popViewController;
+  @property (strong, nonatomic) MapSettingsViewController *popViewController;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (weak, nonatomic) IBOutlet UIButton *hideButton;
 

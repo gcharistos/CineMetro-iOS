@@ -1,20 +1,20 @@
 //
-//  ViewController1.m
+//  MapSettingsViewController.m
 //  CineMetro
 //
-//  Created by George Haristos on 4/9/14.
+//  Created by George Haristos on 7/10/14.
 //  Copyright (c) 2014 George Haristos. All rights reserved.
 //
 
-#import "ViewController1.h"
+#import "MapSettingsViewController.h"
 #import <MapKit/MapKit.h>
 #import "MapViewController.h"
 
-@interface ViewController1 ()
+@interface MapSettingsViewController ()
 
 @end
 
-@implementation ViewController1
+@implementation MapSettingsViewController
 @synthesize cancelbutton;
 @synthesize locationbutton;
 @synthesize directionsbutton;
@@ -30,18 +30,19 @@ MapViewController *viewController;
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     self.view.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:.6];
     self.popUpView.layer.cornerRadius = 5;
     self.popUpView.layer.shadowOpacity = 0.8;
     self.popUpView.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
-//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGestureRecognized:)];
-//    [self.view addGestureRecognizer:tapGesture];
-   [cancelbutton setTitle:NSLocalizedString(@"cancel",@"word") forState:UIControlStateNormal];
+    //    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGestureRecognized:)];
+    //    [self.view addGestureRecognizer:tapGesture];
+    [cancelbutton setTitle:NSLocalizedString(@"cancel",@"word") forState:UIControlStateNormal];
     [directionsbutton setTitle:NSLocalizedString(@"directions",@"word") forState:UIControlStateNormal];
     [locationbutton setTitle:NSLocalizedString(@"userlocation",@"word") forState:UIControlStateNormal];
-
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -81,13 +82,13 @@ MapViewController *viewController;
     destination.name = currentAnnotation.title;
     [destination openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving}];
     [self removeAnimate];
-
+    
 }
 
 -(IBAction)userLocation:(id)sender{
     [self removeAnimate];
     [viewController showUserLocation];
-
+    
 }
 
 - (void)showInView:(UIView *)aView withAnnotation:(MKPointAnnotation *)annotation withController:(UIViewController *)controller  animated:(BOOL)animated
@@ -95,19 +96,27 @@ MapViewController *viewController;
     dispatch_async(dispatch_get_main_queue(), ^{
         currentAnnotation = annotation;
         viewController = (MapViewController *)controller;
-    [aView addSubview:self.view];
-    if (animated) {
-        [self showAnimate];
-    }
+        [aView addSubview:self.view];
+        if (animated) {
+            [self showAnimate];
+        }
     });
     
 }
 
-
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

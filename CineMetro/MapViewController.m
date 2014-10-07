@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "Reachability.h"
 #import <CoreLocation/CoreLocation.h>
-#import "ViewController1.h"
+#import "MapSettingsViewController.h"
 #import <POP.h>
 #import <AddressBook/AddressBook.h>
 
@@ -49,10 +49,6 @@ NSMutableArray *distances;
     self.locationManager.delegate = self;
     self.locationManager = [[CLLocationManager alloc] init];
     distances = [[NSMutableArray alloc]init];
-//    UIBarButtonItem *ratebutton = [[UIBarButtonItem alloc] initWithTitle:@"Hide" style:UIBarButtonItemStyleBordered target:self action:@selector(showHidePressed:)];
-//    
-//    UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"settings",@"word") style:UIBarButtonItemStyleBordered target:self action:@selector(settingsButtonPressed:)];
-//    self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
     [hideButton setTitle:NSLocalizedString(@"hideList",@"word") forState:UIControlStateNormal];
     visibleLine = -1;
     self.locationManager = [[CLLocationManager alloc]init];
@@ -95,14 +91,10 @@ NSMutableArray *distances;
         [hideButton setTitle:NSLocalizedString(@"showList",@"word") forState:UIControlStateNormal];
 
         tableview.hidden = YES;
-        //mapview.frame = self.view.frame;
     }
 }
 
--(void)swipeTableView:(UISwipeGestureRecognizer *)sender{
-    NSLog(@"sssss");
-    // fade myView out
-   }
+
 
 -(void)UploadLine:(NSString *)name :(UIColor *)color{
     NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"plist"];
@@ -298,7 +290,7 @@ NSMutableArray *distances;
  annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
   //  [self performSegueWithIdentifier:@"showDetails" sender:nil];
     MKPointAnnotation *annotationTapped = (MKPointAnnotation *)view.annotation;
-    self.popViewController = [[ViewController1 alloc] initWithNibName:@"ViewController1" bundle:nil];
+    self.popViewController = [[MapSettingsViewController alloc] initWithNibName:@"MapSettingsViewController" bundle:nil];
     
     [self.popViewController showInView:self.view withAnnotation:annotationTapped withController:self animated:YES];
     
@@ -354,6 +346,7 @@ NSMutableArray *distances;
             }
             visibleLine  = buttonIndex;
             [self removeObjectsFromMap];
+            [self UploadLine:@"BlueLineStations" :[UIColor blueColor]];
         }
     }
 }

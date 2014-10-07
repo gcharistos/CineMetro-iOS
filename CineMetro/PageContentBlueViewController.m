@@ -29,7 +29,6 @@
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tappedImage:)];
     gesture.delegate = self;
     [self.backgroundImageView  addGestureRecognizer:gesture];
-    // Do any additional setup after loading the view.
 }
 
 -(void)viewWillAppear:(BOOL)animated{

@@ -8,7 +8,7 @@
 			<key>Title</key>
 			<string>1η Στάση</string>
 			<key>Subtitle</key>
-			<string>ΛΕΥΚΟΣ ΠΥΡΓΟΣ-ΕΤΑΙΡΕΙΑ ΜΑΚΕΔΟΝΙΚΩΝ ΣΠΟΥΔΩΝ (ΕΜΣ)</string>
+			<string>Λευκός Πύργος-Εταιρία Μακεδονικών Σπουδών (ΕΜΣ)</string>
 			<key>Longitude</key>
 			<string>22.934721</string>
 			<key>Latitude</key>
@@ -58,7 +58,7 @@
 			<key>Title</key>
 			<string>2η Στάση</string>
 			<key>Subtitle</key>
-			<string>ΝΤΟΡΕ – ΑΛΕΞΑΝΔΡΟΣ</string>
+			<string>Ντορέ – Αλέξανδρος</string>
 			<key>Latitude</key>
 			<string>40.635650</string>
 			<key>Longitude</key>
@@ -92,7 +92,7 @@
 			<key>Title</key>
 			<string>3η Στάση</string>
 			<key>Subtitle</key>
-			<string>Α. ΣΒΩΛΟΥ – ΠΛ. ΝΑΥΑΡΙΝΟ (ΕΣΠΕΡΟΣ-ΑΝΑΤΟΛΙΑ-ΜΑΚΕΔΟΝΙΚΟΝ – ΝΑΥΑΡΙΝΟ – ΒΑΚΟΥΡΑ)</string>
+			<string>Α. Σβώλου – Πλ. Ναυαρίνο (Έσπερος-Ανατόλια-Μακεδονικόν–Ναυαρίνο–Βακούρα)</string>
 			<key>Latitude</key>
 			<string>40.630440</string>
 			<key>Longitude</key>
@@ -144,7 +144,7 @@
 			<key>Title</key>
 			<string>4η Στάση</string>
 			<key>Subtitle</key>
-			<string>ΟΛΥΜΠΙΟΝ-ΠΛΑΤΕΙΑ ΑΡΙΣΤΟΤΕΛΟΥΣ</string>
+			<string>Ολύμπιον-Πλατεία Αριστοτέλους</string>
 			<key>Latitude</key>
 			<string>40.632804</string>
 			<key>Longitude</key>
@@ -215,7 +215,7 @@
 			<key>Title</key>
 			<string>5η Στάση</string>
 			<key>Subtitle</key>
-			<string>ΛΙΜΑΝΙ</string>
+			<string>Λιμάνι</string>
 			<key>Latitude</key>
 			<string>40.632511</string>
 			<key>Longitude</key>
