@@ -17,6 +17,7 @@
 @synthesize user;
 @synthesize imageView;
 @synthesize greenLinePoints;
+@synthesize blueLinePoints;
 @synthesize redLinePoints;
 @synthesize pointsLabel;
 @synthesize emailLabel;
@@ -34,12 +35,14 @@
 {
     [super viewDidLoad];
     emailLabel.text = [user objectForKey:@"username"];
-    NSString *points = [NSString stringWithFormat:@"%i",[[user objectForKey:@"points"]intValue]];
+    NSString *points = [NSString stringWithFormat:@"%i",[[user objectForKey:@"totalPoints"]intValue]];
     pointsLabel.text = points;
     NSString *redlinepoints = [NSString stringWithFormat:@"%i",[[user objectForKey:@"redLine"]intValue]];
     redLinePoints.text = redlinepoints;
     NSString *greenlinepoints = [NSString stringWithFormat:@"%i",[[user objectForKey:@"GreenLine"]intValue]];
     greenLinePoints.text = greenlinepoints;
+    NSString *bluelinepoints = [NSString stringWithFormat:@"%i",[[user objectForKey:@"blueLine"]intValue]];
+    blueLinePoints.text = bluelinepoints;
     PFFile *image = [user objectForKey:@"profileImage"];
     //profile image exists  . retrieve it from parse database
     if(image != nil){

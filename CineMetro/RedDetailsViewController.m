@@ -96,7 +96,7 @@ NSMutableArray *points;
         else{
             self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
             
-            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:indexPath withName:@"redLineStations" withBackground:[UIImage imageNamed:[images objectAtIndex:0]] animated:YES];
+            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:indexPath withName:@"redLineStations" withname:@"redLine"  animated:YES];
         }
     }
     else {

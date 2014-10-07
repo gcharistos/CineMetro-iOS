@@ -29,6 +29,7 @@ BOOL rated;
 NSMutableArray *points;
 NSInteger row;
 NSString *tableName;
+NSString *linepoints;
 int  selected;
 GreenDetailsViewController *viewController;
 
@@ -104,7 +105,7 @@ GreenDetailsViewController *viewController;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller withArray:(NSArray *)array atIndexPath:(NSInteger)indexPath withName:(NSString *)name withBackground:(UIImage *)image  animated:(BOOL)animated{
+- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller withArray:(NSArray *)array atIndexPath:(NSInteger)indexPath withName:(NSString *)name withname:(NSString *)aname  animated:(BOOL)animated{
     
     dispatch_async(dispatch_get_main_queue(), ^{
        // viewController = (GreenDetailsViewController *)controller;
@@ -112,6 +113,7 @@ GreenDetailsViewController *viewController;
         points = [[NSMutableArray alloc]initWithArray:array];
         row = indexPath;
         tableName = name;
+        linepoints = aname;
         if (animated) {
             [self showAnimate];
         }
@@ -127,7 +129,13 @@ GreenDetailsViewController *viewController;
         if([self checkForNetwork] == true){ // network is enabled
               [points replaceObjectAtIndex:row withObject:[NSNumber numberWithInt:selected]];
               [user setObject:points forKey:tableName];
-              [user saveInBackground];
+            int points = [[user objectForKey:linepoints]intValue];
+            points = points + 1;
+            int totalpoints = [[user objectForKey:@"totalPoints"]intValue];
+            totalpoints = totalpoints + 1;
+            [user setObject:[NSNumber numberWithInt:points] forKey:linepoints];
+            [user setObject:[NSNumber numberWithInt:totalpoints] forKey:@"totalPoints"];
+            [user saveInBackground];
                 
 
               UIAlertView *rate = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"thankyou",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];

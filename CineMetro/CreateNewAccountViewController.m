@@ -132,7 +132,11 @@ PFUser *appUser;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"createSegue"]){
+        UINavigationController *navController = [segue destinationViewController];
+        MainViewController *dest = (MainViewController *)([navController viewControllers][0]);
         user = appUser;
+        [dest saveProfile];
+
     }
 
 }
@@ -144,8 +148,9 @@ PFUser *appUser;
     user.password = passwordTextField.text;
     NSData *imageData = UIImageJPEGRepresentation(profilePhoto.image, 0.05f);
     NSString *filename = [NSString stringWithFormat:@"file.jpg"];
-    NSArray *redArray = [[NSArray alloc]initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], nil];
+    NSArray *redArray = [[NSArray alloc]initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], nil];
     NSArray *greenArray = [[NSArray alloc]initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], nil];
+    NSArray *blueArray = [[NSArray alloc]initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], nil];
     if(imageData != nil){
        PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
         [user setObject:imageFile forKey:@"profileImage"];
@@ -154,8 +159,10 @@ PFUser *appUser;
     [user setObject:@0 forKey:@"redLine"];
     [user setObject:@0 forKey:@"GreenLine"];
     [user setObject:@0 forKey:@"blueLine"];
+    [user setObject:@0 forKey:@"totalPoints"];
     [user setObject:redArray forKey:@"redLineStations"];
     [user setObject:greenArray  forKey:@"greenLineStations"];
+    [user setObject:blueArray forKey:@"blueLineStations"];
     
     BOOL validateEmail = [self validateEmailWithString:emailTextField.text];
     if([passwordTextField.text length] == 0 || [emailTextField.text length] == 0){
@@ -182,11 +189,15 @@ PFUser *appUser;
     
     PFQuery *query = [[PFQuery alloc]initWithClassName:@"User"];
     [query whereKey:@"username" equalTo:user.username];
-    NSArray *results = [query findObjects:nil];
-    if([results count] != 0){
-        NSLog(@"EXISTS");
-        return;
-    }
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects,NSError *error)
+    {
+        if([objects count] != 0){
+            NSLog(@"EXISTS");
+            return;
+        }
+
+                        
+    }];
     
     MBProgressHUD *createAccount = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     createAccount.labelText = @"Creating Account";
@@ -211,6 +222,7 @@ PFUser *appUser;
          }
          else{
              appUser = user;
+            
              // Display an alert view to show the error message
              UIAlertView *alertView =
              [[UIAlertView alloc] initWithTitle:@"Successful Registration"

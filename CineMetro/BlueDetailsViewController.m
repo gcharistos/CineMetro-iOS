@@ -73,7 +73,8 @@ ContainerBlueViewController *dest;
 
 - (IBAction)rateButtonPressed:(id)sender {
     if(user != nil){
-        points = [NSMutableArray arrayWithArray:[user objectForKey:@"redLineStations"]];
+        points = [NSMutableArray arrayWithArray:[user objectForKey:@"blueLineStations"]];
+        NSLog(@"size : %i",[points count]);
         if([[points objectAtIndex:indexPath]intValue] != 0){
             UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"ratedTrue",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
             [alert show];
@@ -81,7 +82,7 @@ ContainerBlueViewController *dest;
         else{
             self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
             
-            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:indexPath withName:@"redLineStations" withBackground:[UIImage imageNamed:[images objectAtIndex:0]] animated:YES];
+            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:indexPath withName:@"blueLineStations" withname:@"blueLine"  animated:YES];
         }
     }
     else {
