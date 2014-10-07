@@ -20,7 +20,7 @@ int flag;
 - (void)viewDidLoad {
     [super viewDidLoad];
     currentIndex = 0;
-    flag = 0;
+    flag = -1;
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.pageViewController.dataSource = self;
@@ -38,8 +38,22 @@ int flag;
 
     // Do any additional setup after loading the view.
 }
-- (IBAction)startWalkthrough:(id)sender {
-    PageContentBlueViewController *startingViewController = [self viewControllerAtIndex:0];
+- (void)goToNextView{
+    flag++;
+    if(flag == [self.pageImages count]){
+        return;
+    }
+    PageContentBlueViewController *startingViewController = [self viewControllerAtIndex:flag];
+    NSArray *viewControllers = @[startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
+}
+
+-(void)goToPreviousView{
+    if(flag == 0){
+        return;
+    }
+    flag--;
+    PageContentBlueViewController *startingViewController = [self viewControllerAtIndex:flag];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
 }
@@ -68,6 +82,7 @@ int flag;
     else{
         pageContentViewController.previousyear = @"";
     }
+    flag = index;
     pageContentViewController.pageIndex = index;
 
         return pageContentViewController;
@@ -78,13 +93,14 @@ int flag;
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
     NSUInteger index = [((PageContentBlueViewController*) viewController) pageIndex];
-
     if (index == 0) {
         return nil;
     }
     index--;
     return [self viewControllerAtIndex:index];
 }
+
+
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {

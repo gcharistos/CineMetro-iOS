@@ -10,8 +10,10 @@
 #import "BlueDetailsViewController.h"
 
 @interface ContainerBlueViewController : UIViewController<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
-- (IBAction)startWalkthrough:(id)sender;
+- (void)startWalkthrough;
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property BlueDetailsViewController *parentController;
 @property (strong, nonatomic) NSArray *pageImages;
+- (void)goToNextView;
+-(void)goToPreviousView;
 @end

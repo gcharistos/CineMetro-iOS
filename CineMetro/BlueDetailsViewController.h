@@ -24,4 +24,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentYear;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UIButton *forwardButton;
+- (IBAction)backButtonPressed:(id)sender;
+- (IBAction)forwardButtonPressed:(id)sender;
 @end

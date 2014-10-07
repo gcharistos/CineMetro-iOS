@@ -27,6 +27,7 @@
 NSMutableArray *images;
 NSArray *currentList;
 NSMutableArray *points;
+ContainerBlueViewController *dest;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -149,7 +150,7 @@ NSMutableArray *points;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"showPhotos2"]){
-        ContainerBlueViewController *dest = segue.destinationViewController;
+        dest = segue.destinationViewController;
         if(images.count != 0){
             dest.pageImages = [[NSArray alloc]initWithArray:images];
             dest.parentController = self;
@@ -164,4 +165,11 @@ NSMutableArray *points;
     
 }
 
+- (IBAction)backButtonPressed:(id)sender {
+    [dest goToPreviousView];
+}
+
+- (IBAction)forwardButtonPressed:(id)sender {
+    [dest goToNextView];
+}
 @end
