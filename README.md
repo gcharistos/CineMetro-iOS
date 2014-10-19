@@ -3,6 +3,8 @@ CineMetro-iOS
 
 CineMetro iOS App
 
+First Implementation of iOS app :D :D 
+
 iOS app for International Thessaloniki Film Festival 
 
 Install Pop Animation Framework
