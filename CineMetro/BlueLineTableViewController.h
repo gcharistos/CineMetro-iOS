@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BlueLineTableViewController : UITableViewController<UITableViewDataSource ,UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *lineName;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end

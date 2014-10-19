@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F1127DF198AD56200BB0F8E /* BlueLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F1127DE198AD56200BB0F8E /* BlueLineStations.plist */; };
+		1F1127DF198AD56200BB0F8E /* GreenLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F1127DE198AD56200BB0F8E /* GreenLineStations.plist */; };
+		1F12952B19EA903C00A6F3F6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F12952919EA903C00A6F3F6 /* FacebookSDK.framework */; };
 		1F12C9A819B7D5850024CAD5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12C9A719B7D5850024CAD5 /* Reachability.m */; };
-		1F13175219DCA9EC00DB8316 /* PageContentBlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F13175119DCA9EC00DB8316 /* PageContentBlueViewController.m */; };
-		1F13175519DCAA6400DB8316 /* ContainerBlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F13175419DCAA6400DB8316 /* ContainerBlueViewController.m */; };
+		1F13175219DCA9EC00DB8316 /* PageContentGreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F13175119DCA9EC00DB8316 /* PageContentGreenViewController.m */; };
+		1F13175519DCAA6400DB8316 /* ContainerGreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F13175419DCAA6400DB8316 /* ContainerGreenViewController.m */; };
 		1F13176A19DCB36C00DB8316 /* blue03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13175919DCB36C00DB8316 /* blue03.jpg */; };
 		1F13176B19DCB36C00DB8316 /* blue04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13175A19DCB36C00DB8316 /* blue04.jpg */; };
 		1F13176C19DCB36C00DB8316 /* blue21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F13175B19DCB36C00DB8316 /* blue21.jpg */; };
@@ -33,7 +34,6 @@
 		1F275BCD19C619CF00A1A8AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F275BCF19C619CF00A1A8AD /* Localizable.strings */; };
 		1F276BBF19679092008735B1 /* CreateNewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BBE19679092008735B1 /* CreateNewAccountViewController.m */; };
 		1F276BC2196790A8008735B1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BC1196790A8008735B1 /* LoginViewController.m */; };
-		1F276BC619679529008735B1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BC519679529008735B1 /* FacebookSDK.framework */; };
 		1F276BC819679595008735B1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BC719679594008735B1 /* AudioToolbox.framework */; };
 		1F276BCA196795A6008735B1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BC9196795A6008735B1 /* CFNetwork.framework */; };
 		1F276BCC196795BB008735B1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BCB196795BB008735B1 /* CoreLocation.framework */; };
@@ -46,7 +46,6 @@
 		1F28171519BE848E005A5337 /* ShowImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F28171319BE848E005A5337 /* ShowImageViewController.xib */; };
 		1F29B5BF19BDF7D90036B2C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */; };
 		1F2D733119CFA0BB00C60F09 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D733019CFA0BB00C60F09 /* AboutViewController.m */; };
-		1F2DC98719C21BCE00265605 /* ShowActorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DC98619C21BCE00265605 /* ShowActorsViewController.m */; };
 		1F2DC9A119C2208B00265605 /* amaliamoutoussihoraproelefsis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC98819C2208B00265605 /* amaliamoutoussihoraproelefsis.jpg */; };
 		1F2DC9A219C2208B00265605 /* antwnopoulos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC98919C2208B00265605 /* antwnopoulos.jpg */; };
 		1F2DC9A319C2208B00265605 /* bazaka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC98A19C2208B00265605 /* bazaka.jpg */; };
@@ -73,14 +72,13 @@
 		1F2DC9B819C2208B00265605 /* voutsas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC99F19C2208B00265605 /* voutsas.jpg */; };
 		1F2DC9B919C2208B00265605 /* zervos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC9A019C2208B00265605 /* zervos.jpg */; };
 		1F2DC9BB19C2213800265605 /* Gregg_Ntallas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC9BA19C2213800265605 /* Gregg_Ntallas.jpg */; };
-		1F2DC9BE19C2249200265605 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2DC9BD19C2249200265605 /* HeaderView.m */; };
 		1F2DC9C019C22D5C00265605 /* dalianidis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC9BF19C22D5C00265605 /* dalianidis.jpg */; };
 		1F2DC9C219C22E7900265605 /* kanelopoulos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC9C119C22E7900265605 /* kanelopoulos.jpeg */; };
 		1F2DC9C419C22EF500265605 /* voulgaris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC9C319C22EF500265605 /* voulgaris.jpg */; };
 		1F2DC9C619C22F6F00265605 /* aggelopoulos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC9C519C22F6F00265605 /* aggelopoulos.jpg */; };
 		1F2DC9C819C22FDD00265605 /* syllas_tzoumerkas-200x200.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC9C719C22FDD00265605 /* syllas_tzoumerkas-200x200.jpg */; };
 		1F2DC9CA19C2307B00265605 /* papaiwannou.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC9C919C2307B00265605 /* papaiwannou.jpg */; };
-		1F370D2C19753ADC003FB972 /* GreenLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F370D2B19753ADC003FB972 /* GreenLineStations.plist */; };
+		1F370D2C19753ADC003FB972 /* BlueLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F370D2B19753ADC003FB972 /* BlueLineStations.plist */; };
 		1F464E0119B9182E00389827 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F464E0019B9182E00389827 /* MBProgressHUD.m */; };
 		1F48BDD0199AB2C400BD30C0 /* green01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F48BDCE199AB2C400BD30C0 /* green01.jpg */; };
 		1F48BDD1199AB2C400BD30C0 /* green02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F48BDCF199AB2C400BD30C0 /* green02.jpg */; };
@@ -103,7 +101,6 @@
 		1F48BDF4199AB38300BD30C0 /* green72.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F48BDF1199AB38300BD30C0 /* green72.jpg */; };
 		1F48BDF5199AB38300BD30C0 /* green73.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F48BDF2199AB38300BD30C0 /* green73.png */; };
 		1F5AB66B19D0AEED007F286B /* film.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F5AB66A19D0AEED007F286B /* film.jpg */; };
-		1F60E94319CB568100AA078F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F60E94219CB568100AA078F /* Parse.framework */; };
 		1F65480B19A7466400974CCB /* ButtonStretch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F65480A19A7466400974CCB /* ButtonStretch@2x.png */; };
 		1F6AED7919AA10BF000490DD /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6AED7819AA10BF000490DD /* ProfileViewController.m */; };
 		1F6AED8619AA5DEA000490DD /* mainBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F6AED8519AA5DEA000490DD /* mainBackground.jpg */; };
@@ -153,6 +150,7 @@
 		1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F996E0719AD15AD004675BB /* TabBarViewController.m */; };
 		1F9DB73519CA137A00C3E3FC /* facebookLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB73419CA137A00C3E3FC /* facebookLogo.png */; };
 		1F9DB73919CA17F900C3E3FC /* twitter-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB73819CA17F900C3E3FC /* twitter-logo.jpg */; };
+		1FA35B8619F43A49003061E7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA35B8319F43A48003061E7 /* Parse.framework */; };
 		1FAE04E119BD073800E45EF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE04E019BD073800E45EF4 /* ViewController.m */; };
 		1FAE04E419BD077900E45EF4 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE04E319BD077900E45EF4 /* PageContentViewController.m */; };
 		1FAE2CE519C3829A00D006EC /* photo-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE2CE419C3829A00D006EC /* photo-75.png */; };
@@ -186,7 +184,6 @@
 		1FEFBB9E19E44EBB00B7649C /* blue02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FEFBB9D19E44EBB00B7649C /* blue02.jpg */; };
 		1FEFBBA019E44F5C00B7649C /* blue37.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FEFBB9F19E44F5C00B7649C /* blue37.jpg */; };
 		1FF72A82198AC4C30022B08D /* BlueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */; };
-		1FFBB93C19BFC7A60035C87B /* ShowTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFBB93B19BFC7A60035C87B /* ShowTextViewController.m */; };
 		36687826E35240D2959EF225 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8630476C0E4E2B87F91772 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -201,13 +198,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F1127DE198AD56200BB0F8E /* BlueLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlueLineStations.plist; sourceTree = "<group>"; };
+		1F0AB7EB19E5D51B002D4D83 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		1F1127DE198AD56200BB0F8E /* GreenLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GreenLineStations.plist; sourceTree = "<group>"; };
+		1F12952919EA903C00A6F3F6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		1F12C9A619B7D5850024CAD5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1F12C9A719B7D5850024CAD5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		1F13175019DCA9EC00DB8316 /* PageContentBlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentBlueViewController.h; sourceTree = "<group>"; };
-		1F13175119DCA9EC00DB8316 /* PageContentBlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentBlueViewController.m; sourceTree = "<group>"; };
-		1F13175319DCAA6400DB8316 /* ContainerBlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerBlueViewController.h; sourceTree = "<group>"; };
-		1F13175419DCAA6400DB8316 /* ContainerBlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerBlueViewController.m; sourceTree = "<group>"; };
+		1F13175019DCA9EC00DB8316 /* PageContentGreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentGreenViewController.h; sourceTree = "<group>"; };
+		1F13175119DCA9EC00DB8316 /* PageContentGreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentGreenViewController.m; sourceTree = "<group>"; };
+		1F13175319DCAA6400DB8316 /* ContainerGreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerGreenViewController.h; sourceTree = "<group>"; };
+		1F13175419DCAA6400DB8316 /* ContainerGreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerGreenViewController.m; sourceTree = "<group>"; };
 		1F13175919DCB36C00DB8316 /* blue03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue03.jpg; sourceTree = "<group>"; };
 		1F13175A19DCB36C00DB8316 /* blue04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue04.jpg; sourceTree = "<group>"; };
 		1F13175B19DCB36C00DB8316 /* blue21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue21.jpg; sourceTree = "<group>"; };
@@ -237,7 +236,6 @@
 		1F276BBE19679092008735B1 /* CreateNewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewAccountViewController.m; sourceTree = "<group>"; };
 		1F276BC0196790A8008735B1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		1F276BC1196790A8008735B1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		1F276BC519679529008735B1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		1F276BC719679594008735B1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1F276BC9196795A6008735B1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1F276BCB196795BB008735B1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -252,8 +250,6 @@
 		1F29B5BE19BDF7D90036B2C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F2D732F19CFA0BB00C60F09 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		1F2D733019CFA0BB00C60F09 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
-		1F2DC98519C21BCE00265605 /* ShowActorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowActorsViewController.h; sourceTree = "<group>"; };
-		1F2DC98619C21BCE00265605 /* ShowActorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowActorsViewController.m; sourceTree = "<group>"; };
 		1F2DC98819C2208B00265605 /* amaliamoutoussihoraproelefsis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = amaliamoutoussihoraproelefsis.jpg; sourceTree = "<group>"; };
 		1F2DC98919C2208B00265605 /* antwnopoulos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = antwnopoulos.jpg; sourceTree = "<group>"; };
 		1F2DC98A19C2208B00265605 /* bazaka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bazaka.jpg; sourceTree = "<group>"; };
@@ -280,15 +276,13 @@
 		1F2DC99F19C2208B00265605 /* voutsas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = voutsas.jpg; sourceTree = "<group>"; };
 		1F2DC9A019C2208B00265605 /* zervos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zervos.jpg; sourceTree = "<group>"; };
 		1F2DC9BA19C2213800265605 /* Gregg_Ntallas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gregg_Ntallas.jpg; sourceTree = "<group>"; };
-		1F2DC9BC19C2249200265605 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
-		1F2DC9BD19C2249200265605 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		1F2DC9BF19C22D5C00265605 /* dalianidis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dalianidis.jpg; sourceTree = "<group>"; };
 		1F2DC9C119C22E7900265605 /* kanelopoulos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kanelopoulos.jpeg; sourceTree = "<group>"; };
 		1F2DC9C319C22EF500265605 /* voulgaris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = voulgaris.jpg; sourceTree = "<group>"; };
 		1F2DC9C519C22F6F00265605 /* aggelopoulos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aggelopoulos.jpg; sourceTree = "<group>"; };
 		1F2DC9C719C22FDD00265605 /* syllas_tzoumerkas-200x200.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "syllas_tzoumerkas-200x200.jpg"; sourceTree = "<group>"; };
 		1F2DC9C919C2307B00265605 /* papaiwannou.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = papaiwannou.jpg; sourceTree = "<group>"; };
-		1F370D2B19753ADC003FB972 /* GreenLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GreenLineStations.plist; sourceTree = "<group>"; };
+		1F370D2B19753ADC003FB972 /* BlueLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlueLineStations.plist; sourceTree = "<group>"; };
 		1F464DFF19B9182E00389827 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../MBProgressHUD.h; sourceTree = "<group>"; };
 		1F464E0019B9182E00389827 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../MBProgressHUD.m; sourceTree = "<group>"; };
 		1F48BDCE199AB2C400BD30C0 /* green01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green01.jpg; sourceTree = "<group>"; };
@@ -312,7 +306,6 @@
 		1F48BDF1199AB38300BD30C0 /* green72.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green72.jpg; sourceTree = "<group>"; };
 		1F48BDF2199AB38300BD30C0 /* green73.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green73.png; sourceTree = "<group>"; };
 		1F5AB66A19D0AEED007F286B /* film.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = film.jpg; sourceTree = "<group>"; };
-		1F60E94219CB568100AA078F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		1F65480A19A7466400974CCB /* ButtonStretch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonStretch@2x.png"; sourceTree = "<group>"; };
 		1F6AED7719AA10BF000490DD /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		1F6AED7819AA10BF000490DD /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
@@ -375,6 +368,7 @@
 		1F996E0719AD15AD004675BB /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
 		1F9DB73419CA137A00C3E3FC /* facebookLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookLogo.png; sourceTree = "<group>"; };
 		1F9DB73819CA17F900C3E3FC /* twitter-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "twitter-logo.jpg"; sourceTree = "<group>"; };
+		1FA35B8319F43A48003061E7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		1FAE04DF19BD073800E45EF4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		1FAE04E019BD073800E45EF4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		1FAE04E219BD077900E45EF4 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageContentViewController.h; path = ../PageContentViewController.h; sourceTree = "<group>"; };
@@ -413,8 +407,6 @@
 		1FEFBB9F19E44F5C00B7649C /* blue37.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue37.jpg; sourceTree = "<group>"; };
 		1FF72A80198AC4C30022B08D /* BlueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueDetailsViewController.h; sourceTree = "<group>"; };
 		1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueDetailsViewController.m; sourceTree = "<group>"; };
-		1FFBB93A19BFC7A60035C87B /* ShowTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTextViewController.h; sourceTree = "<group>"; };
-		1FFBB93B19BFC7A60035C87B /* ShowTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTextViewController.m; sourceTree = "<group>"; };
 		3F77F930E77F45F8932CD087 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		DA8630476C0E4E2B87F91772 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -424,8 +416,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F60E94319CB568100AA078F /* Parse.framework in Frameworks */,
-				1F276BC619679529008735B1 /* FacebookSDK.framework in Frameworks */,
+				1FA35B8619F43A49003061E7 /* Parse.framework in Frameworks */,
+				1F12952B19EA903C00A6F3F6 /* FacebookSDK.framework in Frameworks */,
 				1FB552EB196C45CE00E11311 /* Social.framework in Frameworks */,
 				1FB552E9196C456500E11311 /* Accounts.framework in Frameworks */,
 				1F276BDA1967960D008735B1 /* SystemConfiguration.framework in Frameworks */,
@@ -485,13 +477,11 @@
 				1F70657A1967707B009CB35C /* GreenLineTableViewController.m */,
 				1F16A31219A3DC1900AC7A68 /* GreenDetailsViewController.h */,
 				1F16A31319A3DC1900AC7A68 /* GreenDetailsViewController.m */,
-				1F370D2B19753ADC003FB972 /* GreenLineStations.plist */,
-				1FFBB93A19BFC7A60035C87B /* ShowTextViewController.h */,
-				1FFBB93B19BFC7A60035C87B /* ShowTextViewController.m */,
-				1F2DC98519C21BCE00265605 /* ShowActorsViewController.h */,
-				1F2DC98619C21BCE00265605 /* ShowActorsViewController.m */,
-				1F2DC9BC19C2249200265605 /* HeaderView.h */,
-				1F2DC9BD19C2249200265605 /* HeaderView.m */,
+				1F1127DE198AD56200BB0F8E /* GreenLineStations.plist */,
+				1F13175019DCA9EC00DB8316 /* PageContentGreenViewController.h */,
+				1F13175119DCA9EC00DB8316 /* PageContentGreenViewController.m */,
+				1F13175319DCAA6400DB8316 /* ContainerGreenViewController.h */,
+				1F13175419DCAA6400DB8316 /* ContainerGreenViewController.m */,
 			);
 			name = GreenLine;
 			sourceTree = "<group>";
@@ -515,11 +505,7 @@
 				1F70657D1967708C009CB35C /* BlueLineTableViewController.m */,
 				1FF72A80198AC4C30022B08D /* BlueDetailsViewController.h */,
 				1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */,
-				1F1127DE198AD56200BB0F8E /* BlueLineStations.plist */,
-				1F13175019DCA9EC00DB8316 /* PageContentBlueViewController.h */,
-				1F13175119DCA9EC00DB8316 /* PageContentBlueViewController.m */,
-				1F13175319DCAA6400DB8316 /* ContainerBlueViewController.h */,
-				1F13175419DCAA6400DB8316 /* ContainerBlueViewController.m */,
+				1F370D2B19753ADC003FB972 /* BlueLineStations.plist */,
 			);
 			name = BlueLine;
 			sourceTree = "<group>";
@@ -740,7 +726,9 @@
 		1F70653B196768DA009CB35C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F60E94219CB568100AA078F /* Parse.framework */,
+				1FA35B8319F43A48003061E7 /* Parse.framework */,
+				1F12952919EA903C00A6F3F6 /* FacebookSDK.framework */,
+				1F0AB7EB19E5D51B002D4D83 /* FacebookSDK.framework */,
 				1FB552EA196C45CE00E11311 /* Social.framework */,
 				1FB552E8196C456500E11311 /* Accounts.framework */,
 				1F276BD91967960D008735B1 /* SystemConfiguration.framework */,
@@ -751,7 +739,6 @@
 				1F276BCB196795BB008735B1 /* CoreLocation.framework */,
 				1F276BC9196795A6008735B1 /* CFNetwork.framework */,
 				1F276BC719679594008735B1 /* AudioToolbox.framework */,
-				1F276BC519679529008735B1 /* FacebookSDK.framework */,
 				1F706574196769DB009CB35C /* MapKit.framework */,
 				1F70653C196768DA009CB35C /* Foundation.framework */,
 				1F70653E196768DA009CB35C /* CoreGraphics.framework */,
@@ -1044,7 +1031,7 @@
 				1F48BDE4199AB33100BD30C0 /* green41.jpg in Resources */,
 				1F48BDE0199AB31900BD30C0 /* green31.jpg in Resources */,
 				1F2DC9AD19C2208B00265605 /* laskari.jpg in Resources */,
-				1F1127DF198AD56200BB0F8E /* BlueLineStations.plist in Resources */,
+				1F1127DF198AD56200BB0F8E /* GreenLineStations.plist in Resources */,
 				1F13176D19DCB36C00DB8316 /* blue22.jpg in Resources */,
 				1F2DC9B919C2208B00265605 /* zervos.jpg in Resources */,
 				1F48BDEF199AB36900BD30C0 /* green63.jpg in Resources */,
@@ -1092,7 +1079,7 @@
 				1F2DC9A519C2208B00265605 /* bruno.jpg in Resources */,
 				1F48BDD6199AB2E800BD30C0 /* green12.jpg in Resources */,
 				1F2DC9C419C22EF500265605 /* voulgaris.jpg in Resources */,
-				1F370D2C19753ADC003FB972 /* GreenLineStations.plist in Resources */,
+				1F370D2C19753ADC003FB972 /* BlueLineStations.plist in Resources */,
 				1F13176A19DCB36C00DB8316 /* blue03.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1145,20 +1132,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F70654D196768DA009CB35C /* AppDelegate.m in Sources */,
-				1F2DC98719C21BCE00265605 /* ShowActorsViewController.m in Sources */,
 				1FF72A82198AC4C30022B08D /* BlueDetailsViewController.m in Sources */,
 				1F7065781967706C009CB35C /* RedLineTableViewController.m in Sources */,
 				1F276BBF19679092008735B1 /* CreateNewAccountViewController.m in Sources */,
-				1F13175219DCA9EC00DB8316 /* PageContentBlueViewController.m in Sources */,
+				1F13175219DCA9EC00DB8316 /* PageContentGreenViewController.m in Sources */,
 				1F2D733119CFA0BB00C60F09 /* AboutViewController.m in Sources */,
 				1F276BC2196790A8008735B1 /* LoginViewController.m in Sources */,
 				1F464E0119B9182E00389827 /* MBProgressHUD.m in Sources */,
 				1F8412F719E43EAB00FED4C7 /* MapSettingsViewController.m in Sources */,
 				1FAE04E119BD073800E45EF4 /* ViewController.m in Sources */,
 				1F70658419678116009CB35C /* MapViewController.m in Sources */,
-				1F2DC9BE19C2249200265605 /* HeaderView.m in Sources */,
 				1F6AED7919AA10BF000490DD /* ProfileViewController.m in Sources */,
-				1F13175519DCAA6400DB8316 /* ContainerBlueViewController.m in Sources */,
+				1F13175519DCAA6400DB8316 /* ContainerGreenViewController.m in Sources */,
 				1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */,
 				1F275BC319C6106800A1A8AD /* FilmFestivalViewController.m in Sources */,
 				1F70657B1967707B009CB35C /* GreenLineTableViewController.m in Sources */,
@@ -1166,7 +1151,6 @@
 				1F16A31419A3DC1900AC7A68 /* GreenDetailsViewController.m in Sources */,
 				1FE0F51919C9D827000D8841 /* LicenseViewController.m in Sources */,
 				1F93629A1988F1B10088A0BF /* RedDetailsViewController.m in Sources */,
-				1FFBB93C19BFC7A60035C87B /* ShowTextViewController.m in Sources */,
 				1F12C9A819B7D5850024CAD5 /* Reachability.m in Sources */,
 				1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */,
 				1FAE04E419BD077900E45EF4 /* PageContentViewController.m in Sources */,
@@ -1297,6 +1281,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"/Users/geohar/Downloads/parse-library-1.4.1",
+					/Users/geohar/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";
@@ -1316,6 +1302,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"/Users/geohar/Downloads/parse-library-1.4.1",
+					/Users/geohar/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";

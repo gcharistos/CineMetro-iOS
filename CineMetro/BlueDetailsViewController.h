@@ -9,21 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "RatingViewController.h"
 
-@interface BlueDetailsViewController : UIViewController<UIActionSheetDelegate,UIAlertViewDelegate,UIScrollViewDelegate>{
+@interface BlueDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIActionSheetDelegate>{
     IBOutlet UIScrollView *scroller;
-
 }
-@property NSDictionary *station;
-@property NSInteger indexPath;
+
+@property  NSInteger position;
 @property (strong,nonatomic) RatingViewController *popViewController;
-@property (weak, nonatomic) IBOutlet UITableView *tableview;
 - (IBAction)rateButtonPressed:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *theaterTitle;
-@property (weak, nonatomic) IBOutlet UILabel *previousYear;
-@property (weak, nonatomic) IBOutlet UILabel *nextYear;
-@property (weak, nonatomic) IBOutlet UILabel *currentYear;
-@property (weak, nonatomic) IBOutlet UIButton *backButton;
-@property (weak, nonatomic) IBOutlet UIButton *forwardButton;
-- (IBAction)backButtonPressed:(id)sender;
-- (IBAction)forwardButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *movieTitle;
+@property (weak, nonatomic) IBOutlet UILabel *actorsLabel;
+@property (weak, nonatomic) IBOutlet UICollectionView *actorsCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *directorsCollectionView;
+@property (weak, nonatomic) IBOutlet UILabel *directorsLabel;
+@property (weak, nonatomic) IBOutlet UITextView *info;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
 @end
+

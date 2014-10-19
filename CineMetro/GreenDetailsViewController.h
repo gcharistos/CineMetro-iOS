@@ -6,23 +6,24 @@
 //  Copyright (c) 2014 George Haristos. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
 #import "RatingViewController.h"
 
-@interface GreenDetailsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate,UIScrollViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIActionSheetDelegate>{
+@interface GreenDetailsViewController : UIViewController<UIActionSheetDelegate,UIAlertViewDelegate,UIScrollViewDelegate>{
     IBOutlet UIScrollView *scroller;
+    
 }
-
-@property  NSInteger position;
+@property NSDictionary *station;
+@property NSInteger indexPath;
 @property (strong,nonatomic) RatingViewController *popViewController;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)rateButtonPressed:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *movieTitle;
-@property (weak, nonatomic) IBOutlet UILabel *actorsLabel;
-@property (weak, nonatomic) IBOutlet UICollectionView *actorsCollectionView;
-@property (weak, nonatomic) IBOutlet UICollectionView *directorsCollectionView;
-@property (weak, nonatomic) IBOutlet UILabel *directorsLabel;
-@property (weak, nonatomic) IBOutlet UITextView *info;
-@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *theaterTitle;
+@property (weak, nonatomic) IBOutlet UILabel *previousYear;
+@property (weak, nonatomic) IBOutlet UILabel *nextYear;
+@property (weak, nonatomic) IBOutlet UILabel *currentYear;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *forwardButton;
+- (IBAction)backButtonPressed:(id)sender;
+- (IBAction)forwardButtonPressed:(id)sender;
 @end

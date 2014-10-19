@@ -119,6 +119,7 @@ NSMutableArray *distances;
     [self setRegion];
     lineColor = color;
     [self showUserLocation];
+    [self getDirections];
 
 }
 

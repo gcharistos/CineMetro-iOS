@@ -5,457 +5,290 @@
 	<key>Stations</key>
 	<array>
 		<dict>
-			<key>Images</key>
-			<array>
-				<string>green01.jpg</string>
-				<string>green02.jpg</string>
-				<string>green03.jpg</string>
-				<string>green04.jpg</string>
-				<string>green05.jpg</string>
-			</array>
-			<key>Directors</key>
-			<array>
-				<dict>
-					<key>Name</key>
-					<string>Γκρεγκ Τάλλας</string>
-					<key>Icon</key>
-					<string>Gregg_Ntallas.jpg</string>
-				</dict>
-			</array>
-			<key>Actors</key>
-			<array>
-				<dict>
-					<key>Name</key>
-					<string>Κωστή Μαρία</string>
-					<key>Icon</key>
-					<string>kwsti_maria.jpg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Φερμας Νίκος</string>
-					<key>Icon</key>
-					<string>fermas_nikos.jpg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Φραγκεδάκης Βασίλης</string>
-					<key>Icon</key>
-					<string>fragkedakhs_vasilis.jpg</string>
-				</dict>
-			</array>
-			<key>text</key>
-			<string>Η αληθινή ιστορία επιβίωσης 160 παιδιών στην Θεσσαλονίκη της Κατοχής. 
-
-Η ταινία έχει σαν χώρο δράσης την Θεσσαλονίκη μεταξύ των δεκαετιών 1940-50.
-
-Μέρος των γυρισμάτων έγινε στο Επταπύργιο-Άνω Πόλη. 
-
-Οι μικροί πρωταγωνιστές προέρχονται απο το Ορφανοτροφείο Αθηνών.
-
-Χρυσό Βραβείο στο Φεστιβάλ Κινηματογράφου του Εδιμβούργου (1955). Η ταινία περιδιαβαίνει την Θεσσαλονίκη της δεκαετίας του &apos;50 (Κέντρο και Άνω Πόλη).</string>
 			<key>Title</key>
 			<string>1η Στάση</string>
 			<key>Subtitle</key>
-			<string>Το ξυπόλητο τάγμα (1955)</string>
-			<key>Latitude</key>
-			<string>40.6197797</string>
+			<string>Λευκός Πύργος-Εταιρία Μακεδονικών Σπουδών (ΕΜΣ)</string>
 			<key>Longitude</key>
-			<string>22.9638766</string>
-		</dict>
-		<dict>
+			<string>22.9497383</string>
+			<key>Latitude</key>
+			<string>40.6271087</string>
 			<key>Images</key>
 			<array>
-				<string>green11.jpg</string>
-				<string>green12.jpg</string>
-				<string>green13.jpg</string>
-			</array>
-			<key>Directors</key>
-			<array>
 				<dict>
-					<key>Name</key>
-					<string>Γιάννης Δαλιανίδης</string>
-					<key>Icon</key>
-					<string>dalianidis.jpg</string>
+					<key>year</key>
+					<string>1964</string>
+					<key>Image</key>
+					<string>blue01.jpg</string>
+					<key>text</key>
+					<string>Η έδρα του φεστιβάλ μεταφέρεται από τον κινηματογράφο «Ολύμπιον» στην Εταιρεία Μακεδονικών Σπουδών, χώρο με τον οποίο το φεστιβάλ θα συνδεθεί ιστορικά για περίπου 3,5 δεκαετίες (5η Εβδομάς Ελληνικού Κινηματογράφου, 1964)</string>
 				</dict>
-			</array>
-			<key>text</key>
-			<string>Δύο αδέρφια προσπαθούν να ισορροπήσουν ανάμεσα στις αισθηματικές τους σχέσεις και την συντηρητικές αρχές της πατρικής οικίας τους. 
+				<dict>
+					<key>year</key>
+					<string>1966</string>
+					<key>Image</key>
+					<string>blue02.jpg</string>
+					<key>text</key>
+					<string>Ο παραγωγός Τζεϊμς Παρις, εμβληματική μορφή του Φεστιβάλ κατά την περίοδο 1966-1972, «κατεβαζει» ενα τανκ στην πλατεια του Λευκου Πυργου για διαφημιστικους σκοπους της ταινίας «Ξεχασμενοι ηρωες», σε δική του παραγωγή (7η Φεστιβάλ Ελληνικού Κινηματογράφου, 1966). 
+(more)…Οι εκπληξεις συνεχιζονται και μεσα στην αιθουσα, οπου οι 1.500 θεατες βρισκουν στη θεση τους απο ενα πακετο τσιγαρα, δωρο του παραγωγου στο κοινο.</string>
+				</dict>
+				<dict>
+					<key>year</key>
+					<string>1970</string>
+					<key>Image</key>
+					<string>blue03.jpg</string>
+					<key>text</key>
+					<string>Ο Β Εξώστης, το δυναμικό νεανικό κοινό του φεστιβάλ κάνει δυναμικά την εμφάνιση του για να διαδραματίσει σημαντικό ρόλο τα επόμενα χρόνια (11ο ΦΚΘ, 1970): 
 
-Εξ ολοκλήρου γυρισμένη στην Θεσσαλονίκη: Πανόραμα, περιοχή Ανθέων, Πλ. Αριστοτέλους
+(more)… Ο «Β΄εξώστης» παίρνει το όνομά του από την ομώνυμη κατηγορία θέσεων στην αίθουσα της Εταιρείας Μακεδονικών σπουδών, όπου συνήθως συγκεντρώνονται οι φοιτητές και η νεολαία λόγω του φθηνού εισιτηρίου.</string>
+				</dict>
+				<dict>
+					<key>year</key>
+					<string>1972</string>
+					<key>Image</key>
+					<string>blue04.jpg</string>
+					<key>text</key>
+					<string>Πραγματοποιείται για πρώτη φορά το 1ο Διεθνές Φεστιβάλ Κινηματογράφου Θεσσαλονίκης στην Εταιρεία Μακεδονικών Σπουδών (13ο ΦΚΘ, 1972)
 
-Μεταφορά του θεατρικού έργου του Δ. Ψαθά “Εξοχικόν Κέντρον ο Έρως”</string>
-			<key>Actors</key>
-			<array>
-				<dict>
-					<key>Name</key>
-					<string>Ηλιόπουλος Ντίνος</string>
-					<key>Icon</key>
-					<string>eliopoulos.jpeg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Λάσκαρη Ζώη</string>
-					<key>Icon</key>
-					<string>laskari.jpg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Ζερβός Παντελής</string>
-					<key>Icon</key>
-					<string>zervos.jpg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Στρατηγός Στέφανος</string>
-					<key>Icon</key>
-					<string>stratigos.jpg</string>
+(more)… Το διεθνές φεστιβάλ διεξάγεται μία βδομάδα μετά το επίσημο διαγωνιστικό του ελληνικού προγράμματος, αφορά σε ταινίες μικρού μήκους και διοργανώνεται υπό την ευθύνη της ΔΕΘ και της Διεθνούς Ομοσπονδίας Παραγωγών Κινηματογράφου (FIAPF).</string>
 				</dict>
 			</array>
+		</dict>
+		<dict>
 			<key>Title</key>
 			<string>2η Στάση</string>
 			<key>Subtitle</key>
-			<string>Ο ατσίδας (1961)</string>
+			<string>Ντορέ – Αλέξανδρος</string>
 			<key>Latitude</key>
-			<string>40.632804</string>
+			<string>40.6269345</string>
 			<key>Longitude</key>
-			<string>22.941331</string>
-		</dict>
-		<dict>
+			<string>22.9493905</string>
 			<key>Images</key>
 			<array>
-				<string>green21.jpg</string>
-				<string>green22.jpg</string>
-				<string>green23.jpg</string>
-			</array>
-			<key>Directors</key>
-			<array>
 				<dict>
-					<key>Name</key>
-					<string>Γιάννης Δαλιανίδης</string>
-					<key>Icon</key>
-					<string>dalianidis.jpg</string>
-				</dict>
-			</array>
-			<key>Actors</key>
-			<array>
-				<dict>
-					<key>Name</key>
-					<string>Βλαχοπούλου Ρένα</string>
-					<key>Icon</key>
-					<string>vlaxopoulou.jpg</string>
+					<key>year</key>
+					<string>1960</string>
+					<key>Image</key>
+					<string>blue11.jpg</string>
+					<key>text</key>
+					<string>Το καφενείο «Ντορέ» απέναντι από το Λευκό Πύργο αποτέλεσε ιστορικό στέκι, όπου συγκεντρώνονται καλλιτέχνες και κοινό απο την δεκαετία του &apos;60 εως και την διεθνοποίηση του Φεστιβάλ (δεκαετία &apos;90)
+
+(more)… Οι συζητήσεις μεταξύ σκηνοθετών και θεατών στο «Ντορέ» ξεκινούν συνήθως μετά το τέλος των προβολών και κρατούν μέχρι τα ξημερώματα, διαμορφώνοντας φεστιβαλική ατμόσφαιρα.</string>
 				</dict>
 				<dict>
-					<key>Name</key>
-					<string>Ηλιόπουλος Ντίνος</string>
-					<key>Icon</key>
-					<string>eliopoulos.jpeg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Καραγιάννη Μάρθα</string>
-					<key>Icon</key>
-					<string>karagiannh.jpg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Ναθαναήλ Έλενα</string>
-					<key>Icon</key>
-					<string>nathanahl.jpg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Βουτσάς Κώστας</string>
-					<key>Icon</key>
-					<string>voutsas.jpg</string>
+					<key>year</key>
+					<string>1963</string>
+					<key>Image</key>
+					<string>blue12.jpg</string>
+					<key>text</key>
+					<string>Το Σινέ Αλέξανδρος, βρίσκεται κάτω απο την Λέσχη Αξιωματικών Θεσσαλονίκης, γειτνίαζε με την ΕΜΣ, έδρα του Φεστιβάλ επί πολλά χρόνια, και αποτέλεσε χώρο αρκετών προβολών και δράσεων μεταξύ των οποίων προβολές ταινιών μικρού μήκους</string>
 				</dict>
 			</array>
-			<key>text</key>
-			<string>Ένα νεανικό μουσικό συγκρότημα, ένας προσωπάρχης που συνοδέυει την κόρη του αφεντικού του στη Θεσσαλονίκη, μια κληρονομιά που περιμένει έναν γάμο. Μια παρέα νέων ανθρώπων σε αστείες και ρομαντικές περιπέτειες. 
-
-Η ταινία έχει γυρίσματα σε χώρους όπως ΔΕΘ, Λευκός Πύργος, κ.α.
-
-Το πρώτο μιούζικαλ του Γιάννη Δαλιανίδη και παράλληλα η πρώτη ελληνική ταινία σινεμασκόπ
-
-Πρώτη κινηματογραφική εμφάνιση για την 17χρόνη Έλενα Ναθαναήλ
-</string>
+		</dict>
+		<dict>
 			<key>Title</key>
 			<string>3η Στάση</string>
 			<key>Subtitle</key>
-			<string>Κάτι να καίει (1964)</string>
+			<string>Α. Σβώλου – Πλ. Ναυαρίνο (Έσπερος-Ανατόλια-Μακεδονικόν–Ναυαρίνο–Βακούρα)</string>
 			<key>Latitude</key>
-			<string>40.628192</string>
+			<string>40.6330961</string>
 			<key>Longitude</key>
-			<string>22.9561</string>
-		</dict>
-		<dict>
+			<string>22.9470789</string>
 			<key>Images</key>
 			<array>
-				<string>green31.jpg</string>
-				<string>green32.jpg</string>
-			</array>
-			<key>Actors</key>
-			<array>
 				<dict>
-					<key>Name</key>
-					<string>Λαδικού Αλεξάνδρα</string>
-					<key>Icon</key>
-					<string>ladikou.jpg</string>
+					<key>year</key>
+					<string>1987</string>
+					<key>Image</key>
+					<string>blue21.jpg</string>
+					<key>text</key>
+					<string>Ο κινηματογράφος Έσπερος φιλοξενεί τις παράλληλες εκδηλώσεις του φεστιβάλ. 
+(more)….Ο Έσπερος θα λειτουργήσει ως αίθουσα προβολών για το φεστιβάλ ως το 1996. Στις ξεχωριστές προβολές συγκαταλέγεται αυτή των ταινιών της Germaine Dulac με ζωντανή μουσική, με τον Σάκη Παπαδημητρίου στο πιάνο και τη Γεωργία Συλλαίου στο τραγούδι (28ο ΦΚΘ, 1987)</string>
 				</dict>
 				<dict>
-					<key>Name</key>
-					<string>Αντωνόπουλος Άγγελος</string>
-					<key>Icon</key>
-					<string>antwnopoulos.jpg</string>
+					<key>year</key>
+					<string>1994</string>
+					<key>Image</key>
+					<string>blue24.jpg</string>
+					<key>text</key>
+					<string>Κυρίαρχη μορφή του 35ου Φεστιβάλ Κινηματογράφου Θεσσαλονίκης αναδεικνύεται ο Ιάπωνας δημιουργός Ναγκίσα Όσιμα, το συνολικό έργο του οποίου προβάλλεται σε αναδρομικό αφιέρωμα στον κινηματογράφο «Έσπερος» (35ο ΦΚΘ, 1994): 
+(more)… 
+Ο ίδιος ο Όσιμα έρχεται για λίγες μέρες στη Θεσσαλονίκη, προλογίζει ταινίες του σε κατάμεστες αίθουσες, συναντιέται με το φίλο του Θόδωρο Αγγελόπουλο και διασκεδάζει στο κέντρο που τραγουδά η Δήμητρα Γαλάνη. </string>
 				</dict>
-			</array>
-			<key>Directors</key>
-			<array>
 				<dict>
-					<key>Name</key>
-					<string>Τάκης Κανελλόπουλος</string>
-					<key>Icon</key>
-					<string>kanelopoulos.jpeg</string>
+					<key>year</key>
+					<string>1996</string>
+					<key>Image</key>
+					<string>blue22.jpg</string>
+					<key>text</key>
+					<string>Το 1996 για πρώτη –και μοναδική – χρονιά η έδρα των εκδηλώσεων του Φεστιβάλ Κινηματογράφου Θεσσαλονίκης μεταφέρεται στο «Ανατόλια».
+ 
+(more)… Μπροστά στον κινηματογράφο στήνεται μια ειδική κατασκευή, ένα μεγάλου γυάλινου κουτιού, που σηματοδοτεί την εκεί παρουσία του φεστιβάλ.</string>
+				</dict>
+				<dict>
+					<key>year</key>
+					<string>1996</string>
+					<key>Image</key>
+					<string>blue23.jpg</string>
+					<key>text</key>
+					<string>Το 1996 για πρώτη –και μοναδική – χρονιά η έδρα των εκδηλώσεων του Φεστιβάλ Κινηματογράφου Θεσσαλονίκης μεταφέρεται στο «Ανατόλια».
+ 
+(more)… Μπροστά στον κινηματογράφο στήνεται μια ειδική κατασκευή, ένα μεγάλου γυάλινου κουτιού, που σηματοδοτεί την εκεί παρουσία του φεστιβάλ.</string>
 				</dict>
 			</array>
-			<key>Director</key>
-			<dict>
-				<key>Name</key>
-				<string>Τάκης Κανελλόπουλος</string>
-				<key>Icon</key>
-				<string>kanelopoulos.jpeg</string>
-			</dict>
-			<key>text</key>
-			<string>Ένα ταξίδι με τρένο, μια στάση με ολιγόωρη καθυστέρηση, ένας δυνατός έρωτας δύο ανθρώπων, μια παρένθεση. 
-
-Βασισμένη στο θεατρικό έργο του Νοέλ Κάουαρντ “Ασάλευτη Ζωή”
-
-4 βραβεία στο Φεστιβάλ Θεσσαλονίκης
-
-Η ταινία γυρίστηκε σε: Νέο Σιδηροδρομικό Σταθμό, Νέα Παραλία Θεσσαλονίκης και στην περιοχή Αρετσού (Ν. Κρήνη)
-</string>
+		</dict>
+		<dict>
 			<key>Title</key>
 			<string>4η Στάση</string>
 			<key>Subtitle</key>
-			<string>Παρένθεση (1968)</string>
+			<string>Ολύμπιον-Πλατεία Αριστοτέλους</string>
 			<key>Latitude</key>
-			<string>40.6223568</string>
+			<string>40.6326916</string>
 			<key>Longitude</key>
-			<string>22.9512486</string>
-		</dict>
-		<dict>
+			<string>22.9416844</string>
 			<key>Images</key>
 			<array>
-				<string>green41.jpg</string>
-				<string>green42.jpg</string>
-			</array>
-			<key>Actors</key>
-			<array>
 				<dict>
-					<key>Name</key>
-					<string>Τζώρτζογλου Στράτος</string>
-					<key>Icon</key>
-					<string>tzortzoglou.jpg</string>
+					<key>year</key>
+					<string>1960</string>
+					<key>Image</key>
+					<string>blue31.jpg</string>
+					<key>text</key>
+					<string>H Διεθνής Έκθεση Θεσσαλονίκης διοργανώνει σειρά πολιτιστικών εκδηλώσεων για το σινεμά στη Θεσσαλονίκη με αφορμή τα 25 χρόνια λειτουργίας της (1η Εβδομάς Ελληνικού Κινηματογράφου, 1960) 
+
+(more)…σε συνεργασία με την κινηματογραφική λέσχη της Μακεδονικής Καλλιτεχνικής Εταιρείας «Τέχνη».
+Η 1η Εβδομάς Ελληνικού Κινηματογράφου εγκαινιάζεται επίσημα στις 20 Σεπτεμβρίου 1960, στο κινηματοθέατρο Ολύμπιον, από τον υπουργό Βιομηχανίας Νικόλαο Μάρτη, που έχει την εποπτεία του θεσμού.</string>
 				</dict>
 				<dict>
-					<key>Name</key>
-					<string>Μπαζάκα Θέμις</string>
-					<key>Icon</key>
-					<string>bazaka.jpg</string>
+					<key>year</key>
+					<string>1960</string>
+					<key>Image</key>
+					<string>blue32.jpg</string>
+					<key>text</key>
+					<string>H Διεθνής Έκθεση Θεσσαλονίκης διοργανώνει σειρά πολιτιστικών εκδηλώσεων για το σινεμά στη Θεσσαλονίκη με αφορμή τα 25 χρόνια λειτουργίας της (1η Εβδομάς Ελληνικού Κινηματογράφου, 1960) 
+
+(more)…σε συνεργασία με την κινηματογραφική λέσχη της Μακεδονικής Καλλιτεχνικής Εταιρείας «Τέχνη».
+Η 1η Εβδομάς Ελληνικού Κινηματογράφου εγκαινιάζεται επίσημα στις 20 Σεπτεμβρίου 1960, στο κινηματοθέατρο Ολύμπιον, από τον υπουργό Βιομηχανίας Νικόλαο Μάρτη, που έχει την εποπτεία του θεσμού.</string>
 				</dict>
-			</array>
-			<key>Directors</key>
-			<array>
 				<dict>
-					<key>Name</key>
-					<string>Παντελής Βούλγαρης</string>
-					<key>Icon</key>
-					<string>voulgaris.jpg</string>
+					<key>year</key>
+					<string>1997</string>
+					<key>Image</key>
+					<string>blue33.jpg</string>
+					<key>text</key>
+					<string>H ιστορική κινηματογραφική αίθουσα θα ταυτιστεί με την ιστορία του Φεστιβάλ, το οποίο θα αλλάξει αρκετές έδρες για να επιστρέψει στο ανακαινισμένο Ολύμπιον το 1997.</string>
+				</dict>
+				<dict>
+					<key>year</key>
+					<string>1997</string>
+					<key>Image</key>
+					<string>blue34.jpg</string>
+					<key>text</key>
+					<string>Η πλήρης ανακαίνιση του Ολύμπιον έγινε στο πλαίσιο της Πολιτιστικής Πρωτεύουσας της Ευρώπη «Θεσσαλονίκη ΄97».</string>
+				</dict>
+				<dict>
+					<key>year</key>
+					<string>2014</string>
+					<key>Image</key>
+					<string>blue35.jpg</string>
+					<key>text</key>
+					<string>Απο το 1997 μέχρι και σήμερα το Ολύμπιον έχει φιλοξενήσει όλες τις διοργανώσεις του Φεστιβάλ αλλά και πλήθος εμβληματικών προσωπικοτήτων του παγκόσμιου κινηματογράφου (Κόπολα, Στοούν, Ντεσπλά, Βερασετάκουν, Κουστουρίτσα, Κιτάνο, Χέρτζογκ, κλπ)
+
+Την άνοιξη του 2000 ο Δημήτρης Εϊπίδης καθιερώνει ένα νέο πρωτότυπο Φεστιβάλ, που έμελλε να αγαπηθεί εξίσου απο το κοινό της πόλης, το “Φεστιβάλ Ντοκιμαντέρ Θεσσαλονίκης– Εικόνες του 21ου αιώνα”. Κάθε διοργάνωση συγκεντρώνει κατά μ.ο. 30 χιλ. θεατές στις προβολές της. </string>
+				</dict>
+				<dict>
+					<key>year</key>
+					<string>2014</string>
+					<key>Image</key>
+					<string>blue36.jpg</string>
+					<key>text</key>
+					<string>Απο το 1997 μέχρι και σήμερα το Ολύμπιον έχει φιλοξενήσει όλες τις διοργανώσεις του Φεστιβάλ αλλά και πλήθος εμβληματικών προσωπικοτήτων του παγκόσμιου κινηματογράφου (Κόπολα, Στοούν, Ντεσπλά, Βερασετάκουν, Κουστουρίτσα, Κιτάνο, Χέρτζογκ, κλπ)
+
+Την άνοιξη του 2000 ο Δημήτρης Εϊπίδης καθιερώνει ένα νέο πρωτότυπο Φεστιβάλ, που έμελλε να αγαπηθεί εξίσου απο το κοινό της πόλης, το “Φεστιβάλ Ντοκιμαντέρ Θεσσαλονίκης– Εικόνες του 21ου αιώνα”. Κάθε διοργάνωση συγκεντρώνει κατά μ.ο. 30 χιλ. θεατές στις προβολές της.</string>
+				</dict>
+				<dict>
+					<key>year</key>
+					<string>2014</string>
+					<key>Image</key>
+					<string>blue37.jpg</string>
+					<key>text</key>
+					<string>Απο το 1997 μέχρι και σήμερα το Ολύμπιον έχει φιλοξενήσει όλες τις διοργανώσεις του Φεστιβάλ αλλά και πλήθος εμβληματικών προσωπικοτήτων του παγκόσμιου κινηματογράφου (Κόπολα, Στοούν, Ντεσπλά, Βερασετάκουν, Κουστουρίτσα, Κιτάνο, Χέρτζογκ, κλπ)
+
+Την άνοιξη του 2000 ο Δημήτρης Εϊπίδης καθιερώνει ένα νέο πρωτότυπο Φεστιβάλ, που έμελλε να αγαπηθεί εξίσου απο το κοινό της πόλης, το “Φεστιβάλ Ντοκιμαντέρ Θεσσαλονίκης– Εικόνες του 21ου αιώνα”. Κάθε διοργάνωση συγκεντρώνει κατά μ.ο. 30 χιλ. θεατές στις προβολές της.</string>
 				</dict>
 			</array>
-			<key>text</key>
-			<string>Η πορεία ενός ταλαντούχου ποδοσφαιριστή, ο οποίος μέσα από νίκες και ήττες, τραυματισμούς και παρασκήνιο, θα καταλάβει ότι η επιτυχία έχει το τίμημά της. 
-
-Μέρος της ταινίας έχει γυριστεί στην Θεσσαλονίκη: Πλ. Αριστοτέλους, Εύοσμος.
-
-Βασισμενη στο ομόνυμο μυθιστόρημα του Μένη Κουμανταρέα
-
-2 βραβεία στο Φεστιβάλ Θεσσαλονίκης
-
-Ο πρωταγωνιστής της ταινίας Στρ. Τζώρτζογλου την ίδια χρονιά θα συμμετέχει στα γυρίσματα της ταινίας του Θ. Αγγελόπουλου “Τοπίο στην Ομίχλη” που γίνονται στην Θεσσαλονίκη.</string>
+		</dict>
+		<dict>
 			<key>Title</key>
 			<string>5η Στάση</string>
 			<key>Subtitle</key>
-			<string>Η Φανέλλα με το Νο9 (1987)</string>
+			<string>Λιμάνι</string>
 			<key>Latitude</key>
-			<string>40.632804</string>
+			<string>40.631721</string>
 			<key>Longitude</key>
-			<string>22.941331</string>
-		</dict>
-		<dict>
+			<string>22.93505</string>
 			<key>Images</key>
 			<array>
-				<string>green51.jpg</string>
-				<string>green52.jpg</string>
-			</array>
-			<key>Directors</key>
-			<array>
 				<dict>
-					<key>Name</key>
-					<string>Θόδωρος Αγγελόπουλος</string>
-					<key>Icon</key>
-					<string>aggelopoulos.jpg</string>
-				</dict>
-			</array>
-			<key>Actors</key>
-			<array>
-				<dict>
-					<key>Name</key>
-					<string>Γκαντζ Μπρούνο</string>
-					<key>Icon</key>
-					<string>bruno.jpg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Ρενό Ιζαμπέλ</string>
-					<key>Icon</key>
-					<string>izampel.jpg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Μπενιβόλιο Φαμπρίτσιο</string>
-					<key>Icon</key>
-					<string>bentivolio.jpg</string>
-				</dict>
-			</array>
-			<key>text</key>
-			<string>Ένας μεσήλικας συγγραφέας, που ασχολείται με το έργο του Δ. Σολωμού, αναζητάει τις αναμνήσεις μιας ζωής σε μια περιπλάνηση μιας ημέρας. 
+					<key>year</key>
+					<string>1994</string>
+					<key>Image</key>
+					<string>blue43.jpg</string>
+					<key>text</key>
+					<string>Οι Αποθήκες στο Λιμάνι φιλοξενούν ενδιαφέρουσες εκθέσεις όπως 
 
-Γυρισμένη σε αρχοντικό της Βασ. Όλγας, στην Παλιά Παραλία, Πλ. Αριστοτέλους και σε χώρους της οδού Τσιμισκή. 
-
-Ο Θόδωρος Αγγελόπουλος γύρισε στην Θεσσαλονίκη μέρος ή εξ ολοκλήρου 4 ταινίες. Ανάμεσα τους και την “Αιωνιότητα”
-
-Χρυσός Φοίνικας στο Φεστιβάλ Καννών του 1998</string>
-			<key>Title</key>
-			<string>6η Στάση</string>
-			<key>Subtitle</key>
-			<string>Η Αιωνιότητα και μια μέρα (1998)</string>
-			<key>Latitude</key>
-			<string>40.6148604</string>
-			<key>Longitude</key>
-			<string>22.954036</string>
-		</dict>
-		<dict>
-			<key>Images</key>
-			<array>
-				<string>green61.jpg</string>
-				<string>green62.jpg</string>
-				<string>green63.jpg</string>
-			</array>
-			<key>Actors</key>
-			<array>
-				<dict>
-					<key>Name</key>
-					<string>Μουτούση Αμαλία</string>
-					<key>Icon</key>
-					<string>moutousi.jpg</string>
+(more...) η «Ζωγραφική στον κινηματογράφο: Γιγαντοαφίσες στην 7η Τέχνη», έκθεση κινηματογραφικής αφίσας της συλλογής Hellafi. (35ο ΦΚΘ, 1994) αλλά και η έκθεση σκηνικών και κοστουμιών των Μικέ Καραπιπέρη – Γιώργου Ζιάκα – Γιώργου Πατσά από τα γυρίσματα των ταινιών του Θόδωρου Αγγελόπουλου. Η Αποθήκη Δ΄ φιλοξενεί έκθεση κινηματογραφικής αφίσας από ταινίες του μεγάλου δημιουργού (41ο ΦΚΘ, 2000)</string>
 				</dict>
 				<dict>
-					<key>Name</key>
-					<string>Σαμαράς Θάνος</string>
-					<key>Icon</key>
-					<string>samaras.jpg</string>
+					<key>year</key>
+					<string>1996</string>
+					<key>Image</key>
+					<string>blue42.jpg</string>
+					<key>text</key>
+					<string>Δημοσιογράφοι επισκέπτονται τα σκηνικά της ταινίας «Μια αιωνιότητα και μια μέρα» του Θόδωρου Αγγελόπουλου, η οποία γυρίστηκε στη Θεσσαλονίκη (37ο ΦΚΘ, 1996): 
+(more)….. Λίγους μήνες αργότερα η ταινία θα κερδίσει το «Χρυσό Φοίνικα» στο Φεστιβάλ Κινηματογράφου των Καννών και έτσι θα γίνει η πρώτη –και η μοναδική μέχρι σήμερα- ελληνική ταινία που έχει κατακτήσει τη συγκεκριμένη διάκριση.</string>
 				</dict>
 				<dict>
-					<key>Name</key>
-					<string>Τσιριγκούλη Ιωάννα</string>
-					<key>Icon</key>
-					<string>tsirigkouli.jpg</string>
+					<key>year</key>
+					<string>2001</string>
+					<key>Image</key>
+					<string>blue44.jpg</string>
+					<key>text</key>
+					<string>Οι τέσσερις αίθουσες προβολών στο λιμάνι αποκτούν κινηματογραφικά ονόματα και γίνονται τμήμα του Φεστιβάλ Κινηματογράφου. (42ο ΦΚΘ, 2001)
+(more…) Βαφτίζονται «Τώνια Μαρκετάκη» και «Τζον Κασσαβέτης» (Αποθήκη Α΄) και «Φρίντα Λιάππα» και «Τάκης Κανέλλοπουλος» (Αποθήκη Δ’). Η τελευταία μετονομάζεται την επόμενη χρονιά σε αίθουσα «Σταύρος Τορνές», προκειμένου να αποφεύγεται η σύγχυση με την αίθουσα «Κανελλόπουλος» του παρακείμενου Μουσείου Κινηματογράφου.</string>
 				</dict>
-			</array>
-			<key>Directors</key>
-			<array>
 				<dict>
-					<key>Name</key>
-					<string>Σύλλας Τζουμέρκας</string>
-					<key>Icon</key>
-					<string>syllas_tzoumerkas-200x200.jpg</string>
+					<key>year</key>
+					<string>2001</string>
+					<key>Image</key>
+					<string>blue45.jpg</string>
+					<key>text</key>
+					<string>Οι τέσσερις αίθουσες προβολών στο λιμάνι αποκτούν κινηματογραφικά ονόματα και γίνονται τμήμα του Φεστιβάλ Κινηματογράφου. (42ο ΦΚΘ, 2001)
+(more…) Βαφτίζονται «Τώνια Μαρκετάκη» και «Τζον Κασσαβέτης» (Αποθήκη Α΄) και «Φρίντα Λιάππα» και «Τάκης Κανέλλοπουλος» (Αποθήκη Δ’). Η τελευταία μετονομάζεται την επόμενη χρονιά σε αίθουσα «Σταύρος Τορνές», προκειμένου να αποφεύγεται η σύγχυση με την αίθουσα «Κανελλόπουλος» του παρακείμενου Μουσείου Κινηματογράφου.</string>
+				</dict>
+				<dict>
+					<key>year</key>
+					<string>2001</string>
+					<key>Image</key>
+					<string>blue46.jpg</string>
+					<key>text</key>
+					<string>Οι τέσσερις αίθουσες προβολών στο λιμάνι αποκτούν κινηματογραφικά ονόματα και γίνονται τμήμα του Φεστιβάλ Κινηματογράφου. (42ο ΦΚΘ, 2001)
+(more…) Βαφτίζονται «Τώνια Μαρκετάκη» και «Τζον Κασσαβέτης» (Αποθήκη Α΄) και «Φρίντα Λιάππα» και «Τάκης Κανέλλοπουλος» (Αποθήκη Δ’). Η τελευταία μετονομάζεται την επόμενη χρονιά σε αίθουσα «Σταύρος Τορνές», προκειμένου να αποφεύγεται η σύγχυση με την αίθουσα «Κανελλόπουλος» του παρακείμενου Μουσείου Κινηματογράφου.</string>
+				</dict>
+				<dict>
+					<key>year</key>
+					<string>2008</string>
+					<key>Image</key>
+					<string>blue41.jpg</string>
+					<key>text</key>
+					<string>Oliver Stone και Emir Kusturica ενώνουν τις δυνάμεις τους στη συναυλία των No Smoking Band στην Αποθήκη Γ΄ στο Λιμάνι (49ο ΦΚΘ, 2008)</string>
 				</dict>
 			</array>
-			<key>text</key>
-			<string>Οικογενειακό δράμα ως ακτινογραφία της νεοελληνικής κοινωνικής πραγματικότητας. 
-
-Η ταινία πραγματοποιεί μεγάλο μέρος της δράσης της σε γνωστά σημεία της σημερινής Θεσσαλονίκης: Λεωφόρος Στρατού (ΕΡΤ3), Νέα Παραλία, Αγίος Δημήτριος. 
-
-Συμμετοχή στην Εβδομάδα Κριτικής του Φεστιβάλ Βενετίας</string>
-			<key>Title</key>
-			<string>7η Στάση</string>
-			<key>Subtitle</key>
-			<string>Χώρα Προέλευσης (2010)</string>
-			<key>Latitude</key>
-			<string>40.638799</string>
-			<key>Longitude</key>
-			<string>22.947769</string>
-		</dict>
-		<dict>
-			<key>Images</key>
-			<array>
-				<string>green71.jpg</string>
-				<string>green72.jpg</string>
-				<string>green73.png</string>
-				<string>green74.png</string>
-				<string>green75.png</string>
-			</array>
-			<key>text</key>
-			<string>Όταν ο Κάπτεν Φ.Ρομ, απαιτώντας να τον φωνάζουν με το πραγματικό του όνομα, μετατρέπει τον Λευκό Πύργο σε γιγάντιο φραπέ κι εξαφανίζει όλο το γύρο από τα σουβλατζίδικα της Θεσσαλονίκης, ο Σούπερ Δημήτριος αναλαμβάνει να σώσει τη συμπρωτεύουσα.
-
-Σάτιρα θεσσαλονικιώτικων και βορειοελλαδικών κλισέ με της Μεταπολίτευσης με πολύ χιούμορ. 
-
-Τόποι γυρισμάτων: Θεολογική Σχολή ΑΠΘ, Νέο Δημαρχειακό Μέγαρο, Λευκός Πύργος, ΟΣΕ, Τούμπα 
-
-Βραβείο κοινού στο Φεστιβάλ Θεσσαλονίκης</string>
-			<key>Directors</key>
-			<array>
-				<dict>
-					<key>Name</key>
-					<string>Γιώργος Παπαιωάνου</string>
-					<key>Icon</key>
-					<string>papaiwannou.jpg</string>
-				</dict>
-			</array>
-			<key>Actors</key>
-			<array>
-				<dict>
-					<key>Name</key>
-					<string>Βαϊνας Δημήτρης</string>
-					<key>Icon</key>
-					<string>vainas.jpg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Παπαδόπουλος Πάρης</string>
-					<key>Icon</key>
-					<string>papadopoulos.jpg</string>
-				</dict>
-				<dict>
-					<key>Name</key>
-					<string>Σφέτσα Όλγα</string>
-					<key>Icon</key>
-					<string>sfetsa.jpg</string>
-				</dict>
-			</array>
-			<key>Title</key>
-			<string>8η Στάση</string>
-			<key>Subtitle</key>
-			<string>Σούπερ Δημήτριος (2011)</string>
-			<key>Latitude</key>
-			<string>40.6308363</string>
-			<key>Longitude</key>
-			<string>22.9543887</string>
 		</dict>
 	</array>
 	<key>Color</key>
 	<string>green</string>
 	<key>Name</key>
-	<string>Θεσσαλονίκη μέσα απο τον Ελληνικό Κινηματογράφο</string>
+	<string>Χρονολόγιο</string>
 </dict>
 </plist>

@@ -35,6 +35,12 @@ PFUser *appUser;
 {
     //[super viewDidLoad];
     [super viewDidLoad];
+    //Adding an scrollview to see the blur effect
+   
+ 
+    
+   
+
 
     // Do any additional setup after loading the view.
 }

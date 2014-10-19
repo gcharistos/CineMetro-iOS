@@ -7,34 +7,24 @@
 //
 
 #import "GreenDetailsViewController.h"
-#import "ShowActorsViewController.h"
 #import "MainViewController.h"
-#import "ShowTextViewController.h"
 #import <Social/Social.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import "ViewController.h"
+#import "ContainerGreenViewController.h"
 
 @interface GreenDetailsViewController ()
-@property NSInteger position1;
 
 @end
 
 @implementation GreenDetailsViewController
-@synthesize position1;
-@synthesize position;
-@synthesize info;
-@synthesize infoLabel;
-@synthesize movieTitle;
-@synthesize actorsLabel;
-@synthesize directorsLabel;
+@synthesize station;
+@synthesize title;
+@synthesize indexPath;
+@synthesize theaterTitle;
 NSMutableArray *images;
 NSArray *currentList;
-NSArray *titles;
-NSArray *actors;
-NSArray *directors;
 NSMutableArray *points;
-
-
+ContainerGreenViewController *dest;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -53,49 +43,23 @@ NSMutableArray *points;
     
     UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Upload"] style:UIBarButtonItemStyleBordered target:self action:@selector(shareButtonPressed:)];
     self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
-
+    
     [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,1150)];
+    [scroller setContentSize:CGSizeMake(320,630)];
     images = [[NSMutableArray alloc]init];
-    actorsLabel.text = NSLocalizedString(@"actors",@"word");
-    directorsLabel.text = NSLocalizedString(@"director",@"word");
-    infoLabel.text = NSLocalizedString(@"info",@"word");
-    position1 = position;
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"GreenLineStations" ofType:@"plist"];
-    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
-    NSArray *anns = [dict objectForKey:@"Stations"];
-    currentList = anns;
-    actors = [[currentList objectAtIndex:position1]objectForKey:@"Actors"];
-    directors  = [[currentList objectAtIndex:position1]objectForKey:@"Directors"];
-    info.text = [[currentList objectAtIndex:position1]objectForKey:@"text"];
-    [info setTextColor:[UIColor whiteColor]];
-    [info setFont:[UIFont systemFontOfSize:15]];
-    movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
-    images = [[anns objectAtIndex:position1]objectForKey:@"Images"];
-    titles = [[NSArray alloc]initWithObjects:NSLocalizedString(@"factors",@"word"),NSLocalizedString(@"info",@"word"), nil];
-    [self performSegueWithIdentifier:@"showPhotos" sender:self];
-
-
+    //set navigation bar title
+    // self.navigationItem.title =[station objectForKey:@"Subtitle"];
+    theaterTitle.text = [station objectForKey:@"Subtitle"];
+    images = [station objectForKey:@"Images"];
+    [self performSegueWithIdentifier:@"showPhotos2" sender:self];
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)rateButtonPressed:(id)sender {
-    if(user != nil){
-        points = [NSMutableArray arrayWithArray:[user objectForKey:@"greenLineStations"]];
-        if([[points objectAtIndex:position1]intValue] != 0){
-            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"ratedTrue",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-            [alert show];
-        }
-        else{
-            self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
-            
-            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:position1 withName:@"greenLineStations" withname:@"GreenLine"  animated:YES];
-        }
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    if(images.count == 0 && [identifier isEqualToString:@"showPhotos2"]){
+        return NO;
     }
-    else {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateLogin",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-        [alert show];
-    }
+    return YES;
 }
 
 - (IBAction)shareButtonPressed:(id)sender {
@@ -104,6 +68,25 @@ NSMutableArray *points;
     [actionsheet showInView:self.view];
 }
 
+- (IBAction)rateButtonPressed:(id)sender {
+    if(user != nil){
+        points = [NSMutableArray arrayWithArray:[user objectForKey:@"greenLineStations"]];
+        NSLog(@"size : %i",[points count]);
+        if([[points objectAtIndex:indexPath]intValue] != 0){
+            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"ratedTrue",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        else{
+            self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
+            
+            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:indexPath withName:@"greenLineStations" withname:@"greenLine"  animated:YES];
+        }
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateLogin",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(actionSheet.tag == 100){
@@ -116,69 +99,35 @@ NSMutableArray *points;
     }
 }
 
-- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
-    if(images.count == 0 && [identifier isEqualToString:@"showPhotos"]){
-        return NO;
+- (void)twitterButton {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheetOBJ = [SLComposeViewController
+                                                  composeViewControllerForServiceType:SLServiceTypeTwitter];
+        NSString *twittertext = [NSString stringWithFormat:@"#CineMetro #line3station%li\n",(long)indexPath+1];
+        [tweetSheetOBJ setInitialText:twittertext];
+        [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
     }
-    return YES;
-}
-
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 1;
-}
-
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    if(collectionView == self.actorsCollectionView){
-        return actors.count;
+    else{ // no twitter account
+        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"notwitter",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+        noaccount.tag = 200;
+        [noaccount show];
     }
-    return directors.count;
 }
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell;
-    if(collectionView == self.actorsCollectionView){
-        static NSString *identifer = @"Cell";
-         cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifer forIndexPath:indexPath];
-        UIImageView *imageview = (UIImageView *)[cell viewWithTag:106];
-        UILabel *label = (UILabel *)[cell viewWithTag:107];
-        imageview.image = [UIImage imageNamed:[[actors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
-        label.text = [[actors objectAtIndex:indexPath.row]objectForKey:@"Name"];
+- (void)facebookButton {
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewController *fbSheetOBJ = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        NSString *fbtext = [NSString stringWithFormat:@"#CineMetro #line3station%li\n",(long)indexPath+1];
+        [fbSheetOBJ setInitialText:fbtext];
+        [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
     }
-    else if(collectionView == self.directorsCollectionView){
-        static NSString *identifer = @"cell";
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifer forIndexPath:indexPath];
-        UIImageView *imageview = (UIImageView *)[cell viewWithTag:104];
-        UILabel *label = (UILabel *)[cell viewWithTag:105];
-        imageview.image = [UIImage imageNamed:[[directors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
-        label.text = [[directors objectAtIndex:indexPath.row]objectForKey:@"Name"];
+    else{ // no facebook account
+        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"nofacebook",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+        noaccount.tag = 200;
+        [noaccount show];
     }
-    return cell;
-}
-
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return titles.count;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifier = @"tCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    UILabel *label = (UILabel *)[cell viewWithTag:108];
-    label.text = [titles objectAtIndex:indexPath.row];
-    return cell;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(indexPath.row == 0){
-        [self performSegueWithIdentifier:@"ShowActors" sender:nil];
-    }
-    else if(indexPath.row == 1){
-        [self performSegueWithIdentifier:@"showText" sender:nil];
-    }
 }
 
 
@@ -191,60 +140,35 @@ NSMutableArray *points;
 }
 
 
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"showPhotos"]){
-        ViewController *dest = segue.destinationViewController;
+    if([segue.identifier isEqualToString:@"showPhotos2"]){
+        dest = segue.destinationViewController;
         if(images.count != 0){
             dest.pageImages = [[NSArray alloc]initWithArray:images];
+            dest.parentController = self;
         }
     }
-    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-
-   
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
     images = nil;
-   // [[[self childViewControllers]objectAtIndex:0] removeFromParentViewController];
     
 }
 
-
-
-- (void)twitterButton {
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
-    {
-        SLComposeViewController *tweetSheetOBJ = [SLComposeViewController
-                                                  composeViewControllerForServiceType:SLServiceTypeTwitter];
-        NSString *twittertext = [NSString stringWithFormat:@"#CineMetro #line2station%li\n",(long)position1+1];
-        [tweetSheetOBJ setInitialText:twittertext];
-        [self presentViewController:tweetSheetOBJ animated:YES completion:nil];
-    }
-    else{ // no twitter account
-        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"notwitter",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-        noaccount.tag = 200;
-        [noaccount show];
-    }
+- (IBAction)backButtonPressed:(id)sender {
+    [dest goToPreviousView];
 }
 
-- (void)facebookButton{
-    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
-        SLComposeViewController *fbSheetOBJ = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        NSString *fbtext = [NSString stringWithFormat:@"#CineMetro #line2station%li\n",(long)position1+1];
-        [fbSheetOBJ setInitialText:fbtext];
-        [self presentViewController:fbSheetOBJ animated:YES completion:Nil];
-    }
-    else{ // no facebook account
-        UIAlertView *noaccount = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"nofacebook",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-        noaccount.tag = 200;
-        [noaccount show];
-    }
-
+- (IBAction)forwardButtonPressed:(id)sender {
+    [dest goToNextView];
 }
 @end
+

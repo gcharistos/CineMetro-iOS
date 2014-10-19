@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GreenLineTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lineName;
 
 @end
