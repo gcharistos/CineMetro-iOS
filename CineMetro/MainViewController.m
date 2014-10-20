@@ -40,6 +40,7 @@ int flag;
         welcomeMessage.tag = 100;
         [welcomeMessage show];    }
     else {
+        // retrieve current user
         PFQuery *userQuery = [PFUser query];
         [userQuery whereKey:@"username" equalTo:retrieveUser];
         [userQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
@@ -49,7 +50,6 @@ int flag;
     }
         
 
-    // Do any additional setup after loading the view.
 }
 
 
@@ -60,7 +60,7 @@ int flag;
 //log out button pressed . set user to nil
 -(void)LogOut{
     user = nil;
-    flag = 1;
+    flag = 0;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults removeObjectForKey:@"User"];
 }

@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
 #import "Reachability.h"
+#import "MBProgressHUD.h"
 #import <CoreLocation/CoreLocation.h>
 #import "MapSettingsViewController.h"
 #import <POP.h>
@@ -97,6 +98,10 @@ NSMutableArray *distances;
 
 
 -(void)UploadLine:(NSString *)name :(UIColor *)color{
+    MBProgressHUD *progresshud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    progresshud.labelText = @"Calculating Distances";
+    progresshud.mode = MBProgressHUDModeIndeterminate;
+    [progresshud show:YES];
     NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     NSArray *anns = [dict objectForKey:@"Stations"];
@@ -120,6 +125,7 @@ NSMutableArray *distances;
     lineColor = color;
     [self showUserLocation];
     [self getDirections];
+    [progresshud hide:YES];
 
 }
 
@@ -197,10 +203,12 @@ NSMutableArray *distances;
         annotationView.image = [UIImage imageNamed:@"redPin.png"];
     }
     else if(visibleLine == 2){
-        annotationView.image = [UIImage imageNamed:@"greenPin.png"];
+        annotationView.image = [UIImage imageNamed:@"bluePin.png"];
+
     }
     else if(visibleLine == 3){
-        annotationView.image = [UIImage imageNamed:@"bluePin.png"];
+        annotationView.image = [UIImage imageNamed:@"greenPin.png"];
+
     }
 
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
@@ -298,7 +306,7 @@ NSMutableArray *distances;
 }
 
 - (IBAction)settingsButtonPressed:(id)sender {
-    UIAlertView *settingsAlert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"chooseL",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"cancel",@"word") otherButtonTitles:NSLocalizedString(@"red", @"word"),NSLocalizedString(@"green",@"word"),NSLocalizedString(@"blue",@"word"), nil];
+    UIAlertView *settingsAlert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"chooseL",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"cancel",@"word") otherButtonTitles:NSLocalizedString(@"red", @"word"),NSLocalizedString(@"blue",@"word"),NSLocalizedString(@"green",@"word"), nil];
     settingsAlert.tag = 100;
     [settingsAlert show];
 }
@@ -338,7 +346,7 @@ NSMutableArray *distances;
             }
             visibleLine  = buttonIndex;
             [self removeObjectsFromMap];
-            [self UploadLine:@"GreenLineStations" :[UIColor greenColor]];
+            [self UploadLine:@"BlueLineStations" :[UIColor blueColor]];
 
         }
         else if(buttonIndex == 3) {
@@ -347,7 +355,8 @@ NSMutableArray *distances;
             }
             visibleLine  = buttonIndex;
             [self removeObjectsFromMap];
-            [self UploadLine:@"BlueLineStations" :[UIColor blueColor]];
+            [self UploadLine:@"GreenLineStations" :[UIColor greenColor]];
+
         }
     }
 }

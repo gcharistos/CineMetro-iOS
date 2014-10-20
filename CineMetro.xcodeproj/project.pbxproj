@@ -151,6 +151,7 @@
 		1F9DB73519CA137A00C3E3FC /* facebookLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB73419CA137A00C3E3FC /* facebookLogo.png */; };
 		1F9DB73919CA17F900C3E3FC /* twitter-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB73819CA17F900C3E3FC /* twitter-logo.jpg */; };
 		1FA35B8619F43A49003061E7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA35B8319F43A48003061E7 /* Parse.framework */; };
+		1FA35B8B19F4532F003061E7 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FA35B8A19F4532F003061E7 /* red.png */; };
 		1FAE04E119BD073800E45EF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE04E019BD073800E45EF4 /* ViewController.m */; };
 		1FAE04E419BD077900E45EF4 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE04E319BD077900E45EF4 /* PageContentViewController.m */; };
 		1FAE2CE519C3829A00D006EC /* photo-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE2CE419C3829A00D006EC /* photo-75.png */; };
@@ -369,6 +370,7 @@
 		1F9DB73419CA137A00C3E3FC /* facebookLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookLogo.png; sourceTree = "<group>"; };
 		1F9DB73819CA17F900C3E3FC /* twitter-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "twitter-logo.jpg"; sourceTree = "<group>"; };
 		1FA35B8319F43A48003061E7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		1FA35B8A19F4532F003061E7 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		1FAE04DF19BD073800E45EF4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		1FAE04E019BD073800E45EF4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		1FAE04E219BD077900E45EF4 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageContentViewController.h; path = ../PageContentViewController.h; sourceTree = "<group>"; };
@@ -851,6 +853,7 @@
 				1F9DB73419CA137A00C3E3FC /* facebookLogo.png */,
 				1FAE2CF119C3994D00D006EC /* star_on.png */,
 				1FAE2CED19C38BE300D006EC /* star_off.png */,
+				1FA35B8A19F4532F003061E7 /* red.png */,
 				1F9DB73819CA17F900C3E3FC /* twitter-logo.jpg */,
 				1FAE2CE419C3829A00D006EC /* photo-75.png */,
 				1FAE2CE619C3876900D006EC /* photo-32.png */,
@@ -1079,6 +1082,7 @@
 				1F2DC9A519C2208B00265605 /* bruno.jpg in Resources */,
 				1F48BDD6199AB2E800BD30C0 /* green12.jpg in Resources */,
 				1F2DC9C419C22EF500265605 /* voulgaris.jpg in Resources */,
+				1FA35B8B19F4532F003061E7 /* red.png in Resources */,
 				1F370D2C19753ADC003FB972 /* BlueLineStations.plist in Resources */,
 				1F13176A19DCB36C00DB8316 /* blue03.jpg in Resources */,
 			);
@@ -1276,6 +1280,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F77F930E77F45F8932CD087 /* Pods.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1297,6 +1302,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F77F930E77F45F8932CD087 /* Pods.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (

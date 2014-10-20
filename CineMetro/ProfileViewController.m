@@ -35,27 +35,16 @@
 {
     [super viewDidLoad];
     emailLabel.text = [user objectForKey:@"username"];
-    NSString *points = [NSString stringWithFormat:@"%i",[[user objectForKey:@"totalPoints"]intValue]];
+    NSString *points = [NSString stringWithFormat:@"%@",[user objectForKey:@"totalPoints"]];
     pointsLabel.text = points;
     NSString *redlinepoints = [NSString stringWithFormat:@"%i",[[user objectForKey:@"redLine"]intValue]];
     redLinePoints.text = redlinepoints;
-    NSString *greenlinepoints = [NSString stringWithFormat:@"%i",[[user objectForKey:@"GreenLine"]intValue]];
+    NSString *greenlinepoints = [NSString stringWithFormat:@"%i",[[user objectForKey:@"greenLine"]intValue]];
     greenLinePoints.text = greenlinepoints;
     NSString *bluelinepoints = [NSString stringWithFormat:@"%i",[[user objectForKey:@"blueLine"]intValue]];
     blueLinePoints.text = bluelinepoints;
-    PFFile *image = [user objectForKey:@"profileImage"];
-    //profile image exists  . retrieve it from parse database
-    if(image != nil){
-        [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
-            if (!error) {
-                imageView.image = [UIImage imageWithData:data];
 
-                }
-        }];
-
-        imageView.layer.cornerRadius = imageView.frame.size.width / 2;
-        imageView.clipsToBounds = YES;
-    }
+    
     
 }
 
