@@ -23,7 +23,7 @@
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
     self.textview.text = self.desc;
     [self.textview setFont:[UIFont systemFontOfSize:15]];
-    self.textview.textColor = [UIColor whiteColor];
+  //  self.textview.textColor = [UIColor whiteColor];
 
 
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tappedImage:)];

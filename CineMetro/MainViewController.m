@@ -59,6 +59,8 @@ NSArray *array;
         
 
 }
+
+//Method determines tableview cell height with each iphone model
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(self.view.bounds.size.height == 568){ // iphone 5 - 5s

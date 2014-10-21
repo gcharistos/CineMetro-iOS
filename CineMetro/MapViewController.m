@@ -280,7 +280,6 @@ CLLocationManager *locationManager;
 
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse){
-        NSLog(@"AAAAAAA");
         mapview.showsUserLocation = YES;
         [locationManager startUpdatingLocation];
     }
