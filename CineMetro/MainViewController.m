@@ -37,7 +37,7 @@ NSArray *array;
     [super viewDidLoad];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *retrieveUser = [userDefaults objectForKey:@"User"];
-    array = [NSArray arrayWithObjects:@"Navigation",@"Lines",@"About Film Festival", nil];
+    array = [NSArray arrayWithObjects:NSLocalizedString(@"navigationTitle",@"word"),NSLocalizedString(@"linesTitle",@"word"),NSLocalizedString(@"aboutFestival",@"word"), nil];
     if(retrieveUser == nil && flag == 0){
         UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"welcome",@"word") message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:NSLocalizedString(@"login", @"word"),NSLocalizedString(@"signup",@"word"),nil];
         welcomeMessage.tag = 100;
@@ -61,8 +61,17 @@ NSArray *array;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-       return 80.0;
+    if(self.view.bounds.size.height == 568){ // iphone 5 - 5s
+        return 118.0;
+    }
+    else if(self.view.bounds.size.height == 667){ // iphone 6
+        return 151.0;
+    }
+    else if(self.view.bounds.size.height == 736){ // iphone 6 plus
+        return 175.0;
+    }
+        
+       return 88.0; // iphone 4 - 4s
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

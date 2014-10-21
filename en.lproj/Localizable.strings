@@ -9,6 +9,9 @@
 
 "emptytable" = "Please Select Line";
 "login" = "Log In";
+"navigationTitle" = "Navigation";
+"linesTitle" = "Lines";
+"aboutFestival" = "About Thessaloniki International Film Festival";
 "hideList" = "Hide List";
 "showList" = "Show List";
 "welcome" = "Welcome to CineMetro";

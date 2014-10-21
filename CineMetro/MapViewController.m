@@ -11,7 +11,6 @@
 #import "Reachability.h"
 #import "MBProgressHUD.h"
 #import <CoreLocation/CoreLocation.h>
-#import "MapSettingsViewController.h"
 #import <POP.h>
 #import <AddressBook/AddressBook.h>
 
@@ -125,7 +124,7 @@ CLLocationManager *locationManager;
     [self setRegion];
     lineColor = color;
     [self showUserLocation];
-   // [self getDirections];
+    [self getDirections];
     [progresshud hide:YES];
 
 }
@@ -211,8 +210,9 @@ CLLocationManager *locationManager;
         annotationView.image = [UIImage imageNamed:@"greenPin.png"];
 
     }
-
-    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    [button setImage:[UIImage imageNamed:@"directions"] forState:UIControlStateNormal];
+    annotationView.rightCalloutAccessoryView = button;
     return annotationView;
 }
 
@@ -250,7 +250,7 @@ CLLocationManager *locationManager;
         [locationManager startUpdatingLocation];
     }
     else{
-      [locationManager requestWhenInUseAuthorization];
+        [locationManager requestWhenInUseAuthorization];
     }
     
     
@@ -284,6 +284,7 @@ CLLocationManager *locationManager;
         mapview.showsUserLocation = YES;
         [locationManager startUpdatingLocation];
     }
+    
    
     
     
@@ -296,11 +297,12 @@ CLLocationManager *locationManager;
 //if annotation info button pressed go to details
 - (void)mapView:(MKMapView *)mapView
  annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-  //  [self performSegueWithIdentifier:@"showDetails" sender:nil];
     MKPointAnnotation *annotationTapped = (MKPointAnnotation *)view.annotation;
-    self.popViewController = [[MapSettingsViewController alloc] initWithNibName:@"MapSettingsViewController" bundle:nil];
-    
-    [self.popViewController showInView:self.view withAnnotation:annotationTapped withController:self animated:YES];
+    MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:annotationTapped.coordinate addressDictionary:nil];
+    MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
+    destination.name = annotationTapped.title;
+    [destination openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving}];
+ 
     
 }
 
@@ -358,6 +360,7 @@ CLLocationManager *locationManager;
 
         }
     }
+    
 }
 
 - (BOOL)checkForNetwork

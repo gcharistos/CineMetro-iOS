@@ -18,11 +18,7 @@
     // Override point for customization after application launch.
     [Parse setApplicationId:@"swhW7tnXLp2qdr7ZqbQ1JRCZMuRaQE5CXY12mp7c"
                   clientKey:@"lrNR1Wa2YThA7SjlkitdaCtMmEBJJM69bHcwpifD"];
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    // Override point for customization after application launch.
-    [FBLoginView class];
-    [FBProfilePictureView class];
-
+   
     
     // Override point for customization after application launch.
     

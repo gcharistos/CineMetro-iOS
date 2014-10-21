@@ -11,6 +11,9 @@
 "login" = "Είσοδος";
 "signup" = "Εγγραφή";
 "ok" = "Εντάξει";
+"navigationTitle" = "Πλοήγηση";
+"linesTitle" = "Γραμμές";
+"aboutFestival" = "Σχετικά με Φεστιβάλ Κινηματογράφου Θεσσαλονίκης";
 "loginuser" = "Είσοδος ώς :";
 "thankyou" = "Ευχαριστούμε Πολύ";
 "offline" = "Έιστε Offline";
