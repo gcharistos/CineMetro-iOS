@@ -122,6 +122,8 @@
 		1F70658419678116009CB35C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70658319678116009CB35C /* MapViewController.m */; };
 		1F7CE6AD19DE0A56004ECCD1 /* blue36.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F7CE6AC19DE0A56004ECCD1 /* blue36.jpg */; };
 		1F7CE6AF19DE0AB2004ECCD1 /* blue41.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F7CE6AE19DE0AB2004ECCD1 /* blue41.jpg */; };
+		1F82AB8A19F6BEA100261142 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F82AB8819F6BEA100261142 /* AlertViewController.m */; };
+		1F82AB8B19F6BEA100261142 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F82AB8919F6BEA100261142 /* AlertViewController.xib */; };
 		1F8412F719E43EAB00FED4C7 /* MapSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8412F519E43EAB00FED4C7 /* MapSettingsViewController.m */; };
 		1F8412F819E43EAB00FED4C7 /* MapSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8412F619E43EAB00FED4C7 /* MapSettingsViewController.xib */; };
 		1F8869C319E2D9AA000FBD56 /* forward-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8869C219E2D9AA000FBD56 /* forward-50.png */; };
@@ -337,6 +339,9 @@
 		1F70658319678116009CB35C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		1F7CE6AC19DE0A56004ECCD1 /* blue36.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue36.jpg; sourceTree = "<group>"; };
 		1F7CE6AE19DE0AB2004ECCD1 /* blue41.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue41.jpg; sourceTree = "<group>"; };
+		1F82AB8719F6BEA100261142 /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
+		1F82AB8819F6BEA100261142 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
+		1F82AB8919F6BEA100261142 /* AlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
 		1F8412F419E43EAB00FED4C7 /* MapSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSettingsViewController.h; sourceTree = "<group>"; };
 		1F8412F519E43EAB00FED4C7 /* MapSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapSettingsViewController.m; sourceTree = "<group>"; };
 		1F8412F619E43EAB00FED4C7 /* MapSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapSettingsViewController.xib; sourceTree = "<group>"; };
@@ -775,6 +780,9 @@
 				1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */,
 				1F706554196768DA009CB35C /* Images.xcassets */,
 				1F706543196768DA009CB35C /* Supporting Files */,
+				1F82AB8719F6BEA100261142 /* AlertViewController.h */,
+				1F82AB8819F6BEA100261142 /* AlertViewController.m */,
+				1F82AB8919F6BEA100261142 /* AlertViewController.xib */,
 			);
 			path = CineMetro;
 			sourceTree = "<group>";
@@ -1085,6 +1093,7 @@
 				1FA35B8B19F4532F003061E7 /* red.png in Resources */,
 				1F370D2C19753ADC003FB972 /* BlueLineStations.plist in Resources */,
 				1F13176A19DCB36C00DB8316 /* blue03.jpg in Resources */,
+				1F82AB8B19F6BEA100261142 /* AlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1155,6 +1164,7 @@
 				1F16A31419A3DC1900AC7A68 /* GreenDetailsViewController.m in Sources */,
 				1FE0F51919C9D827000D8841 /* LicenseViewController.m in Sources */,
 				1F93629A1988F1B10088A0BF /* RedDetailsViewController.m in Sources */,
+				1F82AB8A19F6BEA100261142 /* AlertViewController.m in Sources */,
 				1F12C9A819B7D5850024CAD5 /* Reachability.m in Sources */,
 				1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */,
 				1FAE04E419BD077900E45EF4 /* PageContentViewController.m in Sources */,

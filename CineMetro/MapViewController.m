@@ -34,6 +34,8 @@ NSInteger visibleLine;
 NSArray *currentDB;
 UIColor *lineColor;
 NSMutableArray *distances;
+CLLocationManager *locationManager;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,12 +49,11 @@ NSMutableArray *distances;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.locationManager.delegate = self;
-    self.locationManager = [[CLLocationManager alloc] init];
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
     distances = [[NSMutableArray alloc]init];
     [hideButton setTitle:NSLocalizedString(@"hideList",@"word") forState:UIControlStateNormal];
     visibleLine = -1;
-    self.locationManager = [[CLLocationManager alloc]init];
     mapview.delegate = self;
     redPins = [[NSMutableArray alloc]init];
     overlays = [[NSMutableArray alloc]init];
@@ -124,7 +125,7 @@ NSMutableArray *distances;
     [self setRegion];
     lineColor = color;
     [self showUserLocation];
-    [self getDirections];
+   // [self getDirections];
     [progresshud hide:YES];
 
 }
@@ -244,16 +245,14 @@ NSMutableArray *distances;
         return;
 
     }
-    
-    if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined){
-        [self.locationManager requestAlwaysAuthorization];
-    }
-    else if([CLLocationManager authorizationStatus]  == kCLAuthorizationStatusAuthorized){
+    if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse ){
         mapview.showsUserLocation = YES;
-        self.locationManager.delegate = self;
-        [self.locationManager startUpdatingLocation];
+        [locationManager startUpdatingLocation];
     }
-   
+    else{
+      [locationManager requestWhenInUseAuthorization];
+    }
+    
     
 }
 
@@ -273,19 +272,19 @@ NSMutableArray *distances;
         
     }
     if(flag == 0){
-      [self.locationManager stopUpdatingLocation];
-      self.locationManager.delegate = nil;
+      [locationManager stopUpdatingLocation];
       [tableview reloadData];
     }
 
 }
 
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
-    if (status == kCLAuthorizationStatusAuthorized){
+    if (status == kCLAuthorizationStatusAuthorizedWhenInUse){
+        NSLog(@"AAAAAAA");
         mapview.showsUserLocation = YES;
-        self.locationManager.delegate = self;
-        [self.locationManager startUpdatingLocation];
+        [locationManager startUpdatingLocation];
     }
+   
     
     
 }

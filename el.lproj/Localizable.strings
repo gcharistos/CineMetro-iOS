@@ -11,6 +11,7 @@
 "login" = "Είσοδος";
 "signup" = "Εγγραφή";
 "ok" = "Εντάξει";
+"loginuser" = "Είσοδος ώς :";
 "thankyou" = "Ευχαριστούμε Πολύ";
 "offline" = "Έιστε Offline";
 "hideList" = "Κρύψτε Λίστα";

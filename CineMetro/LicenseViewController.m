@@ -33,8 +33,10 @@
 - (void)showInView:(UIView *)aView  withController:(UIViewController *)controller  withText:(NSString *)text animated:(BOOL)animated{
     dispatch_async(dispatch_get_main_queue(), ^{
         // viewController = (GreenDetailsViewController *)controller;
+
         [aView addSubview:self.view];
         textview.text = text;
+        
         if (animated) {
             [self showAnimate];
         }

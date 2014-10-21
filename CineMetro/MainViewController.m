@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import "ProfileViewController.h"
 #import <Pop/POP.h>
+#import "MBProgressHUD.h"
 #import "Reachability.h"
 
 @interface MainViewController ()
@@ -20,6 +21,7 @@
 @synthesize word;
 int loginStatus;
 int flag;
+NSArray *array;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,23 +37,66 @@ int flag;
     [super viewDidLoad];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *retrieveUser = [userDefaults objectForKey:@"User"];
+    array = [NSArray arrayWithObjects:@"Navigation",@"Lines",@"About Film Festival", nil];
     if(retrieveUser == nil && flag == 0){
         UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"welcome",@"word") message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:NSLocalizedString(@"login", @"word"),NSLocalizedString(@"signup",@"word"),nil];
         welcomeMessage.tag = 100;
         [welcomeMessage show];    }
     else {
+        MBProgressHUD *retrieveProcess = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        retrieveProcess.labelText = [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"loginuser",@"word"),retrieveUser];
+        retrieveProcess.mode = MBProgressHUDModeIndeterminate;
+        [retrieveProcess show:YES];
         // retrieve current user
         PFQuery *userQuery = [PFUser query];
         [userQuery whereKey:@"username" equalTo:retrieveUser];
         [userQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
             user = [PFUser currentUser];
+            [retrieveProcess hide:YES];
         }];
 
     }
         
 
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+       return 80.0;
+}
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 3;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *identifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    UILabel *label = (UILabel *)[cell viewWithTag:105];
+    label.text = [array objectAtIndex:indexPath.row];
+    return cell;
+}
+
+//selected button from main menu 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row == 0){
+        [self performSegueWithIdentifier:@"navigationSegue" sender:nil];
+    }
+    else if(indexPath.row == 1){
+        [self performSegueWithIdentifier:@"linesSegue" sender:nil];
+
+    }
+    else if(indexPath.row == 2){
+        [self performSegueWithIdentifier:@"aboutFestivalSegue" sender:nil];
+
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+}
 
 
 
@@ -166,7 +211,27 @@ int flag;
         }
 
     }
+    else if(buttonIndex == 3){
+        UILabel *label = [[UILabel alloc]init];
+        label.text = @"Hello";
+        CGFloat toValue = self.view.center.x;
+        
+        POPSpringAnimation *onscreenAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+        onscreenAnimation.toValue = @(toValue);
+        onscreenAnimation.springBounciness = 10.f;
+        POPBasicAnimation *offscreenAnimation = [POPBasicAnimation easeInAnimation];
+        offscreenAnimation.property = [POPAnimatableProperty propertyWithName:kPOPLayerPositionX];
+        offscreenAnimation.toValue = @(-toValue);
+        offscreenAnimation.duration = 0.2f;
+        [offscreenAnimation setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
+            [label.layer pop_addAnimation:onscreenAnimation forKey:@"onscreenAnimation"];
+        }];
+        [label.layer pop_addAnimation:offscreenAnimation forKey:@"offscreenAnimation"];
+        
+    }
     
     
 }
+
+
 @end
