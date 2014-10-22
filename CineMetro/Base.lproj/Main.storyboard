@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="oEL-5h-yne">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="104" width="320" height="376"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="140" id="QVo-0B-nff">
@@ -28,16 +28,19 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QVo-0B-nff" id="Jvb-Lf-fg9">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinemetroLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SzE-CO-U5e">
-                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3E-oK-B6v">
-                                                    <rect key="frame" x="154" y="28" width="158" height="84"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3E-oK-B6v">
+                                                    <rect key="frame" x="8" y="31" width="304" height="84"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="E3E-oK-B6v" secondAttribute="bottom" constant="17" id="HgB-qV-TCI"/>
+                                                <constraint firstItem="E3E-oK-B6v" firstAttribute="leading" secondItem="Jvb-Lf-fg9" secondAttribute="leadingMargin" id="a4Y-b6-chb"/>
+                                                <constraint firstItem="E3E-oK-B6v" firstAttribute="top" secondItem="Jvb-Lf-fg9" secondAttribute="topMargin" constant="23" id="aXU-sk-fOJ"/>
+                                                <constraint firstItem="E3E-oK-B6v" firstAttribute="trailing" secondItem="Jvb-Lf-fg9" secondAttribute="trailingMargin" id="l6b-Yg-oun"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.01928888447" alpha="0.55000000000000004" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
@@ -47,6 +50,9 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="wkQ-TH-4o3"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinemetroLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="MDn-vW-xm0">
+                                <rect key="frame" x="110" y="64" width="100" height="100"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -75,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="-28"/>
+            <point key="canvasLocation" x="-190" y="-31"/>
         </scene>
         <!--Lines-->
         <scene sceneID="MlV-MN-uuc">
@@ -1086,8 +1092,8 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueP-KJ-tbc">
                                         <rect key="frame" x="0.0" y="113" width="320" height="398"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <mutableString key="text">Το CineMetro είναι μια εφαρμογή για κινητές συσκευές, η οποία σχεδιάζεται εθελοντικά από ομάδα φοιτητών του Τμήματος Πληροφορικής του Α.Π.Θ., υπό την εποπτεία της καθηγήτριας Αθηνάς Βακάλη, σε συνεργασία με την ιστορικό κινηματογράφου Δρ. Αγγελική Μυλωνάκη και τον δημοσιογράφο και κριτικό κινηματογράφου κ. Ιωάννη Γκροσδάνη.
-Η εφαρμογή είναι εκπαιδευτικού χαρακτήρα με στόχο να προσφέρει γνώσεις και να εξοικειώσει τους πολίτες με την κινηματογραφική ιστορία της Θεσσαλονίκης, μέσω μιας σύγχρονης εμπειρίας πλοήγησης στην πόλη. Σημεία της πόλης στα οποία υπάρχει υλικό από ταινίες θα ορίζονται ως «στάσεις» και οι πολίτες θα μπορούν σε κάθε στάση να δουν το εκάστοτε υλικό (π.χ. φωτογραφίες, μικρό κείμενο, ήχο/video) εάν είναι διαθέσιμο. Τα πνευματικά δικαιώματα του περιεχομένου (εικόνες, πληροφορίες για τις ταινίες) της εφαρμογής ανήκουν στους δημιουργούς τους</mutableString>
+                                        <string key="text">Το CineMetro είναι μια εφαρμογή για κινητές συσκευές, η οποία σχεδιάζεται εθελοντικά από ομάδα φοιτητών του Τμήματος Πληροφορικής του Α.Π.Θ., υπό την εποπτεία της καθηγήτριας Αθηνάς Βακάλη, σε συνεργασία με την ιστορικό κινηματογράφου Δρ. Αγγελική Μυλωνάκη και τον δημοσιογράφο και κριτικό κινηματογράφου κ. Ιωάννη Γκροσδάνη.
+Η εφαρμογή είναι εκπαιδευτικού χαρακτήρα με στόχο να προσφέρει γνώσεις και να εξοικειώσει τους πολίτες με την κινηματογραφική ιστορία της Θεσσαλονίκης, μέσω μιας σύγχρονης εμπειρίας πλοήγησης στην πόλη. Σημεία της πόλης στα οποία υπάρχει υλικό από ταινίες θα ορίζονται ως «στάσεις» και οι πολίτες θα μπορούν σε κάθε στάση να δουν το εκάστοτε υλικό (π.χ. φωτογραφίες, μικρό κείμενο, ήχο/video) εάν είναι διαθέσιμο. Τα πνευματικά δικαιώματα του περιεχομένου (εικόνες, πληροφορίες για τις ταινίες) της εφαρμογής ανήκουν στους δημιουργούς τους</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>

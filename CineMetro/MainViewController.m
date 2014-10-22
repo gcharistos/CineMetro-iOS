@@ -78,7 +78,7 @@ NSArray *array;
         return 175.0;
     }
         
-       return 140.0; // iphone 4 - 4s
+       return 105.0; // iphone 4 - 4s
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
