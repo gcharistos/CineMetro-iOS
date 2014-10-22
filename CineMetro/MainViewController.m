@@ -20,7 +20,7 @@
 @implementation MainViewController
 @synthesize word;
 int loginStatus;
-int flag;
+BOOL startFlag;
 NSArray *array;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -37,24 +37,29 @@ NSArray *array;
     [super viewDidLoad];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *retrieveUser = [userDefaults objectForKey:@"User"];
+    NSString *flagstatus = [userDefaults objectForKey:@"flag"];
+    counter++; // plus plus counter variable
     array = [NSArray arrayWithObjects:NSLocalizedString(@"navigationTitle",@"word"),NSLocalizedString(@"linesTitle",@"word"),NSLocalizedString(@"aboutFestival",@"word"), nil];
-    if(retrieveUser == nil && flag == 0){
+    if(retrieveUser == nil){
         UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"welcome",@"word") message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:NSLocalizedString(@"login", @"word"),NSLocalizedString(@"signup",@"word"),nil];
         welcomeMessage.tag = 100;
         [welcomeMessage show];    }
-    else {
-        MBProgressHUD *retrieveProcess = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        retrieveProcess.labelText = [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"loginuser",@"word"),retrieveUser];
-        retrieveProcess.mode = MBProgressHUDModeIndeterminate;
-        [retrieveProcess show:YES];
-        // retrieve current user
-        PFQuery *userQuery = [PFUser query];
-        [userQuery whereKey:@"username" equalTo:retrieveUser];
-        [userQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-            user = [PFUser currentUser];
-            [retrieveProcess hide:YES];
-        }];
-
+    else  {
+        if([flagstatus isEqualToString:@"false"] || counter == 1){
+            MBProgressHUD *retrieveProcess = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            retrieveProcess.labelText = [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"loginuser",@"word"),retrieveUser];
+            retrieveProcess.mode = MBProgressHUDModeIndeterminate;
+            [retrieveProcess show:YES];
+            flag = 1;
+            // retrieve current user
+            PFQuery *userQuery = [PFUser query];
+            [userQuery whereKey:@"username" equalTo:retrieveUser];
+            [userQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+                user = [PFUser currentUser];
+                [retrieveProcess hide:YES];
+                [userDefaults setObject:@"true" forKey:@"flag"];
+            }];
+        }
     }
         
 
@@ -73,7 +78,7 @@ NSArray *array;
         return 175.0;
     }
         
-       return 88.0; // iphone 4 - 4s
+       return 140.0; // iphone 4 - 4s
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -119,6 +124,8 @@ NSArray *array;
     flag = 0;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults removeObjectForKey:@"User"];
+    [userDefaults setObject:@"false" forKey:@"flag"];
+
 }
 
 
@@ -164,6 +171,8 @@ NSArray *array;
 -(void) saveProfile{
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:user.username forKey:@"User"];
+    [userDefaults setObject:@"true" forKey:@"flag"];
+    flag = 1;
 
 }
 
@@ -243,6 +252,7 @@ NSArray *array;
     
     
 }
+
 
 
 @end

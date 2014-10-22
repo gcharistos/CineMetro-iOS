@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 PFUser *user;
+int flag;
+int counter;
 @interface MainViewController : UIViewController<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>
 - (IBAction)profileButtonPressed:(id)sender;
 @property (nonatomic,strong) NSString *word;
