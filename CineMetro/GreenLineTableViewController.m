@@ -36,9 +36,12 @@ NSMutableArray *titles;
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
+    [self.tabBarController.tabBar setTintColor:[UIColor greenColor]];
+
 }
 -(void)viewWillAppear:(BOOL)animated{
+    [self.tabBarController.tabBar setTintColor:[UIColor greenColor]];
+
     titles = [[NSMutableArray alloc]init];
     selectedIndex = -1;
     NSString *title;

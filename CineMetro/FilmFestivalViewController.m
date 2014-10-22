@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
     textview.text = NSLocalizedString(@"filmFestival",@"word");
+    [textview setFont:[UIFont systemFontOfSize:16]];
     // Do any additional setup after loading the view.
 }
 

@@ -46,8 +46,7 @@ NSMutableArray *points;
     
     UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Upload"] style:UIBarButtonItemStyleBordered target:self action:@selector(shareButtonPressed:)];
     self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
-    [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,900)];
+   
     infoLabel.text = NSLocalizedString(@"info",@"word");
     images = [[NSMutableArray alloc]init];
     //set navigation bar title
@@ -56,12 +55,19 @@ NSMutableArray *points;
     textview.text  = [station objectForKey:@"text"];
    // [textview setTextColor:[UIColor whiteColor]];
     [textview setFont:[UIFont systemFontOfSize:15]];
+    
     images = [station objectForKey:@"Images"];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
 
 
     // Do any additional setup after loading the view.
 }
+
+-(void)viewDidLayoutSubviews{
+    [scroller  setScrollEnabled:YES];
+    [scroller setContentSize:CGSizeMake(320,900)];
+}
+
 
 
 

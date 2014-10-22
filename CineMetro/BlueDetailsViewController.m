@@ -52,8 +52,7 @@ NSMutableArray *points;
     UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Upload"] style:UIBarButtonItemStyleBordered target:self action:@selector(shareButtonPressed:)];
     self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
     
-    [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,1150)];
+    
     images = [[NSMutableArray alloc]init];
     actorsLabel.text = NSLocalizedString(@"actors",@"word");
     directorsLabel.text = NSLocalizedString(@"director",@"word");
@@ -76,6 +75,12 @@ NSMutableArray *points;
     
     // Do any additional setup after loading the view.
 }
+
+-(void)viewDidLayoutSubviews{
+    [scroller  setScrollEnabled:YES];
+    [scroller setContentSize:CGSizeMake(320,1050)];
+}
+
 
 - (IBAction)rateButtonPressed:(id)sender {
     if(user != nil){

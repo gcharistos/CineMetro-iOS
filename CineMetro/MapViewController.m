@@ -48,10 +48,11 @@ CLLocationManager *locationManager;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    tableview.hidden = YES;
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     distances = [[NSMutableArray alloc]init];
-    [hideButton setTitle:NSLocalizedString(@"hideList",@"word") forState:UIControlStateNormal];
+    [hideButton setTitle:NSLocalizedString(@"showList",@"word") forState:UIControlStateNormal];
     visibleLine = -1;
     mapview.delegate = self;
     redPins = [[NSMutableArray alloc]init];
@@ -75,6 +76,11 @@ CLLocationManager *locationManager;
 
 //method animates tableview whether user wants to show/hide it .
 -(IBAction)showHidePressed:(id)sender {
+    if(visibleLine == -1){ // empty table
+        UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"emptytable",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+        [alertview show];
+        return;
+    }
     if(tableview.hidden){
         CATransition *animation = [CATransition animation];
         animation.type = kCATransitionFade;
@@ -410,8 +416,7 @@ CLLocationManager *locationManager;
         [messageLabel sizeToFit];
         
         tableView.backgroundView = messageLabel;
-        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        tableview.backgroundColor = [UIColor orangeColor];
+       
         
     }
     return 0;

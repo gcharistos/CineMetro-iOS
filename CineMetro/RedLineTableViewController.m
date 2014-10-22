@@ -35,6 +35,7 @@ NSMutableArray *titles;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
+    [self.tabBarController.tabBar setTintColor:[UIColor redColor]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -42,9 +43,12 @@ NSMutableArray *titles;
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
+
 -(void)viewWillAppear:(BOOL)animated{
     //initialize selectedIndex variable
     selectedIndex = -1;
+    [self.tabBarController.tabBar setTintColor:[UIColor redColor]];
 
     titles = [[NSMutableArray alloc]init];
     NSString *title;

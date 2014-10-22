@@ -38,7 +38,8 @@ NSInteger  selectedIndex ;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
-    
+    [self.tabBarController.tabBar setTintColor:[UIColor blueColor]];
+
     
     
     
@@ -51,6 +52,8 @@ NSInteger  selectedIndex ;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [self.tabBarController.tabBar setTintColor:[UIColor blueColor]];
+
     titles = [[NSMutableArray alloc]init];
     selectedIndex = -1;
     NSString *title;

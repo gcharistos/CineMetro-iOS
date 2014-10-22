@@ -69,7 +69,7 @@ NSArray *array;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(self.view.bounds.size.height == 568){ // iphone 5 - 5s
-        return 118.0;
+        return 120.0;
     }
     else if(self.view.bounds.size.height == 667){ // iphone 6
         return 151.0;
@@ -78,7 +78,7 @@ NSArray *array;
         return 175.0;
     }
         
-       return 105.0; // iphone 4 - 4s
+       return 85.0; // iphone 4 - 4s
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

@@ -44,9 +44,7 @@ ContainerGreenViewController *dest;
     UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Upload"] style:UIBarButtonItemStyleBordered target:self action:@selector(shareButtonPressed:)];
     self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
     
-    [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,630)];
-    images = [[NSMutableArray alloc]init];
+        images = [[NSMutableArray alloc]init];
     //set navigation bar title
     // self.navigationItem.title =[station objectForKey:@"Subtitle"];
     theaterTitle.text = [station objectForKey:@"Subtitle"];
@@ -54,6 +52,13 @@ ContainerGreenViewController *dest;
     [self performSegueWithIdentifier:@"showPhotos2" sender:self];
     // Do any additional setup after loading the view.
 }
+
+-(void)viewDidLayoutSubviews{
+    [scroller  setScrollEnabled:YES];
+    
+    [scroller setContentSize:CGSizeMake(320,670)];
+}
+
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
     if(images.count == 0 && [identifier isEqualToString:@"showPhotos2"]){
