@@ -132,6 +132,9 @@ CLLocationManager *locationManager;
     [self showUserLocation];
     [self getDirections];
     [progresshud hide:YES];
+    tableview.hidden = NO;
+    [hideButton setTitle:NSLocalizedString(@"hideList",@"word") forState:UIControlStateNormal];
+
 
 }
 
@@ -251,12 +254,20 @@ CLLocationManager *locationManager;
         return;
 
     }
-    if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse ){
+    if (![[UIDevice currentDevice].systemVersion hasPrefix:@"7"]) { // if your device is not iOS 7
+        if([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse ){
+            mapview.showsUserLocation = YES;
+            [locationManager startUpdatingLocation];
+        }
+        else{
+            [locationManager requestWhenInUseAuthorization];
+        }
+
+    }
+    else {
+        NSLog(@"iOS 7.1");
         mapview.showsUserLocation = YES;
         [locationManager startUpdatingLocation];
-    }
-    else{
-        [locationManager requestWhenInUseAuthorization];
     }
     
     
