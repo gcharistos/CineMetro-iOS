@@ -237,25 +237,7 @@ NSArray *array;
         }
 
     }
-    else if(buttonIndex == 3){
-        UILabel *label = [[UILabel alloc]init];
-        label.text = @"Hello";
-        CGFloat toValue = self.view.center.x;
         
-        POPSpringAnimation *onscreenAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
-        onscreenAnimation.toValue = @(toValue);
-        onscreenAnimation.springBounciness = 10.f;
-        POPBasicAnimation *offscreenAnimation = [POPBasicAnimation easeInAnimation];
-        offscreenAnimation.property = [POPAnimatableProperty propertyWithName:kPOPLayerPositionX];
-        offscreenAnimation.toValue = @(-toValue);
-        offscreenAnimation.duration = 0.2f;
-        [offscreenAnimation setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
-            [label.layer pop_addAnimation:onscreenAnimation forKey:@"onscreenAnimation"];
-        }];
-        [label.layer pop_addAnimation:offscreenAnimation forKey:@"offscreenAnimation"];
-        
-    }
-    
     
 }
 

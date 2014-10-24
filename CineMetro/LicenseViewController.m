@@ -36,7 +36,7 @@
 
         [aView addSubview:self.view];
         textview.text = text;
-        
+
         if (animated) {
             [self showAnimate];
         }
