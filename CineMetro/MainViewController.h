@@ -15,6 +15,8 @@ int counter;
 - (IBAction)profileButtonPressed:(id)sender;
 @property (nonatomic,strong) NSString *word;
 -(void)redirectToProfile;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *aboutButton;
 -(void)LogOut;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *profileButton;
 -(void) saveProfile;
 @end

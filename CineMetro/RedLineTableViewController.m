@@ -159,7 +159,7 @@ NSMutableArray *titles;
 {
     if([segue.identifier isEqualToString:@"detailSegue1"]){
       RedDetailsViewController *dest = segue.destinationViewController;
-      dest.station = [station objectAtIndex:selectedIndex];
+      dest.station =[[NSDictionary alloc]initWithDictionary:[station objectAtIndex:selectedIndex]];
         dest.indexPath = selectedIndex;
     }
 }

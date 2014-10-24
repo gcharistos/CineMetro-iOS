@@ -22,6 +22,8 @@
 int loginStatus;
 BOOL startFlag;
 NSArray *array;
+@synthesize profileButton;
+@synthesize aboutButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,6 +37,10 @@ NSArray *array;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIFont * font = [UIFont boldSystemFontOfSize:20];
+    NSDictionary * attributes = @{NSFontAttributeName: font};
+    [profileButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    [aboutButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *retrieveUser = [userDefaults objectForKey:@"User"];
     NSString *flagstatus = [userDefaults objectForKey:@"flag"];

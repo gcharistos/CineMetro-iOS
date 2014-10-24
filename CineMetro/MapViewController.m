@@ -211,6 +211,7 @@ int selectedIndex;
         return nil;
     }
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
+
     annotationView.canShowCallout = YES;
     if(visibleLine == 1){
         annotationView.image = [UIImage imageNamed:@"redPin.png"];
@@ -223,9 +224,9 @@ int selectedIndex;
         annotationView.image = [UIImage imageNamed:@"greenPin.png"];
 
     }
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
     [button setImage:[UIImage imageNamed:@"directions"] forState:UIControlStateNormal];
-    UIButton *secondButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    UIButton *secondButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
     [secondButton setImage:[UIImage imageNamed:@"info"] forState:UIControlStateNormal];
     annotationView.rightCalloutAccessoryView = button;
     annotationView.rightCalloutAccessoryView.tag = 200;
