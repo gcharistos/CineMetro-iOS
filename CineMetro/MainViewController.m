@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import "LoginViewController.h"
-#import "ProfileViewController.h"
+#import "ProfileTableViewController.h"
 #import <Pop/POP.h>
 #import "MBProgressHUD.h"
 #import "Reachability.h"
@@ -190,7 +190,7 @@ NSArray *array;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"profileSegue"]){
-        ProfileViewController *dest = segue.destinationViewController;
+        ProfileTableViewController *dest = segue.destinationViewController;
         dest.user = user;
     }
     else if([segue.identifier isEqualToString:@"ProfileLogin"]){

@@ -10,6 +10,7 @@
 #import "MainViewController.h"
 #import <Parse/Parse.h>
 #import <POP.h>
+#import "MBProgressHUD.h"
 
 @interface LoginViewController ()
 
@@ -96,6 +97,9 @@ PFUser *appUser;
         return;
         
     }
+    MBProgressHUD *loginAccount = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    loginAccount.mode = MBProgressHUDModeIndeterminate;
+    [loginAccount show:YES];
 
     [PFUser logInWithUsernameInBackground:emailTextField.text
                                  password:passwordTextField.text
@@ -109,9 +113,11 @@ PFUser *appUser;
                                                                                       delegate:nil
                                                                              cancelButtonTitle:nil
                                                                              otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
+                                            [loginAccount hide:YES];
                                             // Show the alert view
                                             [alertView show];
                                             appUser = auser;
+                                            
                                             [self performSegueWithIdentifier:@"loginSegue" sender:nil];
                                             
                                         }
@@ -124,6 +130,8 @@ PFUser *appUser;
                                                                                   delegate:self
                                                                          cancelButtonTitle:nil
                                                                          otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
+                                            [loginAccount hide:YES];
+
                                             // Show the alert view
                                             [alertView show];
 

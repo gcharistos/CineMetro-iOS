@@ -56,7 +56,7 @@ ContainerGreenViewController *dest;
 -(void)viewDidLayoutSubviews{
     [scroller  setScrollEnabled:YES];
     
-    [scroller setContentSize:CGSizeMake(320,670)];
+    [scroller setContentSize:CGSizeMake(320,730)];
 }
 
 
@@ -76,7 +76,6 @@ ContainerGreenViewController *dest;
 - (IBAction)rateButtonPressed:(id)sender {
     if(user != nil){
         points = [NSMutableArray arrayWithArray:[user objectForKey:@"greenLineStations"]];
-        NSLog(@"size : %i",[points count]);
         if([[points objectAtIndex:indexPath]intValue] != 0){
             UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"ratedTrue",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
             [alert show];
