@@ -14,11 +14,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+   
     [NSThread sleepForTimeInterval:2.0]; // Used For Showing Splash Screen for More Time
     // Override point for customization after application launch.
     [Parse setApplicationId:@"swhW7tnXLp2qdr7ZqbQ1JRCZMuRaQE5CXY12mp7c"
                   clientKey:@"lrNR1Wa2YThA7SjlkitdaCtMmEBJJM69bHcwpifD"];
-   
+    
     
     // Override point for customization after application launch.
     
@@ -42,11 +43,6 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
--(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    
-    return [FBAppCall handleOpenURL:url
-                  sourceApplication:sourceApplication];
-}
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {

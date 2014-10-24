@@ -48,10 +48,12 @@ NSMutableArray *titles;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"GreenLineStations" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     NSArray *anns = [dict objectForKey:@"Stations"];
-    [lineName setText:[dict objectForKey:@"Name"]];
+    
+    [lineName setText:[dict objectForKey:@"GrName"]];
     station = anns; // initialize station variable
     for(int i=0;i<anns.count;i++){
-        title = [[anns objectAtIndex:i]objectForKey:@"Title"];
+        NSString *positionString = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),i+1];
+        title = positionString;
         [titles addObject:title];
     }
     

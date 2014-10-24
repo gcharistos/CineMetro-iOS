@@ -164,6 +164,10 @@
 /* Class = "IBUIButton"; normalTitle = "Lines"; ObjectID = "kdV-sb-6ii"; */
 "kdV-sb-6ii.normalTitle" = "Γραμμές";
 
+/* Class = "IBUIButton"; normalTitle = "Lines"; ObjectID = "9jS-Kf-9ng"; */
+"9jS-Kf-9ng.normalTitle" = "Γραμμές";
+
+
 /* Class = "IBUIBarButtonItem"; title = "Rate"; ObjectID = "lgw-wR-jbP"; */
 "lgw-wR-jbP.title" = "Βαθμολογήστε";
 

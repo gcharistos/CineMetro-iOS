@@ -58,7 +58,8 @@ NSMutableArray *titles;
     [nameLabel setText:[dict objectForKey:@"Name"]];
     station = anns; // initialize station variable
     for(int i=0;i<anns.count;i++){
-        title = [[anns objectAtIndex:i]objectForKey:@"Title"];
+        NSString *positionString = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),i+1];
+        title = positionString;
         [titles addObject:title];
     }
     [self.tableView reloadData];

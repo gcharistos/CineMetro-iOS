@@ -231,7 +231,9 @@
 	</array>
 	<key>Color</key>
 	<string>green</string>
-	<key>Name</key>
+	<key>GrName</key>
 	<string>Χρονολόγιο</string>
+	<key>EnName </key>
+	<string>Timeline</string>
 </dict>
 </plist>

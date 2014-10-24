@@ -13,6 +13,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import <POP.h>
 #import <AddressBook/AddressBook.h>
+#import "GreenDetailsViewController.h"
+#import "BlueDetailsViewController.h"
+#import "RedDetailsViewController.h"
 
 
 
@@ -34,6 +37,7 @@ NSArray *currentDB;
 UIColor *lineColor;
 NSMutableArray *distances;
 CLLocationManager *locationManager;
+int selectedIndex;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -221,7 +225,12 @@ CLLocationManager *locationManager;
     }
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
     [button setImage:[UIImage imageNamed:@"directions"] forState:UIControlStateNormal];
+    UIButton *secondButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    [secondButton setImage:[UIImage imageNamed:@"info"] forState:UIControlStateNormal];
     annotationView.rightCalloutAccessoryView = button;
+    annotationView.rightCalloutAccessoryView.tag = 200;
+    annotationView.leftCalloutAccessoryView = secondButton;
+    annotationView.leftCalloutAccessoryView.tag = 100;
     return annotationView;
 }
 
@@ -314,11 +323,28 @@ CLLocationManager *locationManager;
 - (void)mapView:(MKMapView *)mapView
  annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     MKPointAnnotation *annotationTapped = (MKPointAnnotation *)view.annotation;
-    MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:annotationTapped.coordinate addressDictionary:nil];
-    MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
-    destination.name = annotationTapped.title;
-    [destination openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving}];
- 
+    //info button pressed
+    if(control.tag == 100){
+        selectedIndex =[redPins indexOfObject:annotationTapped];
+        if(visibleLine == 1){
+            [self performSegueWithIdentifier:@"redLine" sender:nil];
+        }
+        else if(visibleLine == 2){
+            [self performSegueWithIdentifier:@"blueLine" sender:nil];
+
+        }
+        else if(visibleLine == 3){
+            [self performSegueWithIdentifier:@"greenLine" sender:nil];
+
+        }
+    }
+    //directions button pressed
+    else {
+        MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:annotationTapped.coordinate addressDictionary:nil];
+        MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
+        destination.name = annotationTapped.title;
+        [destination openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving}];
+    }
     
 }
 
@@ -440,7 +466,8 @@ CLLocationManager *locationManager;
    // cell.backgroundColor = lineColor;
     UILabel *titleLabel = (UILabel *)[cell viewWithTag:105];
     UILabel *subtitleLabel = (UILabel *)[cell viewWithTag:106];
-    titleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"Title"];
+    NSString *positionString = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),indexPath.row+1];
+    titleLabel.text = positionString;
     [titleLabel setTextColor:lineColor];
    // titleLabel.textColor =[UIColor whiteColor];
     subtitleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
@@ -462,9 +489,21 @@ CLLocationManager *locationManager;
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if([segue.identifier isEqualToString:@"redLine"]){
+        RedDetailsViewController *dest = segue.destinationViewController;
+        dest.station = [currentDB objectAtIndex:selectedIndex];
+        dest.indexPath = selectedIndex;
+    }
+    else if([segue.identifier isEqualToString:@"blueLine"]){
+        BlueDetailsViewController *dest = segue.destinationViewController;
+        dest.position = selectedIndex;
+    }
+    else if([segue.identifier isEqualToString:@"greenLine"]){
+        GreenDetailsViewController *dest = segue.destinationViewController;
+        dest.station = [currentDB objectAtIndex:selectedIndex];
+        dest.indexPath = selectedIndex;
+    }
     
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 

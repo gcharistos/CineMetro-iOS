@@ -488,7 +488,7 @@
             <objects>
                 <tableViewController id="XPQ-vv-A5f" customClass="GreenLineTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="22" sectionFooterHeight="22" id="ggA-qz-Xk3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -532,6 +532,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Green Line" image="info" id="sLo-Er-z5V"/>
+                    <navigationItem key="navigationItem" id="rPY-Rg-vig"/>
                     <connections>
                         <outlet property="lineName" destination="jDC-98-ktb" id="kJV-Ve-p35"/>
                         <segue destination="CcH-jB-Ctv" kind="push" identifier="detailSegue" id="cLM-OQ-vNw"/>
@@ -546,7 +547,7 @@
             <objects>
                 <tableViewController id="MsW-8H-eFf" customClass="BlueLineTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="22" sectionFooterHeight="22" id="353-hl-vMK">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -593,6 +594,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Blue Line" image="info" id="zcJ-cJ-ymF"/>
+                    <navigationItem key="navigationItem" id="a8C-IC-OMq"/>
                     <connections>
                         <outlet property="nameLabel" destination="bG5-Dd-2Oq" id="CkP-z0-HQc"/>
                         <segue destination="PX6-O8-zED" kind="push" identifier="detailSegue2" id="1Ad-aq-j7M"/>
@@ -844,11 +846,14 @@
                         <outlet property="hideButton" destination="2R2-0d-PBb" id="F6s-N6-VNT"/>
                         <outlet property="mapview" destination="HbI-nJ-Hyd" id="oy9-ef-pRR"/>
                         <outlet property="tableview" destination="LZS-DU-6Xw" id="EPZ-LD-6VC"/>
+                        <segue destination="wrM-uC-tFl" kind="push" identifier="redLine" id="aUV-Lm-QVJ"/>
+                        <segue destination="PX6-O8-zED" kind="push" identifier="blueLine" id="KUx-vX-pg0"/>
+                        <segue destination="CcH-jB-Ctv" kind="push" identifier="greenLine" id="VZy-wn-wGO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Snu-Ua-5QC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="-785"/>
+            <point key="canvasLocation" x="1003" y="-1017"/>
         </scene>
         <!--Create New Account View Controller-->
         <scene sceneID="Jjh-aU-62V">
@@ -1318,6 +1323,9 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="xxZ-WA-TG7"/>
+        <segue reference="VZy-wn-wGO"/>
+        <segue reference="aUV-Lm-QVJ"/>
+        <segue reference="KUx-vX-pg0"/>
         <segue reference="aE9-pI-0tH"/>
     </inferredMetricsTieBreakers>
 </document>
