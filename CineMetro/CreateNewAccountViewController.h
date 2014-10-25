@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateNewAccountViewController : UIViewController<UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface CreateNewAccountViewController : UIViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 - (IBAction)createButtonPressed:(UIButton *)sender;
-@property (weak, nonatomic) IBOutlet UIImageView *profilePhoto;
-- (IBAction)takePhoto:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *addImageButton;
 
 @end

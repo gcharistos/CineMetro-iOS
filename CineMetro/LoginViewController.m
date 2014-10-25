@@ -108,7 +108,7 @@ PFUser *appUser;
                                         if(auser){
                                             UIAlertView *alertView = nil;
                                                                                                             // Create an alert view to tell the user
-                                                alertView = [[UIAlertView alloc] initWithTitle:@"Successfull Login"
+                                                alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"successfullLogin",@"word")
                                                                                        message:nil
                                                                                       delegate:nil
                                                                              cancelButtonTitle:nil
@@ -125,7 +125,7 @@ PFUser *appUser;
                                             UIAlertView *alertView = nil;
                                             
                                             // Create an alert view to tell the user
-                                            alertView = [[UIAlertView alloc] initWithTitle:@"Wrong Username Or Password"
+                                            alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"wronguser",@"word")
                                                                                    message:nil
                                                                                   delegate:self
                                                                          cancelButtonTitle:nil

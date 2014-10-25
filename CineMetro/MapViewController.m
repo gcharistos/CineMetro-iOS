@@ -38,6 +38,7 @@ UIColor *lineColor;
 NSMutableArray *distances;
 CLLocationManager *locationManager;
 int selectedIndex;
+Reachability* reachability;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -109,7 +110,7 @@ int selectedIndex;
 
 -(void)UploadLine:(NSString *)name :(UIColor *)color{
     MBProgressHUD *progresshud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    progresshud.labelText = @"Calculating Distances";
+    progresshud.labelText = NSLocalizedString(@"calculatedistances",@"word");
     progresshud.mode = MBProgressHUDModeIndeterminate;
     [progresshud show:YES];
     NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"plist"];
@@ -140,6 +141,16 @@ int selectedIndex;
     [hideButton setTitle:NSLocalizedString(@"hideList",@"word") forState:UIControlStateNormal];
 
 
+}
+
+-(void)calculateAgainDistances{
+    MBProgressHUD *progresshud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    progresshud.labelText = NSLocalizedString(@"calculatedistances",@"word");
+    progresshud.mode = MBProgressHUDModeIndeterminate;
+    [progresshud show:YES];
+    [self showUserLocation];
+    [self getDirections];
+    [progresshud hide:YES];
 }
 
 
@@ -256,11 +267,20 @@ int selectedIndex;
     if(![CLLocationManager locationServicesEnabled]){
         UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enablelocation",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
         [disabled show];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNetworkChange:) name:kReachabilityChangedNotification object:nil];
+        
+        reachability = [Reachability reachabilityForInternetConnection];
+        [reachability startNotifier];
         return;
     }
     else if(![self checkForNetwork]){
-        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:@"Please enable internet connection for user location view" message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enableInternetConnection",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
         [disabled show];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNetworkChange:) name:kReachabilityChangedNotification object:nil];
+        
+        reachability = [Reachability reachabilityForInternetConnection];
+        [reachability startNotifier];
         return;
 
     }
@@ -275,7 +295,6 @@ int selectedIndex;
 
     }
     else {
-        NSLog(@"iOS 7.1");
         mapview.showsUserLocation = YES;
         [locationManager startUpdatingLocation];
     }
@@ -303,6 +322,20 @@ int selectedIndex;
       [tableview reloadData];
     }
 
+}
+
+- (void) handleNetworkChange:(NSNotification *)notice
+{
+    NetworkStatus remoteHostStatus = [reachability currentReachabilityStatus];
+    
+    if          (remoteHostStatus == NotReachable)      {NSLog(@"no");}
+    else if     (remoteHostStatus == ReachableViaWiFi)  {[reachability stopNotifier];[self calculateAgainDistances]; }
+    else if     (remoteHostStatus == ReachableViaWWAN) {[reachability stopNotifier];[self calculateAgainDistances];}
+    
+    //    if (self.hasInet) {
+    //        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Net avail" message:@"" delegate:self cancelButtonTitle:OK_EN otherButtonTitles:nil, nil];
+    //        [alert show];
+    //    }
 }
 
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
@@ -508,4 +541,6 @@ int selectedIndex;
 }
 
 
+- (IBAction)calculatePressed:(id)sender {
+}
 @end

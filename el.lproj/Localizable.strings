@@ -9,9 +9,18 @@
 
 "emptytable" = "Παρακαλώ Επιλέξτε Γραμμή";
 "login" = "Είσοδος";
+"successfullLogin" = "Επιτυχής Είσοδος";
+"wronguser" = "Λάθος Username ή Password";
+"fillcreateAccount" = "Παρακαλώ συμπληρώστε τα πεδία Username και Password";
 "signup" = "Εγγραφή";
+"usernameExists" = "Το Username υπάρχει ήδη";
+"calculatedistances" = "Υπολογίζει Αποστάσεις ...";
 "ok" = "Εντάξει";
+"enableInternetConnection" = "Παρακαλώ Ενεργοποιήστε Σύνδεση στο Internet για Υπολογισμό των Αποστάσεων";
 "station" = "Στάση";
+"internetProblem" = "Πρόβλημα Σύνδεσης Δικτύου";
+"successfullCreate" = "Επιτυχής Εγγραφή";
+"createAccount" = "Δημιουργείται ο Λογαριασμός";
 "navigationTitle" = "Πλοήγηση";
 "linesTitle" = "Γραμμές";
 "aboutFestival" = "Σχετικά με Φεστιβάλ Κινηματογράφου Θεσσαλονίκης";

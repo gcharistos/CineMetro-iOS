@@ -164,6 +164,22 @@
 /* Class = "IBUIButton"; normalTitle = "Lines"; ObjectID = "kdV-sb-6ii"; */
 "kdV-sb-6ii.normalTitle" = "Γραμμές";
 
+/* Class = "IBUITableViewSection"; headerTitle = "Γλώσσα"; ObjectID = "iHg-wJ-BKX"; */
+"iHg-wJ-BKX.headerTitle" = "Συνολικοί Πόντοι";
+
+/* Class = "IBUILabel"; text = "Red Line : "; ObjectID = "KOv-ve-P4F"; */
+"KOv-ve-P4F.text" = "Κόκκινη Γραμμή : ";
+
+/* Class = "IBUILabel"; text = "Blue Line : "; ObjectID = "CqE-rZ-4tr"; */
+"CqE-rZ-4tr.text" = "Μπλέ Γραμμή : ";
+
+/* Class = "IBUILabel"; text = "Green Line : "; ObjectID = "fae-Ot-UPM"; */
+"fae-Ot-UPM.text" = "Πράσινη Γραμμή : ";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Γλώσσα"; ObjectID = "vAO-Xg-tx6"; */
+"vAO-Xg-tx6.headerTitle" = "Βαθμολογημένες Στάσεις";
+
+
 /* Class = "IBUIButton"; normalTitle = "Lines"; ObjectID = "9jS-Kf-9ng"; */
 "9jS-Kf-9ng.normalTitle" = "Γραμμές";
 

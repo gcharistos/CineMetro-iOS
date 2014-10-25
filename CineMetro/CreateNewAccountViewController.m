@@ -16,9 +16,7 @@
 @end
 
 @implementation CreateNewAccountViewController
-@synthesize profilePhoto;
 @synthesize emailTextField;
-@synthesize addImageButton;
 @synthesize passwordTextField;
 PFUser *appUser;
 
@@ -34,36 +32,10 @@ PFUser *appUser;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeProfilePhoto:)];
-    [profilePhoto addGestureRecognizer:gesture];
-
+   
         // Do any additional setup after loading the view.
 }
 
--(void)changeProfilePhoto:(UITapGestureRecognizer *)sender{
-    //Simulator doesn't have camera . print error message
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        
-        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"errorMessage",@"Message")
-                                                              message:@"Device has no camera"
-                                                             delegate:nil
-                                                    cancelButtonTitle:NSLocalizedString(@"ok",@"Message")
-                                                    otherButtonTitles: nil];
-        
-        [myAlertView show];
-        return; // end process
-        
-    }
-    NSLog(@"SSSSSS");
-    
-    
-    UIImagePickerController  *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = NO;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [self presentViewController:picker animated:YES completion:NULL];
-    
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -88,43 +60,6 @@ PFUser *appUser;
     
 }
 
-// pick photo from camera and initialize cameraPhoto variable
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *chosenImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-    profilePhoto.image = chosenImage;    
-    profilePhoto.layer.cornerRadius = profilePhoto.frame.size.width / 2;
-    profilePhoto.clipsToBounds = YES;
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-}
-
-
-- (IBAction)takePhoto:(id)sender {
-    
-    //Simulator doesn't have camera . print error message
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        
-        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"errorMessage",@"Message")
-                                                              message:@"Device has no camera"
-                                                             delegate:nil
-                                                    cancelButtonTitle:NSLocalizedString(@"ok",@"Message")
-                                                    otherButtonTitles: nil];
-        
-        [myAlertView show];
-        return; // end process
-        
-    }
-    
-    
-    UIImagePickerController  *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = NO;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [self presentViewController:picker animated:YES completion:NULL];
-}
-
-
-
-
 
 #pragma mark - Navigation
 
@@ -146,16 +81,10 @@ PFUser *appUser;
     PFUser *user = [[PFUser alloc]init];
     user.username = emailTextField.text;
     user.password = passwordTextField.text;
-    NSData *imageData = UIImageJPEGRepresentation(profilePhoto.image, 0.05f);
-    NSString *filename = [NSString stringWithFormat:@"file.jpg"];
     NSArray *redArray = [[NSArray alloc]initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], nil];
     NSArray *blueArray = [[NSArray alloc]initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], nil];
     NSArray *greenArray = [[NSArray alloc]initWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], nil];
-    if(imageData != nil){
-       PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
-        [user setObject:imageFile forKey:@"profileImage"];
-
-    }
+   
     [user setObject:@0 forKey:@"redLine"];
     [user setObject:@0 forKey:@"greenLine"];
     [user setObject:@0 forKey:@"blueLine"];
@@ -164,27 +93,17 @@ PFUser *appUser;
     [user setObject:greenArray  forKey:@"greenLineStations"];
     [user setObject:blueArray forKey:@"blueLineStations"];
     
-    BOOL validateEmail = [self validateEmailWithString:emailTextField.text];
+    
     if([passwordTextField.text length] == 0 || [emailTextField.text length] == 0){
         UIAlertView *alertView =
-        [[UIAlertView alloc] initWithTitle:@"Please fill Username and Password Fields"
+        [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"fillcreateAccount",@"word")
                                    message:nil
                                   delegate:self
                          cancelButtonTitle:nil
-                         otherButtonTitles:@"Ok", nil];
+                         otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
         [alertView show];
         return;
         
-    }
-    if(validateEmail == NO ){
-        UIAlertView *alertView =
-        [[UIAlertView alloc] initWithTitle:@"Email Not Valid"
-                                   message:nil
-                                  delegate:self
-                         cancelButtonTitle:nil
-                         otherButtonTitles:@"Ok", nil];
-        [alertView show];
-        return;
     }
     
     PFQuery *query = [[PFQuery alloc]initWithClassName:@"User"];
@@ -192,7 +111,14 @@ PFUser *appUser;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects,NSError *error)
     {
         if([objects count] != 0){
-            NSLog(@"EXISTS");
+            UIAlertView *alertView =
+            [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"usernameExists",@"word")
+                                       message:nil
+                                      delegate:self
+                             cancelButtonTitle:nil
+                             otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
+            [alertView show];
+
             return;
         }
 
@@ -200,7 +126,7 @@ PFUser *appUser;
     }];
     
     MBProgressHUD *createAccount = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    createAccount.labelText = @"Creating Account";
+    createAccount.labelText = NSLocalizedString(@"createAccount",@"word");
     createAccount.mode = MBProgressHUDModeIndeterminate;
     [createAccount show:YES];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
@@ -210,7 +136,7 @@ PFUser *appUser;
          {
                           // Display an alert view to show the error message
              UIAlertView *alertView =
-             [[UIAlertView alloc] initWithTitle:@"Username Already Exists Or Internet Connection not Enabled"
+             [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"internetProblem",@"word")
                                         message:nil
                                        delegate:self
                               cancelButtonTitle:nil
@@ -225,11 +151,11 @@ PFUser *appUser;
             
              // Display an alert view to show the error message
              UIAlertView *alertView =
-             [[UIAlertView alloc] initWithTitle:@"Successful Registration"
+             [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"successfullCreate",@"word")
                                         message:nil
                                        delegate:self
                               cancelButtonTitle:nil
-                              otherButtonTitles:@"Ok", nil];
+                              otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
              [alertView show];
 
              [self performSegueWithIdentifier:@"createSegue" sender:self];
@@ -240,10 +166,5 @@ PFUser *appUser;
 
 
 
-- (BOOL)validateEmailWithString:(NSString*)email
-{
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:email];
-}
+
 @end

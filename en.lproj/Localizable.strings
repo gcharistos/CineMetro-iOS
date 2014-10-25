@@ -9,9 +9,18 @@
 
 "emptytable" = "Please Select Line";
 "station" = "Station";
+"successfullLogin" = "Successfull Login";
+"wronguser" = "Wrong Username Or Password";
+"fillcreateAccount" = "Please fill Username and Password Fields";
+"calculatedistances" = "Calculating Distances ...";
 "login" = "Log In";
+"usernameExists" = "Username already exists";
 "navigationTitle" = "Navigation";
 "linesTitle" = "Lines";
+"enableInternetConnection" = "Please enable Internet Connection to Calculate Distances";
+"internetProblem" = "Internet Connection Problem";
+"createAccount" = "Creating Account";
+"successfullCreate" = "Successful Registration";
 "aboutFestival" = "About Thessaloniki International Film Festival";
 "hideList" = "Hide List";
 "showList" = "Show List";

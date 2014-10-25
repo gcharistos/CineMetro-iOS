@@ -18,4 +18,5 @@
   - (IBAction)settingsButtonPressed:(id)sender;
 -(IBAction)showHidePressed:(id)sender;
 -(void)showUserLocation;
+
 @end

@@ -159,6 +159,21 @@
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "jU2-bM-5iu"; */
 "jU2-bM-5iu.text" = "Label";
 
+/* Class = "IBUITableViewSection"; headerTitle = "Γλώσσα"; ObjectID = "iHg-wJ-BKX"; */
+"iHg-wJ-BKX.headerTitle" = "Total Points";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Γλώσσα"; ObjectID = "vAO-Xg-tx6"; */
+"vAO-Xg-tx6.headerTitle" = "Stations Rated";
+
+/* Class = "IBUILabel"; text = "Red Line : "; ObjectID = "KOv-ve-P4F"; */
+"KOv-ve-P4F.text" = "Red Line : ";
+
+/* Class = "IBUILabel"; text = "Blue Line : "; ObjectID = "CqE-rZ-4tr"; */
+"CqE-rZ-4tr.text" = "Βlue Line : ";
+
+/* Class = "IBUILabel"; text = "Green Line : "; ObjectID = "fae-Ot-UPM"; */
+"fae-Ot-UPM.text" = "Green Line : ";
+
 /* Class = "IBUILabel"; text = "v 1.0"; ObjectID = "kcj-Lr-J9b"; */
 "kcj-Lr-J9b.text" = "v 1.0";
 
