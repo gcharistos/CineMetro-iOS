@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "RatingViewController.h"
+#import <MapKit/MapKit.h>
 
-@interface BlueDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIActionSheetDelegate>{
+@interface BlueDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIActionSheetDelegate,MKMapViewDelegate>{
     IBOutlet UIScrollView *scroller;
 }
 
@@ -23,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *directorsLabel;
 @property (weak, nonatomic) IBOutlet UITextView *info;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *mapview;
 
 @end
 

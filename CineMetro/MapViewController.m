@@ -39,7 +39,7 @@ NSMutableArray *distances;
 CLLocationManager *locationManager;
 int selectedIndex;
 Reachability* reachability;
-
+NSTimer *timer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -320,6 +320,12 @@ Reachability* reachability;
     if(flag == 0){
       [locationManager stopUpdatingLocation];
       [tableview reloadData];
+        timer = [[NSTimer alloc]init];
+       timer = [NSTimer scheduledTimerWithTimeInterval:60.0
+                                         target:self
+                                       selector:@selector(showUserLocation)
+                                       userInfo:nil
+                                        repeats:NO];
     }
 
 }
@@ -359,7 +365,7 @@ Reachability* reachability;
     MKPointAnnotation *annotationTapped = (MKPointAnnotation *)view.annotation;
     //info button pressed
     if(control.tag == 100){
-        selectedIndex =[redPins indexOfObject:annotationTapped];
+        selectedIndex =(int)[redPins indexOfObject:annotationTapped];
         if(visibleLine == 1){
             [self performSegueWithIdentifier:@"redLine" sender:nil];
         }
@@ -376,7 +382,7 @@ Reachability* reachability;
     else {
         MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:annotationTapped.coordinate addressDictionary:nil];
         MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
-        destination.name = annotationTapped.title;
+        destination.name = annotationTapped.subtitle;
         [destination openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving}];
     }
     
@@ -404,6 +410,10 @@ Reachability* reachability;
     
     //remove all distances
     [distances removeAllObjects];
+    
+    //stop timer for location update
+    [timer invalidate];
+    timer = nil;
 
 }
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -415,6 +425,7 @@ Reachability* reachability;
             }
             visibleLine  = buttonIndex;
             [self removeObjectsFromMap];
+            
             [self UploadLine:@"RedLineStations" :[UIColor redColor]];
         }
         else if(buttonIndex == 2){
@@ -500,7 +511,7 @@ Reachability* reachability;
    // cell.backgroundColor = lineColor;
     UILabel *titleLabel = (UILabel *)[cell viewWithTag:105];
     UILabel *subtitleLabel = (UILabel *)[cell viewWithTag:106];
-    NSString *positionString = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),indexPath.row+1];
+    NSString *positionString = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),(int)indexPath.row+1];
     titleLabel.text = positionString;
     [titleLabel setTextColor:lineColor];
    // titleLabel.textColor =[UIColor whiteColor];
@@ -508,6 +519,9 @@ Reachability* reachability;
     UILabel *distanceLabel = (UILabel *)[cell viewWithTag:107];
     if(distances.count !=0){
       distanceLabel.text = [distances objectAtIndex:indexPath.row];
+    }
+    else {
+        distanceLabel.text = @"";
     }
    // subtitleLabel.textColor = [UIColor whiteColor];
     
@@ -539,8 +553,14 @@ Reachability* reachability;
     }
     
 }
-
-
-- (IBAction)calculatePressed:(id)sender {
+//remove timer for location update . remove reachability notification
+-(void)viewDidDisappear:(BOOL)animated{
+    [timer invalidate];
+    timer = nil;
+    [reachability stopNotifier];
+    reachability = nil;
 }
+
+
+
 @end

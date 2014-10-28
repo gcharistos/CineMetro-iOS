@@ -208,6 +208,15 @@
 /* Class = "IBUIButton"; normalTitle = "Thessaloniki International Film Festival"; ObjectID = "rbH-4a-2g3"; */
 "rbH-4a-2g3.normalTitle" = "Σχετικά Με Φεστιβάλ";
 
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "ljW-1L-j1R"; */
+"ljW-1L-j1R.text" = "Χάρτης";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "oft-Sx-7lf"; */
+"oft-Sx-7lf.text" = "Χάρτης";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "nLq-Oi-dmi"; */
+"nLq-Oi-dmi.text" = "Χάρτης";
+
 /* Class = "IBUITabBarItem"; title = "Green Line"; ObjectID = "sLo-Er-z5V"; */
 "sLo-Er-z5V.title" = "Πράσινη Γραμμή";
 
@@ -217,8 +226,8 @@
 /* Class = "IBUIButton"; normalTitle = "Directions"; ObjectID = "snE-ey-u6j"; */
 "snE-ey-u6j.normalTitle" = "Directions";
 
-/* Class = "IBUINavigationItem"; title = "Profile"; ObjectID = "tS5-Rf-vT0"; */
-"tS5-Rf-vT0.title" = "Προφίλ";
+/* Class = "IBUINavigationItem"; title = "Profile"; ObjectID = "LRi-yF-deD"; */
+"LRi-yF-deD.title" = "Προφίλ";
 
 /* Class = "IBUIButton"; normalTitle = "Create"; ObjectID = "uZF-pP-K45"; */
 "uZF-pP-K45.normalTitle" = "Δημιουργία";

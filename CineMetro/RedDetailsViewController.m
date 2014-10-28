@@ -24,6 +24,7 @@
 @synthesize tableview;
 @synthesize title;
 @synthesize indexPath;
+@synthesize mapview;
 @synthesize theaterTitle;
 NSMutableArray *images;
 NSArray *currentList;
@@ -58,6 +59,20 @@ NSMutableArray *points;
     [textview setFont:[UIFont systemFontOfSize:15]];
     
     images = [station objectForKey:@"Images"];
+    
+    mapview.delegate = self;
+    MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc] init];
+    CLLocationCoordinate2D theCoordinate;
+    theCoordinate.latitude = [[station objectForKey:@"Latitude"]doubleValue];
+    theCoordinate.longitude = [[station objectForKey:@"Longitude"]doubleValue];
+    myAnnotation.coordinate = theCoordinate;
+    myAnnotation.title = [station objectForKey:@"Title"];
+    myAnnotation.subtitle = [station objectForKey:@"Subtitle"];
+    [mapview addAnnotation:myAnnotation];
+    MKCoordinateSpan span = {0.05,0.05};
+    MKCoordinateRegion region = {theCoordinate, span};
+    [mapview setRegion:region];
+    [mapview selectAnnotation:myAnnotation animated:YES];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
 
 
@@ -66,8 +81,42 @@ NSMutableArray *points;
 
 -(void)viewDidLayoutSubviews{
     [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,900)];
+    [scroller setContentSize:CGSizeMake(320,950)];
 }
+
+//set custom annotation view to support callout accessory control mode
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    
+    MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
+    
+    annotationView.canShowCallout = YES;
+    
+    annotationView.image = [UIImage imageNamed:@"redPin.png"];
+    
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+    [button setImage:[UIImage imageNamed:@"directions"] forState:UIControlStateNormal];
+    
+    annotationView.rightCalloutAccessoryView = button;
+    annotationView.rightCalloutAccessoryView.tag = 200;
+    return annotationView;
+}
+
+//if annotation info button pressed go to details
+- (void)mapView:(MKMapView *)mapView
+ annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    MKPointAnnotation *annotationTapped = (MKPointAnnotation *)view.annotation;
+    
+    //directions button pressed
+    MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:annotationTapped.coordinate addressDictionary:nil];
+    MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
+    destination.name = annotationTapped.subtitle;
+    [destination openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving}];
+    
+    
+}
+
 
 
 

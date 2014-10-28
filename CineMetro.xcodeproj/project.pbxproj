@@ -152,6 +152,7 @@
 		1F9362C31988F6630088A0BF /* red51.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9362C01988F6630088A0BF /* red51.jpg */; };
 		1F9362C41988F6630088A0BF /* red52.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9362C11988F6630088A0BF /* red52.jpg */; };
 		1F9362C51988F6630088A0BF /* red53.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9362C21988F6630088A0BF /* red53.jpg */; };
+		1F941DF41A000E8D0066FF34 /* show_in_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F941DF31A000E8D0066FF34 /* show_in_map.png */; };
 		1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F996E0719AD15AD004675BB /* TabBarViewController.m */; };
 		1F9DB73519CA137A00C3E3FC /* facebookLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB73419CA137A00C3E3FC /* facebookLogo.png */; };
 		1F9DB73919CA17F900C3E3FC /* twitter-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB73819CA17F900C3E3FC /* twitter-logo.jpg */; };
@@ -372,6 +373,7 @@
 		1F9362C01988F6630088A0BF /* red51.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red51.jpg; sourceTree = "<group>"; };
 		1F9362C11988F6630088A0BF /* red52.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red52.jpg; sourceTree = "<group>"; };
 		1F9362C21988F6630088A0BF /* red53.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red53.jpg; sourceTree = "<group>"; };
+		1F941DF31A000E8D0066FF34 /* show_in_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show_in_map.png; sourceTree = "<group>"; };
 		1F98CAF9196C790E00A9EB54 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1F996E0619AD15AD004675BB /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
 		1F996E0719AD15AD004675BB /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
@@ -847,6 +849,7 @@
 			isa = PBXGroup;
 			children = (
 				1F8869C219E2D9AA000FBD56 /* forward-50.png */,
+				1F941DF31A000E8D0066FF34 /* show_in_map.png */,
 				1F8869C419E2D9C8000FBD56 /* back-50.png */,
 				1F7A62E119FAF37500237627 /* cinemetroLogoBlurred.png */,
 				1FBD0D5319CF70D30001280B /* film_movie_camera_play_music-512.png */,
@@ -1055,6 +1058,7 @@
 				1F48BDEF199AB36900BD30C0 /* green63.jpg in Resources */,
 				1F2DC9B819C2208B00265605 /* voutsas.jpg in Resources */,
 				1F13177119DCB36C00DB8316 /* blue33.jpg in Resources */,
+				1F941DF41A000E8D0066FF34 /* show_in_map.png in Resources */,
 				1FC3290419D2E2D900B69363 /* red63.jpg in Resources */,
 				1F2DC9A719C2208B00265605 /* fermas_nikos.jpg in Resources */,
 				1F13176B19DCB36C00DB8316 /* blue04.jpg in Resources */,
@@ -1309,6 +1313,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1332,6 +1337,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

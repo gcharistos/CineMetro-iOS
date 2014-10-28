@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "RatingViewController.h"
-@interface RedDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate,UIScrollViewDelegate,UIActionSheetDelegate>{
+#import <MapKit/MapKit.h>
+@interface RedDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate,UIScrollViewDelegate,UIActionSheetDelegate,MKMapViewDelegate>{
     IBOutlet UIScrollView *scroller;
 }
 @property NSDictionary *station;
@@ -19,5 +20,6 @@
 - (IBAction)rateButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *theaterTitle;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *mapview;
 
 @end

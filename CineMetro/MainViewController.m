@@ -59,6 +59,7 @@ NSArray *array;
             flag = 1;
             // retrieve current user
             PFQuery *userQuery = [PFUser query];
+            userQuery.cachePolicy = kPFCachePolicyNetworkElseCache;
             [userQuery whereKey:@"username" equalTo:retrieveUser];
             [userQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
                 user = [PFUser currentUser];

@@ -40,7 +40,7 @@ NSArray *textArray;
 
 -(void)viewDidLayoutSubviews{
     [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,900)];
+    [scroller setContentSize:CGSizeMake(320,1200)];
 }
 
 - (IBAction)mbprogresshudPressed:(id)sender {

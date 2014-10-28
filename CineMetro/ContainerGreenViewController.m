@@ -68,7 +68,7 @@ NSUInteger currentIndex;
         return nil;
     }
     // Create a new view controller and pass suitable data.
-    PageContentGreenViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentBlueViewController"];
+    PageContentGreenViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentGreenViewController"];
     pageContentViewController.imageFile = [self.pageImages[index]objectForKey:@"Image"];
     pageContentViewController.desc = [self.pageImages[index]objectForKey:@"text"];
     pageContentViewController.year = [self.pageImages[index]objectForKey:@"year"];

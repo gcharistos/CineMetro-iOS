@@ -76,4 +76,8 @@
 }
 */
 
+
+- (IBAction)mapPressed:(id)sender {
+    NSLog(@"pressed !!!!!!!");
+}
 @end

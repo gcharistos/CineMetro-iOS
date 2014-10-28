@@ -21,4 +21,5 @@
 @property (strong,nonatomic) ShowImageViewController *popViewController;
 @property GreenDetailsViewController *parent;
 @property (weak, nonatomic) IBOutlet UITextView *textview;
+- (IBAction)mapPressed:(id)sender;
 @end

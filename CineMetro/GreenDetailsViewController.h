@@ -9,8 +9,9 @@
 
 #import <UIKit/UIKit.h>
 #import "RatingViewController.h"
+#import <MapKit/MapKit.h>
 
-@interface GreenDetailsViewController : UIViewController<UIActionSheetDelegate,UIAlertViewDelegate,UIScrollViewDelegate>{
+@interface GreenDetailsViewController : UIViewController<UIActionSheetDelegate,UIAlertViewDelegate,UIScrollViewDelegate,MKMapViewDelegate>{
     IBOutlet UIScrollView *scroller;
     
 }
@@ -26,4 +27,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *forwardButton;
 - (IBAction)backButtonPressed:(id)sender;
 - (IBAction)forwardButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet MKMapView *mapview;
 @end

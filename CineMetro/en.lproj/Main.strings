@@ -217,8 +217,8 @@
 /* Class = "IBUIButton"; normalTitle = "Directions"; ObjectID = "snE-ey-u6j"; */
 "snE-ey-u6j.normalTitle" = "Directions";
 
-/* Class = "IBUINavigationItem"; title = "Profile"; ObjectID = "tS5-Rf-vT0"; */
-"tS5-Rf-vT0.title" = "Profile";
+/* Class = "IBUINavigationItem"; title = "Profile"; ObjectID = "LRi-yF-deD"; */
+"LRi-yF-deD.title" = "Profile";
 
 /* Class = "IBUIButton"; normalTitle = "Create"; ObjectID = "uZF-pP-K45"; */
 "uZF-pP-K45.normalTitle" = "Create";
@@ -231,6 +231,16 @@
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "yGp-hw-JsV"; */
 "yGp-hw-JsV.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "ljW-1L-j1R"; */
+"ljW-1L-j1R.text" = "Map";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "oft-Sx-7lf"; */
+"oft-Sx-7lf.text" = "Map";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "nLq-Oi-dmi"; */
+"nLq-Oi-dmi.text" = "Map";
+
 
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "ytf-OK-cjh"; */
 "ytf-OK-cjh.text" = "Title";
