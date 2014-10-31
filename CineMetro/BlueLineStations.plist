@@ -43,7 +43,7 @@
 					<string>fragkedakhs_vasilis.jpg</string>
 				</dict>
 			</array>
-			<key>text</key>
+			<key>GrText</key>
 			<string>Η αληθινή ιστορία επιβίωσης 160 παιδιών στην Θεσσαλονίκη της Κατοχής. 
 
 Η ταινία έχει σαν χώρο δράσης την Θεσσαλονίκη μεταξύ των δεκαετιών 1940-50.
@@ -53,10 +53,14 @@
 Οι μικροί πρωταγωνιστές προέρχονται απο το Ορφανοτροφείο Αθηνών.
 
 Χρυσό Βραβείο στο Φεστιβάλ Κινηματογράφου του Εδιμβούργου (1955). Η ταινία περιδιαβαίνει την Θεσσαλονίκη της δεκαετίας του &apos;50 (Κέντρο και Άνω Πόλη).</string>
+			<key>EnText</key>
+			<string>Based on a true story of 160 orphans, who live in Thessaloniki under the German Occupation during the 1940s. The film wanders around the centre and the acropolis of Thessaloniki.</string>
 			<key>Title</key>
 			<string>1η Στάση</string>
-			<key>Subtitle</key>
+			<key>GrSubtitle</key>
 			<string>Το ξυπόλητο τάγμα (1955)</string>
+			<key>EnSubtitle</key>
+			<string>The Barefoot Badallion (1955)</string>
 			<key>Latitude</key>
 			<string>40.6197797</string>
 			<key>Longitude</key>
@@ -78,12 +82,14 @@
 					<string>dalianidis.jpg</string>
 				</dict>
 			</array>
-			<key>text</key>
+			<key>GrText</key>
 			<string>Δύο αδέρφια προσπαθούν να ισορροπήσουν ανάμεσα στις αισθηματικές τους σχέσεις και την συντηρητικές αρχές της πατρικής οικίας τους. 
 
 Εξ ολοκλήρου γυρισμένη στην Θεσσαλονίκη: Πανόραμα, περιοχή Ανθέων, Πλ. Αριστοτέλους
 
 Μεταφορά του θεατρικού έργου του Δ. Ψαθά “Εξοχικόν Κέντρον ο Έρως”</string>
+			<key>EnText</key>
+			<string>Two brothers try to balance between the emotional relations and the conservative principles of a paternal family. The film is totally shot in Thessaloniki (Panorama, Antheon area, city centre).</string>
 			<key>Actors</key>
 			<array>
 				<dict>
@@ -113,8 +119,10 @@
 			</array>
 			<key>Title</key>
 			<string>2η Στάση</string>
-			<key>Subtitle</key>
+			<key>GrSubtitle</key>
 			<string>Ο ατσίδας (1961)</string>
+			<key>EnSubtitle</key>
+			<string>The cutie (O atsidas, 1961)</string>
 			<key>Latitude</key>
 			<string>40.632804</string>
 			<key>Longitude</key>
@@ -169,7 +177,7 @@
 					<string>voutsas.jpg</string>
 				</dict>
 			</array>
-			<key>text</key>
+			<key>GrText</key>
 			<string>Ένα νεανικό μουσικό συγκρότημα, ένας προσωπάρχης που συνοδέυει την κόρη του αφεντικού του στη Θεσσαλονίκη, μια κληρονομιά που περιμένει έναν γάμο. Μια παρέα νέων ανθρώπων σε αστείες και ρομαντικές περιπέτειες. 
 
 Η ταινία έχει γυρίσματα σε χώρους όπως ΔΕΘ, Λευκός Πύργος, κ.α.
@@ -178,10 +186,15 @@
 
 Πρώτη κινηματογραφική εμφάνιση για την 17χρόνη Έλενα Ναθαναήλ
 </string>
+			<key>EnText</key>
+			<string>During the Thessaloniki International Fair, a group of young people gets involved in funny love affairs.
+The film is shot in many areas of the city, such as the Thessaloniki International Fair and the White Tower.</string>
 			<key>Title</key>
 			<string>3η Στάση</string>
-			<key>Subtitle</key>
+			<key>GrSubtitle</key>
 			<string>Κάτι να καίει (1964)</string>
+			<key>EnSubtitle</key>
+			<string>Some like it hot (1964)</string>
 			<key>Latitude</key>
 			<string>40.628192</string>
 			<key>Longitude</key>
@@ -224,7 +237,7 @@
 				<key>Icon</key>
 				<string>kanelopoulos.jpeg</string>
 			</dict>
-			<key>text</key>
+			<key>GrText</key>
 			<string>Ένα ταξίδι με τρένο, μια στάση με ολιγόωρη καθυστέρηση, ένας δυνατός έρωτας δύο ανθρώπων, μια παρένθεση. 
 
 Βασισμένη στο θεατρικό έργο του Νοέλ Κάουαρντ “Ασάλευτη Ζωή”
@@ -233,10 +246,15 @@
 
 Η ταινία γυρίστηκε σε: Νέο Σιδηροδρομικό Σταθμό, Νέα Παραλία Θεσσαλονίκης και στην περιοχή Αρετσού (Ν. Κρήνη)
 </string>
+			<key>EnText</key>
+			<string>A train journey with a delayed stop. A strong love affair, a parenthesis in the lives of two people. The film won 4 prizes in Thessaloniki Film Festival. 
+It was shot in the sea front of Thessaloniki and the area of Aretsou (Nea Krini).</string>
 			<key>Title</key>
 			<string>4η Στάση</string>
-			<key>Subtitle</key>
+			<key>GrSubtitle</key>
 			<string>Παρένθεση (1968)</string>
+			<key>EnSubtitle</key>
+			<string>Parenthesis (1968)</string>
 			<key>Latitude</key>
 			<string>40.6223568</string>
 			<key>Longitude</key>
@@ -272,7 +290,7 @@
 					<string>voulgaris.jpg</string>
 				</dict>
 			</array>
-			<key>text</key>
+			<key>GrText</key>
 			<string>Η πορεία ενός ταλαντούχου ποδοσφαιριστή, ο οποίος μέσα από νίκες και ήττες, τραυματισμούς και παρασκήνιο, θα καταλάβει ότι η επιτυχία έχει το τίμημά της. 
 
 Μέρος της ταινίας έχει γυριστεί στην Θεσσαλονίκη: Πλ. Αριστοτέλους, Εύοσμος.
@@ -282,10 +300,15 @@
 2 βραβεία στο Φεστιβάλ Θεσσαλονίκης
 
 Ο πρωταγωνιστής της ταινίας Στρ. Τζώρτζογλου την ίδια χρονιά θα συμμετέχει στα γυρίσματα της ταινίας του Θ. Αγγελόπουλου “Τοπίο στην Ομίχλη” που γίνονται στην Θεσσαλονίκη.</string>
+			<key>EnText</key>
+			<string>The journey of a talented football player  goes through defeats, injuries and background, which will make him understand that success comes at a price.
+Part of the film was shot in Thessaloniki (Aristotelous Square, Evosmos).</string>
 			<key>Title</key>
 			<string>5η Στάση</string>
-			<key>Subtitle</key>
+			<key>GrSubtitle</key>
 			<string>Η Φανέλλα με το Νο9 (1987)</string>
+			<key>EnSubtitle</key>
+			<string>The striker with number 9 (1987)</string>
 			<key>Latitude</key>
 			<string>40.632804</string>
 			<key>Longitude</key>
@@ -327,7 +350,7 @@
 					<string>bentivolio.jpg</string>
 				</dict>
 			</array>
-			<key>text</key>
+			<key>GrText</key>
 			<string>Ένας μεσήλικας συγγραφέας, που ασχολείται με το έργο του Δ. Σολωμού, αναζητάει τις αναμνήσεις μιας ζωής σε μια περιπλάνηση μιας ημέρας. 
 
 Γυρισμένη σε αρχοντικό της Βασ. Όλγας, στην Παλιά Παραλία, Πλ. Αριστοτέλους και σε χώρους της οδού Τσιμισκή. 
@@ -335,10 +358,14 @@
 Ο Θόδωρος Αγγελόπουλος γύρισε στην Θεσσαλονίκη μέρος ή εξ ολοκλήρου 4 ταινίες. Ανάμεσα τους και την “Αιωνιότητα”
 
 Χρυσός Φοίνικας στο Φεστιβάλ Καννών του 1998</string>
+			<key>EnText</key>
+			<string>The film traces the final days of Alexandre, a celebrated Greek writer as he prepares to leave his seaside home forever. It is shot in Thessaloniki, in a villa located in Vassilisis Olgas Avenue, as well as in the city’s sea front, Aristotelous Square and Tsimiski Street.</string>
 			<key>Title</key>
 			<string>6η Στάση</string>
-			<key>Subtitle</key>
+			<key>GrSubtitle</key>
 			<string>Μια Αιωνιότητα και μια μέρα (1998)</string>
+			<key>EnSubtitle</key>
+			<string>Eternity and a day (1998)</string>
 			<key>Latitude</key>
 			<string>40.6148604</string>
 			<key>Longitude</key>
@@ -381,16 +408,20 @@
 					<string>syllas_tzoumerkas-200x200.jpg</string>
 				</dict>
 			</array>
-			<key>text</key>
+			<key>GrText</key>
 			<string>Οικογενειακό δράμα ως ακτινογραφία της νεοελληνικής κοινωνικής πραγματικότητας. 
 
 Η ταινία πραγματοποιεί μεγάλο μέρος της δράσης της σε γνωστά σημεία της σημερινής Θεσσαλονίκης: Λεωφόρος Στρατού (ΕΡΤ3), Νέα Παραλία, Αγίος Δημήτριος. 
 
 Συμμετοχή στην Εβδομάδα Κριτικής του Φεστιβάλ Βενετίας</string>
+			<key>EnText</key>
+			<string>A story about a family and a country falling apart, inspired by true events. A large part of the film is shot in central places of Thessaloniki (Leoforos Stratou Str, the sea front, Saint Demetrius Church).</string>
 			<key>Title</key>
 			<string>7η Στάση</string>
-			<key>Subtitle</key>
+			<key>GrSubtitle</key>
 			<string>Χώρα Προέλευσης (2010)</string>
+			<key>EnSubtitle</key>
+			<string>Homeland (2010)</string>
 			<key>Latitude</key>
 			<string>40.638799</string>
 			<key>Longitude</key>
@@ -405,7 +436,7 @@
 				<string>green74.png</string>
 				<string>green75.png</string>
 			</array>
-			<key>text</key>
+			<key>GrText</key>
 			<string>Όταν ο Κάπτεν Φ.Ρομ, απαιτώντας να τον φωνάζουν με το πραγματικό του όνομα, μετατρέπει τον Λευκό Πύργο σε γιγάντιο φραπέ κι εξαφανίζει όλο το γύρο από τα σουβλατζίδικα της Θεσσαλονίκης, ο Σούπερ Δημήτριος αναλαμβάνει να σώσει τη συμπρωτεύουσα.
 
 Σάτιρα θεσσαλονικιώτικων και βορειοελλαδικών κλισέ με της Μεταπολίτευσης με πολύ χιούμορ. 
@@ -413,6 +444,9 @@
 Τόποι γυρισμάτων: Θεολογική Σχολή ΑΠΘ, Νέο Δημαρχειακό Μέγαρο, Λευκός Πύργος, ΟΣΕ, Τούμπα 
 
 Βραβείο κοινού στο Φεστιβάλ Θεσσαλονίκης</string>
+			<key>EnText</key>
+			<string>In a surreal, parallel universe, Thessaloniki has its very own superhero: Super Demetrios.
+A film shot around the city of Thessaloniki, showcasing many of the city’s public buildings (the University, the City Hall, the White Tower, the Railway Station).</string>
 			<key>Directors</key>
 			<array>
 				<dict>
@@ -445,8 +479,10 @@
 			</array>
 			<key>Title</key>
 			<string>8η Στάση</string>
-			<key>Subtitle</key>
+			<key>GrSubtitle</key>
 			<string>Σούπερ Δημήτριος (2011)</string>
+			<key>EnSubtitle</key>
+			<string>Super Demetrios (2011)</string>
 			<key>Latitude</key>
 			<string>40.6308363</string>
 			<key>Longitude</key>
@@ -458,6 +494,6 @@
 	<key>GrName</key>
 	<string>Θεσσαλονίκη μέσα απο τον Ελληνικό Κινηματογράφο</string>
 	<key>EnName</key>
-	<string>Movies</string>
+	<string>Thessaloniki in Greek films</string>
 </dict>
 </plist>

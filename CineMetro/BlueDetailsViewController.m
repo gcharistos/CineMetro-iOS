@@ -66,10 +66,7 @@ NSMutableArray *points;
     currentList = anns;
     actors = [[currentList objectAtIndex:position1]objectForKey:@"Actors"];
     directors  = [[currentList objectAtIndex:position1]objectForKey:@"Directors"];
-    info.text = [[currentList objectAtIndex:position1]objectForKey:@"text"];
    // [info setTextColor:[UIColor whiteColor]];
-    [info setFont:[UIFont systemFontOfSize:18]];
-    movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
     images = [[anns objectAtIndex:position1]objectForKey:@"Images"];
     titles = [[NSArray alloc]initWithObjects:NSLocalizedString(@"factors",@"word"),NSLocalizedString(@"info",@"word"), nil];
     
@@ -79,8 +76,21 @@ NSMutableArray *points;
     theCoordinate.latitude = [[[anns objectAtIndex:position1] objectForKey:@"Latitude"]doubleValue];
     theCoordinate.longitude = [[[anns objectAtIndex:position1] objectForKey:@"Longitude"]doubleValue];
     myAnnotation.coordinate = theCoordinate;
-    myAnnotation.title = [[anns objectAtIndex:position1] objectForKey:@"Title"];
-    myAnnotation.subtitle = [[anns objectAtIndex:position1] objectForKey:@"Subtitle"];
+    myAnnotation.title = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),position1+1];
+    if([locale isEqualToString:@"el"]){
+        info.text = [[currentList objectAtIndex:position1]objectForKey:@"GrText"];
+        movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"GrSubtitle"];
+        myAnnotation.subtitle = [[anns objectAtIndex:position1] objectForKey:@"GrSubtitle"];
+
+    }
+    else if([locale isEqualToString:@"en"]){
+        info.text = [[currentList objectAtIndex:position1]objectForKey:@"EnText"];
+        movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"EnSubtitle"];
+        myAnnotation.subtitle = [[anns objectAtIndex:position1] objectForKey:@"GrSubtitle"];
+
+    }
+    [info setFont:[UIFont systemFontOfSize:18]];
+
     [mapview addAnnotation:myAnnotation];
     MKCoordinateSpan span = {0.05,0.05};
     MKCoordinateRegion region = {theCoordinate, span};
