@@ -8,6 +8,7 @@
 
 #import "ContainerGreenViewController.h"
 #import "PageContentGreenViewController.h"
+#import "MainViewController.h"
 
 @interface ContainerGreenViewController ()
 
@@ -70,7 +71,12 @@ NSUInteger currentIndex;
     // Create a new view controller and pass suitable data.
     PageContentGreenViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentGreenViewController"];
     pageContentViewController.imageFile = [self.pageImages[index]objectForKey:@"Image"];
-    pageContentViewController.desc = [self.pageImages[index]objectForKey:@"text"];
+    if([locale isEqualToString:@"el"]){
+        pageContentViewController.desc = [self.pageImages[index]objectForKey:@"GrText"];
+    }
+    else if([locale isEqualToString:@"en"]){
+        pageContentViewController.desc = [self.pageImages[index]objectForKey:@"EnText"];
+    }
     pageContentViewController.year = [self.pageImages[index]objectForKey:@"year"];
     pageContentViewController.parent = parentController;
     if((index+1) != [self.pageImages count]){

@@ -8,6 +8,7 @@
 
 #import "GreenLineTableViewController.h"
 #import "GreenDetailsViewController.h"
+#import "MainViewController.h"
 
 @interface GreenLineTableViewController ()
 
@@ -48,8 +49,12 @@ NSMutableArray *titles;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"GreenLineStations" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     NSArray *anns = [dict objectForKey:@"Stations"];
-    
-    [lineName setText:[dict objectForKey:@"GrName"]];
+    if([locale isEqualToString:@"el"]){
+        [lineName setText:[dict objectForKey:@"GrName"]];
+    }
+    else if([locale isEqualToString:@"en"]){
+        [lineName setText:[dict objectForKey:@"EnName"]];
+    }
     station = anns; // initialize station variable
     for(int i=0;i<anns.count;i++){
         NSString *positionString = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),i+1];
@@ -90,7 +95,12 @@ NSMutableArray *titles;
     NSArray *imagedictionary = [[station objectAtIndex:indexPath.row]objectForKey:@"Images"];
     imageview.image = [UIImage imageNamed:[[imagedictionary objectAtIndex:0]objectForKey:@"Image"]];
     namelabel.text = [titles objectAtIndex:indexPath.row];
-    stationNameLabel.text = [[station objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
+    if([locale isEqualToString:@"el"]){
+        stationNameLabel.text = [[station objectAtIndex:indexPath.row]objectForKey:@"GrSubtitle"];
+    }
+    else if([locale isEqualToString:@"en"]){
+        stationNameLabel.text = [[station objectAtIndex:indexPath.row]objectForKey:@"EnSubtitle"];
+    }
     
     return cell;
 }

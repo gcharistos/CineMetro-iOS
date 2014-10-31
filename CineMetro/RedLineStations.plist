@@ -41,7 +41,7 @@
 			<key>GrSubtitle</key>
 			<string>Παλιά παραλία (Λιμάνι)</string>
 			<key>EnSubtitle</key>
-			<string>Sea front (the port)</string>
+			<string>Sea front (The port)</string>
 			<key>Latitude</key>
 			<string>40.635650</string>
 			<key>Longitude</key>
@@ -207,6 +207,6 @@ O Εξώστης υπήρξε πανελλαδικά το πρώτο free press.
 	<key>GrName</key>
 	<string>Τα σινεμά της πόλης </string>
 	<key>EnName</key>
-	<string>Cinemas</string>
+	<string>Cinema Theatres Of The City</string>
 </dict>
 </plist>

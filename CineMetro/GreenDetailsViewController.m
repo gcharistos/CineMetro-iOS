@@ -48,7 +48,7 @@ ContainerGreenViewController *dest;
         images = [[NSMutableArray alloc]init];
     //set navigation bar title
     // self.navigationItem.title =[station objectForKey:@"Subtitle"];
-    theaterTitle.text = [station objectForKey:@"Subtitle"];
+   
     images = [station objectForKey:@"Images"];
     mapview.delegate = self;
     MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc] init];
@@ -56,8 +56,17 @@ ContainerGreenViewController *dest;
     theCoordinate.latitude = [[station objectForKey:@"Latitude"]doubleValue];
     theCoordinate.longitude = [[station objectForKey:@"Longitude"]doubleValue];
     myAnnotation.coordinate = theCoordinate;
-    myAnnotation.title = [station objectForKey:@"Title"];
-    myAnnotation.subtitle = [station objectForKey:@"Subtitle"];
+    myAnnotation.title =[NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),indexPath+1];
+    if([locale isEqualToString:@"el"]){
+        theaterTitle.text = [station objectForKey:@"GrSubtitle"];
+        myAnnotation.subtitle = [station objectForKey:@"GrSubtitle"];
+
+    }
+    else if([locale isEqualToString:@"en"]){
+        theaterTitle.text = [station objectForKey:@"EnSubtitle"];
+        myAnnotation.subtitle = [station objectForKey:@"EnSubtitle"];
+
+    }
     [mapview addAnnotation:myAnnotation];
     MKCoordinateSpan span = {0.05,0.05};
     MKCoordinateRegion region = {theCoordinate, span};

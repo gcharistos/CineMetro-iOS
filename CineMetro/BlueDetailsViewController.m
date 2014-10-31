@@ -76,7 +76,7 @@ NSMutableArray *points;
     theCoordinate.latitude = [[[anns objectAtIndex:position1] objectForKey:@"Latitude"]doubleValue];
     theCoordinate.longitude = [[[anns objectAtIndex:position1] objectForKey:@"Longitude"]doubleValue];
     myAnnotation.coordinate = theCoordinate;
-    myAnnotation.title = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),position1+1];
+    myAnnotation.title = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),(int)position1+1];
     if([locale isEqualToString:@"el"]){
         info.text = [[currentList objectAtIndex:position1]objectForKey:@"GrText"];
         movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"GrSubtitle"];
@@ -86,7 +86,7 @@ NSMutableArray *points;
     else if([locale isEqualToString:@"en"]){
         info.text = [[currentList objectAtIndex:position1]objectForKey:@"EnText"];
         movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"EnSubtitle"];
-        myAnnotation.subtitle = [[anns objectAtIndex:position1] objectForKey:@"GrSubtitle"];
+        myAnnotation.subtitle = [[anns objectAtIndex:position1] objectForKey:@"EnSubtitle"];
 
     }
     [info setFont:[UIFont systemFontOfSize:18]];
@@ -102,6 +102,8 @@ NSMutableArray *points;
     
     // Do any additional setup after loading the view.
 }
+
+
 
 //set custom annotation view to support callout accessory control mode
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
@@ -139,7 +141,7 @@ NSMutableArray *points;
 
 -(void)viewDidLayoutSubviews{
     [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,1430)];
+    [scroller setContentSize:CGSizeMake(320,1550)];
 }
 
 

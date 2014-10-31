@@ -54,7 +54,8 @@
 
 Χρυσό Βραβείο στο Φεστιβάλ Κινηματογράφου του Εδιμβούργου (1955). Η ταινία περιδιαβαίνει την Θεσσαλονίκη της δεκαετίας του &apos;50 (Κέντρο και Άνω Πόλη).</string>
 			<key>EnText</key>
-			<string>Based on a true story of 160 orphans, who live in Thessaloniki under the German Occupation during the 1940s. The film wanders around the centre and the acropolis of Thessaloniki.</string>
+			<string>Based on a true story of 160 orphans, who live in Thessaloniki under the German Occupation during the 1940s. 
+The film wanders around the centre and the acropolis of Thessaloniki.</string>
 			<key>Title</key>
 			<string>1η Στάση</string>
 			<key>GrSubtitle</key>
@@ -89,7 +90,9 @@
 
 Μεταφορά του θεατρικού έργου του Δ. Ψαθά “Εξοχικόν Κέντρον ο Έρως”</string>
 			<key>EnText</key>
-			<string>Two brothers try to balance between the emotional relations and the conservative principles of a paternal family. The film is totally shot in Thessaloniki (Panorama, Antheon area, city centre).</string>
+			<string>Two brothers try to balance between the emotional relations and the conservative principles of a paternal family. 
+The film is totally shot in Thessaloniki (Panorama, Antheon area, city centre).
+</string>
 			<key>Actors</key>
 			<array>
 				<dict>
@@ -247,7 +250,8 @@ The film is shot in many areas of the city, such as the Thessaloniki Internation
 Η ταινία γυρίστηκε σε: Νέο Σιδηροδρομικό Σταθμό, Νέα Παραλία Θεσσαλονίκης και στην περιοχή Αρετσού (Ν. Κρήνη)
 </string>
 			<key>EnText</key>
-			<string>A train journey with a delayed stop. A strong love affair, a parenthesis in the lives of two people. The film won 4 prizes in Thessaloniki Film Festival. 
+			<string>A train journey with a delayed stop. A strong love affair, a parenthesis in the lives of two people. 
+The film won 4 prizes in Thessaloniki Film Festival. 
 It was shot in the sea front of Thessaloniki and the area of Aretsou (Nea Krini).</string>
 			<key>Title</key>
 			<string>4η Στάση</string>
@@ -359,7 +363,8 @@ Part of the film was shot in Thessaloniki (Aristotelous Square, Evosmos).</strin
 
 Χρυσός Φοίνικας στο Φεστιβάλ Καννών του 1998</string>
 			<key>EnText</key>
-			<string>The film traces the final days of Alexandre, a celebrated Greek writer as he prepares to leave his seaside home forever. It is shot in Thessaloniki, in a villa located in Vassilisis Olgas Avenue, as well as in the city’s sea front, Aristotelous Square and Tsimiski Street.</string>
+			<string>The film traces the final days of Alexandre, a celebrated Greek writer as he prepares to leave his seaside home forever. 
+It is shot in Thessaloniki, in a villa located in Vassilisis Olgas Avenue, as well as in the city’s sea front, Aristotelous Square and Tsimiski Street.</string>
 			<key>Title</key>
 			<string>6η Στάση</string>
 			<key>GrSubtitle</key>
@@ -415,7 +420,8 @@ Part of the film was shot in Thessaloniki (Aristotelous Square, Evosmos).</strin
 
 Συμμετοχή στην Εβδομάδα Κριτικής του Φεστιβάλ Βενετίας</string>
 			<key>EnText</key>
-			<string>A story about a family and a country falling apart, inspired by true events. A large part of the film is shot in central places of Thessaloniki (Leoforos Stratou Str, the sea front, Saint Demetrius Church).</string>
+			<string>A story about a family and a country falling apart, inspired by true events. 
+A large part of the film is shot in central places of Thessaloniki (Leoforos Stratou Str, the sea front, Saint Demetrius Church).</string>
 			<key>Title</key>
 			<string>7η Στάση</string>
 			<key>GrSubtitle</key>
@@ -494,6 +500,6 @@ A film shot around the city of Thessaloniki, showcasing many of the city’s pub
 	<key>GrName</key>
 	<string>Θεσσαλονίκη μέσα απο τον Ελληνικό Κινηματογράφο</string>
 	<key>EnName</key>
-	<string>Thessaloniki in Greek films</string>
+	<string>Thessaloniki In Greek Films</string>
 </dict>
 </plist>

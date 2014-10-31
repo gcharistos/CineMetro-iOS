@@ -12,6 +12,7 @@
 #import "MBProgressHUD.h"
 #import <CoreLocation/CoreLocation.h>
 #import <POP.h>
+#import "MainViewController.h"
 #import <AddressBook/AddressBook.h>
 #import "GreenDetailsViewController.h"
 #import "BlueDetailsViewController.h"
@@ -126,8 +127,13 @@ NSTimer *timer;
         theCoordinate.latitude = realLatitude;
         theCoordinate.longitude = realLongitude;
         myAnnotation.coordinate = theCoordinate;
-        myAnnotation.title = [[anns objectAtIndex:i] objectForKey:@"Title"];
-        myAnnotation.subtitle = [[anns objectAtIndex:i] objectForKey:@"Subtitle"];
+        myAnnotation.title = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),i+1];
+        if([locale isEqualToString:@"el"]){
+            myAnnotation.subtitle = [[anns objectAtIndex:i] objectForKey:@"GrSubtitle"];
+        }
+        else if([locale isEqualToString:@"en"]){
+            myAnnotation.subtitle = [[anns objectAtIndex:i] objectForKey:@"EnSubtitle"];
+        }
         [mapview addAnnotation:myAnnotation];
         [redPins addObject:myAnnotation];
     }
@@ -515,7 +521,12 @@ NSTimer *timer;
     titleLabel.text = positionString;
     [titleLabel setTextColor:lineColor];
    // titleLabel.textColor =[UIColor whiteColor];
-    subtitleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
+    if([locale isEqualToString:@"el"]){
+        subtitleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"GrSubtitle"];
+    }
+    else if([locale isEqualToString:@"en"]){
+        subtitleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"EnSubtitle"];
+    }
     UILabel *distanceLabel = (UILabel *)[cell viewWithTag:107];
     if(distances.count !=0){
       distanceLabel.text = [distances objectAtIndex:indexPath.row];
