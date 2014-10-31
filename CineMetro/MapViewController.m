@@ -62,7 +62,7 @@ NSTimer *timer;
     mapview.delegate = self;
     redPins = [[NSMutableArray alloc]init];
     overlays = [[NSMutableArray alloc]init];
-    showDirections = NO;
+    showDirections = false;
     //set region of map
     [self setRegion];
     

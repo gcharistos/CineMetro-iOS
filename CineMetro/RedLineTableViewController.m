@@ -8,6 +8,7 @@
 
 #import "RedLineTableViewController.h"
 #import "RedDetailsViewController.h"
+#import "MainViewController.h"
 
 @interface RedLineTableViewController ()
 
@@ -36,7 +37,7 @@ NSMutableArray *titles;
     self.tableView.dataSource = self;
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
     [self.tabBarController.tabBar setTintColor:[UIColor redColor]];
-    // Uncomment the following line to preserve selection between presentations.
+       // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -55,7 +56,12 @@ NSMutableArray *titles;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"RedLineStations" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     NSArray *anns = [dict objectForKey:@"Stations"];
-    [nameLabel setText:[dict objectForKey:@"Name"]];
+    if([locale isEqualToString:@"el"]){
+        [nameLabel setText:[dict objectForKey:@"GrName"]];
+    }
+    else if([locale isEqualToString:@"en"]){
+        [nameLabel setText:[dict objectForKey:@"EnName"]];
+    }
     station = anns; // initialize station variable
     for(int i=0;i<anns.count;i++){
         NSString *positionString = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),i+1];
@@ -101,7 +107,13 @@ NSMutableArray *titles;
     UIImage *image = [UIImage imageNamed:[[[station objectAtIndex:indexPath.row]objectForKey:@"Images"]objectAtIndex:0]];
     imageview.image = image;
     namelabel.text = [titles objectAtIndex:indexPath.row];
-    stationNameLabel.text = [[station objectAtIndex:indexPath.row]objectForKey:@"Subtitle"];
+    if([locale isEqualToString:@"el"]){
+        stationNameLabel.text = [[station objectAtIndex:indexPath.row]objectForKey:@"GrSubtitle"];
+    }
+    else if([locale isEqualToString:@"en"]){
+        stationNameLabel.text = [[station objectAtIndex:indexPath.row]objectForKey:@"EnSubtitle"];
+    }
+
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

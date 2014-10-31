@@ -22,7 +22,7 @@
 
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
     self.textview.text = self.desc;
-    [self.textview setFont:[UIFont systemFontOfSize:15]];
+    [self.textview setFont:[UIFont systemFontOfSize:18]];
   //  self.textview.textColor = [UIColor whiteColor];
 
 

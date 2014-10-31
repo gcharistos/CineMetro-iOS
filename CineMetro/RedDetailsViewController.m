@@ -13,6 +13,8 @@
 #import "MainViewController.h"
 #import <Parse/Parse.h>
 
+
+
 @interface RedDetailsViewController ()
 
 @end
@@ -53,11 +55,9 @@ NSMutableArray *points;
     images = [[NSMutableArray alloc]init];
     //set navigation bar title
    // self.navigationItem.title =[station objectForKey:@"Subtitle"];
-    theaterTitle.text = [station objectForKey:@"Subtitle"];
-    textview.text  = [station objectForKey:@"text"];
-   // [textview setTextColor:[UIColor whiteColor]];
-    [textview setFont:[UIFont systemFontOfSize:15]];
-    
+
+   
+   
     images = [station objectForKey:@"Images"];
     
     mapview.delegate = self;
@@ -66,8 +66,19 @@ NSMutableArray *points;
     theCoordinate.latitude = [[station objectForKey:@"Latitude"]doubleValue];
     theCoordinate.longitude = [[station objectForKey:@"Longitude"]doubleValue];
     myAnnotation.coordinate = theCoordinate;
-    myAnnotation.title = [station objectForKey:@"Title"];
-    myAnnotation.subtitle = [station objectForKey:@"Subtitle"];
+    myAnnotation.title = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),indexPath+1];
+
+    if([locale isEqualToString:@"el"]){
+        theaterTitle.text = [station objectForKey:@"GrSubtitle"];
+        textview.text  = [station objectForKey:@"GrText"];
+        myAnnotation.subtitle = [station objectForKey:@"GrSubtitle"];
+    }
+    else if([locale isEqualToString:@"en"]){
+        theaterTitle.text = [station objectForKey:@"EnSubtitle"];
+        textview.text  = [station objectForKey:@"EnText"];
+        myAnnotation.subtitle = [station objectForKey:@"EnSubtitle"];
+    }
+    [textview setFont:[UIFont systemFontOfSize:18]];
     [mapview addAnnotation:myAnnotation];
     MKCoordinateSpan span = {0.05,0.05};
     MKCoordinateRegion region = {theCoordinate, span};
@@ -79,9 +90,11 @@ NSMutableArray *points;
     // Do any additional setup after loading the view.
 }
 
+
+
 -(void)viewDidLayoutSubviews{
     [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,950)];
+    [scroller setContentSize:CGSizeMake(320,1000)];
 }
 
 //set custom annotation view to support callout accessory control mode

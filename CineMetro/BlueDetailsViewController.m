@@ -68,7 +68,7 @@ NSMutableArray *points;
     directors  = [[currentList objectAtIndex:position1]objectForKey:@"Directors"];
     info.text = [[currentList objectAtIndex:position1]objectForKey:@"text"];
    // [info setTextColor:[UIColor whiteColor]];
-    [info setFont:[UIFont systemFontOfSize:15]];
+    [info setFont:[UIFont systemFontOfSize:18]];
     movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"Subtitle"];
     images = [[anns objectAtIndex:position1]objectForKey:@"Images"];
     titles = [[NSArray alloc]initWithObjects:NSLocalizedString(@"factors",@"word"),NSLocalizedString(@"info",@"word"), nil];
@@ -129,7 +129,7 @@ NSMutableArray *points;
 
 -(void)viewDidLayoutSubviews{
     [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,1600)];
+    [scroller setContentSize:CGSizeMake(320,1430)];
 }
 
 

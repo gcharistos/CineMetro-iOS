@@ -29,7 +29,6 @@
 		1F16A31419A3DC1900AC7A68 /* GreenDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F16A31319A3DC1900AC7A68 /* GreenDetailsViewController.m */; };
 		1F23B8A419A5F2A00092FE9C /* bw_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F23B8A319A5F2A00092FE9C /* bw_background.jpg */; };
 		1F275BC319C6106800A1A8AD /* FilmFestivalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F275BC219C6106800A1A8AD /* FilmFestivalViewController.m */; };
-		1F275BCD19C619CF00A1A8AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F275BCF19C619CF00A1A8AD /* Localizable.strings */; };
 		1F276BBF19679092008735B1 /* CreateNewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BBE19679092008735B1 /* CreateNewAccountViewController.m */; };
 		1F276BC2196790A8008735B1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F276BC1196790A8008735B1 /* LoginViewController.m */; };
 		1F276BC819679595008735B1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BC719679594008735B1 /* AudioToolbox.framework */; };
@@ -42,7 +41,6 @@
 		1F276BDA1967960D008735B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F276BD91967960D008735B1 /* SystemConfiguration.framework */; };
 		1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F28171219BE848E005A5337 /* ShowImageViewController.m */; };
 		1F28171519BE848E005A5337 /* ShowImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F28171319BE848E005A5337 /* ShowImageViewController.xib */; };
-		1F29B5BF19BDF7D90036B2C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */; };
 		1F2D733119CFA0BB00C60F09 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D733019CFA0BB00C60F09 /* AboutViewController.m */; };
 		1F2DC9A119C2208B00265605 /* amaliamoutoussihoraproelefsis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC98819C2208B00265605 /* amaliamoutoussihoraproelefsis.jpg */; };
 		1F2DC9A219C2208B00265605 /* antwnopoulos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F2DC98919C2208B00265605 /* antwnopoulos.jpg */; };
@@ -117,6 +115,9 @@
 		1F70657B1967707B009CB35C /* GreenLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70657A1967707B009CB35C /* GreenLineTableViewController.m */; };
 		1F70657E1967708C009CB35C /* BlueLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70657D1967708C009CB35C /* BlueLineTableViewController.m */; };
 		1F70658419678116009CB35C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70658319678116009CB35C /* MapViewController.m */; };
+		1F73658A1A03E0DA006A5356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F7365881A03E0DA006A5356 /* Main.storyboard */; };
+		1F73658F1A03E3CF006A5356 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F7365911A03E3CF006A5356 /* Localizable.strings */; };
+		1F7365941A03E3F1006A5356 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F7365961A03E3F1006A5356 /* Localizable.strings */; };
 		1F7A62D619FAD47000237627 /* bentivolio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F7A62D519FAD47000237627 /* bentivolio.jpg */; };
 		1F7A62D819FAE90700237627 /* blue06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F7A62D719FAE90700237627 /* blue06.jpg */; };
 		1F7A62DA19FAE9F200237627 /* izampel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F7A62D919FAE9F200237627 /* izampel.jpg */; };
@@ -232,10 +233,6 @@
 		1F23B8A319A5F2A00092FE9C /* bw_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bw_background.jpg; sourceTree = "<group>"; };
 		1F275BC119C6106800A1A8AD /* FilmFestivalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmFestivalViewController.h; sourceTree = "<group>"; };
 		1F275BC219C6106800A1A8AD /* FilmFestivalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmFestivalViewController.m; sourceTree = "<group>"; };
-		1F275BC619C616AA00A1A8AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		1F275BC719C616F600A1A8AD /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Main.strings; sourceTree = "<group>"; };
-		1F275BCE19C619CF00A1A8AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1F275BD019C619D300A1A8AD /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1F276BBD19679092008735B1 /* CreateNewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewAccountViewController.h; sourceTree = "<group>"; };
 		1F276BBE19679092008735B1 /* CreateNewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewAccountViewController.m; sourceTree = "<group>"; };
 		1F276BC0196790A8008735B1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -251,7 +248,6 @@
 		1F28171119BE848E005A5337 /* ShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowImageViewController.h; path = ../ShowImageViewController.h; sourceTree = "<group>"; };
 		1F28171219BE848E005A5337 /* ShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowImageViewController.m; path = ../ShowImageViewController.m; sourceTree = "<group>"; };
 		1F28171319BE848E005A5337 /* ShowImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShowImageViewController.xib; path = ../ShowImageViewController.xib; sourceTree = "<group>"; };
-		1F29B5BE19BDF7D90036B2C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F2D732F19CFA0BB00C60F09 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		1F2D733019CFA0BB00C60F09 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		1F2DC98819C2208B00265605 /* amaliamoutoussihoraproelefsis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = amaliamoutoussihoraproelefsis.jpg; sourceTree = "<group>"; };
@@ -336,6 +332,11 @@
 		1F70657D1967708C009CB35C /* BlueLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueLineTableViewController.m; sourceTree = "<group>"; };
 		1F70658219678116009CB35C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		1F70658319678116009CB35C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		1F7365891A03E0DA006A5356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F73658B1A03E0EF006A5356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		1F73658C1A03E0FB006A5356 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Main.strings; sourceTree = "<group>"; };
+		1F7365901A03E3CF006A5356 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1F7365951A03E3F1006A5356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1F7A62D519FAD47000237627 /* bentivolio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bentivolio.jpg; sourceTree = "<group>"; };
 		1F7A62D719FAE90700237627 /* blue06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue06.jpg; sourceTree = "<group>"; };
 		1F7A62D919FAE9F200237627 /* izampel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = izampel.jpg; sourceTree = "<group>"; };
@@ -715,6 +716,8 @@
 		1F706530196768DA009CB35C = {
 			isa = PBXGroup;
 			children = (
+				1F7365961A03E3F1006A5356 /* Localizable.strings */,
+				1F7365911A03E3CF006A5356 /* Localizable.strings */,
 				1F706542196768DA009CB35C /* CineMetro */,
 				1F706561196768DA009CB35C /* CineMetroTests */,
 				1F70653B196768DA009CB35C /* Frameworks */,
@@ -779,8 +782,8 @@
 				1F12C99E19B7D2410024CAD5 /* GreenLine */,
 				1FFF0BCF1974651B00FE59D2 /* Images */,
 				1F12C9A919B7D9680024CAD5 /* External Libraries */,
-				1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */,
 				1F706554196768DA009CB35C /* Images.xcassets */,
+				1F7365881A03E0DA006A5356 /* Main.storyboard */,
 				1F706543196768DA009CB35C /* Supporting Files */,
 			);
 			path = CineMetro;
@@ -790,7 +793,6 @@
 			isa = PBXGroup;
 			children = (
 				1F706544196768DA009CB35C /* CineMetro-Info.plist */,
-				1F275BCF19C619CF00A1A8AD /* Localizable.strings */,
 				1F706548196768DA009CB35C /* main.m */,
 				1F70654A196768DA009CB35C /* CineMetro-Prefix.pch */,
 			);
@@ -946,9 +948,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
-				el,
 			);
 			mainGroup = 1F706530196768DA009CB35C;
 			productRefGroup = 1F70653A196768DA009CB35C /* Products */;
@@ -991,6 +991,7 @@
 				1FE42E4219E49AFF009B999C /* red14.jpg in Resources */,
 				1F45E35819F725BC00032AAF /* cinemetroLogo.png in Resources */,
 				1F13176C19DCB36C00DB8316 /* blue21.jpg in Resources */,
+				1F73658F1A03E3CF006A5356 /* Localizable.strings in Resources */,
 				1F8869C519E2D9C8000FBD56 /* back-50.png in Resources */,
 				1F7A62D619FAD47000237627 /* bentivolio.jpg in Resources */,
 				1F2DC9AF19C2208B00265605 /* nathanahl.jpg in Resources */,
@@ -998,7 +999,6 @@
 				1F2DC9CA19C2307B00265605 /* papaiwannou.jpg in Resources */,
 				1F7CE6AF19DE0AB2004ECCD1 /* blue41.jpg in Resources */,
 				1F48BDEE199AB36900BD30C0 /* green62.jpg in Resources */,
-				1F29B5BF19BDF7D90036B2C1 /* Main.storyboard in Resources */,
 				1F9362A51988F6320088A0BF /* red11.jpg in Resources */,
 				1F48BDE9199AB34B00BD30C0 /* green52.jpg in Resources */,
 				1F48BDDB199AB30300BD30C0 /* green21.jpg in Resources */,
@@ -1032,6 +1032,7 @@
 				1FD3F22919CE37B1009BF58E /* redPin.png in Resources */,
 				1F137A8619753179001C0F2B /* RedLineStations.plist in Resources */,
 				1F2DC9C819C22FDD00265605 /* syllas_tzoumerkas-200x200.jpg in Resources */,
+				1F7365941A03E3F1006A5356 /* Localizable.strings in Resources */,
 				1F9DB73519CA137A00C3E3FC /* facebookLogo.png in Resources */,
 				1F5AB66B19D0AEED007F286B /* film.jpg in Resources */,
 				1F9362B81988F6490088A0BF /* red33.jpg in Resources */,
@@ -1047,6 +1048,7 @@
 				1F2DC9B019C2208B00265605 /* papadopoulos.jpg in Resources */,
 				1F48BDD1199AB2C400BD30C0 /* green02.jpg in Resources */,
 				1F90A16E19F81D06003943F6 /* buttonBack.png in Resources */,
+				1F73658A1A03E0DA006A5356 /* Main.storyboard in Resources */,
 				1F2DC9A219C2208B00265605 /* antwnopoulos.jpg in Resources */,
 				1F9362B71988F6490088A0BF /* red32.jpg in Resources */,
 				1F48BDE4199AB33100BD30C0 /* green41.jpg in Resources */,
@@ -1096,7 +1098,6 @@
 				1FC3290A19D2E3B000B69363 /* green05.jpg in Resources */,
 				1F48BDD7199AB2E800BD30C0 /* green13.jpg in Resources */,
 				1F9362B91988F6490088A0BF /* red34.jpg in Resources */,
-				1F275BCD19C619CF00A1A8AD /* Localizable.strings in Resources */,
 				1F2DC9A519C2208B00265605 /* bruno.jpg in Resources */,
 				1F48BDD6199AB2E800BD30C0 /* green12.jpg in Resources */,
 				1F2DC9C419C22EF500265605 /* voulgaris.jpg in Resources */,
@@ -1201,24 +1202,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1F275BCF19C619CF00A1A8AD /* Localizable.strings */ = {
+		1F7365881A03E0DA006A5356 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1F275BCE19C619CF00A1A8AD /* en */,
-				1F275BD019C619D300A1A8AD /* el */,
-			);
-			name = Localizable.strings;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		1F29B5BD19BDF7D90036B2C1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1F29B5BE19BDF7D90036B2C1 /* Base */,
-				1F275BC619C616AA00A1A8AD /* en */,
-				1F275BC719C616F600A1A8AD /* el */,
+				1F7365891A03E0DA006A5356 /* Base */,
+				1F73658B1A03E0EF006A5356 /* en */,
+				1F73658C1A03E0FB006A5356 /* el */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F7365911A03E3CF006A5356 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F7365901A03E3CF006A5356 /* el */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		1F7365961A03E3F1006A5356 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F7365951A03E3F1006A5356 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

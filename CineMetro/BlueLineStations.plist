@@ -338,7 +338,7 @@
 			<key>Title</key>
 			<string>6η Στάση</string>
 			<key>Subtitle</key>
-			<string>Η Αιωνιότητα και μια μέρα (1998)</string>
+			<string>Μια Αιωνιότητα και μια μέρα (1998)</string>
 			<key>Latitude</key>
 			<string>40.6148604</string>
 			<key>Longitude</key>
@@ -455,7 +455,9 @@
 	</array>
 	<key>Color</key>
 	<string>blue</string>
-	<key>Name</key>
+	<key>GrName</key>
 	<string>Θεσσαλονίκη μέσα απο τον Ελληνικό Κινηματογράφο</string>
+	<key>EnName</key>
+	<string>Movies</string>
 </dict>
 </plist>

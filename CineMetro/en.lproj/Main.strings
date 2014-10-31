@@ -1,4 +1,3 @@
-
 /* Class = "IBUILabel"; text = "Login"; ObjectID = "189-hT-MYi"; */
 "189-hT-MYi.text" = "Login";
 
@@ -17,8 +16,9 @@
 /* Class = "IBUIButton"; normalTitle = "About"; ObjectID = "2ef-NK-vV9"; */
 "2ef-NK-vV9.normalTitle" = "About";
 
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "3ae-zk-Ss6"; */
-"3ae-zk-Ss6.text" = "Label";
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "bTY-IH-fuj"; */
+"bTY-IH-fuj.text" = "Photos";
+
 
 /* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "3wQ-9G-J0d"; */
 "3wQ-9G-J0d.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
@@ -250,7 +250,6 @@
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "jjR-nJ-7gm"; */
 "jjR-nJ-7gm.text" = "Thessaloniki International Film Festival";
-
 
 
 

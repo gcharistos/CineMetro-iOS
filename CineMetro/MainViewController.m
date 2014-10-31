@@ -37,6 +37,7 @@ NSArray *array;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    locale = [[[NSBundle mainBundle] preferredLocalizations]objectAtIndex:0];
     UIFont * font = [UIFont boldSystemFontOfSize:20];
     NSDictionary * attributes = @{NSFontAttributeName: font};
     [profileButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
