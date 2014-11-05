@@ -202,10 +202,7 @@ NSTimer *timer;
         [mapview
          addOverlay:route.polyline level:MKOverlayLevelAboveRoads];
         
-        for (MKRouteStep *step in route.steps)
-        {
-            NSLog(@"%@", step.instructions);
-        }
+       
     }
 }
 
@@ -566,10 +563,13 @@ NSTimer *timer;
 }
 //remove timer for location update . remove reachability notification
 -(void)viewDidDisappear:(BOOL)animated{
-    [timer invalidate];
-    timer = nil;
-    [reachability stopNotifier];
-    reachability = nil;
+    if(timer !=nil){
+      [timer invalidate];
+      timer = nil;
+      [reachability stopNotifier];
+      reachability = nil;
+        currentDB = nil;
+    }
 }
 
 

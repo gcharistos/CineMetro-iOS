@@ -20,6 +20,7 @@
 
 - (IBAction)reachabilityPressed:(id)sender;
 - (IBAction)contactPressed:(id)sender;
+- (IBAction)ratebuttonPressed:(id)sender;
 
 
 @end

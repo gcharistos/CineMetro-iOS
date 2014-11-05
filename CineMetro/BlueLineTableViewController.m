@@ -171,8 +171,8 @@ NSInteger  selectedIndex ;
     if([segue.identifier isEqualToString:@"detailSegue2"]){
         BlueDetailsViewController *dest = segue.destinationViewController;
         dest.position = selectedIndex;
+        
     }}
-
 
 
 @end

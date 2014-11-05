@@ -67,4 +67,9 @@ NSArray *textArray;
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
 
 }
+
+- (IBAction)ratebuttonPressed:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/app/jobsy/id933450618"]];
+
+}
 @end

@@ -114,7 +114,7 @@ ContainerGreenViewController *dest;
 -(void)viewDidLayoutSubviews{
     [scroller  setScrollEnabled:YES];
     
-    [scroller setContentSize:CGSizeMake(320,1350)];
+    [scroller setContentSize:CGSizeMake(320,1370)];
 }
 
 
