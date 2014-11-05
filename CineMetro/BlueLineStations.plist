@@ -16,8 +16,10 @@
 			<key>Directors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Γκρεγκ Τάλλας</string>
+					<key>EnName</key>
+					<string>Greg Tallas</string>
 					<key>Icon</key>
 					<string>Gregg_Ntallas.jpg</string>
 				</dict>
@@ -25,20 +27,26 @@
 			<key>Actors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Κωστή Μαρία</string>
+					<key>EnName</key>
+					<string>Maria Kosti</string>
 					<key>Icon</key>
 					<string>kwsti_maria.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Φερμας Νίκος</string>
+					<key>EnName</key>
+					<string>Nikos Fermas</string>
 					<key>Icon</key>
 					<string>fermas_nikos.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Φραγκεδάκης Βασίλης</string>
+					<key>EnName</key>
+					<string>Vassilis Fraghedakis</string>
 					<key>Icon</key>
 					<string>fragkedakhs_vasilis.jpg</string>
 				</dict>
@@ -77,8 +85,10 @@ The film wanders around the centre and the acropolis of Thessaloniki.</string>
 			<key>Directors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Γιάννης Δαλιανίδης</string>
+					<key>EnName</key>
+					<string>Yannis Dalianidis</string>
 					<key>Icon</key>
 					<string>dalianidis.jpg</string>
 				</dict>
@@ -96,26 +106,34 @@ The film is totally shot in Thessaloniki (Panorama, Antheon area, city centre).
 			<key>Actors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Ηλιόπουλος Ντίνος</string>
+					<key>EnName</key>
+					<string>Dinos Iliopoulos</string>
 					<key>Icon</key>
 					<string>eliopoulos.jpeg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Λάσκαρη Ζώη</string>
+					<key>EnName</key>
+					<string>Zoe Laskari</string>
 					<key>Icon</key>
 					<string>laskari.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Ζερβός Παντελής</string>
+					<key>EnName</key>
+					<string>Pandelis Zervos</string>
 					<key>Icon</key>
 					<string>zervos.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Στρατηγός Στέφανος</string>
+					<key>EnName</key>
+					<string>Stefanos Stratigos</string>
 					<key>Icon</key>
 					<string>stratigos.jpg</string>
 				</dict>
@@ -141,8 +159,10 @@ The film is totally shot in Thessaloniki (Panorama, Antheon area, city centre).
 			<key>Directors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Γιάννης Δαλιανίδης</string>
+					<key>EnName</key>
+					<string>Yannis Dalianidis</string>
 					<key>Icon</key>
 					<string>dalianidis.jpg</string>
 				</dict>
@@ -150,32 +170,42 @@ The film is totally shot in Thessaloniki (Panorama, Antheon area, city centre).
 			<key>Actors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Βλαχοπούλου Ρένα</string>
+					<key>EnName</key>
+					<string>Rena Vlachopoulou</string>
 					<key>Icon</key>
 					<string>vlaxopoulou.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Ηλιόπουλος Ντίνος</string>
+					<key>EnName</key>
+					<string>Dinos Iliopoulos</string>
 					<key>Icon</key>
 					<string>eliopoulos.jpeg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Καραγιάννη Μάρθα</string>
+					<key>EnName</key>
+					<string>Martha Karagianni</string>
 					<key>Icon</key>
 					<string>karagiannh.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Ναθαναήλ Έλενα</string>
+					<key>EnName</key>
+					<string>Elena Nathanael</string>
 					<key>Icon</key>
 					<string>nathanahl.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Βουτσάς Κώστας</string>
+					<key>EnName</key>
+					<string>Kostas Voutsas</string>
 					<key>Icon</key>
 					<string>voutsas.jpg</string>
 				</dict>
@@ -212,14 +242,18 @@ The film is shot in many areas of the city, such as the Thessaloniki Internation
 			<key>Actors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Λαδικού Αλεξάνδρα</string>
+					<key>EnName</key>
+					<string>Alexandra Ladikou</string>
 					<key>Icon</key>
 					<string>ladikou.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Αντωνόπουλος Άγγελος</string>
+					<key>EnName</key>
+					<string>Angelos Antonopoulos</string>
 					<key>Icon</key>
 					<string>antwnopoulos.jpg</string>
 				</dict>
@@ -227,19 +261,14 @@ The film is shot in many areas of the city, such as the Thessaloniki Internation
 			<key>Directors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Τάκης Κανελλόπουλος</string>
+					<key>EnName</key>
+					<string>Takis Kanellopoulos</string>
 					<key>Icon</key>
 					<string>kanelopoulos.jpeg</string>
 				</dict>
 			</array>
-			<key>Director</key>
-			<dict>
-				<key>Name</key>
-				<string>Τάκης Κανελλόπουλος</string>
-				<key>Icon</key>
-				<string>kanelopoulos.jpeg</string>
-			</dict>
 			<key>GrText</key>
 			<string>Ένα ταξίδι με τρένο, μια στάση με ολιγόωρη καθυστέρηση, ένας δυνατός έρωτας δύο ανθρώπων, μια παρένθεση. 
 
@@ -273,14 +302,18 @@ It was shot in the sea front of Thessaloniki and the area of Aretsou (Nea Krini)
 			<key>Actors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Τζώρτζογλου Στράτος</string>
+					<key>EnName</key>
+					<string>Stratos Tzortzoglou</string>
 					<key>Icon</key>
 					<string>tzortzoglou.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Μπαζάκα Θέμις</string>
+					<key>EnName</key>
+					<string>Themis Bazaka</string>
 					<key>Icon</key>
 					<string>bazaka.jpg</string>
 				</dict>
@@ -288,8 +321,10 @@ It was shot in the sea front of Thessaloniki and the area of Aretsou (Nea Krini)
 			<key>Directors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Παντελής Βούλγαρης</string>
+					<key>EnName</key>
+					<string>Pantelis Voulgaris</string>
 					<key>Icon</key>
 					<string>voulgaris.jpg</string>
 				</dict>
@@ -327,8 +362,10 @@ Part of the film was shot in Thessaloniki (Aristotelous Square, Evosmos).</strin
 			<key>Directors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Θόδωρος Αγγελόπουλος</string>
+					<key>EnName</key>
+					<string>Theo Angelopoulos</string>
 					<key>Icon</key>
 					<string>aggelopoulos.jpg</string>
 				</dict>
@@ -336,20 +373,26 @@ Part of the film was shot in Thessaloniki (Aristotelous Square, Evosmos).</strin
 			<key>Actors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Γκαντζ Μπρούνο</string>
+					<key>EnName</key>
+					<string>Bruno Ganz</string>
 					<key>Icon</key>
 					<string>bruno.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Ρενό Ιζαμπέλ</string>
+					<key>EnName</key>
+					<string>Isabelle Renauld</string>
 					<key>Icon</key>
 					<string>izampel.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Μπενιβόλιο Φαμπρίτσιο</string>
+					<key>EnName</key>
+					<string>Fabrizio Bentivoglio</string>
 					<key>Icon</key>
 					<string>bentivolio.jpg</string>
 				</dict>
@@ -386,20 +429,26 @@ It is shot in Thessaloniki, in a villa located in Vassilisis Olgas Avenue, as we
 			<key>Actors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Μουτούση Αμαλία</string>
+					<key>EnName</key>
+					<string>Amalia Moutoussi</string>
 					<key>Icon</key>
 					<string>moutousi.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Σαμαράς Θάνος</string>
+					<key>EnName</key>
+					<string>Thanos Samaras</string>
 					<key>Icon</key>
 					<string>samaras.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Τσιριγκούλη Ιωάννα</string>
+					<key>EnName</key>
+					<string>Ioanna Tsiringhouli</string>
 					<key>Icon</key>
 					<string>tsirigkouli.jpg</string>
 				</dict>
@@ -407,8 +456,10 @@ It is shot in Thessaloniki, in a villa located in Vassilisis Olgas Avenue, as we
 			<key>Directors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Σύλλας Τζουμέρκας</string>
+					<key>EnName</key>
+					<string>Syllas Tzoumerkas</string>
 					<key>Icon</key>
 					<string>syllas_tzoumerkas-200x200.jpg</string>
 				</dict>
@@ -456,8 +507,10 @@ A film shot around the city of Thessaloniki, showcasing many of the city’s pub
 			<key>Directors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Γιώργος Παπαιωάνου</string>
+					<key>EnName</key>
+					<string>Yorgos Papaioannou</string>
 					<key>Icon</key>
 					<string>papaiwannou.jpg</string>
 				</dict>
@@ -465,20 +518,26 @@ A film shot around the city of Thessaloniki, showcasing many of the city’s pub
 			<key>Actors</key>
 			<array>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Βαϊνας Δημήτρης</string>
+					<key>EnName</key>
+					<string>Dimitris Vainas</string>
 					<key>Icon</key>
 					<string>vainas.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Παπαδόπουλος Πάρης</string>
+					<key>EnName</key>
+					<string>Paris Papadopoulos</string>
 					<key>Icon</key>
 					<string>papadopoulos.jpg</string>
 				</dict>
 				<dict>
-					<key>Name</key>
+					<key>GrName</key>
 					<string>Σφέτσα Όλγα</string>
+					<key>EnName</key>
+					<string>Olga Sfetsa</string>
 					<key>Icon</key>
 					<string>sfetsa.jpg</string>
 				</dict>

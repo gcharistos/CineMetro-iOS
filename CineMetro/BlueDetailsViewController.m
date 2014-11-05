@@ -208,7 +208,16 @@ NSMutableArray *points;
         UIImageView *imageview = (UIImageView *)[cell viewWithTag:106];
         UILabel *label = (UILabel *)[cell viewWithTag:107];
         imageview.image = [UIImage imageNamed:[[actors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
-        label.text = [[actors objectAtIndex:indexPath.row]objectForKey:@"Name"];
+        if([locale isEqualToString:@"el"]){
+            label.text = [[actors objectAtIndex:indexPath.row]objectForKey:@"GrName"];
+
+            
+        }
+        else if([locale isEqualToString:@"en"]){
+            label.text = [[actors objectAtIndex:indexPath.row]objectForKey:@"EnName"];
+
+            
+        }
     }
     else if(collectionView == self.directorsCollectionView){
         static NSString *identifer = @"cell";
@@ -216,7 +225,16 @@ NSMutableArray *points;
         UIImageView *imageview = (UIImageView *)[cell viewWithTag:104];
         UILabel *label = (UILabel *)[cell viewWithTag:105];
         imageview.image = [UIImage imageNamed:[[directors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
-        label.text = [[directors objectAtIndex:indexPath.row]objectForKey:@"Name"];
+        if([locale isEqualToString:@"el"]){
+            label.text = [[directors objectAtIndex:indexPath.row]objectForKey:@"GrName"];
+            
+            
+        }
+        else if([locale isEqualToString:@"en"]){
+            label.text = [[directors objectAtIndex:indexPath.row]objectForKey:@"EnName"];
+            
+            
+        }
     }
     return cell;
 }
