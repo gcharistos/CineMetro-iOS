@@ -14,6 +14,7 @@
 @end
 
 @implementation ViewController
+NSUInteger currentIndex;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    currentIndex = 0;
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.pageViewController.dataSource = self;
@@ -42,6 +43,8 @@
     [self addChildViewController:_pageViewController];
     [self.view addSubview:_pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
+    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(goToNextView) userInfo:nil repeats:YES];
+
     
 }
 
@@ -63,6 +66,18 @@
     pageContentViewController.imageFile = self.pageImages[index];
     pageContentViewController.pageIndex = index;
     return pageContentViewController;
+}
+
+//Method goes to next page view
+- (void)goToNextView{
+    currentIndex = [[self.pageViewController.viewControllers lastObject] pageIndex];
+    currentIndex++;
+    if(currentIndex == [self.pageImages count]){
+        currentIndex = 0;
+    }
+    PageContentViewController *startingViewController = [self viewControllerAtIndex:currentIndex];
+    NSArray *viewControllers = @[startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }
 
 #pragma mark - Page View Controller Data Source
