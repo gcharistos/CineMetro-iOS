@@ -11,6 +11,11 @@
 #import "Reachability.h"
 #import "MainViewController.h"
 #import <Pop/POP.h>
+#import "IIShortNotificationPresenter.h"
+#import "IIShortNotificationConcurrentQueue.h"
+#import "IIShortNotificationRightSideLayout.h"
+#import "TestNotificationView.h"
+
 
 @interface RatingViewController ()
 
@@ -46,6 +51,10 @@ GreenDetailsViewController *viewController;
 {
    
     [super viewDidLoad];
+    [[IIShortNotificationPresenter defaultConfiguration] setAutoDismissDelay:3];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationViewClass:[TestNotificationView class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
     rated = false;
    // [star1 setUserInteractionEnabled:YES];
     [okbutton setTitle:NSLocalizedString(@"ok",@"word") forState:UIControlStateNormal];
@@ -108,7 +117,6 @@ GreenDetailsViewController *viewController;
 - (void)showInView:(UIView *)aView  withController:(UIViewController *)controller withArray:(NSArray *)array atIndexPath:(NSInteger)indexPath withName:(NSString *)name withname:(NSString *)aname  animated:(BOOL)animated{
     
     dispatch_async(dispatch_get_main_queue(), ^{
-       // viewController = (GreenDetailsViewController *)controller;
         [aView addSubview:self.view];
         points = [[NSMutableArray alloc]initWithArray:array];
         row = indexPath;
@@ -136,14 +144,16 @@ GreenDetailsViewController *viewController;
             [user setObject:[NSNumber numberWithInt:points] forKey:linepoints];
             [user setObject:[NSNumber numberWithInt:totalpoints] forKey:@"totalPoints"];
             [user saveInBackground];
-                
+            [self presentConfirmation:NSLocalizedString(@"thankyou",@"word")];
 
-              UIAlertView *rate = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"thankyou",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-              [rate show];
+//              UIAlertView *rate = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"thankyou",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+//              [rate show];
         }
         else { // no network
-            UIAlertView *noNetwork = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateerror",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-            [noNetwork show];
+            [self presentConfirmation:NSLocalizedString(@"rateerror",@"word")];
+
+//            UIAlertView *noNetwork = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateerror",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+//            [noNetwork show];
         }
     }
 

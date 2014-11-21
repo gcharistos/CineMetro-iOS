@@ -14,6 +14,7 @@
 
 }
 @property (strong,nonatomic) LicenseViewController *popViewController;
+@property (weak, nonatomic) IBOutlet UITextView *aboutTextview;
 
 
 - (IBAction)mbprogresshudPressed:(id)sender;

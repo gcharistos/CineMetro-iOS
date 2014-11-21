@@ -10,6 +10,10 @@
 #import "MainViewController.h"
 #import <Parse/Parse.h>
 #import "MBProgressHUD.h"
+#import "IIShortNotificationPresenter.h"
+#import "IIShortNotificationConcurrentQueue.h"
+#import "IIShortNotificationRightSideLayout.h"
+#import "TestNotificationView.h"
 
 @interface CreateNewAccountViewController ()
 
@@ -32,7 +36,10 @@ PFUser *appUser;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+    [[IIShortNotificationPresenter defaultConfiguration] setAutoDismissDelay:3];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationViewClass:[TestNotificationView class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
         // Do any additional setup after loading the view.
 }
 
@@ -71,6 +78,7 @@ PFUser *appUser;
         MainViewController *dest = (MainViewController *)([navController viewControllers][0]);
         user = appUser;
         [dest saveProfile];
+        [dest showCreateAccount];
 
     }
 
@@ -95,13 +103,15 @@ PFUser *appUser;
     
     
     if([passwordTextField.text length] == 0 || [emailTextField.text length] == 0){
-        UIAlertView *alertView =
-        [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"fillcreateAccount",@"word")
-                                   message:nil
-                                  delegate:self
-                         cancelButtonTitle:nil
-                         otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
-        [alertView show];
+        [self presentConfirmation:NSLocalizedString(@"fillcreateAccount",@"word")];
+
+//        UIAlertView *alertView =
+//        [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"fillcreateAccount",@"word")
+//                                   message:nil
+//                                  delegate:self
+//                         cancelButtonTitle:nil
+//                         otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
+//        [alertView show];
         return;
         
     }
@@ -111,6 +121,7 @@ PFUser *appUser;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects,NSError *error)
     {
         if([objects count] != 0){
+            
             UIAlertView *alertView =
             [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"usernameExists",@"word")
                                        message:nil
@@ -134,29 +145,29 @@ PFUser *appUser;
          [createAccount hide:YES];
          if (error) // Something went wrong
          {
+             [self presentErrorMessage:NSLocalizedString(@"internetProblem",@"word")];
+
                           // Display an alert view to show the error message
-             UIAlertView *alertView =
-             [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"internetProblem",@"word")
-                                        message:nil
-                                       delegate:self
-                              cancelButtonTitle:nil
-                              otherButtonTitles:@"Ok", nil];
-             [alertView show];
+//             UIAlertView *alertView =
+//             [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"internetProblem",@"word")
+//                                        message:nil
+//                                       delegate:self
+//                              cancelButtonTitle:nil
+//                              otherButtonTitles:@"Ok", nil];
+//             [alertView show];
              
             
              return;
          }
          else{
              appUser = user;
-            
-             // Display an alert view to show the error message
-             UIAlertView *alertView =
-             [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"successfullCreate",@"word")
-                                        message:nil
-                                       delegate:self
-                              cancelButtonTitle:nil
-                              otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
-             [alertView show];
+//             UIAlertView *alertView =
+//             [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"successfullCreate",@"word")
+//                                        message:nil
+//                                       delegate:self
+//                              cancelButtonTitle:nil
+//                              otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
+//             [alertView show];
 
              [self performSegueWithIdentifier:@"createSegue" sender:self];
          }

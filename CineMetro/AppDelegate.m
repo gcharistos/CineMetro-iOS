@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
    
-    [NSThread sleepForTimeInterval:2.0]; // Used For Showing Splash Screen for More Time
+    [NSThread sleepForTimeInterval:1.0]; // Used For Showing Splash Screen for More Time
     // Override point for customization after application launch.
     [Parse setApplicationId:@"swhW7tnXLp2qdr7ZqbQ1JRCZMuRaQE5CXY12mp7c"
                   clientKey:@"lrNR1Wa2YThA7SjlkitdaCtMmEBJJM69bHcwpifD"];

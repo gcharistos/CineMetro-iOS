@@ -8,6 +8,10 @@
 
 #import "ProfileTableViewController.h"
 #import "MainViewController.h"
+#import "IIShortNotificationPresenter.h"
+#import "IIShortNotificationConcurrentQueue.h"
+#import "IIShortNotificationRightSideLayout.h"
+#import "TestNotificationView.h"
 
 @interface ProfileTableViewController ()
 
@@ -24,6 +28,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[IIShortNotificationPresenter defaultConfiguration] setAutoDismissDelay:3];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationViewClass:[TestNotificationView class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
     UIFont * font = [UIFont boldSystemFontOfSize:20];
     NSDictionary * attributes = @{NSFontAttributeName: font};
     [logoutButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
@@ -129,8 +137,10 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 - (IBAction)LogoutPressed:(id)sender {
     MainViewController *dest = (MainViewController *)[[self.navigationController viewControllers]objectAtIndex:0];
     [dest LogOut];
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Logged Out" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
+
+//    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Logged Out" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//    [alert show];
     [self.navigationController popToRootViewControllerAnimated:YES];
+    [dest showLogout];
 }
 @end

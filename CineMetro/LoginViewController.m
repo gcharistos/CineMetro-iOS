@@ -11,6 +11,11 @@
 #import <Parse/Parse.h>
 #import <POP.h>
 #import "MBProgressHUD.h"
+#import "IIShortNotificationPresenter.h"
+#import "IIShortNotificationConcurrentQueue.h"
+#import "IIShortNotificationRightSideLayout.h"
+#import "TestNotificationView.h"
+
 
 @interface LoginViewController ()
 
@@ -36,6 +41,11 @@ PFUser *appUser;
 {
     //[super viewDidLoad];
     [super viewDidLoad];
+    [[IIShortNotificationPresenter defaultConfiguration] setAutoDismissDelay:3];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationViewClass:[TestNotificationView class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
+
     //Adding an scrollview to see the blur effect
    
  
@@ -75,10 +85,8 @@ PFUser *appUser;
         MainViewController *dest = (MainViewController *)([navController viewControllers][0]);
         user = appUser;
         [dest saveProfile];
-
-        if(loginStatus == 1){
-            [dest redirectToProfile];
-        }
+        [dest showLogIn];
+       
 
         
     }
@@ -87,13 +95,14 @@ PFUser *appUser;
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
     if([passwordTextField.text length] == 0 || [emailTextField.text length] == 0){
-        UIAlertView *alertView =
-        [[UIAlertView alloc] initWithTitle:@"Please fill Username and Password Fields"
-                                   message:nil
-                                  delegate:self
-                         cancelButtonTitle:nil
-                         otherButtonTitles:@"Ok", nil];
-        [alertView show];
+        [self presentNotification:NSLocalizedString(@"fillcreateAccount",@"word")];
+//        UIAlertView *alertView =
+//        [[UIAlertView alloc] initWithTitle:@"Please fill Username and Password Fields"
+//                                   message:nil
+//                                  delegate:self
+//                         cancelButtonTitle:nil
+//                         otherButtonTitles:@"Ok", nil];
+//        [alertView show];
         return;
         
     }
@@ -106,16 +115,17 @@ PFUser *appUser;
                                     block:^(PFUser *auser, NSError *error){
                                         
                                         if(auser){
-                                            UIAlertView *alertView = nil;
+//                                            UIAlertView *alertView = nil;
                                                                                                             // Create an alert view to tell the user
-                                                alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"successfullLogin",@"word")
-                                                                                       message:nil
-                                                                                      delegate:nil
-                                                                             cancelButtonTitle:nil
-                                                                             otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
+//                                                alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"successfullLogin",@"word")
+//                                                                                       message:nil
+//                                                                                      delegate:nil
+//                                                                             cancelButtonTitle:nil
+//                                                                             otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
+                                           
                                             [loginAccount hide:YES];
                                             // Show the alert view
-                                            [alertView show];
+//                                            [alertView show];
                                             appUser = auser;
                                             
                                             [self performSegueWithIdentifier:@"loginSegue" sender:nil];
@@ -125,11 +135,12 @@ PFUser *appUser;
                                             UIAlertView *alertView = nil;
                                             
                                             // Create an alert view to tell the user
-                                            alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"wronguser",@"word")
-                                                                                   message:nil
-                                                                                  delegate:self
-                                                                         cancelButtonTitle:nil
-                                                                         otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
+//                                            alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"wronguser",@"word")
+//                                                                                   message:nil
+//                                                                                  delegate:self
+//                                                                         cancelButtonTitle:nil
+//                                                                         otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
+                                            [self presentErrorMessage:NSLocalizedString(@"wronguser",@"word")];
                                             [loginAccount hide:YES];
 
                                             // Show the alert view

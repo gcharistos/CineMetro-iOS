@@ -159,6 +159,7 @@
 		1F7365941A03E3F1006A5356 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F7365961A03E3F1006A5356 /* Localizable.strings */; };
 		1F7A62E219FAF37500237627 /* cinemetroLogoBlurred.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F7A62E119FAF37500237627 /* cinemetroLogoBlurred.png */; };
 		1F7A62E719FAFC2700237627 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A62E619FAFC2700237627 /* ProfileTableViewController.m */; };
+		1F842C0D1A1E87C000A6AFCD /* cinemetro-mainpage-bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F842C0C1A1E87C000A6AFCD /* cinemetro-mainpage-bg1.png */; };
 		1F8869C319E2D9AA000FBD56 /* forward-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8869C219E2D9AA000FBD56 /* forward-50.png */; };
 		1F8869C519E2D9C8000FBD56 /* back-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F8869C419E2D9C8000FBD56 /* back-50.png */; };
 		1F90A16C19F80EC6003943F6 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F90A16B19F80EC6003943F6 /* logo2.png */; };
@@ -179,11 +180,30 @@
 		1FAE2CF219C3994D00D006EC /* star_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FAE2CF119C3994D00D006EC /* star_on.png */; };
 		1FB552E9196C456500E11311 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552E8196C456500E11311 /* Accounts.framework */; };
 		1FB552EB196C45CE00E11311 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB552EA196C45CE00E11311 /* Social.framework */; };
+		1FCA5C9A1A0AB130008834EF /* IIShortNotificationConcurrentQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA5C801A0AB130008834EF /* IIShortNotificationConcurrentQueue.m */; };
+		1FCA5C9B1A0AB130008834EF /* IIShortNotificationConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA5C821A0AB130008834EF /* IIShortNotificationConfiguration.m */; };
+		1FCA5C9C1A0AB130008834EF /* IIShortNotificationDefaultChevron.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA5C831A0AB130008834EF /* IIShortNotificationDefaultChevron.png */; };
+		1FCA5C9D1A0AB130008834EF /* IIShortNotificationDefaultChevron@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA5C841A0AB130008834EF /* IIShortNotificationDefaultChevron@2x.png */; };
+		1FCA5C9E1A0AB130008834EF /* IIShortNotificationDefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA5C861A0AB130008834EF /* IIShortNotificationDefaultView.m */; };
+		1FCA5C9F1A0AB130008834EF /* IIShortNotificationPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA5C8B1A0AB130008834EF /* IIShortNotificationPresenter.m */; };
+		1FCA5CA01A0AB130008834EF /* IIShortNotificationRightSideLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA5C8E1A0AB130008834EF /* IIShortNotificationRightSideLayout.m */; };
+		1FCA5CA11A0AB130008834EF /* IIShortNotificationSerialQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA5C901A0AB130008834EF /* IIShortNotificationSerialQueue.m */; };
+		1FCA5CA21A0AB130008834EF /* IIShortNotificationSlideUpChevron.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA5C911A0AB130008834EF /* IIShortNotificationSlideUpChevron.png */; };
+		1FCA5CA31A0AB130008834EF /* IIShortNotificationSlideUpChevron@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA5C921A0AB130008834EF /* IIShortNotificationSlideUpChevron@2x.png */; };
+		1FCA5CA41A0AB130008834EF /* IIShortNotificationTopLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA5C941A0AB130008834EF /* IIShortNotificationTopLayout.m */; };
+		1FCA5CA51A0AB130008834EF /* IIShortNotificationViewInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA5C971A0AB130008834EF /* IIShortNotificationViewInstance.m */; };
+		1FCA5CA61A0AB130008834EF /* TestNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA5C991A0AB130008834EF /* TestNotificationView.m */; };
 		1FD3F22319CE21BC009BF58E /* greenPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FD3F22219CE21BC009BF58E /* greenPin.png */; };
 		1FD3F22819CE37B1009BF58E /* bluePin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FD3F22619CE37B1009BF58E /* bluePin.png */; };
 		1FD3F22919CE37B1009BF58E /* redPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FD3F22719CE37B1009BF58E /* redPin.png */; };
 		1FE0F51919C9D827000D8841 /* LicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0F51719C9D827000D8841 /* LicenseViewController.m */; };
 		1FE0F51A19C9D827000D8841 /* LicenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0F51819C9D827000D8841 /* LicenseViewController.xib */; };
+		1FF0D5E91A1F953900674D23 /* cinemetro-about2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0D5E81A1F953900674D23 /* cinemetro-about2.png */; };
+		1FF0D5EB1A1F955400674D23 /* cinemetro-navigation2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0D5EA1A1F955400674D23 /* cinemetro-navigation2.png */; };
+		1FF0D5ED1A1F956200674D23 /* cinemtro-lines2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0D5EC1A1F956200674D23 /* cinemtro-lines2.png */; };
+		1FF0D5EF1A1F96D900674D23 /* cinemetro_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0D5EE1A1F96D900674D23 /* cinemetro_button.png */; };
+		1FF0D5F11A1F975200674D23 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0D5F01A1F975200674D23 /* logo.png */; };
+		1FF0D5F31A1F975700674D23 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0D5F21A1F975700674D23 /* background1.png */; };
 		1FF72A82198AC4C30022B08D /* BlueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */; };
 		36687826E35240D2959EF225 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8630476C0E4E2B87F91772 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -373,6 +393,7 @@
 		1F7A62E119FAF37500237627 /* cinemetroLogoBlurred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinemetroLogoBlurred.png; sourceTree = "<group>"; };
 		1F7A62E519FAFC2700237627 /* ProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewController.h; sourceTree = "<group>"; };
 		1F7A62E619FAFC2700237627 /* ProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewController.m; sourceTree = "<group>"; };
+		1F842C0C1A1E87C000A6AFCD /* cinemetro-mainpage-bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinemetro-mainpage-bg1.png"; sourceTree = "<group>"; };
 		1F8869C219E2D9AA000FBD56 /* forward-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-50.png"; sourceTree = "<group>"; };
 		1F8869C419E2D9C8000FBD56 /* back-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-50.png"; sourceTree = "<group>"; };
 		1F90A16B19F80EC6003943F6 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
@@ -399,15 +420,49 @@
 		1FAE2CF119C3994D00D006EC /* star_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_on.png; sourceTree = "<group>"; };
 		1FB552E8196C456500E11311 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1FB552EA196C45CE00E11311 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		1FCA5C7F1A0AB130008834EF /* IIShortNotificationConcurrentQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationConcurrentQueue.h; sourceTree = "<group>"; };
+		1FCA5C801A0AB130008834EF /* IIShortNotificationConcurrentQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIShortNotificationConcurrentQueue.m; sourceTree = "<group>"; };
+		1FCA5C811A0AB130008834EF /* IIShortNotificationConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationConfiguration.h; sourceTree = "<group>"; };
+		1FCA5C821A0AB130008834EF /* IIShortNotificationConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIShortNotificationConfiguration.m; sourceTree = "<group>"; };
+		1FCA5C831A0AB130008834EF /* IIShortNotificationDefaultChevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IIShortNotificationDefaultChevron.png; sourceTree = "<group>"; };
+		1FCA5C841A0AB130008834EF /* IIShortNotificationDefaultChevron@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IIShortNotificationDefaultChevron@2x.png"; sourceTree = "<group>"; };
+		1FCA5C851A0AB130008834EF /* IIShortNotificationDefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationDefaultView.h; sourceTree = "<group>"; };
+		1FCA5C861A0AB130008834EF /* IIShortNotificationDefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIShortNotificationDefaultView.m; sourceTree = "<group>"; };
+		1FCA5C871A0AB130008834EF /* IIShortNotificationLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationLayout.h; sourceTree = "<group>"; };
+		1FCA5C881A0AB130008834EF /* IIShortNotificationPresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationPresentation.h; sourceTree = "<group>"; };
+		1FCA5C891A0AB130008834EF /* IIShortNotificationPresentation+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IIShortNotificationPresentation+Internal.h"; sourceTree = "<group>"; };
+		1FCA5C8A1A0AB130008834EF /* IIShortNotificationPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationPresenter.h; sourceTree = "<group>"; };
+		1FCA5C8B1A0AB130008834EF /* IIShortNotificationPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIShortNotificationPresenter.m; sourceTree = "<group>"; };
+		1FCA5C8C1A0AB130008834EF /* IIShortNotificationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationQueue.h; sourceTree = "<group>"; };
+		1FCA5C8D1A0AB130008834EF /* IIShortNotificationRightSideLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationRightSideLayout.h; sourceTree = "<group>"; };
+		1FCA5C8E1A0AB130008834EF /* IIShortNotificationRightSideLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIShortNotificationRightSideLayout.m; sourceTree = "<group>"; };
+		1FCA5C8F1A0AB130008834EF /* IIShortNotificationSerialQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationSerialQueue.h; sourceTree = "<group>"; };
+		1FCA5C901A0AB130008834EF /* IIShortNotificationSerialQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIShortNotificationSerialQueue.m; sourceTree = "<group>"; };
+		1FCA5C911A0AB130008834EF /* IIShortNotificationSlideUpChevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IIShortNotificationSlideUpChevron.png; sourceTree = "<group>"; };
+		1FCA5C921A0AB130008834EF /* IIShortNotificationSlideUpChevron@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IIShortNotificationSlideUpChevron@2x.png"; sourceTree = "<group>"; };
+		1FCA5C931A0AB130008834EF /* IIShortNotificationTopLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationTopLayout.h; sourceTree = "<group>"; };
+		1FCA5C941A0AB130008834EF /* IIShortNotificationTopLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIShortNotificationTopLayout.m; sourceTree = "<group>"; };
+		1FCA5C951A0AB130008834EF /* IIShortNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationView.h; sourceTree = "<group>"; };
+		1FCA5C961A0AB130008834EF /* IIShortNotificationViewInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIShortNotificationViewInstance.h; sourceTree = "<group>"; };
+		1FCA5C971A0AB130008834EF /* IIShortNotificationViewInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIShortNotificationViewInstance.m; sourceTree = "<group>"; };
+		1FCA5C981A0AB130008834EF /* TestNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNotificationView.h; sourceTree = "<group>"; };
+		1FCA5C991A0AB130008834EF /* TestNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNotificationView.m; sourceTree = "<group>"; };
 		1FD3F22219CE21BC009BF58E /* greenPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenPin.png; sourceTree = "<group>"; };
 		1FD3F22619CE37B1009BF58E /* bluePin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluePin.png; sourceTree = "<group>"; };
 		1FD3F22719CE37B1009BF58E /* redPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redPin.png; sourceTree = "<group>"; };
 		1FE0F51619C9D827000D8841 /* LicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LicenseViewController.h; sourceTree = "<group>"; };
 		1FE0F51719C9D827000D8841 /* LicenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LicenseViewController.m; sourceTree = "<group>"; };
 		1FE0F51819C9D827000D8841 /* LicenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LicenseViewController.xib; sourceTree = "<group>"; };
+		1FF0D5E81A1F953900674D23 /* cinemetro-about2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinemetro-about2.png"; sourceTree = "<group>"; };
+		1FF0D5EA1A1F955400674D23 /* cinemetro-navigation2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinemetro-navigation2.png"; sourceTree = "<group>"; };
+		1FF0D5EC1A1F956200674D23 /* cinemtro-lines2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinemtro-lines2.png"; sourceTree = "<group>"; };
+		1FF0D5EE1A1F96D900674D23 /* cinemetro_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinemetro_button.png; sourceTree = "<group>"; };
+		1FF0D5F01A1F975200674D23 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		1FF0D5F21A1F975700674D23 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
 		1FF72A80198AC4C30022B08D /* BlueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueDetailsViewController.h; sourceTree = "<group>"; };
 		1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueDetailsViewController.m; sourceTree = "<group>"; };
-		3F77F930E77F45F8932CD087 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		67788C0654EEA2A846AEAD66 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		87C014C416B2C7FA6F249760 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DA8630476C0E4E2B87F91772 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -646,6 +701,7 @@
 		1F12C9A919B7D9680024CAD5 /* External Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				1FCA5C7E1A0AB11F008834EF /* IIShortNotificationPresenter */,
 				1F464DFF19B9182E00389827 /* MBProgressHUD.h */,
 				1F464E0019B9182E00389827 /* MBProgressHUD.m */,
 				1F12C9A619B7D5850024CAD5 /* Reachability.h */,
@@ -709,7 +765,7 @@
 				1F706561196768DA009CB35C /* CineMetroTests */,
 				1F70653B196768DA009CB35C /* Frameworks */,
 				1F70653A196768DA009CB35C /* Products */,
-				3F77F930E77F45F8932CD087 /* Pods.xcconfig */,
+				720C8A9D8AE93CEFA714C07D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -803,11 +859,52 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1FCA5C7E1A0AB11F008834EF /* IIShortNotificationPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				1FCA5C7F1A0AB130008834EF /* IIShortNotificationConcurrentQueue.h */,
+				1FCA5C801A0AB130008834EF /* IIShortNotificationConcurrentQueue.m */,
+				1FCA5C811A0AB130008834EF /* IIShortNotificationConfiguration.h */,
+				1FCA5C821A0AB130008834EF /* IIShortNotificationConfiguration.m */,
+				1FCA5C831A0AB130008834EF /* IIShortNotificationDefaultChevron.png */,
+				1FCA5C841A0AB130008834EF /* IIShortNotificationDefaultChevron@2x.png */,
+				1FCA5C851A0AB130008834EF /* IIShortNotificationDefaultView.h */,
+				1FCA5C861A0AB130008834EF /* IIShortNotificationDefaultView.m */,
+				1FCA5C871A0AB130008834EF /* IIShortNotificationLayout.h */,
+				1FCA5C881A0AB130008834EF /* IIShortNotificationPresentation.h */,
+				1FCA5C891A0AB130008834EF /* IIShortNotificationPresentation+Internal.h */,
+				1FCA5C8A1A0AB130008834EF /* IIShortNotificationPresenter.h */,
+				1FCA5C8B1A0AB130008834EF /* IIShortNotificationPresenter.m */,
+				1FCA5C8C1A0AB130008834EF /* IIShortNotificationQueue.h */,
+				1FCA5C8D1A0AB130008834EF /* IIShortNotificationRightSideLayout.h */,
+				1FCA5C8E1A0AB130008834EF /* IIShortNotificationRightSideLayout.m */,
+				1FCA5C8F1A0AB130008834EF /* IIShortNotificationSerialQueue.h */,
+				1FCA5C901A0AB130008834EF /* IIShortNotificationSerialQueue.m */,
+				1FCA5C911A0AB130008834EF /* IIShortNotificationSlideUpChevron.png */,
+				1FCA5C921A0AB130008834EF /* IIShortNotificationSlideUpChevron@2x.png */,
+				1FCA5C931A0AB130008834EF /* IIShortNotificationTopLayout.h */,
+				1FCA5C941A0AB130008834EF /* IIShortNotificationTopLayout.m */,
+				1FCA5C951A0AB130008834EF /* IIShortNotificationView.h */,
+				1FCA5C961A0AB130008834EF /* IIShortNotificationViewInstance.h */,
+				1FCA5C971A0AB130008834EF /* IIShortNotificationViewInstance.m */,
+				1FCA5C981A0AB130008834EF /* TestNotificationView.h */,
+				1FCA5C991A0AB130008834EF /* TestNotificationView.m */,
+			);
+			name = IIShortNotificationPresenter;
+			sourceTree = "<group>";
+		};
 		1FFF0BCF1974651B00FE59D2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1FF0D5EA1A1F955400674D23 /* cinemetro-navigation2.png */,
+				1FF0D5F21A1F975700674D23 /* background1.png */,
+				1FF0D5EE1A1F96D900674D23 /* cinemetro_button.png */,
+				1FF0D5F01A1F975200674D23 /* logo.png */,
+				1FF0D5E81A1F953900674D23 /* cinemetro-about2.png */,
+				1FF0D5EC1A1F956200674D23 /* cinemtro-lines2.png */,
 				1F0CAD491A0A981B0026AC90 /* aggelopoulos.jpg */,
 				1F0CAD4A1A0A981B0026AC90 /* amaliamoutoussihoraproelefsis.jpg */,
+				1F842C0C1A1E87C000A6AFCD /* cinemetro-mainpage-bg1.png */,
 				1F0CAD4B1A0A981B0026AC90 /* antwnopoulos.jpg */,
 				1F0CAD4C1A0A981B0026AC90 /* bazaka.jpg */,
 				1F0CAD4D1A0A981B0026AC90 /* bentivolio.jpg */,
@@ -861,6 +958,15 @@
 				1F65480A19A7466400974CCB /* ButtonStretch@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		720C8A9D8AE93CEFA714C07D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67788C0654EEA2A846AEAD66 /* Pods.debug.xcconfig */,
+				87C014C416B2C7FA6F249760 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -949,6 +1055,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F0CADEC1A0A981B0026AC90 /* green75.png in Resources */,
+				1FF0D5EB1A1F955400674D23 /* cinemetro-navigation2.png in Resources */,
 				1F0CAE011A0A981B0026AC90 /* red24.jpg in Resources */,
 				1F0CADF11A0A981B0026AC90 /* kwsti_maria.jpg in Resources */,
 				1F0CADDA1A0A981B0026AC90 /* green12.jpg in Resources */,
@@ -957,13 +1064,16 @@
 				1F0CADBF1A0A981B0026AC90 /* blue21.jpg in Resources */,
 				1F0CADCD1A0A981B0026AC90 /* blue44.jpg in Resources */,
 				1F0CAE131A0A981B0026AC90 /* syllas_tzoumerkas-200x200.jpg in Resources */,
+				1FCA5CA31A0AB130008834EF /* IIShortNotificationSlideUpChevron@2x.png in Resources */,
 				1F0CADE21A0A981B0026AC90 /* green42.jpg in Resources */,
 				1F0CADD11A0A981B0026AC90 /* eliopoulos.jpeg in Resources */,
+				1FF0D5F11A1F975200674D23 /* logo.png in Resources */,
 				1F706555196768DA009CB35C /* Images.xcassets in Resources */,
 				1F45E35619F724EB00032AAF /* final-cinemetro-thess71x71.png in Resources */,
 				1F0CAE0D1A0A981B0026AC90 /* red61.jpg in Resources */,
 				1F0CAE0A1A0A981B0026AC90 /* red51.jpg in Resources */,
 				1F0CAE101A0A981B0026AC90 /* samaras.jpg in Resources */,
+				1FF0D5F31A1F975700674D23 /* background1.png in Resources */,
 				1F0CADC31A0A981B0026AC90 /* blue31.jpg in Resources */,
 				1F0CADDE1A0A981B0026AC90 /* green23.jpg in Resources */,
 				1F0CADBC1A0A981B0026AC90 /* blue06.jpg in Resources */,
@@ -1015,6 +1125,7 @@
 				1FD3F22919CE37B1009BF58E /* redPin.png in Resources */,
 				1F0CADFD1A0A981B0026AC90 /* red14.jpg in Resources */,
 				1F0CADF01A0A981B0026AC90 /* karagiannh.jpg in Resources */,
+				1FCA5C9C1A0AB130008834EF /* IIShortNotificationDefaultChevron.png in Resources */,
 				1F0CADB31A0A981B0026AC90 /* amaliamoutoussihoraproelefsis.jpg in Resources */,
 				1F137A8619753179001C0F2B /* RedLineStations.plist in Resources */,
 				1F0CADB41A0A981B0026AC90 /* antwnopoulos.jpg in Resources */,
@@ -1031,7 +1142,9 @@
 				1F0CADE71A0A981B0026AC90 /* green63.jpg in Resources */,
 				1F0CADE91A0A981B0026AC90 /* green72.jpg in Resources */,
 				1F0CADBE1A0A981B0026AC90 /* blue12.jpg in Resources */,
+				1FCA5CA21A0AB130008834EF /* IIShortNotificationSlideUpChevron.png in Resources */,
 				1F0CADE11A0A981B0026AC90 /* green41.jpg in Resources */,
+				1FF0D5EF1A1F96D900674D23 /* cinemetro_button.png in Resources */,
 				1F0CADFF1A0A981B0026AC90 /* red22.jpg in Resources */,
 				1F0CAE001A0A981B0026AC90 /* red23.jpg in Resources */,
 				1F0CADC01A0A981B0026AC90 /* blue22.jpg in Resources */,
@@ -1064,6 +1177,7 @@
 				1FAE2CF219C3994D00D006EC /* star_on.png in Resources */,
 				1F0CADC41A0A981B0026AC90 /* blue32.jpg in Resources */,
 				1F0CADC11A0A981B0026AC90 /* blue23.jpg in Resources */,
+				1FF0D5E91A1F953900674D23 /* cinemetro-about2.png in Resources */,
 				1F0CADD31A0A981B0026AC90 /* fragkedakhs_vasilis.jpg in Resources */,
 				1FAE2CE519C3829A00D006EC /* photo-75.png in Resources */,
 				1F0CADE31A0A981B0026AC90 /* green51.jpg in Resources */,
@@ -1072,13 +1186,16 @@
 				1FAE2CEE19C38BE300D006EC /* star_off.png in Resources */,
 				1F0CAE021A0A981B0026AC90 /* red25.jpg in Resources */,
 				1F0CADEF1A0A981B0026AC90 /* kanelopoulos.jpeg in Resources */,
+				1FF0D5ED1A1F956200674D23 /* cinemtro-lines2.png in Resources */,
 				1F0CAE161A0A981B0026AC90 /* vainas.jpg in Resources */,
 				1F9DB73919CA17F900C3E3FC /* twitter-logo.jpg in Resources */,
 				1F0CAE051A0A981B0026AC90 /* red33.jpg in Resources */,
 				1FA35B8B19F4532F003061E7 /* red.png in Resources */,
 				1F0CADF71A0A981B0026AC90 /* papaiwannou.jpg in Resources */,
 				1F0CADCC1A0A981B0026AC90 /* blue43.jpg in Resources */,
+				1FCA5C9D1A0AB130008834EF /* IIShortNotificationDefaultChevron@2x.png in Resources */,
 				1F0CADE61A0A981B0026AC90 /* green62.jpg in Resources */,
+				1F842C0D1A1E87C000A6AFCD /* cinemetro-mainpage-bg1.png in Resources */,
 				1F370D2C19753ADC003FB972 /* BlueLineStations.plist in Resources */,
 				1F0CADDC1A0A981B0026AC90 /* green21.jpg in Resources */,
 			);
@@ -1106,7 +1223,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A0C962E0007B4EF384E98AD0 /* Check Pods Manifest.lock */ = {
@@ -1138,17 +1255,24 @@
 				1F13175219DCA9EC00DB8316 /* PageContentGreenViewController.m in Sources */,
 				1F2D733119CFA0BB00C60F09 /* AboutViewController.m in Sources */,
 				1F276BC2196790A8008735B1 /* LoginViewController.m in Sources */,
+				1FCA5CA01A0AB130008834EF /* IIShortNotificationRightSideLayout.m in Sources */,
 				1F464E0119B9182E00389827 /* MBProgressHUD.m in Sources */,
+				1FCA5C9E1A0AB130008834EF /* IIShortNotificationDefaultView.m in Sources */,
 				1FAE04E119BD073800E45EF4 /* ViewController.m in Sources */,
 				1F70658419678116009CB35C /* MapViewController.m in Sources */,
 				1F13175519DCAA6400DB8316 /* ContainerGreenViewController.m in Sources */,
 				1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */,
 				1F275BC319C6106800A1A8AD /* FilmFestivalViewController.m in Sources */,
+				1FCA5C9F1A0AB130008834EF /* IIShortNotificationPresenter.m in Sources */,
 				1F70657B1967707B009CB35C /* GreenLineTableViewController.m in Sources */,
+				1FCA5CA11A0AB130008834EF /* IIShortNotificationSerialQueue.m in Sources */,
+				1FCA5C9A1A0AB130008834EF /* IIShortNotificationConcurrentQueue.m in Sources */,
+				1FCA5CA41A0AB130008834EF /* IIShortNotificationTopLayout.m in Sources */,
 				1FAE2CEB19C38AF400D006EC /* RatingViewController.m in Sources */,
 				1F16A31419A3DC1900AC7A68 /* GreenDetailsViewController.m in Sources */,
 				1FE0F51919C9D827000D8841 /* LicenseViewController.m in Sources */,
 				1F93629A1988F1B10088A0BF /* RedDetailsViewController.m in Sources */,
+				1FCA5C9B1A0AB130008834EF /* IIShortNotificationConfiguration.m in Sources */,
 				1F12C9A819B7D5850024CAD5 /* Reachability.m in Sources */,
 				1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */,
 				1FAE04E419BD077900E45EF4 /* PageContentViewController.m in Sources */,
@@ -1156,6 +1280,8 @@
 				1F7A62E719FAFC2700237627 /* ProfileTableViewController.m in Sources */,
 				1F706549196768DA009CB35C /* main.m in Sources */,
 				1F706573196768E8009CB35C /* MainViewController.m in Sources */,
+				1FCA5CA51A0AB130008834EF /* IIShortNotificationViewInstance.m in Sources */,
+				1FCA5CA61A0AB130008834EF /* TestNotificationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1279,7 +1405,7 @@
 		};
 		1F70656C196768DA009CB35C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F77F930E77F45F8932CD087 /* Pods.xcconfig */;
+			baseConfigurationReference = 67788C0654EEA2A846AEAD66 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
@@ -1303,7 +1429,7 @@
 		};
 		1F70656D196768DA009CB35C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F77F930E77F45F8932CD087 /* Pods.xcconfig */;
+			baseConfigurationReference = 87C014C416B2C7FA6F249760 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";

@@ -11,6 +11,10 @@
 #import <Social/Social.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "ContainerGreenViewController.h"
+#import "IIShortNotificationPresenter.h"
+#import "IIShortNotificationConcurrentQueue.h"
+#import "IIShortNotificationRightSideLayout.h"
+#import "TestNotificationView.h"
 
 @interface GreenDetailsViewController ()
 
@@ -40,6 +44,11 @@ ContainerGreenViewController *dest;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[IIShortNotificationPresenter defaultConfiguration] setAutoDismissDelay:3];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationViewClass:[TestNotificationView class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
+    
     UIBarButtonItem *ratebutton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"rate",@"word") style:UIBarButtonItemStyleBordered target:self action:@selector(rateButtonPressed:)];
     
     UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Upload"] style:UIBarButtonItemStyleBordered target:self action:@selector(shareButtonPressed:)];
@@ -135,8 +144,10 @@ ContainerGreenViewController *dest;
     if(user != nil){
         points = [NSMutableArray arrayWithArray:[user objectForKey:@"greenLineStations"]];
         if([[points objectAtIndex:indexPath]intValue] != 0){
-            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"ratedTrue",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-            [alert show];
+            [self presentNotification:NSLocalizedString(@"ratedTrue",@"word")];
+
+//            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"ratedTrue",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+//            [alert show];
         }
         else{
             self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
@@ -145,8 +156,10 @@ ContainerGreenViewController *dest;
         }
     }
     else {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateLogin",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-        [alert show];
+        [self presentNotification:NSLocalizedString(@"rateLogin",@"word")];
+
+//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateLogin",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+//        [alert show];
     }
 }
 

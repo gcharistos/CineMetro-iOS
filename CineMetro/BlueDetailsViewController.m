@@ -11,6 +11,10 @@
 #import <Social/Social.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "ViewController.h"
+#import "IIShortNotificationPresenter.h"
+#import "IIShortNotificationConcurrentQueue.h"
+#import "IIShortNotificationRightSideLayout.h"
+#import "TestNotificationView.h"
 
 @interface BlueDetailsViewController ()
 @property NSInteger position1;
@@ -48,7 +52,10 @@ NSMutableArray *points;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [[IIShortNotificationPresenter defaultConfiguration] setAutoDismissDelay:3];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationViewClass:[TestNotificationView class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
     UIBarButtonItem *ratebutton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"rate",@"word") style:UIBarButtonItemStyleBordered target:self action:@selector(rateButtonPressed:)];
     
     UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Upload"] style:UIBarButtonItemStyleBordered target:self action:@selector(shareButtonPressed:)];
@@ -90,6 +97,7 @@ NSMutableArray *points;
 
     }
     [info setFont:[UIFont systemFontOfSize:18]];
+    info.textColor = [UIColor blackColor];
 
     [mapview addAnnotation:myAnnotation];
     MKCoordinateSpan span = {0.05,0.05};
@@ -149,8 +157,9 @@ NSMutableArray *points;
     if(user != nil){
         points = [NSMutableArray arrayWithArray:[user objectForKey:@"blueLineStations"]];
         if([[points objectAtIndex:position1]intValue] != 0){
-            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"ratedTrue",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-            [alert show];
+            [self presentNotification:NSLocalizedString(@"ratedTrue",@"word")];
+//            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"ratedTrue",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+//            [alert show];
         }
         else{
             self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
@@ -159,8 +168,10 @@ NSMutableArray *points;
         }
     }
     else {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateLogin",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-        [alert show];
+        [self presentNotification:NSLocalizedString(@"rateLogin",@"word")];
+
+//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateLogin",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+//        [alert show];
     }
 }
 

@@ -12,6 +12,10 @@
 #import <Pop/POP.h>
 #import "MBProgressHUD.h"
 #import "Reachability.h"
+#import "IIShortNotificationPresenter.h"
+#import "IIShortNotificationConcurrentQueue.h"
+#import "IIShortNotificationRightSideLayout.h"
+#import "TestNotificationView.h"
 
 @interface MainViewController ()
 
@@ -19,7 +23,6 @@
 
 @implementation MainViewController
 @synthesize word;
-int loginStatus;
 BOOL startFlag;
 NSArray *array;
 @synthesize profileButton;
@@ -34,9 +37,14 @@ NSArray *array;
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[IIShortNotificationPresenter defaultConfiguration] setAutoDismissDelay:3];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationViewClass:[TestNotificationView class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
     locale = [[[NSBundle mainBundle] preferredLocalizations]objectAtIndex:0];
     UIFont * font = [UIFont boldSystemFontOfSize:20];
     NSDictionary * attributes = @{NSFontAttributeName: font};
@@ -48,9 +56,9 @@ NSArray *array;
     counter++; // plus plus counter variable
     array = [NSArray arrayWithObjects:NSLocalizedString(@"navigationTitle",@"word"),NSLocalizedString(@"linesTitle",@"word"),NSLocalizedString(@"aboutFestival",@"word"), nil];
     if(retrieveUser == nil){
-        UIAlertView *welcomeMessage = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"welcome",@"word") message:nil delegate:self cancelButtonTitle:@"Offline" otherButtonTitles:NSLocalizedString(@"login", @"word"),NSLocalizedString(@"signup",@"word"),nil];
-        welcomeMessage.tag = 100;
-        [welcomeMessage show];    }
+        [self.navigationController presentNotification:NSLocalizedString(@"offline",@"word")];
+
+    }
     else  {
         if([flagstatus isEqualToString:@"false"] || counter == 1){
             MBProgressHUD *retrieveProcess = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -65,11 +73,40 @@ NSArray *array;
             [userQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
                 user = [PFUser currentUser];
                 [retrieveProcess hide:YES];
+                [self.navigationController presentConfirmation:retrieveProcess.labelText];
                 [userDefaults setObject:@"true" forKey:@"flag"];
             }];
         }
     }
         
+
+}
+
+-(void)showLogout{
+    [self.navigationController presentConfirmation:@"Logged Out"];
+    
+}
+
+-(void)showLogIn{
+    [self.navigationController presentConfirmation:NSLocalizedString(@"successfullLogin",@"word")];
+}
+-(void)showCreateAccount{
+    [self.navigationController presentConfirmation:NSLocalizedString(@"successfullCreate",@"word")];
+    
+}
+
+- (IBAction)navigationButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"navigationSegue" sender:nil];
+
+}
+
+- (IBAction)linesButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"linesSegue" sender:nil];
+
+}
+
+- (IBAction)aboutButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"aboutSegue" sender:nil];
 
 }
 
@@ -115,7 +152,7 @@ NSArray *array;
 
     }
     else if(indexPath.row == 2){
-        [self performSegueWithIdentifier:@"aboutFestivalSegue" sender:nil];
+        [self performSegueWithIdentifier:@"aboutSegue" sender:nil];
 
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -145,10 +182,7 @@ NSArray *array;
     // Dispose of any resources that can be recreated.
 }
 
--(void)redirectToProfile{
-    [self performSegueWithIdentifier:@"profileSegue" sender:nil];
 
-}
 
 - (BOOL)checkForNetwork
 {
@@ -195,17 +229,13 @@ NSArray *array;
         ProfileTableViewController *dest = segue.destinationViewController;
         dest.user = user;
     }
-    else if([segue.identifier isEqualToString:@"ProfileLogin"]){
-        LoginViewController *dest = segue.destinationViewController;
-        dest.loginStatus = loginStatus;
-    }
+   
 }
 
 
 - (IBAction)profileButtonPressed:(id)sender {
     if(user == nil){
         UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"offline",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:NSLocalizedString(@"login",@"word"),NSLocalizedString(@"signup",@"word"),nil];
-        nullUser.tag = 200;
         [nullUser show];
     }
     else{
@@ -216,16 +246,16 @@ NSArray *array;
 {
     if (buttonIndex == 1) // login
     {
-        if(alertView.tag == 200){
-           loginStatus = 1;
-        }
+       
         if([self checkForNetwork] == true){
           [self performSegueWithIdentifier:@"ProfileLogin" sender:nil];
         }
         else{
-            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"loginerror",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil,nil];
-            nullUser.tag = 400;
-            [nullUser show];
+            [self presentErrorMessage:NSLocalizedString(@"loginerror",@"word")];
+
+//            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"loginerror",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil,nil];
+//            nullUser.tag = 400;
+          //  [nullUser show];
         }
     }
     else if(buttonIndex == 2){ // sign up
@@ -233,9 +263,11 @@ NSArray *array;
             [self performSegueWithIdentifier:@"createAccount" sender:nil];
         }
         else{
-            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"signuperror",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil,nil];
-            nullUser.tag = 400;
-            [nullUser show];
+            [self presentErrorMessage:NSLocalizedString(@"signuperror",@"word")];
+
+//            UIAlertView *nullUser = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"signuperror",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil,nil];
+//            nullUser.tag = 400;
+//            [nullUser show];
         }
 
     }

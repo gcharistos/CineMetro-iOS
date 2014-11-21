@@ -17,6 +17,10 @@
 #import "GreenDetailsViewController.h"
 #import "BlueDetailsViewController.h"
 #import "RedDetailsViewController.h"
+#import "IIShortNotificationPresenter.h"
+#import "IIShortNotificationConcurrentQueue.h"
+#import "IIShortNotificationRightSideLayout.h"
+#import "TestNotificationView.h"
 
 
 
@@ -54,6 +58,12 @@ NSTimer *timer;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[IIShortNotificationPresenter defaultConfiguration] setAutoDismissDelay:3];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationViewClass:[TestNotificationView class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
+    [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
+    
+
     tableview.hidden = YES;
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
@@ -83,8 +93,10 @@ NSTimer *timer;
 //method animates tableview whether user wants to show/hide it .
 -(IBAction)showHidePressed:(id)sender {
     if(visibleLine == -1){ // empty table
-        UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"emptytable",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-        [alertview show];
+        [self presentNotification:NSLocalizedString(@"emptytable",@"word")];
+
+//        UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"emptytable",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+//        [alertview show];
         return;
     }
     if(tableview.hidden){
@@ -268,17 +280,18 @@ NSTimer *timer;
 //Method checks if user location services are enabled then show user location to map
 -(void)showUserLocation{
     if(![CLLocationManager locationServicesEnabled]){
-        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enablelocation",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-        [disabled show];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNetworkChange:) name:kReachabilityChangedNotification object:nil];
-        
-        reachability = [Reachability reachabilityForInternetConnection];
-        [reachability startNotifier];
+        [self presentNotification:NSLocalizedString(@"enablelocation",@"word")];
+
+//        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enablelocation",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+//        [disabled show];
+       
         return;
     }
     else if(![self checkForNetwork]){
-        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enableInternetConnection",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-        [disabled show];
+        [self presentNotification:NSLocalizedString(@"enableInternetConnection",@"word")];
+
+//        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enableInternetConnection",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+//        [disabled show];
 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNetworkChange:) name:kReachabilityChangedNotification object:nil];
         
@@ -383,6 +396,7 @@ NSTimer *timer;
     }
     //directions button pressed
     else {
+       
         MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:annotationTapped.coordinate addressDictionary:nil];
         MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
         destination.name = annotationTapped.subtitle;
@@ -392,6 +406,7 @@ NSTimer *timer;
 }
 
 - (IBAction)settingsButtonPressed:(id)sender {
+
     UIAlertView *settingsAlert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"chooseL",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"cancel",@"word") otherButtonTitles:NSLocalizedString(@"red", @"word"),NSLocalizedString(@"blue",@"word"),NSLocalizedString(@"green",@"word"), nil];
     settingsAlert.tag = 100;
     [settingsAlert show];
@@ -430,6 +445,7 @@ NSTimer *timer;
             [self removeObjectsFromMap];
             
             [self UploadLine:@"RedLineStations" :[UIColor redColor]];
+            alertView.hidden = YES;
         }
         else if(buttonIndex == 2){
             if(visibleLine == 2){
@@ -450,6 +466,7 @@ NSTimer *timer;
 
         }
     }
+    
     
 }
 
@@ -568,7 +585,6 @@ NSTimer *timer;
       timer = nil;
       [reachability stopNotifier];
       reachability = nil;
-        currentDB = nil;
     }
 }
 
