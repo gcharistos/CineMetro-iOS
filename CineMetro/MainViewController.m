@@ -41,7 +41,8 @@ NSArray *array;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[IIShortNotificationPresenter defaultConfiguration] setAutoDismissDelay:3];
+    
+        [[IIShortNotificationPresenter defaultConfiguration] setAutoDismissDelay:3];
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationViewClass:[TestNotificationView class]];
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
@@ -81,6 +82,14 @@ NSArray *array;
         
 
 }
+
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 
 -(void)showLogout{
     [self.navigationController presentConfirmation:@"Logged Out"];
@@ -274,6 +283,15 @@ NSArray *array;
         
     
 }
+
+#pragma mark -
+#pragma mark - CDSideBarController delegate
+
+- (void)menuButtonClicked:(int)index
+{
+    // Execute what ever you want
+}
+
 
 
 

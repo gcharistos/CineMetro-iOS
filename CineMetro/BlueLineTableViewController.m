@@ -39,8 +39,7 @@ NSInteger  selectedIndex ;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
-    [self.tabBarController.tabBar setTintColor:[UIColor blueColor]];
-
+[self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:(11/255.0) green:(63/255.0) blue:(100/255.0) alpha:1.0]];
     
     
     
@@ -53,8 +52,7 @@ NSInteger  selectedIndex ;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [self.tabBarController.tabBar setTintColor:[UIColor blueColor]];
-
+[self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:(11/255.0) green:(63/255.0) blue:(100/255.0) alpha:1.0]];
     titles = [[NSMutableArray alloc]init];
     selectedIndex = -1;
     NSString *title;
@@ -73,6 +71,8 @@ NSInteger  selectedIndex ;
         title = positionString;
         [titles addObject:title];
     }
+    [self.tableView reloadData];
+
     
 }
 

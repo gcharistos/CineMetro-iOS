@@ -20,6 +20,8 @@
 "bTY-IH-fuj.text" = "Photos";
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "yMv-bI-HvP"; */
 "yMv-bI-HvP.text" = "Photos";
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "ir6-uO-ExA"; */
+"ir6-uO-ExA.text" = "Information";
 
 
 
@@ -88,7 +90,7 @@
 "NTU-Ek-nnz.text" = "Green Line : ";
 
 /* Class = "IBUITabBarItem"; title = "Red Line"; ObjectID = "NUQ-Vq-nJi"; */
-"NUQ-Vq-nJi.title" = "Red Line";
+"NUQ-Vq-nJi.title" = "Cinemas";
 
 /* Class = "IBUIButton"; normalTitle = "Log Out"; ObjectID = "O93-cU-edO"; */
 "O93-cU-edO.normalTitle" = "Log Out";
@@ -135,9 +137,6 @@
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "bKi-NP-eRF"; */
 "bKi-NP-eRF.text" = "Label";
 
-/* Class = "IBUILabel"; text = "Title"; ObjectID = "cc0-ni-UIo"; */
-"cc0-ni-UIo.text" = "Title";
-
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "dOU-LY-BXD"; */
 "dOU-LY-BXD.text" = "Label";
 
@@ -154,7 +153,7 @@
 "hwI-e9-RFb.title" = "About";
 
 /* Class = "IBUIBarButtonItem"; title = "Profile"; ObjectID = "izI-d6-cCF"; */
-"izI-d6-cCF.title" = "Profile";
+"NOA-Ea-848.title" = "Profile";
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "jDC-98-ktb"; */
 "jDC-98-ktb.text" = "Label";
@@ -212,7 +211,7 @@
 "rbH-4a-2g3.normalTitle" = "About Festival";
 
 /* Class = "IBUITabBarItem"; title = "Green Line"; ObjectID = "sLo-Er-z5V"; */
-"sLo-Er-z5V.title" = "Green Line";
+"sLo-Er-z5V.title" = "Timeline";
 
 /* Class = "IBUIBarButtonItem"; title = "Settings"; ObjectID = "si6-Ax-lzK"; */
 "si6-Ax-lzK.title" = "Settings";
@@ -249,10 +248,14 @@
 "ytf-OK-cjh.text" = "Title";
 
 /* Class = "IBUITabBarItem"; title = "Blue Line"; ObjectID = "zcJ-cJ-ymF"; */
-"zcJ-cJ-ymF.title" = "Blue Line";
+"zcJ-cJ-ymF.title" = "Movies";
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "jjR-nJ-7gm"; */
 "jjR-nJ-7gm.text" = "Thessaloniki International Film Festival";
+
+"JQC-rl-GYR.segmentTitles[0]"= "Director";
+"JQC-rl-GYR.segmentTitles[1]"= "Actors";
+
 
 
 

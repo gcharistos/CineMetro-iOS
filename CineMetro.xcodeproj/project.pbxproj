@@ -134,10 +134,15 @@
 		1F28171519BE848E005A5337 /* ShowImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F28171319BE848E005A5337 /* ShowImageViewController.xib */; };
 		1F2D733119CFA0BB00C60F09 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D733019CFA0BB00C60F09 /* AboutViewController.m */; };
 		1F370D2C19753ADC003FB972 /* BlueLineStations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F370D2B19753ADC003FB972 /* BlueLineStations.plist */; };
+		1F4587621A2241B10006C478 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4587611A2241B10006C478 /* facebook.png */; };
+		1F4587641A2241BD0006C478 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4587631A2241BD0006C478 /* twitter.png */; };
 		1F45E35619F724EB00032AAF /* final-cinemetro-thess71x71.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F45E35519F724EB00032AAF /* final-cinemetro-thess71x71.png */; };
 		1F45E35819F725BC00032AAF /* cinemetroLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F45E35719F725BC00032AAF /* cinemetroLogo.png */; };
 		1F464E0119B9182E00389827 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F464E0019B9182E00389827 /* MBProgressHUD.m */; };
+		1F5DA1C01A21FBAB00B32E16 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DA1BF1A21FBAB00B32E16 /* share.png */; };
+		1F5DA1C21A21FBCF00B32E16 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DA1C11A21FBCF00B32E16 /* map.png */; };
 		1F65480B19A7466400974CCB /* ButtonStretch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F65480A19A7466400974CCB /* ButtonStretch@2x.png */; };
+		1F6FB7FC1A20EB72008E42D6 /* ic_drawer.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F6FB7FB1A20EB72008E42D6 /* ic_drawer.png */; };
 		1F70653D196768DA009CB35C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653C196768DA009CB35C /* Foundation.framework */; };
 		1F70653F196768DA009CB35C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F70653E196768DA009CB35C /* CoreGraphics.framework */; };
 		1F706541196768DA009CB35C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F706540196768DA009CB35C /* UIKit.framework */; };
@@ -356,11 +361,17 @@
 		1F2D732F19CFA0BB00C60F09 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		1F2D733019CFA0BB00C60F09 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		1F370D2B19753ADC003FB972 /* BlueLineStations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BlueLineStations.plist; sourceTree = "<group>"; };
+		1F4587611A2241B10006C478 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		1F4587631A2241BD0006C478 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		1F45E35519F724EB00032AAF /* final-cinemetro-thess71x71.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "final-cinemetro-thess71x71.png"; sourceTree = "<group>"; };
 		1F45E35719F725BC00032AAF /* cinemetroLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinemetroLogo.png; sourceTree = "<group>"; };
 		1F464DFF19B9182E00389827 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../MBProgressHUD.h; sourceTree = "<group>"; };
 		1F464E0019B9182E00389827 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../MBProgressHUD.m; sourceTree = "<group>"; };
+		1F5DA1BF1A21FBAB00B32E16 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		1F5DA1C11A21FBCF00B32E16 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		1F65480A19A7466400974CCB /* ButtonStretch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonStretch@2x.png"; sourceTree = "<group>"; };
+		1F6FB7FB1A20EB72008E42D6 /* ic_drawer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_drawer.png; sourceTree = "<group>"; };
+		1F6FB7FD1A20EF9F008E42D6 /* libPods-MLFlyOverMenu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MLFlyOverMenu.a"; path = "Pods/build/Debug-iphoneos/libPods-MLFlyOverMenu.a"; sourceTree = "<group>"; };
 		1F706539196768DA009CB35C /* CineMetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineMetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F70653C196768DA009CB35C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1F70653E196768DA009CB35C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -781,6 +792,7 @@
 		1F70653B196768DA009CB35C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F6FB7FD1A20EF9F008E42D6 /* libPods-MLFlyOverMenu.a */,
 				1FA35B8319F43A48003061E7 /* Parse.framework */,
 				1F12952919EA903C00A6F3F6 /* FacebookSDK.framework */,
 				1F0AB7EB19E5D51B002D4D83 /* FacebookSDK.framework */,
@@ -896,6 +908,9 @@
 		1FFF0BCF1974651B00FE59D2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1F4587611A2241B10006C478 /* facebook.png */,
+				1F4587631A2241BD0006C478 /* twitter.png */,
+				1F6FB7FB1A20EB72008E42D6 /* ic_drawer.png */,
 				1FF0D5EA1A1F955400674D23 /* cinemetro-navigation2.png */,
 				1FF0D5F21A1F975700674D23 /* background1.png */,
 				1FF0D5EE1A1F96D900674D23 /* cinemetro_button.png */,
@@ -942,6 +957,7 @@
 				1F8869C419E2D9C8000FBD56 /* back-50.png */,
 				1F7A62E119FAF37500237627 /* cinemetroLogoBlurred.png */,
 				1FD3F22619CE37B1009BF58E /* bluePin.png */,
+				1F5DA1BF1A21FBAB00B32E16 /* share.png */,
 				1F90A16B19F80EC6003943F6 /* logo2.png */,
 				1FD3F22719CE37B1009BF58E /* redPin.png */,
 				1FD3F22219CE21BC009BF58E /* greenPin.png */,
@@ -950,6 +966,7 @@
 				1F90A16D19F81D06003943F6 /* buttonBack.png */,
 				1F45E35519F724EB00032AAF /* final-cinemetro-thess71x71.png */,
 				1FAE2CED19C38BE300D006EC /* star_off.png */,
+				1F5DA1C11A21FBCF00B32E16 /* map.png */,
 				1FA35B8A19F4532F003061E7 /* red.png */,
 				1F45E35719F725BC00032AAF /* cinemetroLogo.png */,
 				1F9DB73819CA17F900C3E3FC /* twitter-logo.jpg */,
@@ -1069,8 +1086,11 @@
 				1F0CADD11A0A981B0026AC90 /* eliopoulos.jpeg in Resources */,
 				1FF0D5F11A1F975200674D23 /* logo.png in Resources */,
 				1F706555196768DA009CB35C /* Images.xcassets in Resources */,
+				1F4587641A2241BD0006C478 /* twitter.png in Resources */,
+				1F6FB7FC1A20EB72008E42D6 /* ic_drawer.png in Resources */,
 				1F45E35619F724EB00032AAF /* final-cinemetro-thess71x71.png in Resources */,
 				1F0CAE0D1A0A981B0026AC90 /* red61.jpg in Resources */,
+				1F5DA1C21A21FBCF00B32E16 /* map.png in Resources */,
 				1F0CAE0A1A0A981B0026AC90 /* red51.jpg in Resources */,
 				1F0CAE101A0A981B0026AC90 /* samaras.jpg in Resources */,
 				1FF0D5F31A1F975700674D23 /* background1.png in Resources */,
@@ -1089,6 +1109,7 @@
 				1F0CADFC1A0A981B0026AC90 /* red13.jpg in Resources */,
 				1F0CADF81A0A981B0026AC90 /* red01.jpg in Resources */,
 				1F0CAE0C1A0A981B0026AC90 /* red53.jpg in Resources */,
+				1F4587621A2241B10006C478 /* facebook.png in Resources */,
 				1F0CADC91A0A981B0026AC90 /* blue37.jpg in Resources */,
 				1F0CADE51A0A981B0026AC90 /* green61.jpg in Resources */,
 				1F65480B19A7466400974CCB /* ButtonStretch@2x.png in Resources */,
@@ -1162,6 +1183,7 @@
 				1F0CADD51A0A981B0026AC90 /* green02.jpg in Resources */,
 				1F0CADD81A0A981B0026AC90 /* green05.jpg in Resources */,
 				1F0CAE1A1A0A981B0026AC90 /* zervos.jpg in Resources */,
+				1F5DA1C01A21FBAB00B32E16 /* share.png in Resources */,
 				1F0CAE151A0A981B0026AC90 /* tzortzoglou.jpg in Resources */,
 				1F0CADF91A0A981B0026AC90 /* red02.jpg in Resources */,
 				1F0CADD41A0A981B0026AC90 /* green01.jpg in Resources */,
@@ -1420,6 +1442,10 @@
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";
 				INFOPLIST_FILE = "CineMetro/CineMetro-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1444,6 +1470,10 @@
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";
 				INFOPLIST_FILE = "CineMetro/CineMetro-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

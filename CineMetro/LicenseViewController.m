@@ -30,12 +30,16 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller  withText:(NSString *)text animated:(BOOL)animated{
+- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller  withText:(NSString *)text withColor:(UIColor *)color withTextColor:(UIColor *)textColor animated:(BOOL)animated{
     dispatch_async(dispatch_get_main_queue(), ^{
         // viewController = (GreenDetailsViewController *)controller;
 
         [aView addSubview:self.view];
         textview.text = text;
+        textview.textColor = textColor;
+        [textview setFont:[UIFont systemFontOfSize:18]];
+        self.view.backgroundColor = color;
+        textview.backgroundColor = color;
 
         if (animated) {
             [self showAnimate];

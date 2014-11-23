@@ -13,6 +13,8 @@ int flag;
 NSString *locale;
 int counter;
 @interface MainViewController : UIViewController<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>
+
+
 - (IBAction)profileButtonPressed:(id)sender;
 @property (nonatomic,strong) NSString *word;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *aboutButton;

@@ -135,8 +135,6 @@
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "bKi-NP-eRF"; */
 "bKi-NP-eRF.text" = "Label";
 
-/* Class = "IBUILabel"; text = "Title"; ObjectID = "cc0-ni-UIo"; */
-"cc0-ni-UIo.text" = "Title";
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "dOU-LY-BXD"; */
 "dOU-LY-BXD.text" = "Label";
@@ -147,6 +145,9 @@
 /* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "fAS-UG-Cvd"; */
 "fAS-UG-Cvd.normalTitle" = "Άκυρο";
 
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "ir6-uO-ExA"; */
+"ir6-uO-ExA.text" = "Πληροφορίες";
+
 /* Class = "IBUILabel"; text = "Προγραμματιστής  "; ObjectID = "fVP-y5-oXE"; */
 "fVP-y5-oXE.text" = "Προγραμματιστής  ";
 
@@ -154,7 +155,7 @@
 "hwI-e9-RFb.title" = "Σχετικά";
 
 /* Class = "IBUIBarButtonItem"; title = "Profile"; ObjectID = "izI-d6-cCF"; */
-"izI-d6-cCF.title" = "Προφίλ";
+"NOA-Ea-848.title" = "Προφίλ";
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "jDC-98-ktb"; */
 "jDC-98-ktb.text" = "Label";
@@ -253,4 +254,6 @@
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "jjR-nJ-7gm"; */
 "jjR-nJ-7gm.text" = "Φεστιβάλ Κινηματογράφου Θεσσαλονίκης";
+"JQC-rl-GYR.segmentTitles[0]"= "Σκηνοθέτης";
+"JQC-rl-GYR.segmentTitles[1]"= "Ηθοποιοί";
 

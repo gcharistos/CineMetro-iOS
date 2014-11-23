@@ -49,13 +49,13 @@ NSArray *textArray;
 - (IBAction)mbprogresshudPressed:(id)sender {
     self.popViewController = [[LicenseViewController alloc] initWithNibName:@"LicenseViewController" bundle:nil];
     
-    [self.popViewController showInView:self.navigationController.view  withController:self  withText:[textArray objectAtIndex:0] animated:YES];
+    [self.popViewController showInView:self.navigationController.view  withController:self  withText:[textArray objectAtIndex:0] withColor:[UIColor whiteColor] withTextColor:[UIColor blackColor] animated:YES];
 }
 
 - (IBAction)reachabilityPressed:(id)sender {
     self.popViewController = [[LicenseViewController alloc] initWithNibName:@"LicenseViewController" bundle:nil];
     
-    [self.popViewController showInView:self.navigationController.view  withController:self  withText:[textArray objectAtIndex:1] animated:YES];
+    [self.popViewController showInView:self.navigationController.view  withController:self  withText:[textArray objectAtIndex:1] withColor:[UIColor whiteColor] withTextColor:[UIColor blackColor] animated:YES];
 }
 
 - (IBAction)contactPressed:(id)sender {

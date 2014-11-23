@@ -25,11 +25,11 @@
 @synthesize position1;
 @synthesize position;
 @synthesize info;
+@synthesize segmentedControl;
 @synthesize infoLabel;
 @synthesize movieTitle;
 @synthesize actorsLabel;
 @synthesize mapview;
-@synthesize directorsLabel;
 NSMutableArray *images;
 NSArray *currentList;
 NSArray *titles;
@@ -56,15 +56,11 @@ NSMutableArray *points;
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationViewClass:[TestNotificationView class]];
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
-    UIBarButtonItem *ratebutton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"rate",@"word") style:UIBarButtonItemStyleBordered target:self action:@selector(rateButtonPressed:)];
-    
-    UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Upload"] style:UIBarButtonItemStyleBordered target:self action:@selector(shareButtonPressed:)];
-    self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
     
     
+    info.scrollEnabled = NO;
     images = [[NSMutableArray alloc]init];
     actorsLabel.text = NSLocalizedString(@"actors",@"word");
-    directorsLabel.text = NSLocalizedString(@"director",@"word");
     infoLabel.text = NSLocalizedString(@"info",@"word");
     position1 = position;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"BlueLineStations" ofType:@"plist"];
@@ -78,6 +74,9 @@ NSMutableArray *points;
     titles = [[NSArray alloc]initWithObjects:NSLocalizedString(@"factors",@"word"),NSLocalizedString(@"info",@"word"), nil];
     
     mapview.delegate = self;
+    mapview.showsUserLocation = YES;
+    mapview.userInteractionEnabled = NO;
+
     MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc] init];
     CLLocationCoordinate2D theCoordinate;
     theCoordinate.latitude = [[[anns objectAtIndex:position1] objectForKey:@"Latitude"]doubleValue];
@@ -97,12 +96,58 @@ NSMutableArray *points;
 
     }
     [info setFont:[UIFont systemFontOfSize:18]];
-    info.textColor = [UIColor blackColor];
+    info.textColor = [UIColor whiteColor];
 
     [mapview addAnnotation:myAnnotation];
     MKCoordinateSpan span = {0.05,0.05};
     MKCoordinateRegion region = {theCoordinate, span};
-    [mapview setRegion:region];
+    if([CLLocationManager locationServicesEnabled]){
+        MKCoordinateRegion innerregion;
+        MKCoordinateSpan innerspan = {0.10,0.10};
+        
+        //find rect that encloses all coords
+        float maxLat = -200;
+        float maxLong = -200;
+        float minLat = MAXFLOAT;
+        float minLong = MAXFLOAT;
+        for (int i=0 ; i < 2 ; i++) {
+            CLLocationCoordinate2D location;
+            if(i == 0){
+                location = myAnnotation.coordinate;
+            }
+            else if(i == 1){
+                location = mapview.userLocation.location.coordinate;
+            }
+            
+            if (location.latitude < minLat) {
+                minLat = location.latitude;
+            }
+            
+            if (location.longitude < minLong) {
+                minLong = location.longitude;
+            }
+            
+            if (location.latitude > maxLat) {
+                maxLat = location.latitude;
+            }
+            
+            if (location.longitude > maxLong) {
+                maxLong = location.longitude;
+            }
+        }
+        
+        //Center point
+        
+        CLLocationCoordinate2D center = CLLocationCoordinate2DMake((maxLat + minLat) * 0.5, (maxLong + minLong) * 0.5);
+        innerregion.center = center;
+        innerregion.span = innerspan;
+        [mapview setRegion:innerregion];
+        
+    }
+    else{
+        [mapview setRegion:region];
+    }
+
     [mapview selectAnnotation:myAnnotation animated:YES];
     
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
@@ -116,6 +161,10 @@ NSMutableArray *points;
 //set custom annotation view to support callout accessory control mode
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
+    if(annotation == mapView.userLocation){
+        return nil;
+    }
+
     
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
     
@@ -149,7 +198,7 @@ NSMutableArray *points;
 
 -(void)viewDidLayoutSubviews{
     [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,1550)];
+    [scroller setContentSize:CGSizeMake(320,1300)];
 }
 
 
@@ -205,7 +254,7 @@ NSMutableArray *points;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    if(collectionView == self.actorsCollectionView){
+    if(segmentedControl.selectedSegmentIndex == 1){
         return actors.count;
     }
     return directors.count;
@@ -213,40 +262,38 @@ NSMutableArray *points;
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell;
-    if(collectionView == self.actorsCollectionView){
         static NSString *identifer = @"Cell";
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifer forIndexPath:indexPath];
         UIImageView *imageview = (UIImageView *)[cell viewWithTag:106];
         UILabel *label = (UILabel *)[cell viewWithTag:107];
-        imageview.image = [UIImage imageNamed:[[actors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
-        if([locale isEqualToString:@"el"]){
-            label.text = [[actors objectAtIndex:indexPath.row]objectForKey:@"GrName"];
+        if(segmentedControl.selectedSegmentIndex == 0){
+            imageview.image = [UIImage imageNamed:[[directors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
+            if([locale isEqualToString:@"el"]){
+                label.text = [[directors objectAtIndex:indexPath.row]objectForKey:@"GrName"];
+                
+                
+            }
+            else if([locale isEqualToString:@"en"]){
+                label.text = [[directors objectAtIndex:indexPath.row]objectForKey:@"EnName"];
+                
+                
+            }
+        }
+        else{
 
-            
-        }
-        else if([locale isEqualToString:@"en"]){
-            label.text = [[actors objectAtIndex:indexPath.row]objectForKey:@"EnName"];
+            imageview.image = [UIImage imageNamed:[[actors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
+            if([locale isEqualToString:@"el"]){
+                label.text = [[actors objectAtIndex:indexPath.row]objectForKey:@"GrName"];
 
-            
+                
+            }
+            else if([locale isEqualToString:@"en"]){
+                label.text = [[actors objectAtIndex:indexPath.row]objectForKey:@"EnName"];
+
+                
+            }
         }
-    }
-    else if(collectionView == self.directorsCollectionView){
-        static NSString *identifer = @"cell";
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifer forIndexPath:indexPath];
-        UIImageView *imageview = (UIImageView *)[cell viewWithTag:104];
-        UILabel *label = (UILabel *)[cell viewWithTag:105];
-        imageview.image = [UIImage imageNamed:[[directors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
-        if([locale isEqualToString:@"el"]){
-            label.text = [[directors objectAtIndex:indexPath.row]objectForKey:@"GrName"];
-            
-            
-        }
-        else if([locale isEqualToString:@"en"]){
-            label.text = [[directors objectAtIndex:indexPath.row]objectForKey:@"EnName"];
-            
-            
-        }
-    }
+    
     return cell;
 }
 
@@ -318,5 +365,13 @@ NSMutableArray *points;
         [noaccount show];
     }
     
+}
+- (IBAction)moreButtonPressed:(id)sender {
+    self.popViewControllerText = [[LicenseViewController alloc] initWithNibName:@"LicenseViewController" bundle:nil];
+    
+    [self.popViewControllerText showInView:self.navigationController.view  withController:self  withText:info.text withColor:scroller.backgroundColor withTextColor:[UIColor whiteColor] animated:YES];
+}
+- (IBAction)showFactorPressed:(id)sender {
+    [self.factorsCollectionView reloadData];
 }
 @end

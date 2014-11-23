@@ -36,7 +36,8 @@ NSMutableArray *titles;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
-    [self.tabBarController.tabBar setTintColor:[UIColor redColor]];
+    [self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:(143/255.0) green:(1/255.0) blue:(1/255.0) alpha:1.0]];
+
        // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -49,8 +50,7 @@ NSMutableArray *titles;
 -(void)viewWillAppear:(BOOL)animated{
     //initialize selectedIndex variable
     selectedIndex = -1;
-    [self.tabBarController.tabBar setTintColor:[UIColor redColor]];
-
+[self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:(143/255.0) green:(1/255.0) blue:(1/255.0) alpha:1.0]];
     titles = [[NSMutableArray alloc]init];
     NSString *title;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"RedLineStations" ofType:@"plist"];

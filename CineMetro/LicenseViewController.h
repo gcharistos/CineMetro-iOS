@@ -10,7 +10,7 @@
 
 @interface LicenseViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *popUpView;
-- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller  withText:(NSString *)text animated:(BOOL)animated;
+- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller  withText:(NSString *)text  withColor:(UIColor *)color withTextColor:(UIColor *)textColor animated:(BOOL)animated;
 - (IBAction)closeButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *textview;
 @end
