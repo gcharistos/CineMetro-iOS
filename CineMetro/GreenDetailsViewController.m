@@ -49,10 +49,6 @@ ContainerGreenViewController *dest;
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
     
-    UIBarButtonItem *ratebutton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"rate",@"word") style:UIBarButtonItemStyleBordered target:self action:@selector(rateButtonPressed:)];
-    
-    UIBarButtonItem *sharebutton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Upload"] style:UIBarButtonItemStyleBordered target:self action:@selector(shareButtonPressed:)];
-    self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:ratebutton,sharebutton, nil];
     
         images = [[NSMutableArray alloc]init];
     //set navigation bar title
@@ -60,6 +56,8 @@ ContainerGreenViewController *dest;
    
     images = [station objectForKey:@"Images"];
     mapview.delegate = self;
+    mapview.showsUserLocation = YES;
+    mapview.userInteractionEnabled = NO;
     MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc] init];
     CLLocationCoordinate2D theCoordinate;
     theCoordinate.latitude = [[station objectForKey:@"Latitude"]doubleValue];
@@ -79,7 +77,53 @@ ContainerGreenViewController *dest;
     [mapview addAnnotation:myAnnotation];
     MKCoordinateSpan span = {0.05,0.05};
     MKCoordinateRegion region = {theCoordinate, span};
-    [mapview setRegion:region];
+    if([CLLocationManager locationServicesEnabled]){
+        MKCoordinateRegion innerregion;
+        MKCoordinateSpan innerspan = {0.10,0.10};
+        
+        //find rect that encloses all coords
+        float maxLat = -200;
+        float maxLong = -200;
+        float minLat = MAXFLOAT;
+        float minLong = MAXFLOAT;
+        for (int i=0 ; i < 2 ; i++) {
+            CLLocationCoordinate2D location;
+            if(i == 0){
+                location = myAnnotation.coordinate;
+            }
+            else if(i == 1){
+                location = mapview.userLocation.location.coordinate;
+            }
+            
+            if (location.latitude < minLat) {
+                minLat = location.latitude;
+            }
+            
+            if (location.longitude < minLong) {
+                minLong = location.longitude;
+            }
+            
+            if (location.latitude > maxLat) {
+                maxLat = location.latitude;
+            }
+            
+            if (location.longitude > maxLong) {
+                maxLong = location.longitude;
+            }
+        }
+        
+        //Center point
+        
+        CLLocationCoordinate2D center = CLLocationCoordinate2DMake((maxLat + minLat) * 0.5, (maxLong + minLong) * 0.5);
+        innerregion.center = center;
+        innerregion.span = innerspan;
+        [mapview setRegion:innerregion];
+        
+    }
+    else{
+        [mapview setRegion:region];
+    }
+
     [mapview selectAnnotation:myAnnotation animated:YES];
     [self performSegueWithIdentifier:@"showPhotos2" sender:self];
     // Do any additional setup after loading the view.
@@ -88,7 +132,10 @@ ContainerGreenViewController *dest;
 //set custom annotation view to support callout accessory control mode
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
-   
+    if(annotation == mapView.userLocation){
+        return nil;
+    }
+    
     MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
     
     annotationView.canShowCallout = YES;
@@ -123,7 +170,7 @@ ContainerGreenViewController *dest;
 -(void)viewDidLayoutSubviews{
     [scroller  setScrollEnabled:YES];
     
-    [scroller setContentSize:CGSizeMake(320,1370)];
+    [scroller setContentSize:CGSizeMake(320,1330)];
 }
 
 

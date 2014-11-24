@@ -378,15 +378,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-Wn-hhm">
-                                        <rect key="frame" x="8" y="1225" width="40" height="40"/>
-                                        <state key="normal" image="star_off.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="rateButtonPressed:" destination="PX6-O8-zED" eventType="touchUpInside" id="un7-pB-Hig"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z13-TG-hyn">
                                         <rect key="frame" x="140" y="1225" width="40" height="40"/>
                                         <state key="normal" image="map.png">
@@ -438,6 +429,15 @@
                                         </state>
                                         <connections>
                                             <action selector="shareButtonPressed:" destination="PX6-O8-zED" eventType="touchUpInside" id="Pjb-Tr-5hJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-Wn-hhm">
+                                        <rect key="frame" x="8" y="1225" width="40" height="40"/>
+                                        <state key="normal" image="star_off.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rateButtonPressed:" destination="PX6-O8-zED" eventType="touchUpInside" id="un7-pB-Hig"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -649,21 +649,39 @@
                                 <rect key="frame" x="0.0" y="100" width="320" height="836"/>
                                 <subviews>
                                     <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfT-yK-gxH">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="590"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="XLh-NE-wq7" kind="embed" identifier="showPhotos2" id="dDh-lq-50o"/>
                                         </connections>
                                     </containerView>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="q4i-0x-m7t">
-                                        <rect key="frame" x="0.0" y="656" width="320" height="180"/>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4i-0x-m7t">
+                                        <rect key="frame" x="0.0" y="508" width="320" height="180"/>
                                     </mapView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oft-Sx-7lf">
-                                        <rect key="frame" x="110" y="628" width="100" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCR-df-wCv">
+                                        <rect key="frame" x="8" y="743" width="40" height="40"/>
+                                        <state key="normal" image="star_off.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rateButtonPressed:" destination="CcH-jB-Ctv" eventType="touchUpInside" id="V7H-Lc-YWe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVB-wS-skA">
+                                        <rect key="frame" x="140" y="743" width="40" height="40"/>
+                                        <state key="normal" image="map.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6X-GT-pwL">
+                                        <rect key="frame" x="272" y="743" width="40" height="40"/>
+                                        <state key="normal" image="share.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareButtonPressed:" destination="CcH-jB-Ctv" eventType="touchUpInside" id="pOf-Wg-Cco"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.066666666669999999" green="0.33333333329999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </scrollView>
@@ -699,26 +717,43 @@
                         <viewControllerLayoutGuide type="bottom" id="Kg5-h5-rmg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IWf-Zf-BIN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="590"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FEg-PU-sIh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hml-gH-Aig">
-                                <rect key="frame" x="0.0" y="260" width="320" height="300"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hml-gH-Aig">
+                                <rect key="frame" x="0.0" y="260" width="320" height="150"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD8-8Z-Br9">
+                                <rect key="frame" x="231" y="402" width="80" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="More..">
+                                    <color key="titleColor" red="0.066666666669999999" green="0.33333333329999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="moreButtonPressed:" destination="PX6-O8-zED" eventType="touchUpInside" id="jJ7-Xe-Hg9"/>
+                                    <action selector="moreButtonPressed:" destination="wrM-uC-tFl" eventType="touchUpInside" id="ltC-mt-ZYH"/>
+                                    <action selector="moreButtonPressed:" destination="FGx-F8-fvl" eventType="touchUpInside" id="oxo-X4-mqp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.066666666666666666" green="0.33333333333333331" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="590"/>
+                    <size key="freeformSize" width="320" height="500"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="FEg-PU-sIh" id="lPB-mh-fxU"/>
                         <outlet property="textview" destination="Hml-gH-Aig" id="jL1-sB-85u"/>
@@ -737,12 +772,12 @@
                         <viewControllerLayoutGuide type="bottom" id="hU8-Zu-3gk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Yw8-vx-V6X">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="590"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="590"/>
+                    <size key="freeformSize" width="320" height="500"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbE-Lb-u2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1315,6 +1350,14 @@
             </objects>
             <point key="canvasLocation" x="1922" y="-1489"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="HTM-Vh-aCQ">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewControllerTimeline" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="RlJ-o1-swM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O10-8c-JZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2268" y="-1858"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="6gU-q3-RRt">
             <objects>
@@ -1377,10 +1420,10 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cLM-OQ-vNw"/>
         <segue reference="xxZ-WA-TG7"/>
-        <segue reference="Euu-0z-MaG"/>
         <segue reference="1Ad-aq-j7M"/>
         <segue reference="aE9-pI-0tH"/>
+        <segue reference="cLM-OQ-vNw"/>
+        <segue reference="Euu-0z-MaG"/>
     </inferredMetricsTieBreakers>
 </document>

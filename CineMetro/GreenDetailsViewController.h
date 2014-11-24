@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "RatingViewController.h"
 #import <MapKit/MapKit.h>
+#import "LicenseViewController.h"
 
 @interface GreenDetailsViewController : UIViewController<UIActionSheetDelegate,UIAlertViewDelegate,UIScrollViewDelegate,MKMapViewDelegate>{
     IBOutlet UIScrollView *scroller;

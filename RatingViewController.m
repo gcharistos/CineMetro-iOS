@@ -60,10 +60,15 @@ GreenDetailsViewController *viewController;
     [okbutton setTitle:NSLocalizedString(@"ok",@"word") forState:UIControlStateNormal];
     [cancelButton setTitle:NSLocalizedString(@"cancel",@"word") forState:UIControlStateNormal];
     UITapGestureRecognizer *recognizer1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(star1Pressed:)];
+    recognizer1.numberOfTapsRequired = 1;
      UITapGestureRecognizer *recognizer2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(star2Pressed:)];
+    recognizer2.numberOfTapsRequired = 1;
      UITapGestureRecognizer *recognizer3 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(star3Pressed:)];
+    recognizer3.numberOfTapsRequired = 1;
     UITapGestureRecognizer *recognizer4 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(star4Pressed:)];
+    recognizer4.numberOfTapsRequired = 1;
      UITapGestureRecognizer *recognizer5 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(star5Pressed:)];
+    recognizer5.numberOfTapsRequired = 1;
     [star1 addGestureRecognizer:recognizer1];
     [star2 addGestureRecognizer:recognizer2];
     [star3 addGestureRecognizer:recognizer3];
@@ -144,10 +149,10 @@ GreenDetailsViewController *viewController;
             [user setObject:[NSNumber numberWithInt:points] forKey:linepoints];
             [user setObject:[NSNumber numberWithInt:totalpoints] forKey:@"totalPoints"];
             [user saveInBackground];
-            [self presentConfirmation:NSLocalizedString(@"thankyou",@"word")];
+          //  [self presentConfirmation:NSLocalizedString(@"thankyou",@"word")];
 
-//              UIAlertView *rate = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"thankyou",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-//              [rate show];
+              UIAlertView *rate = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"thankyou",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+              [rate show];
         }
         else { // no network
             [self presentConfirmation:NSLocalizedString(@"rateerror",@"word")];
@@ -217,6 +222,8 @@ GreenDetailsViewController *viewController;
 }
 
 -(void)startAnimation:(int)counter{
+    
+    
     for(int i = 0;i<counter;i++){
         UIImageView *star = [stars objectAtIndex:i];
         CGFloat toValue = star.center.x;

@@ -79,4 +79,10 @@
 
 - (IBAction)mapPressed:(id)sender {
 }
+
+- (IBAction)moreButtonPressed:(id)sender {
+    self.popViewControllerText = [[LicenseViewController alloc] initWithNibName:@"LicenseViewController" bundle:nil];
+    
+    [self.popViewControllerText showInView:self.navigationController.view  withController:self  withText:self.textview.text withColor:self.view.backgroundColor withTextColor:[UIColor whiteColor] animated:YES];
+}
 @end

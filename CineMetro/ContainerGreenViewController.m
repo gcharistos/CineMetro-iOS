@@ -22,7 +22,7 @@ NSUInteger currentIndex;
     [super viewDidLoad];
     currentIndex = 0;
     // Create page view controller
-    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
+    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewControllerTimeline"];
     self.pageViewController.dataSource = self;
     self.pageViewController.delegate = self;
     PageContentGreenViewController *startingViewController = [self viewControllerAtIndex:0];

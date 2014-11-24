@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ShowImageViewController.h"
 #import "GreenDetailsViewController.h"
+#import "LicenseViewController.h"
 
 @interface PageContentGreenViewController : UIViewController<UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
@@ -19,7 +20,10 @@
 @property NSString *nextyear;
 @property NSString *previousyear;
 @property (strong,nonatomic) ShowImageViewController *popViewController;
+@property (strong,nonatomic) LicenseViewController *popViewControllerText;
 @property GreenDetailsViewController *parent;
 @property (weak, nonatomic) IBOutlet UITextView *textview;
 - (IBAction)mapPressed:(id)sender;
+
+- (IBAction)moreButtonPressed:(id)sender;
 @end
