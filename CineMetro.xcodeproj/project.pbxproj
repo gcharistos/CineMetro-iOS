@@ -159,9 +159,6 @@
 		1F706568196768DA009CB35C /* CineMetroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F706567196768DA009CB35C /* CineMetroTests.m */; };
 		1F706573196768E8009CB35C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F706572196768E8009CB35C /* MainViewController.m */; };
 		1F706575196769DB009CB35C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F706574196769DB009CB35C /* MapKit.framework */; };
-		1F7065781967706C009CB35C /* RedLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7065771967706C009CB35C /* RedLineTableViewController.m */; };
-		1F70657B1967707B009CB35C /* GreenLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70657A1967707B009CB35C /* GreenLineTableViewController.m */; };
-		1F70657E1967708C009CB35C /* BlueLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70657D1967708C009CB35C /* BlueLineTableViewController.m */; };
 		1F70658419678116009CB35C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70658319678116009CB35C /* MapViewController.m */; };
 		1F73658A1A03E0DA006A5356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F7365881A03E0DA006A5356 /* Main.storyboard */; };
 		1F73658F1A03E3CF006A5356 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F7365911A03E3CF006A5356 /* Localizable.strings */; };
@@ -174,7 +171,6 @@
 		1F90A16C19F80EC6003943F6 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F90A16B19F80EC6003943F6 /* logo2.png */; };
 		1F90A16E19F81D06003943F6 /* buttonBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F90A16D19F81D06003943F6 /* buttonBack.png */; };
 		1F93629A1988F1B10088A0BF /* RedDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9362991988F1B10088A0BF /* RedDetailsViewController.m */; };
-		1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F996E0719AD15AD004675BB /* TabBarViewController.m */; };
 		1F9DB73519CA137A00C3E3FC /* facebookLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB73419CA137A00C3E3FC /* facebookLogo.png */; };
 		1F9DB73919CA17F900C3E3FC /* twitter-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F9DB73819CA17F900C3E3FC /* twitter-logo.jpg */; };
 		1FA35B8619F43A49003061E7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA35B8319F43A48003061E7 /* Parse.framework */; };
@@ -371,10 +367,10 @@
 		1F45E35719F725BC00032AAF /* cinemetroLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinemetroLogo.png; sourceTree = "<group>"; };
 		1F464DFF19B9182E00389827 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../MBProgressHUD.h; sourceTree = "<group>"; };
 		1F464E0019B9182E00389827 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../MBProgressHUD.m; sourceTree = "<group>"; };
-		1F526BFF1A2A24A600FA4F70 /* LinesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinesCollectionViewController.h; sourceTree = "<group>"; };
-		1F526C001A2A24A600FA4F70 /* LinesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinesCollectionViewController.m; sourceTree = "<group>"; };
-		1F526C051A2A4A8E00FA4F70 /* LinesPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinesPageViewController.h; sourceTree = "<group>"; };
-		1F526C061A2A4A8E00FA4F70 /* LinesPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinesPageViewController.m; sourceTree = "<group>"; };
+		1F526BFF1A2A24A600FA4F70 /* LinesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinesCollectionViewController.h; path = ../LinesCollectionViewController.h; sourceTree = "<group>"; };
+		1F526C001A2A24A600FA4F70 /* LinesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinesCollectionViewController.m; path = ../LinesCollectionViewController.m; sourceTree = "<group>"; };
+		1F526C051A2A4A8E00FA4F70 /* LinesPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinesPageViewController.h; path = ../LinesPageViewController.h; sourceTree = "<group>"; };
+		1F526C061A2A4A8E00FA4F70 /* LinesPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinesPageViewController.m; path = ../LinesPageViewController.m; sourceTree = "<group>"; };
 		1F526C081A2A6AA700FA4F70 /* AboutPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPageViewController.h; sourceTree = "<group>"; };
 		1F526C091A2A6AA700FA4F70 /* AboutPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPageViewController.m; sourceTree = "<group>"; };
 		1F526C0B1A2A6B3E00FA4F70 /* AboutContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutContentViewController.h; sourceTree = "<group>"; };
@@ -399,12 +395,6 @@
 		1F706567196768DA009CB35C /* CineMetroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CineMetroTests.m; sourceTree = "<group>"; };
 		1F706572196768E8009CB35C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1F706574196769DB009CB35C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		1F7065761967706C009CB35C /* RedLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedLineTableViewController.h; sourceTree = "<group>"; };
-		1F7065771967706C009CB35C /* RedLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedLineTableViewController.m; sourceTree = "<group>"; };
-		1F7065791967707B009CB35C /* GreenLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenLineTableViewController.h; sourceTree = "<group>"; };
-		1F70657A1967707B009CB35C /* GreenLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenLineTableViewController.m; sourceTree = "<group>"; };
-		1F70657C1967708C009CB35C /* BlueLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueLineTableViewController.h; sourceTree = "<group>"; };
-		1F70657D1967708C009CB35C /* BlueLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueLineTableViewController.m; sourceTree = "<group>"; };
 		1F70658219678116009CB35C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		1F70658319678116009CB35C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		1F7365891A03E0DA006A5356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -423,8 +413,6 @@
 		1F9362981988F1B10088A0BF /* RedDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedDetailsViewController.h; sourceTree = "<group>"; };
 		1F9362991988F1B10088A0BF /* RedDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedDetailsViewController.m; sourceTree = "<group>"; };
 		1F98CAF9196C790E00A9EB54 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		1F996E0619AD15AD004675BB /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
-		1F996E0719AD15AD004675BB /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
 		1F9DB73419CA137A00C3E3FC /* facebookLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookLogo.png; sourceTree = "<group>"; };
 		1F9DB73819CA17F900C3E3FC /* twitter-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "twitter-logo.jpg"; sourceTree = "<group>"; };
 		1FA35B8319F43A48003061E7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -644,8 +632,6 @@
 		1F12C99E19B7D2410024CAD5 /* GreenLine */ = {
 			isa = PBXGroup;
 			children = (
-				1F7065791967707B009CB35C /* GreenLineTableViewController.h */,
-				1F70657A1967707B009CB35C /* GreenLineTableViewController.m */,
 				1F16A31219A3DC1900AC7A68 /* GreenDetailsViewController.h */,
 				1F16A31319A3DC1900AC7A68 /* GreenDetailsViewController.m */,
 				1F1127DE198AD56200BB0F8E /* GreenLineStations.plist */,
@@ -660,8 +646,6 @@
 		1F12C99F19B7D25B0024CAD5 /* RedLine */ = {
 			isa = PBXGroup;
 			children = (
-				1F7065761967706C009CB35C /* RedLineTableViewController.h */,
-				1F7065771967706C009CB35C /* RedLineTableViewController.m */,
 				1F9362981988F1B10088A0BF /* RedDetailsViewController.h */,
 				1F9362991988F1B10088A0BF /* RedDetailsViewController.m */,
 				1F137A8519753179001C0F2B /* RedLineStations.plist */,
@@ -672,8 +656,6 @@
 		1F12C9A019B7D2680024CAD5 /* BlueLine */ = {
 			isa = PBXGroup;
 			children = (
-				1F70657C1967708C009CB35C /* BlueLineTableViewController.h */,
-				1F70657D1967708C009CB35C /* BlueLineTableViewController.m */,
 				1FF72A80198AC4C30022B08D /* BlueDetailsViewController.h */,
 				1FF72A81198AC4C30022B08D /* BlueDetailsViewController.m */,
 				1F370D2B19753ADC003FB972 /* BlueLineStations.plist */,
@@ -684,7 +666,6 @@
 		1F12C9A219B7D2E10024CAD5 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				1F70658219678116009CB35C /* MapViewController.h */,
 				1F70658319678116009CB35C /* MapViewController.m */,
 			);
 			name = Map;
@@ -693,6 +674,7 @@
 		1F12C9A319B7D2FD0024CAD5 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				1F70658219678116009CB35C /* MapViewController.h */,
 				1FE0F51619C9D827000D8841 /* LicenseViewController.h */,
 				1FE0F51719C9D827000D8841 /* LicenseViewController.m */,
 				1FE0F51819C9D827000D8841 /* LicenseViewController.xib */,
@@ -713,15 +695,6 @@
 				1F7A62E619FAFC2700237627 /* ProfileTableViewController.m */,
 			);
 			name = Profile;
-			sourceTree = "<group>";
-		};
-		1F12C9A519B7D31F0024CAD5 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				1F996E0619AD15AD004675BB /* TabBarViewController.h */,
-				1F996E0719AD15AD004675BB /* TabBarViewController.m */,
-			);
-			name = TabBar;
 			sourceTree = "<group>";
 		};
 		1F12C9A919B7D9680024CAD5 /* External Libraries */ = {
@@ -785,10 +758,6 @@
 		1F706530196768DA009CB35C = {
 			isa = PBXGroup;
 			children = (
-				1F526C051A2A4A8E00FA4F70 /* LinesPageViewController.h */,
-				1F526C061A2A4A8E00FA4F70 /* LinesPageViewController.m */,
-				1F526BFF1A2A24A600FA4F70 /* LinesCollectionViewController.h */,
-				1F526C001A2A24A600FA4F70 /* LinesCollectionViewController.m */,
 				1F7365961A03E3F1006A5356 /* Localizable.strings */,
 				1F7365911A03E3CF006A5356 /* Localizable.strings */,
 				1F706542196768DA009CB35C /* CineMetro */,
@@ -846,9 +815,9 @@
 				1F12C9AA19B7D9840024CAD5 /* Login */,
 				1F12C9AB19B7D9B10024CAD5 /* MainMenu */,
 				1F12C9AC19B7D9C90024CAD5 /* CreateAccount */,
-				1F12C9A519B7D31F0024CAD5 /* TabBar */,
 				1F12C9A419B7D3070024CAD5 /* Profile */,
 				1F12C9A319B7D2FD0024CAD5 /* About */,
+				1FE991CF1A2BDCEB001FFFAD /* Lines */,
 				1F12C9A219B7D2E10024CAD5 /* Map */,
 				1F12C9A019B7D2680024CAD5 /* BlueLine */,
 				1F12C99F19B7D25B0024CAD5 /* RedLine */,
@@ -921,6 +890,17 @@
 				1FCA5C991A0AB130008834EF /* TestNotificationView.m */,
 			);
 			name = IIShortNotificationPresenter;
+			sourceTree = "<group>";
+		};
+		1FE991CF1A2BDCEB001FFFAD /* Lines */ = {
+			isa = PBXGroup;
+			children = (
+				1F526C051A2A4A8E00FA4F70 /* LinesPageViewController.h */,
+				1F526C061A2A4A8E00FA4F70 /* LinesPageViewController.m */,
+				1F526BFF1A2A24A600FA4F70 /* LinesCollectionViewController.h */,
+				1F526C001A2A24A600FA4F70 /* LinesCollectionViewController.m */,
+			);
+			name = Lines;
 			sourceTree = "<group>";
 		};
 		1FFF0BCF1974651B00FE59D2 /* Images */ = {
@@ -1290,7 +1270,6 @@
 			files = (
 				1F70654D196768DA009CB35C /* AppDelegate.m in Sources */,
 				1FF72A82198AC4C30022B08D /* BlueDetailsViewController.m in Sources */,
-				1F7065781967706C009CB35C /* RedLineTableViewController.m in Sources */,
 				1F276BBF19679092008735B1 /* CreateNewAccountViewController.m in Sources */,
 				1F13175219DCA9EC00DB8316 /* PageContentGreenViewController.m in Sources */,
 				1F2D733119CFA0BB00C60F09 /* AboutViewController.m in Sources */,
@@ -1305,7 +1284,6 @@
 				1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */,
 				1F275BC319C6106800A1A8AD /* FilmFestivalViewController.m in Sources */,
 				1FCA5C9F1A0AB130008834EF /* IIShortNotificationPresenter.m in Sources */,
-				1F70657B1967707B009CB35C /* GreenLineTableViewController.m in Sources */,
 				1FCA5CA11A0AB130008834EF /* IIShortNotificationSerialQueue.m in Sources */,
 				1FCA5C9A1A0AB130008834EF /* IIShortNotificationConcurrentQueue.m in Sources */,
 				1FCA5CA41A0AB130008834EF /* IIShortNotificationTopLayout.m in Sources */,
@@ -1318,9 +1296,7 @@
 				1F12C9A819B7D5850024CAD5 /* Reachability.m in Sources */,
 				1F526C0D1A2A6B3E00FA4F70 /* AboutContentViewController.m in Sources */,
 				1F526C071A2A4A8E00FA4F70 /* LinesPageViewController.m in Sources */,
-				1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */,
 				1FAE04E419BD077900E45EF4 /* PageContentViewController.m in Sources */,
-				1F70657E1967708C009CB35C /* BlueLineTableViewController.m in Sources */,
 				1F7A62E719FAFC2700237627 /* ProfileTableViewController.m in Sources */,
 				1F706549196768DA009CB35C /* main.m in Sources */,
 				1F706573196768E8009CB35C /* MainViewController.m in Sources */,
