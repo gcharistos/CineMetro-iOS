@@ -24,7 +24,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bO-PH-Dpp">
                                                     <rect key="frame" x="33" y="5" width="279" height="33"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -42,7 +42,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIN-hV-hHG">
                                                     <rect key="frame" x="61" y="11" width="170" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -66,7 +66,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red Line : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOv-ve-P4F">
                                                     <rect key="frame" x="59" y="11" width="177" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -86,7 +86,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue Line : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqE-rZ-4tr">
                                                     <rect key="frame" x="59" y="11" width="180" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -106,7 +106,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green Line : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fae-Ot-UPM">
                                                     <rect key="frame" x="59" y="11" width="187" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -140,7 +140,87 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mnI-Rq-lZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-573" y="-340"/>
+            <point key="canvasLocation" x="-633" y="-512"/>
+        </scene>
+        <!--Lines Page View Controller-->
+        <scene sceneID="whV-EY-Wdm">
+            <objects>
+                <viewController id="NNz-4e-kOK" customClass="LinesPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3gu-Qt-QxA"/>
+                        <viewControllerLayoutGuide type="bottom" id="HcL-F0-29b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kXP-qM-bs9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="2gO-IP-mih"/>
+                    <connections>
+                        <segue destination="wrM-uC-tFl" kind="push" identifier="detailSegue3" id="lni-WN-Yes"/>
+                        <segue destination="PX6-O8-zED" kind="push" identifier="detailSegue4" id="eMP-sc-6tl"/>
+                        <segue destination="CcH-jB-Ctv" kind="push" identifier="detailSegue5" id="GnN-A7-SU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ilu-Fa-GNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="-849"/>
+        </scene>
+        <!--Lines Collection View Controller-->
+        <scene sceneID="wSf-38-X5c">
+            <objects>
+                <collectionViewController storyboardIdentifier="LinesCollectionViewController" id="gRc-eI-mya" customClass="LinesCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IFR-1z-stF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.56078431370000004" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uQU-GW-BDt">
+                            <size key="itemSize" width="320" height="180"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="KzF-RU-WyH">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="105" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3AC-fb-lA3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seF-zK-a54">
+                                            <rect key="frame" x="110" y="0.0" width="100" height="20"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="21"/>
+                                            <color key="textColor" red="0.56078431370000004" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWZ-Pp-gff">
+                                            <rect key="frame" x="0.0" y="120" width="320" height="60"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="21"/>
+                                            <color key="textColor" red="0.56078431370000004" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="gRc-eI-mya" id="fun-GN-Fp2"/>
+                            <outlet property="delegate" destination="gRc-eI-mya" id="eoH-sH-JQQ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="O8u-hT-vVe"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ndt-jQ-ooB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="-1062"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -159,7 +239,9 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PD-2M-lEa">
                                 <rect key="frame" x="66" y="246" width="189" height="66"/>
-                                <state key="normal" image="cinemetro-navigation2.png">
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="25"/>
+                                <state key="normal" title="Navigation" backgroundImage="cinemetro_button.png">
+                                    <color key="titleColor" red="0.56078431370000004" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -168,7 +250,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgH-b4-k29">
                                 <rect key="frame" x="66" y="406" width="189" height="66"/>
-                                <state key="normal" title="Button" image="cinemetro-about2.png">
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="25"/>
+                                <state key="normal" title="About" backgroundImage="cinemetro_button.png">
+                                    <color key="titleColor" red="0.56078431370000004" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -180,7 +264,9 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUO-OP-atq">
                                 <rect key="frame" x="66" y="326" width="189" height="66"/>
-                                <state key="normal" title="Button" image="cinemtro-lines2.png">
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="25"/>
+                                <state key="normal" title="Lines" backgroundImage="cinemetro_button.png">
+                                    <color key="titleColor" red="0.56078431370000004" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -209,9 +295,10 @@
                         <segue destination="O4T-xR-ep1" kind="push" identifier="ProfileLogin" id="dPJ-Yd-iJd"/>
                         <segue destination="Kwh-Pk-xxN" kind="push" identifier="createAccount" id="yhZ-oc-vXf"/>
                         <segue destination="GPH-Vm-SOP" kind="push" identifier="navigationSegue" id="vpx-bv-OBd"/>
-                        <segue destination="VK0-r7-KVM" kind="push" identifier="linesSegue" id="9BN-ll-p2u"/>
+                        <segue destination="VK0-r7-KVM" kind="push" identifier="" id="9BN-ll-p2u"/>
                         <segue destination="wPu-Nr-kZN" kind="push" identifier="profileSegue" id="2jf-lk-rA8"/>
-                        <segue destination="KWv-Nu-y5r" kind="push" identifier="aboutSegue" id="Wec-7Z-xVt"/>
+                        <segue destination="lSY-Cx-gKT" kind="push" identifier="aboutSegue" id="UQZ-Fh-9K1"/>
+                        <segue destination="NNz-4e-kOK" kind="push" identifier="linesSegue" id="1oH-Oz-m1m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -257,7 +344,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.5607843137254902" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="19"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -274,13 +361,13 @@
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="157" translatesAutoresizingMaskIntoConstraints="NO" id="VvR-Vu-iHK">
                                             <rect key="frame" x="118" y="43" width="157" height="58"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytf-OK-cjh">
                                             <rect key="frame" x="118" y="20" width="160" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
                                             <color key="textColor" red="0.56078431370000004" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -297,12 +384,11 @@
                     <navigationItem key="navigationItem" id="lhM-FO-hFZ"/>
                     <connections>
                         <outlet property="nameLabel" destination="yGp-hw-JsV" id="46N-T8-zSd"/>
-                        <segue destination="wrM-uC-tFl" kind="push" identifier="detailSegue1" id="Euu-0z-MaG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBe-lz-oGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="-717"/>
+            <point key="canvasLocation" x="2370" y="-717"/>
         </scene>
         <!--Blue Details View Controller-->
         <scene sceneID="2W1-7V-mRe">
@@ -313,7 +399,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Osn-M7-DGt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="H1D-D5-NX7">
-                        <rect key="frame" x="0.0" y="64" width="320" height="1536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1536"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMx-39-9SV">
@@ -323,11 +409,11 @@
                                         <rect key="frame" x="0.0" y="440" width="320" height="150"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Ox-Lo-ppP">
-                                        <rect key="frame" x="0.0" y="740" width="320" height="180"/>
+                                        <rect key="frame" x="0.0" y="750" width="320" height="180"/>
                                         <color key="backgroundColor" red="0.043137254899999998" green="0.2470588235" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.043137254899999998" green="0.2470588235" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="RUY-zg-cGp">
@@ -347,7 +433,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z98-xi-1p3">
                                                             <rect key="frame" x="0.0" y="130" width="124" height="49"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -367,7 +453,7 @@
                                         </connections>
                                     </collectionView>
                                     <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q09-Yy-NN6">
-                                        <rect key="frame" x="0.0" y="116" width="320" height="240"/>
+                                        <rect key="frame" x="0.0" y="120" width="320" height="240"/>
                                         <connections>
                                             <segue destination="qRU-mK-HBd" kind="embed" identifier="showPhotos" id="aE9-pI-0tH"/>
                                         </connections>
@@ -385,19 +471,19 @@
                                         </state>
                                     </button>
                                     <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekk-nW-xau">
-                                        <rect key="frame" x="0.0" y="975" width="320" height="180"/>
+                                        <rect key="frame" x="0.0" y="1000" width="320" height="180"/>
                                     </mapView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpr-eJ-C3Z">
                                         <rect key="frame" x="0.0" y="8" width="320" height="100"/>
                                         <color key="backgroundColor" red="0.043137254901960784" green="0.24705882352941178" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eef-sw-dsH">
                                         <rect key="frame" x="221" y="585" width="80" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="18"/>
                                         <state key="normal" title="More..">
                                             <color key="titleColor" red="0.043137254899999998" green="0.2470588235" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -481,7 +567,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.066666666669999999" green="0.33333333329999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="19"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -495,7 +581,7 @@
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGk-TS-3pH">
                                             <rect key="frame" x="113" y="20" width="166" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
                                             <color key="textColor" red="0.066666666669999999" green="0.33333333329999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -504,7 +590,7 @@
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="159" translatesAutoresizingMaskIntoConstraints="NO" id="bKi-NP-eRF">
                                             <rect key="frame" x="120" y="49" width="159" height="65"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -540,7 +626,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.043137254899999998" green="0.2470588235" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="19"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -554,7 +640,7 @@
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc0-ni-UIo">
                                             <rect key="frame" x="119" y="20" width="160" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
                                             <color key="textColor" red="0.043137254899999998" green="0.2470588235" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -563,7 +649,7 @@
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="157" translatesAutoresizingMaskIntoConstraints="NO" id="DGO-Gp-SbX">
                                             <rect key="frame" x="121" y="52" width="157" height="58"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -598,25 +684,25 @@
                         <viewControllerLayoutGuide type="bottom" id="3Ai-dE-yWL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QQs-Dp-IuQ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="936"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="936"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qP-wK-PrW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                 <color key="backgroundColor" red="0.066666666669999999" green="0.33333333329999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUN-aJ-4SG">
                                 <rect key="frame" x="224" y="63" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgu-bQ-oGG">
                                 <rect key="frame" x="33" y="63" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -641,11 +727,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpe-bW-NWA">
                                 <rect key="frame" x="119" y="61" width="83" height="26"/>
                                 <color key="backgroundColor" red="0.066666666669999999" green="0.33333333329999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tk2-EG-Av3">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tk2-EG-Av3">
                                 <rect key="frame" x="0.0" y="100" width="320" height="836"/>
                                 <subviews>
                                     <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfT-yK-gxH">
@@ -656,7 +742,7 @@
                                         </connections>
                                     </containerView>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4i-0x-m7t">
-                                        <rect key="frame" x="0.0" y="508" width="320" height="180"/>
+                                        <rect key="frame" x="0.0" y="550" width="320" height="180"/>
                                     </mapView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCR-df-wCv">
                                         <rect key="frame" x="8" y="743" width="40" height="40"/>
@@ -687,6 +773,10 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="tk2-EG-Av3" secondAttribute="trailing" constant="-16" id="O07-Nc-ajH"/>
+                            <constraint firstItem="tk2-EG-Av3" firstAttribute="leading" secondItem="QQs-Dp-IuQ" secondAttribute="leadingMargin" constant="-16" id="zZM-W6-kZz"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="bVC-NC-MLz"/>
@@ -706,7 +796,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9Y-bf-YO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3022" y="-134"/>
+            <point key="canvasLocation" x="3554" y="-134"/>
         </scene>
         <!--Page Content Green View Controller-->
         <scene sceneID="7gd-q9-LVi">
@@ -727,13 +817,13 @@
                                 <rect key="frame" x="0.0" y="260" width="320" height="150"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD8-8Z-Br9">
                                 <rect key="frame" x="231" y="402" width="80" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="18"/>
                                 <state key="normal" title="More..">
                                     <color key="titleColor" red="0.066666666669999999" green="0.33333333329999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -761,7 +851,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYU-h7-ssB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3476" y="-431"/>
+            <point key="canvasLocation" x="4008" y="-431"/>
         </scene>
         <!--Container Green View Controller-->
         <scene sceneID="Ft8-5p-Zok">
@@ -814,13 +904,13 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PB4-gb-L4a">
                                                     <rect key="frame" x="20" y="2" width="238" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nV-TF-d5z">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nV-TF-d5z">
                                                     <rect key="frame" x="20" y="20" width="280" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bH-zb-1y6">
@@ -828,7 +918,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="83" id="RnX-iv-Nvc"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -859,7 +949,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="toY-L2-hjW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="17"/>
                                 <state key="normal" title="Hide List">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -908,14 +998,14 @@
                         <outlet property="hideButton" destination="2R2-0d-PBb" id="F6s-N6-VNT"/>
                         <outlet property="mapview" destination="HbI-nJ-Hyd" id="oy9-ef-pRR"/>
                         <outlet property="tableview" destination="LZS-DU-6Xw" id="EPZ-LD-6VC"/>
-                        <segue destination="wrM-uC-tFl" kind="push" identifier="redLine" id="aUV-Lm-QVJ"/>
                         <segue destination="PX6-O8-zED" kind="push" identifier="blueLine" id="KUx-vX-pg0"/>
                         <segue destination="CcH-jB-Ctv" kind="push" identifier="greenLine" id="VZy-wn-wGO"/>
+                        <segue destination="wrM-uC-tFl" kind="push" identifier="redLine" id="Y5Q-os-AMi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Snu-Ua-5QC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083" y="-1137"/>
+            <point key="canvasLocation" x="1251" y="-1475"/>
         </scene>
         <!--Create New Account View Controller-->
         <scene sceneID="Jjh-aU-62V">
@@ -937,6 +1027,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZF-pP-K45">
                                 <rect key="frame" x="97" y="372" width="127" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="22"/>
                                 <state key="normal" title="Create">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -965,7 +1056,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1P-ct-Pws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-904" y="801"/>
+            <point key="canvasLocation" x="-920" y="977"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="flw-Yo-5Mv">
@@ -992,6 +1083,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDX-4Z-9hG">
                                 <rect key="frame" x="80" y="314" width="161" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="22"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1016,180 +1108,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7q-yT-XLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-428" y="789"/>
+            <point key="canvasLocation" x="-320" y="993"/>
         </scene>
-        <!--About View Controller-->
-        <scene sceneID="lcc-wS-k5N">
+        <!--About Page View Controller-->
+        <scene sceneID="EVw-Sq-bGA">
             <objects>
-                <viewController id="KWv-Nu-y5r" customClass="AboutViewController" sceneMemberID="viewController">
+                <viewController id="lSY-Cx-gKT" customClass="AboutPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gul-ag-fMs"/>
-                        <viewControllerLayoutGuide type="bottom" id="zCr-7g-011"/>
+                        <viewControllerLayoutGuide type="top" id="cuq-Rc-LGN"/>
+                        <viewControllerLayoutGuide type="bottom" id="lat-1G-2af"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cSd-2b-yBS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
+                    <view key="view" contentMode="scaleToFill" id="tEK-CN-ycp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="Avn-Vm-huQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hk-sh-kbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179" y="451"/>
+        </scene>
+        <!--About Content View Controller-->
+        <scene sceneID="wiJ-eD-vbn">
+            <objects>
+                <viewController storyboardIdentifier="AboutContentViewController" id="SJ2-Mw-2go" customClass="AboutContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i60-zr-Qr7"/>
+                        <viewControllerLayoutGuide type="bottom" id="j5q-BW-ffe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iJV-Nw-11b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D5q-2n-jt9">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Design" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykN-3N-94v">
-                                        <rect key="frame" x="19" y="766" width="53" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="George Haristos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZ3-Gf-WlG">
-                                        <rect key="frame" x="148" y="766" width="125" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Code Libraries" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1n-2U-d26">
-                                        <rect key="frame" x="94" y="821" width="133" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7V-Db-n1K">
-                                        <rect key="frame" x="102" y="850" width="117" height="30"/>
-                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="14"/>
-                                        <state key="normal" title="MBProgressHUD">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="mbprogresshudPressed:" destination="KWv-Nu-y5r" eventType="touchUpInside" id="UPU-T2-HhK"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcb-ky-YqR">
-                                        <rect key="frame" x="19" y="969" width="61" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rx-eb-56o">
-                                        <rect key="frame" x="102" y="967" width="200" height="30"/>
-                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="15"/>
-                                        <state key="normal" title="geohararnea16@hotmail.com">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="contactPressed:" destination="KWv-Nu-y5r" eventType="touchUpInside" id="Rl8-dD-KzR"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Supervisors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqg-Q9-9z6">
-                                        <rect key="frame" x="97" y="1029" width="126" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Giannis Grosdanis" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMt-sd-Snm">
-                                        <rect key="frame" x="171" y="1103" width="141" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Athena Vakali" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agF-YD-1hI">
-                                        <rect key="frame" x="108" y="1070" width="104" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yj9-CS-Qb2">
-                                        <rect key="frame" x="102" y="888" width="117" height="30"/>
-                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="14"/>
-                                        <state key="normal" title="Reachability">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="reachabilityPressed:" destination="KWv-Nu-y5r" eventType="touchUpInside" id="Bqh-gz-Lxg"/>
-                                        </connections>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueP-KJ-tbc">
-                                        <rect key="frame" x="0.0" y="230" width="320" height="446"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">Το CineMetro είναι μια εφαρμογή για κινητές συσκευές, η οποία σχεδιάζεται εθελοντικά από ομάδα φοιτητών του Τμήματος Πληροφορικής του Α.Π.Θ., υπό την εποπτεία της καθηγήτριας Αθηνάς Βακάλη, σε συνεργασία με την ιστορικό κινηματογράφου Δρ. Αγγελική Μυλωνάκη και τον δημοσιογράφο και κριτικό κινηματογράφου κ. Ιωάννη Γκροσδάνη.Στην iOS εφαρμοφή εργάστηκε ο Γιώργος Χαριστός ενώ η ομάδα των φοιτητών που εργάστηκε στην Android εφαρμογή απαρτίζεται από τους : Βαενά Παρασκευή, Καλτιμιρίδου Ευφροσύνη, Πανισκάκη Κυριακή, Παπάζογλου Χρήστος-Παναγιώτης και Συρτάρη Χαρίκλεια.
-Η εφαρμογή είναι εκπαιδευτικού χαρακτήρα με στόχο να προσφέρει γνώσεις και να εξοικειώσει τους πολίτες με την κινηματογραφική ιστορία της Θεσσαλονίκης, μέσω μιας σύγχρονης εμπειρίας πλοήγησης στην πόλη. Σημεία της πόλης στα οποία υπάρχει υλικό από ταινίες θα ορίζονται ως «στάσεις» και οι πολίτες θα μπορούν σε κάθε στάση να δουν το εκάστοτε υλικό (π.χ. φωτογραφίες, μικρό κείμενο, ήχο/video) εάν είναι διαθέσιμο. Τα πνευματικά δικαιώματα του περιεχομένου (εικόνες, πληροφορίες για τις ταινίες) της εφαρμογής ανήκουν στους δημιουργούς τους.
- Πηγές φωτογραφικού υλικού: Finos Films, Ελληνικό Κέντρο Κινηματογράφου, Φεστιβάλ Κινηματογράφου Θεσσαλονίκης, Κοινωνία Κληρονόμων Θ. Αγγελόπουλου .</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Development" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jes-Oa-9WG">
-                                        <rect key="frame" x="19" y="727" width="102" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="rv6-BX-gtY">
-                                        <rect key="frame" x="130" y="1132" width="60" height="60"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="George Haristos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HO-t0-qYQ">
-                                        <rect key="frame" x="148" y="727" width="125" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lina Milonaki" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMl-h7-qfE">
-                                        <rect key="frame" x="19" y="1103" width="101" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CineMetro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4W-Pu-EHl">
-                                        <rect key="frame" x="76" y="78" width="169" height="50"/>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="32"/>
-                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="v 1.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2V5-ik-lNg">
-                                        <rect key="frame" x="120" y="168" width="80" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DHr-qf-Ma1">
+                                <rect key="frame" x="0.0" y="150" width="320" height="330"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gkb-vh-csP">
+                                <rect key="frame" x="60" y="0.0" width="200" height="150"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="zCr-7g-011" firstAttribute="top" secondItem="D5q-2n-jt9" secondAttribute="bottom" id="3cY-aK-8SV"/>
-                            <constraint firstItem="D5q-2n-jt9" firstAttribute="top" secondItem="cSd-2b-yBS" secondAttribute="topMargin" id="AgC-Bk-Gyd"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6Wl-Ig-VZd">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="VU7-Cd-9VG">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="At8-NX-iBg">
-                                <rect key="frame" x="222" y="75" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Rate App">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="20" name="HelveticaNeue"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="ratebuttonPressed:" destination="KWv-Nu-y5r" eventType="touchUpInside" id="vHR-mK-iHV"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1200"/>
                     <connections>
-                        <outlet property="aboutTextview" destination="ueP-KJ-tbc" id="Qlz-s0-LjI"/>
-                        <outlet property="scroller" destination="D5q-2n-jt9" id="bgh-fH-PAD"/>
+                        <outlet property="imageview" destination="Gkb-vh-csP" id="j50-v4-oBP"/>
+                        <outlet property="textview" destination="DHr-qf-Ma1" id="K2k-1k-axn"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="upi-CW-A4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdo-nS-OXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="437"/>
+            <point key="canvasLocation" x="541" y="384"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tfw-ng-gS4">
@@ -1208,7 +1181,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EvW-y4-Ihr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-942" y="51"/>
+            <point key="canvasLocation" x="-1066" y="-33"/>
         </scene>
         <!--Red Details View Controller-->
         <scene sceneID="bIr-Bk-bOA">
@@ -1219,17 +1192,17 @@
                         <viewControllerLayoutGuide type="bottom" id="6ZX-pZ-Stw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DrX-EF-x90">
-                        <rect key="frame" x="0.0" y="64" width="320" height="986"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="986"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Um-Ie-6ht">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Um-Ie-6ht">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="986"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swd-8B-I7D">
                                         <rect key="frame" x="0.0" y="8" width="320" height="100"/>
                                         <color key="backgroundColor" red="0.56078431370000004" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
@@ -1237,11 +1210,11 @@
                                         <rect key="frame" x="0.0" y="396" width="320" height="150"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <containerView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iaC-im-fN5">
-                                        <rect key="frame" x="0.0" y="116" width="320" height="240"/>
+                                        <rect key="frame" x="0.0" y="120" width="320" height="240"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="qRU-mK-HBd" kind="embed" identifier="showPhotos" id="TPj-vl-8q5"/>
@@ -1272,12 +1245,12 @@
                                         </connections>
                                     </button>
                                     <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTb-O2-jU1">
-                                        <rect key="frame" x="0.0" y="626" width="320" height="170"/>
+                                        <rect key="frame" x="0.0" y="600" width="320" height="180"/>
                                     </mapView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1t-2D-N4l">
                                         <rect key="frame" x="232" y="540" width="80" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="18"/>
                                         <state key="normal" title="More..">
                                             <color key="titleColor" red="0.56078431370000004" green="0.0039215686269999999" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1297,6 +1270,8 @@
                         <constraints>
                             <constraint firstItem="6ZX-pZ-Stw" firstAttribute="top" secondItem="2Um-Ie-6ht" secondAttribute="bottom" id="Y16-74-E3T"/>
                             <constraint firstItem="2Um-Ie-6ht" firstAttribute="top" secondItem="wVl-Os-qsP" secondAttribute="bottom" id="vPP-da-zuF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Um-Ie-6ht" secondAttribute="trailing" constant="-16" id="vcb-Qp-VSo"/>
+                            <constraint firstItem="2Um-Ie-6ht" firstAttribute="leading" secondItem="DrX-EF-x90" secondAttribute="leadingMargin" constant="-16" id="vgs-uK-yTH"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -1313,7 +1288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j99-hX-VU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2433" y="-993"/>
+            <point key="canvasLocation" x="3176" y="-1159"/>
         </scene>
         <!--Page Content View Controller-->
         <scene sceneID="aps-Gi-kuJ">
@@ -1340,7 +1315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rV-Y1-o6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3263" y="-1330"/>
+            <point key="canvasLocation" x="4327" y="-1330"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="0yD-26-Alx">
@@ -1348,7 +1323,7 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="TEs-qC-Khl" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6x-gZ-yvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="-1489"/>
+            <point key="canvasLocation" x="2676" y="-1719"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="HTM-Vh-aCQ">
@@ -1396,20 +1371,17 @@
                     <nil key="highlightedColor"/>
                 </label>
             </objects>
-            <point key="canvasLocation" x="2939" y="-1376.5"/>
+            <point key="canvasLocation" x="3774" y="-1495"/>
         </scene>
     </scenes>
     <resources>
         <image name="back-50.png" width="50" height="50"/>
         <image name="background1.png" width="800" height="1200"/>
-        <image name="cinemetro-about2.png" width="400" height="133"/>
-        <image name="cinemetro-navigation2.png" width="400" height="133"/>
         <image name="cinemetroLogo.png" width="4019" height="3212"/>
-        <image name="cinemtro-lines2.png" width="400" height="133"/>
+        <image name="cinemetro_button.png" width="399" height="111"/>
         <image name="forward-50.png" width="50" height="50"/>
         <image name="info" width="32" height="32"/>
         <image name="logo.png" width="800" height="508"/>
-        <image name="logo2.png" width="70" height="70"/>
         <image name="map.png" width="256" height="256"/>
         <image name="share.png" width="300" height="300"/>
         <image name="star_off.png" width="50" height="50"/>
@@ -1421,9 +1393,9 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="xxZ-WA-TG7"/>
-        <segue reference="1Ad-aq-j7M"/>
+        <segue reference="KUx-vX-pg0"/>
+        <segue reference="VZy-wn-wGO"/>
+        <segue reference="Y5Q-os-AMi"/>
         <segue reference="aE9-pI-0tH"/>
-        <segue reference="cLM-OQ-vNw"/>
-        <segue reference="Euu-0z-MaG"/>
     </inferredMetricsTieBreakers>
 </document>

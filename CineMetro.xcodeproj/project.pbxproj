@@ -139,6 +139,10 @@
 		1F45E35619F724EB00032AAF /* final-cinemetro-thess71x71.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F45E35519F724EB00032AAF /* final-cinemetro-thess71x71.png */; };
 		1F45E35819F725BC00032AAF /* cinemetroLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F45E35719F725BC00032AAF /* cinemetroLogo.png */; };
 		1F464E0119B9182E00389827 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F464E0019B9182E00389827 /* MBProgressHUD.m */; };
+		1F526C011A2A24A600FA4F70 /* LinesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F526C001A2A24A600FA4F70 /* LinesCollectionViewController.m */; };
+		1F526C071A2A4A8E00FA4F70 /* LinesPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F526C061A2A4A8E00FA4F70 /* LinesPageViewController.m */; };
+		1F526C0A1A2A6AA700FA4F70 /* AboutPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F526C091A2A6AA700FA4F70 /* AboutPageViewController.m */; };
+		1F526C0D1A2A6B3E00FA4F70 /* AboutContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F526C0C1A2A6B3E00FA4F70 /* AboutContentViewController.m */; };
 		1F5DA1C01A21FBAB00B32E16 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DA1BF1A21FBAB00B32E16 /* share.png */; };
 		1F5DA1C21A21FBCF00B32E16 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5DA1C11A21FBCF00B32E16 /* map.png */; };
 		1F65480B19A7466400974CCB /* ButtonStretch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F65480A19A7466400974CCB /* ButtonStretch@2x.png */; };
@@ -367,11 +371,18 @@
 		1F45E35719F725BC00032AAF /* cinemetroLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinemetroLogo.png; sourceTree = "<group>"; };
 		1F464DFF19B9182E00389827 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../MBProgressHUD.h; sourceTree = "<group>"; };
 		1F464E0019B9182E00389827 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../MBProgressHUD.m; sourceTree = "<group>"; };
+		1F526BFF1A2A24A600FA4F70 /* LinesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinesCollectionViewController.h; sourceTree = "<group>"; };
+		1F526C001A2A24A600FA4F70 /* LinesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinesCollectionViewController.m; sourceTree = "<group>"; };
+		1F526C051A2A4A8E00FA4F70 /* LinesPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinesPageViewController.h; sourceTree = "<group>"; };
+		1F526C061A2A4A8E00FA4F70 /* LinesPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinesPageViewController.m; sourceTree = "<group>"; };
+		1F526C081A2A6AA700FA4F70 /* AboutPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPageViewController.h; sourceTree = "<group>"; };
+		1F526C091A2A6AA700FA4F70 /* AboutPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPageViewController.m; sourceTree = "<group>"; };
+		1F526C0B1A2A6B3E00FA4F70 /* AboutContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutContentViewController.h; sourceTree = "<group>"; };
+		1F526C0C1A2A6B3E00FA4F70 /* AboutContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutContentViewController.m; sourceTree = "<group>"; };
 		1F5DA1BF1A21FBAB00B32E16 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		1F5DA1C11A21FBCF00B32E16 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		1F65480A19A7466400974CCB /* ButtonStretch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonStretch@2x.png"; sourceTree = "<group>"; };
 		1F6FB7FB1A20EB72008E42D6 /* ic_drawer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_drawer.png; sourceTree = "<group>"; };
-		1F6FB7FD1A20EF9F008E42D6 /* libPods-MLFlyOverMenu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MLFlyOverMenu.a"; path = "Pods/build/Debug-iphoneos/libPods-MLFlyOverMenu.a"; sourceTree = "<group>"; };
 		1F706539196768DA009CB35C /* CineMetro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineMetro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F70653C196768DA009CB35C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1F70653E196768DA009CB35C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -687,6 +698,10 @@
 				1FE0F51819C9D827000D8841 /* LicenseViewController.xib */,
 				1F2D732F19CFA0BB00C60F09 /* AboutViewController.h */,
 				1F2D733019CFA0BB00C60F09 /* AboutViewController.m */,
+				1F526C081A2A6AA700FA4F70 /* AboutPageViewController.h */,
+				1F526C091A2A6AA700FA4F70 /* AboutPageViewController.m */,
+				1F526C0B1A2A6B3E00FA4F70 /* AboutContentViewController.h */,
+				1F526C0C1A2A6B3E00FA4F70 /* AboutContentViewController.m */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -770,6 +785,10 @@
 		1F706530196768DA009CB35C = {
 			isa = PBXGroup;
 			children = (
+				1F526C051A2A4A8E00FA4F70 /* LinesPageViewController.h */,
+				1F526C061A2A4A8E00FA4F70 /* LinesPageViewController.m */,
+				1F526BFF1A2A24A600FA4F70 /* LinesCollectionViewController.h */,
+				1F526C001A2A24A600FA4F70 /* LinesCollectionViewController.m */,
 				1F7365961A03E3F1006A5356 /* Localizable.strings */,
 				1F7365911A03E3CF006A5356 /* Localizable.strings */,
 				1F706542196768DA009CB35C /* CineMetro */,
@@ -792,7 +811,6 @@
 		1F70653B196768DA009CB35C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F6FB7FD1A20EF9F008E42D6 /* libPods-MLFlyOverMenu.a */,
 				1FA35B8319F43A48003061E7 /* Parse.framework */,
 				1F12952919EA903C00A6F3F6 /* FacebookSDK.framework */,
 				1F0AB7EB19E5D51B002D4D83 /* FacebookSDK.framework */,
@@ -1282,6 +1300,7 @@
 				1FCA5C9E1A0AB130008834EF /* IIShortNotificationDefaultView.m in Sources */,
 				1FAE04E119BD073800E45EF4 /* ViewController.m in Sources */,
 				1F70658419678116009CB35C /* MapViewController.m in Sources */,
+				1F526C0A1A2A6AA700FA4F70 /* AboutPageViewController.m in Sources */,
 				1F13175519DCAA6400DB8316 /* ContainerGreenViewController.m in Sources */,
 				1F28171419BE848E005A5337 /* ShowImageViewController.m in Sources */,
 				1F275BC319C6106800A1A8AD /* FilmFestivalViewController.m in Sources */,
@@ -1293,9 +1312,12 @@
 				1FAE2CEB19C38AF400D006EC /* RatingViewController.m in Sources */,
 				1F16A31419A3DC1900AC7A68 /* GreenDetailsViewController.m in Sources */,
 				1FE0F51919C9D827000D8841 /* LicenseViewController.m in Sources */,
+				1F526C011A2A24A600FA4F70 /* LinesCollectionViewController.m in Sources */,
 				1F93629A1988F1B10088A0BF /* RedDetailsViewController.m in Sources */,
 				1FCA5C9B1A0AB130008834EF /* IIShortNotificationConfiguration.m in Sources */,
 				1F12C9A819B7D5850024CAD5 /* Reachability.m in Sources */,
+				1F526C0D1A2A6B3E00FA4F70 /* AboutContentViewController.m in Sources */,
+				1F526C071A2A4A8E00FA4F70 /* LinesPageViewController.m in Sources */,
 				1F996E0819AD15AD004675BB /* TabBarViewController.m in Sources */,
 				1FAE04E419BD077900E45EF4 /* PageContentViewController.m in Sources */,
 				1F70657E1967708C009CB35C /* BlueLineTableViewController.m in Sources */,
@@ -1442,10 +1464,7 @@
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";
 				INFOPLIST_FILE = "CineMetro/CineMetro-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1470,10 +1489,7 @@
 				GCC_PREFIX_HEADER = "CineMetro/CineMetro-Prefix.pch";
 				INFOPLIST_FILE = "CineMetro/CineMetro-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

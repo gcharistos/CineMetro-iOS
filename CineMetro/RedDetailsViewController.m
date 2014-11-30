@@ -56,17 +56,16 @@ NSMutableArray *points;
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
    
     textview.scrollEnabled = NO;
-    mapview.showsUserLocation = YES;
     infoLabel.text = NSLocalizedString(@"info",@"word");
     images = [[NSMutableArray alloc]init];
     //set navigation bar title
    // self.navigationItem.title =[station objectForKey:@"Subtitle"];
     mapview.userInteractionEnabled = NO;
-   
+
    
     images = [station objectForKey:@"Images"];
-    
     mapview.delegate = self;
+
     MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc] init];
     CLLocationCoordinate2D theCoordinate;
     theCoordinate.latitude = [[station objectForKey:@"Latitude"]doubleValue];
@@ -90,56 +89,32 @@ NSMutableArray *points;
     MKCoordinateSpan span = {0.05,0.05};
     MKCoordinateRegion region = {theCoordinate, span};
     if([CLLocationManager locationServicesEnabled]){
-        MKCoordinateRegion innerregion;
-        MKCoordinateSpan innerspan = {0.10,0.10};
+        mapview.showsUserLocation = YES;
 
-        //find rect that encloses all coords
-        float maxLat = -200;
-        float maxLong = -200;
-        float minLat = MAXFLOAT;
-        float minLong = MAXFLOAT;
-        for (int i=0 ; i < 2 ; i++) {
-            CLLocationCoordinate2D location;
-            if(i == 0){
-                location = myAnnotation.coordinate;
-            }
-            else if(i == 1){
-                location = mapview.userLocation.location.coordinate;
-            }
-            
-            if (location.latitude < minLat) {
-                minLat = location.latitude;
-            }
-            
-            if (location.longitude < minLong) {
-                minLong = location.longitude;
-            }
-            
-            if (location.latitude > maxLat) {
-                maxLat = location.latitude;
-            }
-            
-            if (location.longitude > maxLong) {
-                maxLong = location.longitude;
-            }
-        }
-        
-        //Center point
-        
-        CLLocationCoordinate2D center = CLLocationCoordinate2DMake((maxLat + minLat) * 0.5, (maxLong + minLong) * 0.5);
-        innerregion.center = center;
-        innerregion.span = innerspan;
-        [mapview setRegion:innerregion];
 
     }
     else{
         [mapview setRegion:region];
     }
-    [mapview selectAnnotation:myAnnotation animated:YES];
     [self performSegueWithIdentifier:@"showPhotos" sender:self];
 
 
     // Do any additional setup after loading the view.
+}
+
+- (void)mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation {
+    MKCoordinateRegion region;
+    MKCoordinateSpan span;
+    //span.latitudeDelta = 0.005;
+    //span.longitudeDelta = 0.005;
+    span.latitudeDelta = 0.9;
+    span.longitudeDelta = 0.9;
+    CLLocationCoordinate2D location;
+    location.latitude = aUserLocation.coordinate.latitude;
+    location.longitude = aUserLocation.coordinate.longitude;
+    region.span = span;
+    region.center = location;
+    [aMapView setRegion:region animated:YES];
 }
 
 

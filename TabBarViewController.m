@@ -9,6 +9,7 @@
 #import "TabBarViewController.h"
 
 @interface TabBarViewController ()
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 @end
 
@@ -27,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   
+    
     // Do any additional setup after loading the view.
 }
 
