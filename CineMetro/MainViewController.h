@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "CDRTranslucentSideBar.h"
 PFUser *user;
 int flag;
 NSString *locale;
 int counter;
-@interface MainViewController : UIViewController<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface MainViewController : UIViewController<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate,CDRTranslucentSideBarDelegate,UIGestureRecognizerDelegate>
 
 
-- (IBAction)profileButtonPressed:(id)sender;
 @property (nonatomic,strong) NSString *word;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *aboutButton;
 -(void)LogOut;
@@ -27,4 +27,5 @@ int counter;
 - (IBAction)navigationButtonPressed:(id)sender;
 - (IBAction)linesButtonPressed:(id)sender;
 - (IBAction)aboutButtonPressed:(id)sender;
+- (IBAction)sidebarButtonPressed:(id)sender;
 @end

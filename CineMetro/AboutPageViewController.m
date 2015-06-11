@@ -26,9 +26,7 @@ NSUInteger currentIndex;
     AboutContentViewController *startingViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
-    // Change the size of page view controller
-    self.pageViewController.view.frame = CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height);
+   
     
     [self.view addSubview:_pageViewController.view];
     // Do any additional setup after loading the view.

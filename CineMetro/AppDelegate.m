@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
-#import <FacebookSDK/FacebookSDK.h>
+
 
 @implementation AppDelegate
 
@@ -20,8 +20,7 @@
     [Parse setApplicationId:@"swhW7tnXLp2qdr7ZqbQ1JRCZMuRaQE5CXY12mp7c"
                   clientKey:@"lrNR1Wa2YThA7SjlkitdaCtMmEBJJM69bHcwpifD"];
     
-
-    // Override point for customization after application launch.
+       // Override point for customization after application launch.
     
     return YES;
 }

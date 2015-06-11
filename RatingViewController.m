@@ -7,7 +7,6 @@
 //
 
 #import "RatingViewController.h"
-#import "GreenDetailsViewController.h"
 #import "Reachability.h"
 #import "MainViewController.h"
 #import <Pop/POP.h>
@@ -16,18 +15,14 @@
 #import "IIShortNotificationRightSideLayout.h"
 #import "TestNotificationView.h"
 
+#define IDIOM    UI_USER_INTERFACE_IDIOM()
+#define IPAD     UIUserInterfaceIdiomPad
 
 @interface RatingViewController ()
 
 @end
 
 @implementation RatingViewController
-@synthesize star1;
-@synthesize star2;
-@synthesize star3;
-@synthesize star4;
-@synthesize star5;
-@synthesize stars;
 @synthesize cancelButton;
 @synthesize okbutton;
 BOOL rated;
@@ -35,8 +30,7 @@ NSMutableArray *points;
 NSInteger row;
 NSString *tableName;
 NSString *linepoints;
-int  selected;
-GreenDetailsViewController *viewController;
+float  selected;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,116 +50,77 @@ GreenDetailsViewController *viewController;
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
     rated = false;
-   // [star1 setUserInteractionEnabled:YES];
     [okbutton setTitle:NSLocalizedString(@"ok",@"word") forState:UIControlStateNormal];
+    [okbutton.titleLabel setFont:[UIFont systemFontOfSize:18]];
     [cancelButton setTitle:NSLocalizedString(@"cancel",@"word") forState:UIControlStateNormal];
-    UITapGestureRecognizer *recognizer1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(star1Pressed:)];
-    recognizer1.numberOfTapsRequired = 1;
-     UITapGestureRecognizer *recognizer2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(star2Pressed:)];
-    recognizer2.numberOfTapsRequired = 1;
-     UITapGestureRecognizer *recognizer3 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(star3Pressed:)];
-    recognizer3.numberOfTapsRequired = 1;
-    UITapGestureRecognizer *recognizer4 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(star4Pressed:)];
-    recognizer4.numberOfTapsRequired = 1;
-     UITapGestureRecognizer *recognizer5 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(star5Pressed:)];
-    recognizer5.numberOfTapsRequired = 1;
-    [star1 addGestureRecognizer:recognizer1];
-    [star2 addGestureRecognizer:recognizer2];
-    [star3 addGestureRecognizer:recognizer3];
-    [star4 addGestureRecognizer:recognizer4];
-    [star5 addGestureRecognizer:recognizer5];
+    if(IDIOM != IPAD){
+        _ratingView = [[TQStarRatingView alloc] initWithFrame:CGRectMake(30, 200, 250, 50)];
+    }
+    else{
+        _ratingView = [[TQStarRatingView alloc] initWithFrame:CGRectMake(30+250, 300, 250, 50)];
 
+    }
+    _ratingView.delegate = self;
+    [self.view addSubview:_ratingView];
+
+    
+
+    
     
     // Do any additional setup after loading the view from its nib.
 }
 
--(void)star1Pressed:(UITapGestureRecognizer *)sender{
+-(void)starRatingView:(TQStarRatingView *)view score:(float)score
+{
+    NSString *string = [NSString stringWithFormat:@"%0.2f",score * 5 ];
     rated = true;
-    selected = 1;
-    [self startAnimation:1];
-
+    selected  = [string floatValue];
+    
 }
 
--(void)star2Pressed:(UITapGestureRecognizer *)sender{
-    rated = true;
-    selected = 2;
-    [self startAnimation:2];
 
-}
 
--(void)star3Pressed:(UITapGestureRecognizer *)sender{
-    rated = true;
-    selected = 3;
-    [self startAnimation:3];
 
-}
 
--(void)star4Pressed:(UITapGestureRecognizer *)sender{
-    rated = true;
-    selected = 4;
-    [self startAnimation:4];
-
-}
-
--(void)star5Pressed:(UITapGestureRecognizer *)sender{
-    rated = true;
-    selected = 5;
-    [self startAnimation:5];
-
-}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller withArray:(NSArray *)array atIndexPath:(NSInteger)indexPath withName:(NSString *)name withname:(NSString *)aname  animated:(BOOL)animated{
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [aView addSubview:self.view];
-        points = [[NSMutableArray alloc]initWithArray:array];
-        row = indexPath;
-        tableName = name;
-        linepoints = aname;
-        if (animated) {
-            [self showAnimate];
-        }
-    });
-    
-    
-}
 
 
 - (IBAction)okButtonPressed:(id)sender {
-    [self removeAnimate];
     if(rated){
         if([self checkForNetwork] == true){ // network is enabled
-              [points replaceObjectAtIndex:row withObject:[NSNumber numberWithInt:selected]];
-              [user setObject:points forKey:tableName];
+            [points replaceObjectAtIndex:row withObject:[NSNumber numberWithFloat:selected]];
+            [user setObject:points forKey:tableName];
             int points = [[user objectForKey:linepoints]intValue];
             points = points + 1;
-            int totalpoints = [[user objectForKey:@"totalPoints"]intValue];
-            totalpoints = totalpoints + 1;
+            float totalpoints = [[user objectForKey:@"totalPoints"]floatValue];
+            totalpoints = totalpoints + selected ;
             [user setObject:[NSNumber numberWithInt:points] forKey:linepoints];
-            [user setObject:[NSNumber numberWithInt:totalpoints] forKey:@"totalPoints"];
+            [user setObject:[NSNumber numberWithFloat:totalpoints] forKey:@"totalPoints"];
             [user saveInBackground];
-          //  [self presentConfirmation:NSLocalizedString(@"thankyou",@"word")];
-
-              UIAlertView *rate = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"thankyou",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-              [rate show];
-        }
+            UIAlertView *rate = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"thankyou",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
+            rate.tag = 1;
+            [rate show];
+            }
         else { // no network
             [self presentConfirmation:NSLocalizedString(@"rateerror",@"word")];
 
-//            UIAlertView *noNetwork = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateerror",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-//            [noNetwork show];
         }
     }
 
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(alertView.tag == 1){
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 - (IBAction)cancelButtonPressed:(id)sender {
-    [self removeAnimate];
 
 }
 - (BOOL)checkForNetwork
@@ -199,66 +154,13 @@ GreenDetailsViewController *viewController;
 
 
 
-- (void)showAnimate
-{
-    self.view.transform = CGAffineTransformMakeScale(1.3, 1.3);
-    self.view.alpha = 0;
-    [UIView animateWithDuration:.25 animations:^{
-        self.view.alpha = 1;
-        self.view.transform = CGAffineTransformMakeScale(1, 1);
-    }];
-}
 
-- (void)removeAnimate
-{
-    [UIView animateWithDuration:.25 animations:^{
-        self.view.transform = CGAffineTransformMakeScale(1.3, 1.3);
-        self.view.alpha = 0.0;
-    } completion:^(BOOL finished) {
-        if (finished) {
-            [self.view removeFromSuperview];
-        }
-    }];
-}
-
--(void)startAnimation:(int)counter{
+-(void)initializeView:(NSInteger)counter :(NSString *)tablen :(NSMutableArray *)array :(NSString *)linepo{
+    row = counter;
+    tableName = tablen;
+    points = array;
+    linepoints = linepo;
     
-    
-    for(int i = 0;i<counter;i++){
-        UIImageView *star = [stars objectAtIndex:i];
-        CGFloat toValue = star.center.x;
-        
-        POPSpringAnimation *onscreenAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
-        onscreenAnimation.toValue = @(toValue);
-        onscreenAnimation.springBounciness = 10.f;
-        POPBasicAnimation *offscreenAnimation = [POPBasicAnimation easeInAnimation];
-        offscreenAnimation.property = [POPAnimatableProperty propertyWithName:kPOPLayerPositionX];
-        offscreenAnimation.toValue = @(-toValue);
-        offscreenAnimation.duration = 0.2f;
-        [offscreenAnimation setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
-            star.image = [UIImage imageNamed:@"star_on.png"];
-            [star.layer pop_addAnimation:onscreenAnimation forKey:@"onscreenAnimation"];
-        }];
-        [star.layer pop_addAnimation:offscreenAnimation forKey:@"offscreenAnimation"];
-        
-    }
-    for(int i=counter;i<stars.count;i++){
-        UIImageView *star = [stars objectAtIndex:i];
-        CGFloat toValue = star.center.x;
-        
-        POPSpringAnimation *onscreenAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
-        onscreenAnimation.toValue = @(toValue);
-        onscreenAnimation.springBounciness = 10.f;
-        POPBasicAnimation *offscreenAnimation = [POPBasicAnimation easeInAnimation];
-        offscreenAnimation.property = [POPAnimatableProperty propertyWithName:kPOPLayerPositionX];
-        offscreenAnimation.toValue = @(-toValue);
-        offscreenAnimation.duration = 0.2f;
-        [offscreenAnimation setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
-            star.image = [UIImage imageNamed:@"star_off.png"];
-            [star.layer pop_addAnimation:onscreenAnimation forKey:@"onscreenAnimation"];
-        }];
-        [star.layer pop_addAnimation:offscreenAnimation forKey:@"offscreenAnimation"];
-    }
 
 }
 

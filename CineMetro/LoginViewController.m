@@ -46,8 +46,7 @@ PFUser *appUser;
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
 
-    //Adding an scrollview to see the blur effect
-   
+  
  
     
    
@@ -57,21 +56,22 @@ PFUser *appUser;
 }
 
 
+-(void)viewDidLayoutSubviews{
+    [scroller  setScrollEnabled:YES];
+    [scroller setContentSize:CGSizeMake(self.view.frame.size.width,600)];
+}
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [[event allTouches] anyObject];
-    if ([emailTextField isFirstResponder] && [touch view] != emailTextField) {
-        [emailTextField resignFirstResponder];
-    }
-    else if ([passwordTextField isFirstResponder] && [touch view] != passwordTextField) {
-        [passwordTextField resignFirstResponder];
-    }
-    [super touchesBegan:touches withEvent:event];
+- (void)hideKeyboard:(id)sender {
+    [emailTextField resignFirstResponder];
+
 }
 
 
@@ -96,13 +96,7 @@ PFUser *appUser;
 - (IBAction)loginButtonPressed:(UIButton *)sender {
     if([passwordTextField.text length] == 0 || [emailTextField.text length] == 0){
         [self presentNotification:NSLocalizedString(@"fillcreateAccount",@"word")];
-//        UIAlertView *alertView =
-//        [[UIAlertView alloc] initWithTitle:@"Please fill Username and Password Fields"
-//                                   message:nil
-//                                  delegate:self
-//                         cancelButtonTitle:nil
-//                         otherButtonTitles:@"Ok", nil];
-//        [alertView show];
+
         return;
         
     }
@@ -115,17 +109,8 @@ PFUser *appUser;
                                     block:^(PFUser *auser, NSError *error){
                                         
                                         if(auser){
-//                                            UIAlertView *alertView = nil;
-                                                                                                            // Create an alert view to tell the user
-//                                                alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"successfullLogin",@"word")
-//                                                                                       message:nil
-//                                                                                      delegate:nil
-//                                                                             cancelButtonTitle:nil
-//                                                                             otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
-                                           
-                                            [loginAccount hide:YES];
+
                                             // Show the alert view
-//                                            [alertView show];
                                             appUser = auser;
                                             
                                             [self performSegueWithIdentifier:@"loginSegue" sender:nil];
@@ -133,13 +118,7 @@ PFUser *appUser;
                                         }
                                         else{
                                             UIAlertView *alertView = nil;
-                                            
-                                            // Create an alert view to tell the user
-//                                            alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"wronguser",@"word")
-//                                                                                   message:nil
-//                                                                                  delegate:self
-//                                                                         cancelButtonTitle:nil
-//                                                                         otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
+                                          
                                             [self presentErrorMessage:NSLocalizedString(@"wronguser",@"word")];
                                             [loginAccount hide:YES];
 
@@ -150,4 +129,7 @@ PFUser *appUser;
                                     }];
 }
 
+- (IBAction)signupPressed:(id)sender {
+    [self performSegueWithIdentifier:@"signupSegue" sender:nil];
+}
 @end

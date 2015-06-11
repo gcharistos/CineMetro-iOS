@@ -12,4 +12,7 @@
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) NSArray *pageImages;
 -(void)setStationAndIndex:(NSInteger) index : (NSArray *)array;
+-(void)goToPreviousView;
+-(void)goToNextView;
+-(void)initializeView;
 @end

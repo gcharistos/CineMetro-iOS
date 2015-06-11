@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LinesPageViewController.h"
+#import "HeaderCollectionView.h"
 
 @interface LinesCollectionViewController : UICollectionViewController<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate,UINavigationControllerDelegate>
 @property NSUInteger pageIndex;

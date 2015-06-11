@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AboutContentViewController : UIViewController
+@interface AboutContentViewController : UIViewController<UIScrollViewDelegate>{
+      IBOutlet UIScrollView *scroller;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *imageview;
-@property (weak, nonatomic) IBOutlet UITextView *textview;
 @property NSUInteger pageIndex;
 @property NSString *imageFile;
 @property NSString *text;

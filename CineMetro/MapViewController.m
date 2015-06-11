@@ -21,19 +21,27 @@
 #import "IIShortNotificationConcurrentQueue.h"
 #import "IIShortNotificationRightSideLayout.h"
 #import "TestNotificationView.h"
-
+#import "MapTableViewCell.h"
+#import "ZSPinAnnotation.h"
+#import "ZSAnnotation.h"
+#import "VCFloatingActionButton.h"
 
 
 @interface MapViewController ()
+@property (nonatomic,strong) UILongPressGestureRecognizer *gesture;
+@property (strong, nonatomic) VCFloatingActionButton *addButton;
+@property (strong,nonatomic) MBProgressHUD *progresshud;
 
 @end
 
 @implementation MapViewController
 @synthesize mapview;
 @synthesize tableview;
-@synthesize hideButton;
+@synthesize addButton;
+@synthesize progresshud;
+@synthesize gesture;
 UIBarButtonItem *sidebarButton;
-NSMutableArray *redPins ;
+NSMutableArray *pins ;
 NSMutableArray *overlays;
 BOOL showDirections;
 id<MKOverlay> polyline;
@@ -58,53 +66,118 @@ NSTimer *timer;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [[IIShortNotificationPresenter defaultConfiguration] setAutoDismissDelay:3];
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationViewClass:[TestNotificationView class]];
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationQueueClass:[IIShortNotificationConcurrentQueue class]];
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
     
 
-    tableview.hidden = YES;
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     distances = [[NSMutableArray alloc]init];
-    [hideButton setTitle:NSLocalizedString(@"showList",@"word") forState:UIControlStateNormal];
     visibleLine = -1;
     mapview.delegate = self;
-    redPins = [[NSMutableArray alloc]init];
+    pins = [[NSMutableArray alloc]init];
     overlays = [[NSMutableArray alloc]init];
     showDirections = false;
     //set region of map
+    tableview.hidden = YES;
+    gesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGestures:)];
+    gesture.minimumPressDuration = 1.0f;
+    gesture.allowableMovement = 100.0f;
+    
+    [mapview addGestureRecognizer:gesture];
     [self setRegion];
+   
+    
     
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 44;
+-(void)viewDidAppear:(BOOL)animated{
+    
+    CGRect floatFrame = CGRectMake(mapview.frame.size.width-44-20, mapview.frame.size.height-20-44, 44, 44);
+    
+    addButton = [[VCFloatingActionButton alloc]initWithFrame:floatFrame normalImage:[UIImage imageNamed:@"plus"] andPressedImage:[UIImage imageNamed:@"cross"] withScrollview:nil];
+    
+    
+    addButton.labelArray = @[NSLocalizedString(@"red", @"word"),NSLocalizedString(@"blue", @"word"),NSLocalizedString(@"green", @"word")];
+    addButton.hideWhileScrolling = NO;
+    addButton.delegate = self;
+   
+    [mapview addSubview:addButton];
+    
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+-(void) didSelectMenuOptionAtIndex:(NSInteger)row
 {
-    return 44;
+    if(row+1 == 1 ){
+        //if user pressed the same line and route is visible exit
+        if(visibleLine == 1){
+            return;
+        }
+        visibleLine  = row+1;
+        [self removeObjectsFromMap];
+        
+        [self UploadLine:@"RedLineStations" :[UIColor redColor]];
+    }
+    else if(row+1 == 2){
+        if(visibleLine == 2){
+            return;
+        }
+        visibleLine  = row+1;
+        [self removeObjectsFromMap];
+        [self UploadLine:@"BlueLineStations" :[UIColor blueColor]];
+        
+    }
+    else if(row+1 == 3) {
+        if(visibleLine == 3){
+            return;
+        }
+        visibleLine  = row+1;
+        [self removeObjectsFromMap];
+        [self UploadLine:@"GreenLineStations" :[UIColor greenColor]];
+        
+    }
+//    else if(row+1 == 4) {
+//        if(visibleLine == 4){
+//            return;
+//        }
+//        visibleLine  = row+1;
+//        [self removeObjectsFromMap];
+//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"No Line :D" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//        [alert show];
+//    }
+
 }
 
+
+
+// show or hide tableview list
+- (void)handleLongPressGestures:(UILongPressGestureRecognizer *)sender
+{
+    if ([sender isEqual:gesture]) {
+        if (sender.state == UIGestureRecognizerStateBegan)
+        {
+            [self showHidePressed];
+        }
+    }
+}
 
 //method animates tableview whether user wants to show/hide it .
--(IBAction)showHidePressed:(id)sender {
+-(void)showHidePressed {
     if(visibleLine == -1){ // empty table
         [self presentNotification:NSLocalizedString(@"emptytable",@"word")];
 
-//        UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"emptytable",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-//        [alertview show];
+
         return;
     }
     if(tableview.hidden){
+        
         CATransition *animation = [CATransition animation];
         animation.type = kCATransitionFade;
         animation.duration = 0.4;
         [tableview.layer addAnimation:animation forKey:nil];
-        [hideButton setTitle:NSLocalizedString(@"hideList",@"word") forState:UIControlStateNormal];
         tableview.hidden = NO;
     }
     else {
@@ -113,16 +186,41 @@ NSTimer *timer;
         animation.type = kCATransitionFade;
         animation.duration = 0.4;
         [tableview.layer addAnimation:animation forKey:nil];
-        [hideButton setTitle:NSLocalizedString(@"showList",@"word") forState:UIControlStateNormal];
 
         tableview.hidden = YES;
     }
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return pins.count;
+}
+
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+     MapTableViewCell *cell;
+    NSString *identifier = @"Cell";
+    cell = [tableview dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    cell.title.text =[NSString stringWithFormat:@"%@ %d",NSLocalizedString(@"station",@"word"),(int)indexPath.row+1];
+    if([locale isEqualToString:@"el"]){
+        cell.subtitle.text = [[currentDB objectAtIndex:indexPath.row] objectForKey:@"GrSubtitle"];
+    }
+    else if([locale isEqualToString:@"en"]){
+        cell.subtitle.text = [[currentDB objectAtIndex:indexPath.row] objectForKey:@"EnSubtitle"];
+    }
+    cell.subtitle.textColor = lineColor;
+    return cell;
+}
+
+
+
 
 
 -(void)UploadLine:(NSString *)name :(UIColor *)color{
-    MBProgressHUD *progresshud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    progresshud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     progresshud.labelText = NSLocalizedString(@"calculatedistances",@"word");
     progresshud.mode = MBProgressHUDModeIndeterminate;
     [progresshud show:YES];
@@ -134,11 +232,13 @@ NSTimer *timer;
     for(int i = 0; i < [anns count]; i++) {
         float realLatitude = [[[anns objectAtIndex:i] objectForKey:@"Latitude"] floatValue];
         float realLongitude = [[[anns objectAtIndex:i] objectForKey:@"Longitude"] floatValue];
-        MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc] init];
+        ZSAnnotation *myAnnotation = [[ZSAnnotation alloc] init];
+        myAnnotation.type = ZSPinAnnotationTypeTag;
         CLLocationCoordinate2D theCoordinate;
         theCoordinate.latitude = realLatitude;
         theCoordinate.longitude = realLongitude;
         myAnnotation.coordinate = theCoordinate;
+        myAnnotation.color = color;
         myAnnotation.title = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),i+1];
         if([locale isEqualToString:@"el"]){
             myAnnotation.subtitle = [[anns objectAtIndex:i] objectForKey:@"GrSubtitle"];
@@ -147,28 +247,20 @@ NSTimer *timer;
             myAnnotation.subtitle = [[anns objectAtIndex:i] objectForKey:@"EnSubtitle"];
         }
         [mapview addAnnotation:myAnnotation];
-        [redPins addObject:myAnnotation];
+        [pins addObject:myAnnotation];
     }
     [tableview reloadData];
     [self setRegion];
     lineColor = color;
     [self showUserLocation];
     [self getDirections];
-    [progresshud hide:YES];
-    tableview.hidden = NO;
-    [hideButton setTitle:NSLocalizedString(@"hideList",@"word") forState:UIControlStateNormal];
-
-
 }
 
 -(void)calculateAgainDistances{
-    MBProgressHUD *progresshud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     progresshud.labelText = NSLocalizedString(@"calculatedistances",@"word");
-    progresshud.mode = MBProgressHUDModeIndeterminate;
     [progresshud show:YES];
     [self showUserLocation];
     [self getDirections];
-    [progresshud hide:YES];
 }
 
 
@@ -178,15 +270,15 @@ NSTimer *timer;
 
 - (void)getDirections
 {
-    for(int i=0 ;i<redPins.count-1;i++){
+    for(int i=0 ;i<pins.count-1;i++){
         MKDirectionsRequest *request =
         [[MKDirectionsRequest alloc] init];
         request.transportType =MKDirectionsTransportTypeWalking;
-        MKPointAnnotation *ann = (MKPointAnnotation *)[redPins objectAtIndex:i];
+        MKPointAnnotation *ann = (MKPointAnnotation *)[pins objectAtIndex:i];
         MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:ann.coordinate addressDictionary:nil];
         MKMapItem *item = [[MKMapItem alloc]initWithPlacemark:placemark];
         request.source = item;
-        MKPointAnnotation *ann1 = (MKPointAnnotation *)[redPins objectAtIndex:i+1];
+        MKPointAnnotation *ann1 = (MKPointAnnotation *)[pins objectAtIndex:i+1];
         MKPlacemark *placemark1 = [[MKPlacemark alloc]initWithCoordinate:ann1.coordinate addressDictionary:nil];
         MKMapItem *item1 = [[MKMapItem alloc]initWithPlacemark:placemark1];
         request.destination = item1;
@@ -202,6 +294,8 @@ NSTimer *timer;
              } else {
                  showDirections = true;
                  [self showRoute:response];
+                 [progresshud hide:YES];
+
              }
          }];
     }
@@ -236,29 +330,25 @@ NSTimer *timer;
     if(annotation == mapView.userLocation){
         return nil;
     }
-    MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
-
-    annotationView.canShowCallout = YES;
-    if(visibleLine == 1){
-        annotationView.image = [UIImage imageNamed:@"redPin.png"];
+    
+    ZSAnnotation *a = (ZSAnnotation *)annotation;
+    static NSString *defaultPinID = @"StandardIdentifier";
+    
+    // Create the ZSPinAnnotation object and reuse it
+    ZSPinAnnotation *pinView = (ZSPinAnnotation *)[mapview dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
+    if (pinView == nil){
+        pinView = [[ZSPinAnnotation alloc] initWithAnnotation:annotation reuseIdentifier:defaultPinID];
     }
-    else if(visibleLine == 2){
-        annotationView.image = [UIImage imageNamed:@"bluePin.png"];
-
-    }
-    else if(visibleLine == 3){
-        annotationView.image = [UIImage imageNamed:@"greenPin.png"];
-
-    }
+    
+    // Set the type of pin to draw and the color
+    pinView.annotationType = ZSPinAnnotationTypeTagStroke;
+    pinView.annotationColor = a.color;
+    pinView.canShowCallout = YES;
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
     [button setImage:[UIImage imageNamed:@"directions"] forState:UIControlStateNormal];
-    UIButton *secondButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
-    [secondButton setImage:[UIImage imageNamed:@"info"] forState:UIControlStateNormal];
-    annotationView.rightCalloutAccessoryView = button;
-    annotationView.rightCalloutAccessoryView.tag = 200;
-    annotationView.leftCalloutAccessoryView = secondButton;
-    annotationView.leftCalloutAccessoryView.tag = 100;
-    return annotationView;
+    pinView.rightCalloutAccessoryView = button;
+    pinView.rightCalloutAccessoryView.tag = 200;
+    return pinView;
 }
 
 - (void)didReceiveMemoryWarning
@@ -281,17 +371,13 @@ NSTimer *timer;
 -(void)showUserLocation{
     if(![CLLocationManager locationServicesEnabled]){
         [self presentNotification:NSLocalizedString(@"enablelocation",@"word")];
-
-//        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enablelocation",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-//        [disabled show];
-       
+        [progresshud hide:YES];
         return;
     }
     else if(![self checkForNetwork]){
         [self presentNotification:NSLocalizedString(@"enableInternetConnection",@"word")];
+        [progresshud hide:YES];
 
-//        UIAlertView *disabled = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"enableInternetConnection",@"word") message:@"" delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-//        [disabled show];
 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNetworkChange:) name:kReachabilityChangedNotification object:nil];
         
@@ -320,8 +406,8 @@ NSTimer *timer;
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
     int flag = 0;
-    for(int i=0;i<redPins.count;i++){
-        MKPointAnnotation *theAnnotation = [redPins objectAtIndex:i];
+    for(int i=0;i<pins.count;i++){
+        MKPointAnnotation *theAnnotation = [pins objectAtIndex:i];
         CLLocation *pinlocation = [[CLLocation alloc]initWithLatitude:theAnnotation.coordinate.latitude longitude:theAnnotation.coordinate.longitude];
         CLLocationDistance distance = [pinlocation distanceFromLocation:mapview.userLocation.location];
         if(distance == -1){
@@ -335,7 +421,6 @@ NSTimer *timer;
     }
     if(flag == 0){
       [locationManager stopUpdatingLocation];
-      [tableview reloadData];
         timer = [[NSTimer alloc]init];
        timer = [NSTimer scheduledTimerWithTimeInterval:60.0
                                          target:self
@@ -365,61 +450,37 @@ NSTimer *timer;
         mapview.showsUserLocation = YES;
         [locationManager startUpdatingLocation];
     }
-    
-   
-    
-    
 }
     
-    
-
-
 
 //if annotation info button pressed go to details
 - (void)mapView:(MKMapView *)mapView
  annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     MKPointAnnotation *annotationTapped = (MKPointAnnotation *)view.annotation;
-    //info button pressed
-    if(control.tag == 100){
-        selectedIndex =(int)[redPins indexOfObject:annotationTapped];
-        if(visibleLine == 1){
-            [self performSegueWithIdentifier:@"redLine" sender:nil];
-        }
-        else if(visibleLine == 2){
-            [self performSegueWithIdentifier:@"blueLine" sender:nil];
-
-        }
-        else if(visibleLine == 3){
-            [self performSegueWithIdentifier:@"greenLine" sender:nil];
-
-        }
-    }
-    //directions button pressed
-    else {
-       
+    
+       //directions button pressed
         MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:annotationTapped.coordinate addressDictionary:nil];
         MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
         destination.name = annotationTapped.subtitle;
         [destination openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving}];
-    }
+    
     
 }
 
 - (IBAction)settingsButtonPressed:(id)sender {
 
-    UIAlertView *settingsAlert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"chooseL",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"cancel",@"word") otherButtonTitles:NSLocalizedString(@"red", @"word"),NSLocalizedString(@"blue",@"word"),NSLocalizedString(@"green",@"word"), nil];
+    UIAlertView *settingsAlert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"chooseL",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"cancel",@"word") otherButtonTitles:NSLocalizedString(@"red", @"word"),NSLocalizedString(@"blue",@"word"),NSLocalizedString(@"green",@"word"),NSLocalizedString(@"noline",@"word"), nil];
     settingsAlert.tag = 100;
     [settingsAlert show];
 }
 
 -(void)removeObjectsFromMap{
     //remove annotations from map
-    [mapview removeAnnotations:redPins];
+    [mapview removeAnnotations:pins];
     // remove all annotations from array
-    [redPins removeAllObjects];
+    [pins removeAllObjects];
     //after delete , reload tableview
     [tableview reloadData];
-    
     //remove all overlays from map
     [mapview removeOverlays:overlays];
     
@@ -496,65 +557,31 @@ NSTimer *timer;
     return  status;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return redPins.count;
+-(void)selectPinFromMap:(NSInteger)index{
+    [mapview selectAnnotation:[pins objectAtIndex:index] animated:YES];
+
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    if(redPins.count != 0){
-        tableview.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        tableview.backgroundView = nil;
-        return 1;
-    }
-    else{
-        // Display a message when the table is empty
-        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-        
-        messageLabel.text = NSLocalizedString(@"emptytable",@"word");
-        messageLabel.textColor = [UIColor whiteColor];
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = NSTextAlignmentCenter;
-        messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
-        [messageLabel sizeToFit];
-        
-        tableView.backgroundView = messageLabel;
-       
-        
-    }
-    return 0;
-}
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    static NSString *identifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-   // cell.backgroundColor = lineColor;
-    UILabel *titleLabel = (UILabel *)[cell viewWithTag:105];
-    UILabel *subtitleLabel = (UILabel *)[cell viewWithTag:106];
-    NSString *positionString = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),(int)indexPath.row+1];
-    titleLabel.text = positionString;
-    [titleLabel setTextColor:lineColor];
-   // titleLabel.textColor =[UIColor whiteColor];
-    if([locale isEqualToString:@"el"]){
-        subtitleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"GrSubtitle"];
-    }
-    else if([locale isEqualToString:@"en"]){
-        subtitleLabel.text = [[currentDB objectAtIndex:indexPath.row]objectForKey:@"EnSubtitle"];
-    }
-    UILabel *distanceLabel = (UILabel *)[cell viewWithTag:107];
-    if(distances.count !=0){
-      distanceLabel.text = [distances objectAtIndex:indexPath.row];
-    }
-    else {
-        distanceLabel.text = @"";
-    }
-   // subtitleLabel.textColor = [UIColor whiteColor];
-    
-    return cell;
-}
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [mapview selectAnnotation:[redPins objectAtIndex:indexPath.row] animated:YES];
+    [mapview selectAnnotation:[pins objectAtIndex:indexPath.row] animated:YES];
+    //info button pressed
+        selectedIndex =(int)indexPath.row;
+        if(visibleLine == 1){
+            [self performSegueWithIdentifier:@"redLine" sender:nil];
+        }
+        else if(visibleLine == 2){
+            [self performSegueWithIdentifier:@"blueLine" sender:nil];
+            
+        }
+        else if(visibleLine == 3){
+            [self performSegueWithIdentifier:@"greenLine" sender:nil];
+            
+        }
+    
+
 }
 
 #pragma mark - Navigation

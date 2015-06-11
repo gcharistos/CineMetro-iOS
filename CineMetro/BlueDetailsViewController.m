@@ -9,15 +9,21 @@
 #import "BlueDetailsViewController.h"
 #import "MainViewController.h"
 #import <Social/Social.h>
-#import <MobileCoreServices/MobileCoreServices.h>
 #import "ViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 #import "IIShortNotificationPresenter.h"
 #import "IIShortNotificationConcurrentQueue.h"
 #import "IIShortNotificationRightSideLayout.h"
 #import "TestNotificationView.h"
+#import "ZSAnnotation.h"
+#import "MapViewController.h"
+
+#define IDIOM    UI_USER_INTERFACE_IDIOM()
+#define IPAD     UIUserInterfaceIdiomPad
 
 @interface BlueDetailsViewController ()
 @property NSInteger position1;
+@property (strong, nonatomic)  UITextView *tempTextview;
 
 @end
 
@@ -25,18 +31,19 @@
 @synthesize position1;
 @synthesize position;
 @synthesize info;
-@synthesize segmentedControl;
+@synthesize tempTextview;
 @synthesize infoLabel;
 @synthesize movieTitle;
 @synthesize actorsLabel;
-@synthesize mapview;
+MKMapView *mapview;
 NSMutableArray *images;
 NSArray *currentList;
 NSArray *titles;
+CGFloat heightOfText;
 NSArray *actors;
+NSString *tempText;
 NSArray *directors;
 NSMutableArray *points;
-
 
 
 
@@ -58,7 +65,6 @@ NSMutableArray *points;
     [[IIShortNotificationPresenter defaultConfiguration] setNotificationLayoutClass:[IIShortNotificationRightSideLayout class]];
     
     
-    info.scrollEnabled = NO;
     images = [[NSMutableArray alloc]init];
     actorsLabel.text = NSLocalizedString(@"actors",@"word");
     infoLabel.text = NSLocalizedString(@"info",@"word");
@@ -72,107 +78,202 @@ NSMutableArray *points;
    // [info setTextColor:[UIColor whiteColor]];
     images = [[anns objectAtIndex:position1]objectForKey:@"Images"];
     titles = [[NSArray alloc]initWithObjects:NSLocalizedString(@"factors",@"word"),NSLocalizedString(@"info",@"word"), nil];
+    [self performSegueWithIdentifier:@"showPhotos" sender:self];
+
+    if([locale isEqualToString:@"el"]){
+        tempText = [[currentList objectAtIndex:position1]objectForKey:@"GrText"];
+        
+    }
+    else if([locale isEqualToString:@"en"]){
+        tempText = [[currentList objectAtIndex:position1]objectForKey:@"EnText"];
+        
+    }
+
+    // ADD TEXT TO SCROLLVIEW
+    heightOfText = [self heightOfTextViewWithString:tempText withFont:[UIFont systemFontOfSize:18] andFixedWidth:self.view.frame.size.width];
+    tempTextview = [[UITextView alloc]initWithFrame:CGRectMake(0,infoLabel.frame.origin.y+infoLabel.frame.size.height+40,self.view.frame.size.width-20,heightOfText)];
+    tempTextview.text = tempText;
+    [tempTextview setFont:[UIFont systemFontOfSize:18]];
+    tempTextview.editable = NO;
+    tempTextview.selectable = NO;
+    [tempTextview setTextAlignment:NSTextAlignmentLeft];
+    tempTextview.textColor = [UIColor whiteColor];
+    tempTextview.backgroundColor = [UIColor clearColor];
+    [scroller addSubview:tempTextview];
+    // -- END --
+    //ADD DIRECTOR NAME
+    NSString *directortext;
+    if([locale isEqualToString:@"el"]){
+        directortext = [NSString stringWithFormat:@"%@ : %@",NSLocalizedString(@"director",@"word"),[directors[0] objectForKey:@"GrName"]];
+        
+    }
+    else if([locale isEqualToString:@"en"]){
+      directortext = [NSString stringWithFormat:@"%@ : %@",NSLocalizedString(@"director",@"word"),[directors[0] objectForKey:@"EnName"]];
+    }
     
+    heightOfText = [self heightOfTextViewWithString:directortext withFont:[UIFont systemFontOfSize:18] andFixedWidth:self.view.frame.size.width];
+    UITextView *textview = [[UITextView alloc]initWithFrame:CGRectMake(20,tempTextview.frame.origin.y+tempTextview.frame.size.height,self.view.frame.size.width,heightOfText)];
+    textview.text = directortext;
+    [textview setFont:[UIFont systemFontOfSize:18]];
+    textview.editable = NO;
+    textview.textAlignment =NSTextAlignmentJustified;
+    textview.scrollEnabled = NO;
+    textview.selectable = NO;
+    textview.textColor = [UIColor whiteColor];
+    textview.backgroundColor = [UIColor clearColor];
+    [scroller addSubview:textview];
+    //END
+    //ADD ACTORS NAME
+    NSString *actorstext = [NSString stringWithFormat:@"%@ : ",NSLocalizedString(@"actors",@"word")];
+    for(int i=0;i<actors.count;i++){
+        if([locale isEqualToString:@"el"]){
+            NSString *name = [NSString stringWithFormat:@"%@ ",[actors[i] objectForKey:@"GrName"]];
+            actorstext = [actorstext stringByAppendingString:name];
+            if(i< actors.count-1){
+                actorstext = [actorstext stringByAppendingString:@","];
+            }
+        }
+        else if([locale isEqualToString:@"en"]){
+            NSString *name = [NSString stringWithFormat:@"%@ ",[actors[i] objectForKey:@"EnName"]];
+            actorstext = [actorstext stringByAppendingString:name];
+            if(i< actors.count-1){
+                actorstext = [actorstext stringByAppendingString:@","];
+            }
+        }
+    }
+    heightOfText = [self heightOfTextViewWithString:actorstext withFont:[UIFont systemFontOfSize:18] andFixedWidth:self.view.frame.size.width];
+    UITextView *textview1 = [[UITextView alloc]initWithFrame:CGRectMake(20,textview.frame.origin.y+textview.frame.size.height+10,self.view.frame.size.width-20,heightOfText)];
+    textview1.text = actorstext;
+    [textview1 setFont:[UIFont systemFontOfSize:18]];
+    textview1.editable = NO;
+    textview1.scrollEnabled = NO;
+    textview1.selectable = NO;
+    textview1.textColor = [UIColor whiteColor];
+    textview1.backgroundColor = [UIColor clearColor];
+    [scroller addSubview:textview1];
+    // END
+    // ADD COLLECTION OF DIRECTOR/ACTORS IMAGES-NAMES
+    self.factorsCollectionView.frame = CGRectMake(0,textview1.frame.origin.y+textview1.frame.size.height+40, self.view.frame.size.width,180);
+    //END
+    // ADD RATE BUTTON TO SCROLLVIEW
+    UIButton *ratebutton = [[UIButton alloc]initWithFrame:CGRectMake(10,self.factorsCollectionView.frame.size.height+self.factorsCollectionView.frame.origin.y+50,40, 40)];
+    [ratebutton setImage:[UIImage imageNamed:@"star_off.png"] forState:UIControlStateNormal] ;
+    [ratebutton addTarget:self action:@selector(rateButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [scroller addSubview:ratebutton];
+    // -- END --
+    // ADD MAP BUTTON TO SCROLLVIEW
+    UIButton *mapbutton = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2.0-30,self.factorsCollectionView.frame.size.height+self.factorsCollectionView.frame.origin.y+50,40, 40)];
+     [mapbutton addTarget:self action:@selector(mapButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [mapbutton setImage:[UIImage imageNamed:@"map.png"] forState:UIControlStateNormal] ;
+    [scroller addSubview:mapbutton];
+    // -- END --
+    // ADD MAP TO SCROLLVIEW
+    mapview = [[MKMapView alloc]initWithFrame:CGRectMake(0,ratebutton.frame.origin.y+ratebutton.frame.size.height+50,self.view.frame.size.width,240)];
+    mapview.userInteractionEnabled = NO;
+    mapview.delegate = self;
+    [scroller addSubview:mapview];
+    // -- END --
+    // ADD SHARE BUTTON TO SCROLLVIEW
+    UIButton *fbbutton = [[UIButton alloc]initWithFrame:CGRectMake(5,10,40, 40)];
+    [fbbutton setImage:[UIImage imageNamed:@"fb.png"] forState:UIControlStateNormal] ;
+    [fbbutton addTarget:self action:@selector(facebookButton) forControlEvents:UIControlEventTouchUpInside];
+    [scroller addSubview:fbbutton];
+    // -- END --
+    // ADD SHARE BUTTON TO SCROLLVIEW
+    UIButton *twitterbutton = [[UIButton alloc]initWithFrame:CGRectMake(55,10,40, 40)];
+    [twitterbutton setImage:[UIImage imageNamed:@"twitter.png"] forState:UIControlStateNormal] ;
+    [twitterbutton addTarget:self action:@selector(twitterButton) forControlEvents:UIControlEventTouchUpInside];
+    [scroller addSubview:twitterbutton];
+    // -- END --
+
+   
     mapview.delegate = self;
     mapview.userInteractionEnabled = NO;
 
-    MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc] init];
+    ZSAnnotation *myAnnotation = [[ZSAnnotation alloc] init];
+    myAnnotation.type = ZSPinAnnotationTypeTag;
+    myAnnotation.color = [UIColor blueColor];
     CLLocationCoordinate2D theCoordinate;
     theCoordinate.latitude = [[[anns objectAtIndex:position1] objectForKey:@"Latitude"]doubleValue];
     theCoordinate.longitude = [[[anns objectAtIndex:position1] objectForKey:@"Longitude"]doubleValue];
     myAnnotation.coordinate = theCoordinate;
     myAnnotation.title = [NSString stringWithFormat:@"%@ %i",NSLocalizedString(@"station",@"word"),(int)position1+1];
     if([locale isEqualToString:@"el"]){
-        info.text = [[currentList objectAtIndex:position1]objectForKey:@"GrText"];
         movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"GrSubtitle"];
         myAnnotation.subtitle = [[anns objectAtIndex:position1] objectForKey:@"GrSubtitle"];
 
     }
     else if([locale isEqualToString:@"en"]){
-        info.text = [[currentList objectAtIndex:position1]objectForKey:@"EnText"];
         movieTitle.text = [[currentList objectAtIndex:position1]objectForKey:@"EnSubtitle"];
         myAnnotation.subtitle = [[anns objectAtIndex:position1] objectForKey:@"EnSubtitle"];
 
     }
-    [info setFont:[UIFont systemFontOfSize:18]];
-    info.textColor = [UIColor whiteColor];
+ 
 
     [mapview addAnnotation:myAnnotation];
     MKCoordinateSpan span = {0.05,0.05};
     MKCoordinateRegion region = {theCoordinate, span};
-    if([CLLocationManager locationServicesEnabled]){
-        mapview.showsUserLocation = YES;
-        
-        
-    }
-    else{
-        [mapview setRegion:region];
-    }
     
-    [self performSegueWithIdentifier:@"showPhotos" sender:self];
+    [mapview setRegion:region];
+    
+    
     
     
     // Do any additional setup after loading the view.
 }
 
-- (void)mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation {
-    MKCoordinateRegion region;
-    MKCoordinateSpan span;
-    //span.latitudeDelta = 0.005;
-    //span.longitudeDelta = 0.005;
-    span.latitudeDelta = 0.9;
-    span.longitudeDelta = 0.9;
-    CLLocationCoordinate2D location;
-    location.latitude = aUserLocation.coordinate.latitude;
-    location.longitude = aUserLocation.coordinate.longitude;
-    region.span = span;
-    region.center = location;
-    [aMapView setRegion:region animated:YES];
+- (CGFloat)heightOfTextViewWithString:(NSString *)string
+                             withFont:(UIFont *)font
+                        andFixedWidth:(CGFloat)fixedWidth
+{
+    UITextView *tempTV = [[UITextView alloc]initWithFrame:CGRectMake(0, 0, fixedWidth, 1)];
+    tempTV.text = [string uppercaseString];
+    tempTV.font = font;
+    
+    CGSize newSize = [tempTV sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
+    CGRect newFrame = tempTV.frame;
+    newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), newSize.height);
+    tempTV.frame = newFrame;
+    
+    return tempTV.frame.size.height;
 }
 
+
+- (IBAction)mapButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"showMapBlue" sender:nil];
+}
 
 
 //set custom annotation view to support callout accessory control mode
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    if(annotation == mapView.userLocation){
-        return nil;
+   
+    ZSAnnotation *a = (ZSAnnotation *)annotation;
+    static NSString *defaultPinID = @"StandardIdentifier";
+    
+    // Create the ZSPinAnnotation object and reuse it
+    ZSPinAnnotation *pinView = (ZSPinAnnotation *)[mapview dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
+    if (pinView == nil){
+        pinView = [[ZSPinAnnotation alloc] initWithAnnotation:annotation reuseIdentifier:defaultPinID];
     }
-
     
-    MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
-    
-    annotationView.canShowCallout = YES;
-    
-    annotationView.image = [UIImage imageNamed:@"redPin.png"];
-    
-    
+    // Set the type of pin to draw and the color
+    pinView.annotationType = ZSPinAnnotationTypeTagStroke;
+    pinView.annotationColor = a.color;
+    pinView.canShowCallout = YES;
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
     [button setImage:[UIImage imageNamed:@"directions"] forState:UIControlStateNormal];
-    
-    annotationView.rightCalloutAccessoryView = button;
-    annotationView.rightCalloutAccessoryView.tag = 200;
-    return annotationView;
+    pinView.rightCalloutAccessoryView = button;
+    pinView.rightCalloutAccessoryView.tag = 200;
+    return pinView;
 }
 
-//if annotation info button pressed go to details
-- (void)mapView:(MKMapView *)mapView
- annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    MKPointAnnotation *annotationTapped = (MKPointAnnotation *)view.annotation;
-    
-    //directions button pressed
-    MKPlacemark *placemark = [[MKPlacemark alloc]initWithCoordinate:annotationTapped.coordinate addressDictionary:nil];
-    MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
-    destination.name = annotationTapped.subtitle;
-    [destination openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving}];
-    
-    
-}
 
 
 -(void)viewDidLayoutSubviews{
     [scroller  setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320,1300)];
+    [scroller setContentSize:CGSizeMake(self.view.frame.size.width,mapview.frame.origin.y+mapview.frame.size.height+40)];
+    
 }
 
 
@@ -181,28 +282,19 @@ NSMutableArray *points;
         points = [NSMutableArray arrayWithArray:[user objectForKey:@"blueLineStations"]];
         if([[points objectAtIndex:position1]intValue] != 0){
             [self presentNotification:NSLocalizedString(@"ratedTrue",@"word")];
-//            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"ratedTrue",@"word") message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-//            [alert show];
+
         }
         else{
-            self.popViewController = [[RatingViewController alloc] initWithNibName:@"RatingViewController" bundle:nil];
-            
-            [self.popViewController showInView:self.navigationController.view  withController:self withArray:points atIndexPath:position1 withName:@"blueLineStations" withname:@"blueLine"  animated:YES];
+            [self performSegueWithIdentifier:@"blueStars" sender:nil];
         }
     }
     else {
         [self presentNotification:NSLocalizedString(@"rateLogin",@"word")];
 
-//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"rateLogin",@"word") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"ok",@"word") otherButtonTitles:nil, nil];
-//        [alert show];
+
     }
 }
 
-- (IBAction)shareButtonPressed:(id)sender {
-    UIActionSheet *actionsheet = [[UIActionSheet alloc]initWithTitle:NSLocalizedString(@"sharemessage",@"word") delegate:self cancelButtonTitle:NSLocalizedString(@"cancel",@"word") destructiveButtonTitle:nil otherButtonTitles:@"Facebook",@"Twitter", nil];
-    actionsheet.tag = 100;
-    [actionsheet showInView:self.view];
-}
 
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -228,10 +320,8 @@ NSMutableArray *points;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    if(segmentedControl.selectedSegmentIndex == 1){
-        return actors.count;
-    }
-    return directors.count;
+    
+    return directors.count+actors.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -240,7 +330,7 @@ NSMutableArray *points;
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifer forIndexPath:indexPath];
         UIImageView *imageview = (UIImageView *)[cell viewWithTag:106];
         UILabel *label = (UILabel *)[cell viewWithTag:107];
-        if(segmentedControl.selectedSegmentIndex == 0){
+        if(indexPath.row == 0){
             imageview.image = [UIImage imageNamed:[[directors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
             if([locale isEqualToString:@"el"]){
                 label.text = [[directors objectAtIndex:indexPath.row]objectForKey:@"GrName"];
@@ -254,15 +344,17 @@ NSMutableArray *points;
             }
         }
         else{
+            int tempCount = indexPath.row-1;
+            
 
-            imageview.image = [UIImage imageNamed:[[actors objectAtIndex:indexPath.row]objectForKey:@"Icon"]];
+            imageview.image = [UIImage imageNamed:[[actors objectAtIndex:tempCount]objectForKey:@"Icon"]];
             if([locale isEqualToString:@"el"]){
-                label.text = [[actors objectAtIndex:indexPath.row]objectForKey:@"GrName"];
+                label.text = [[actors objectAtIndex:tempCount]objectForKey:@"GrName"];
 
                 
             }
             else if([locale isEqualToString:@"en"]){
-                label.text = [[actors objectAtIndex:indexPath.row]objectForKey:@"EnName"];
+                label.text = [[actors objectAtIndex:tempCount]objectForKey:@"EnName"];
 
                 
             }
@@ -294,6 +386,15 @@ NSMutableArray *points;
         if(images.count != 0){
             dest.pageImages = [[NSArray alloc]initWithArray:images];
         }
+    }
+    else if([segue.identifier isEqualToString:@"showMapBlue"]){
+        MapViewController *dest = segue.destinationViewController;
+        [dest UploadLine:@"BlueLineStations" :[UIColor blueColor]];
+        [dest selectPinFromMap:position];
+    }
+    else if([segue.identifier isEqualToString:@"blueStars"]){
+        RatingViewController *dest = segue.destinationViewController;
+        [dest initializeView:position :@"blueLineStations" :points :@"blueLine"];
     }
     
     // Get the new view controller using [segue destinationViewController].
@@ -340,11 +441,7 @@ NSMutableArray *points;
     }
     
 }
-- (IBAction)moreButtonPressed:(id)sender {
-    self.popViewControllerText = [[LicenseViewController alloc] initWithNibName:@"LicenseViewController" bundle:nil];
-    
-    [self.popViewControllerText showInView:self.navigationController.view  withController:self  withText:info.text withColor:scroller.backgroundColor withTextColor:[UIColor whiteColor] animated:YES];
-}
+
 - (IBAction)showFactorPressed:(id)sender {
     [self.factorsCollectionView reloadData];
 }

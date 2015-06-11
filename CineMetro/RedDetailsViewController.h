@@ -9,20 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "RatingViewController.h"
 #import <MapKit/MapKit.h>
-#import "LicenseViewController.h"
-@interface RedDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate,UIScrollViewDelegate,UIActionSheetDelegate,MKMapViewDelegate>{
+@interface RedDetailsViewController : UIViewController<UIAlertViewDelegate,UIScrollViewDelegate,UIScrollViewDelegate,UIActionSheetDelegate,MKMapViewDelegate,CLLocationManagerDelegate>{
     IBOutlet UIScrollView *scroller;
 }
-@property (strong,nonatomic) LicenseViewController *popViewControllerText;
 @property (strong,nonatomic) RatingViewController *popViewController;
 @property NSDictionary *station;
 @property NSInteger indexPath;
-@property (weak, nonatomic) IBOutlet UITextView *textview;
-@property (weak, nonatomic) IBOutlet UITableView *tableview;
-- (IBAction)rateButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *theaterTitle;
-@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
-@property (weak, nonatomic) IBOutlet MKMapView *mapview;
-- (IBAction)moreButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end

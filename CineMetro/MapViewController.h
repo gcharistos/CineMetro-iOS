@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "VCFloatingActionButton.h"
 
-@interface MapViewController : UIViewController<MKMapViewDelegate,UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate,CLLocationManagerDelegate>
+@interface MapViewController : UIViewController<MKMapViewDelegate,UIAlertViewDelegate,UIGestureRecognizerDelegate,CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate,floatMenuDelegate>
   @property (weak, nonatomic) IBOutlet MKMapView *mapview;
-@property (weak, nonatomic) IBOutlet UITableView *tableview;
-@property (weak, nonatomic) IBOutlet UIButton *hideButton;
 
   - (IBAction)settingsButtonPressed:(id)sender;
--(IBAction)showHidePressed:(id)sender;
 -(void)showUserLocation;
-
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
+-(void)UploadLine:(NSString *)name :(UIColor *)color;
+-(void)selectPinFromMap:(NSInteger)index;
 @end

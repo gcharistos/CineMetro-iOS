@@ -12,6 +12,8 @@
 #import "BlueDetailsViewController.h"
 #import "GreenDetailsViewController.h"
 
+#define IDIOM    UI_USER_INTERFACE_IDIOM()
+#define IPAD     UIUserInterfaceIdiomPad
 
 @interface LinesCollectionViewController ()
 
@@ -22,21 +24,19 @@ NSInteger  selectedIndex ;
 NSArray *station;
 NSMutableArray *titles;
 UIColor *lineColor;
+UIButton *previousButton;
+UIButton *nextButton;
+NSDictionary *db;
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     selectedIndex = -1;
     self.collectionView.delegate = self;
-   
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    
-    // Do any additional setup after loading the view.
+
 }
+
 
 -(void)viewWillAppear:(BOOL)animated{
     selectedIndex = -1;
@@ -62,6 +62,7 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    db = dict;
     NSArray *anns = [dict objectForKey:@"Stations"];
     station = anns; // initialize station variable
     
@@ -73,13 +74,16 @@ static NSString * const reuseIdentifier = @"Cell";
         [titles addObject:title];
     }
     [self.collectionView reloadData];
-
+    
 }
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    
-    
+
+
+-(void)nextButtonTapped:(UITapGestureRecognizer *)sender{
+    [self.parentcontroller goToNextView];
+}
+-(void)previousButtonTapped:(UITapGestureRecognizer *)sender{
+    [self.parentcontroller goToPreviousView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,15 +91,9 @@ static NSString * const reuseIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
 
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -109,6 +107,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+
     UIImage *image;
     if(self.pageIndex != 2){
       image = [UIImage imageNamed:[[[station objectAtIndex:indexPath.row]objectForKey:@"Images"]objectAtIndex:0]];
@@ -119,19 +118,59 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     UIImageView *imageview = (UIImageView *)[cell viewWithTag:105];
     UILabel *label = (UILabel *)[cell viewWithTag:106];
-    UILabel *stationLabel =(UILabel *)[cell viewWithTag:107];
-    stationLabel.text = [titles objectAtIndex:indexPath.row];
     if([locale isEqualToString:@"el"]){
-        label.text = [[station objectAtIndex:indexPath.row]objectForKey:@"GrSubtitle"];
+         NSString *labelText = [NSString stringWithFormat:@"%@\n%@",[titles objectAtIndex:indexPath.row],[[station objectAtIndex:indexPath.row]objectForKey:@"GrSubtitle"]];
+        label.text = labelText;
     }
     else if([locale isEqualToString:@"en"]){
-        label.text = [[station objectAtIndex:indexPath.row]objectForKey:@"EnSubtitle"];
+        NSString *labelText = [NSString stringWithFormat:@"%@\n%@",[titles objectAtIndex:indexPath.row],[[station objectAtIndex:indexPath.row]objectForKey:@"EnSubtitle"]];
+        label.text = labelText;
     }
     label.textColor = lineColor;
-    stationLabel.textColor = lineColor;
     imageview.image = image;
+   // adjust cell width with frame width
+
+    
+    if ( IDIOM != IPAD ) {
+                 cell.frame = CGRectMake(0,indexPath.row*185+100,self.view.frame.size.width,180);
+    }
+
     
     return cell;
+}
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *reusableview = nil;
+    
+    if (kind == UICollectionElementKindSectionHeader) {
+        HeaderCollectionView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        if([locale isEqualToString:@"el"]){
+            NSString *labelText = [db objectForKey:@"GrName"];
+            headerView.title.text = labelText;
+            headerView.title.backgroundColor = lineColor;
+            headerView.category.text = [db objectForKey:@"GrCategory"];
+            headerView.category.backgroundColor = lineColor;
+            headerView.category.layer.borderColor = [UIColor blackColor].CGColor;
+            headerView.category.layer.borderWidth = 5.0;
+
+        }
+        else if([locale isEqualToString:@"en"]){
+            NSString *labelText = [db objectForKey:@"EnName"];
+            headerView.title.text = labelText;
+            headerView.title.backgroundColor = lineColor;
+            headerView.category.text = [db objectForKey:@"EnCategory"];
+            headerView.category.backgroundColor = lineColor;
+            headerView.category.layer.borderColor = [UIColor blackColor].CGColor;
+            headerView.category.layer.borderWidth = 5.0;
+        }
+        
+        
+        
+
+
+        reusableview = headerView;
+    }
+    return reusableview;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -154,7 +193,10 @@ static NSString * const reuseIdentifier = @"Cell";
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    
+    if([segue.identifier isEqualToString:@"detailSegue5"]){
+        GreenDetailsViewController *dest = segue.destinationViewController;
+        dest.indexPath = selectedIndex;
+    }
 }
 
 

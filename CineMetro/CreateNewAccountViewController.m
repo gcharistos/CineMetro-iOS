@@ -22,6 +22,7 @@
 @implementation CreateNewAccountViewController
 @synthesize emailTextField;
 @synthesize passwordTextField;
+@synthesize passwordValTextField;
 PFUser *appUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -49,23 +50,13 @@ PFUser *appUser;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//hide keyboard
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [[event allTouches] anyObject];
-    if ([emailTextField isFirstResponder] && [touch view] != emailTextField) {
-        [emailTextField resignFirstResponder];
-    }
-    else if ([passwordTextField isFirstResponder] && [touch view] != passwordTextField) {
-        [passwordTextField resignFirstResponder];
-    }
-    [super touchesBegan:touches withEvent:event];
+
+
+-(void)viewDidLayoutSubviews{
+    [scroller  setScrollEnabled:YES];
+    [scroller setContentSize:CGSizeMake(self.view.frame.size.width,650)];
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-    
-}
 
 
 #pragma mark - Navigation
@@ -102,18 +93,17 @@ PFUser *appUser;
     [user setObject:blueArray forKey:@"blueLineStations"];
     
     
-    if([passwordTextField.text length] == 0 || [emailTextField.text length] == 0){
+    if([passwordTextField.text length] == 0 || [emailTextField.text length] == 0 || [passwordValTextField.text length] == 0){
         [self presentConfirmation:NSLocalizedString(@"fillcreateAccount",@"word")];
 
-//        UIAlertView *alertView =
-//        [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"fillcreateAccount",@"word")
-//                                   message:nil
-//                                  delegate:self
-//                         cancelButtonTitle:nil
-//                         otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
-//        [alertView show];
+
         return;
         
+    }
+    if(![passwordTextField.text isEqualToString:passwordValTextField.text]){
+        [self presentErrorMessage:NSLocalizedString(@"passwordDouble",@"word")];
+       
+        return;
     }
     
     PFQuery *query = [[PFQuery alloc]initWithClassName:@"User"];
@@ -121,20 +111,19 @@ PFUser *appUser;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects,NSError *error)
     {
         if([objects count] != 0){
+            [self presentErrorMessage:NSLocalizedString(@"usernameExists",@"word")];
             
-            UIAlertView *alertView =
-            [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"usernameExists",@"word")
-                                       message:nil
-                                      delegate:self
-                             cancelButtonTitle:nil
-                             otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
-            [alertView show];
-
             return;
         }
 
                         
     }];
+    if(![self validEmail:emailTextField.text]){
+        [self presentErrorMessage:NSLocalizedString(@"emailInvalid",@"word")];
+        
+        return;
+
+    }
     
     MBProgressHUD *createAccount = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     createAccount.labelText = NSLocalizedString(@"createAccount",@"word");
@@ -148,26 +137,14 @@ PFUser *appUser;
              [self presentErrorMessage:NSLocalizedString(@"internetProblem",@"word")];
 
                           // Display an alert view to show the error message
-//             UIAlertView *alertView =
-//             [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"internetProblem",@"word")
-//                                        message:nil
-//                                       delegate:self
-//                              cancelButtonTitle:nil
-//                              otherButtonTitles:@"Ok", nil];
-//             [alertView show];
+
              
             
              return;
          }
          else{
              appUser = user;
-//             UIAlertView *alertView =
-//             [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"successfullCreate",@"word")
-//                                        message:nil
-//                                       delegate:self
-//                              cancelButtonTitle:nil
-//                              otherButtonTitles:NSLocalizedString(@"ok",@"word"), nil];
-//             [alertView show];
+
 
              [self performSegueWithIdentifier:@"createSegue" sender:self];
          }
@@ -175,6 +152,24 @@ PFUser *appUser;
      }];
 }
 
+- (BOOL) validEmail:(NSString*) emailString {
+    
+    if([emailString length]==0){
+        return NO;
+    }
+    
+    NSString *regExPattern = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    
+    NSRegularExpression *regEx = [[NSRegularExpression alloc] initWithPattern:regExPattern options:NSRegularExpressionCaseInsensitive error:nil];
+    NSUInteger regExMatches = [regEx numberOfMatchesInString:emailString options:0 range:NSMakeRange(0, [emailString length])];
+    
+    NSLog(@"%i", regExMatches);
+    if (regExMatches == 0) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
 
 
 

@@ -15,8 +15,9 @@
 
 
 
-@interface LinesPageViewController ()
 
+@interface LinesPageViewController ()
+@property (nonatomic, strong) UIPageControl *pageControl;
 @end
 
 @implementation LinesPageViewController
@@ -26,8 +27,27 @@ NSArray *station;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+
+  
+       // Do any additional setup after loading the view.
+}
+
+//Method goes to next page view
+- (void)goToNextView{
+    currentIndex = [[self.pageViewController.viewControllers lastObject] pageIndex];
+    currentIndex++;
+    if(currentIndex == [self.pageImages count]){
+        return;
+    }
+    LinesCollectionViewController *startingViewController = [self viewControllerAtIndex:currentIndex];
+    NSArray *viewControllers = @[startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+}
+
+-(void)initializeView{
     currentIndex = 0;
-    [self changeNavigationTitle:currentIndex];
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewControllerTimeline"];
     self.pageViewController.dataSource = self;
@@ -40,7 +60,18 @@ NSArray *station;
     self.pageViewController.view.frame = CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height);
     
     [self.view addSubview:_pageViewController.view];
-    // Do any additional setup after loading the view.
+}
+//Method goes to previous page view
+-(void)goToPreviousView{
+    
+    currentIndex = [[self.pageViewController.viewControllers lastObject] pageIndex];
+    if(currentIndex == 0){
+        return;
+    }
+    currentIndex--;
+    LinesCollectionViewController *startingViewController = [self viewControllerAtIndex:currentIndex];
+    NSArray *viewControllers = @[startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
 }
 
 -(void)setStationAndIndex:(NSInteger) index : (NSArray *)array{
@@ -48,17 +79,7 @@ NSArray *station;
     station = array;
 }
 
--(void)changeNavigationTitle:(NSUInteger ) index{
-    if(index == 0){
-        self.navigationItem.title = NSLocalizedString(@"line1",@"word");
-    }
-    else if(index == 1){
-        self.navigationItem.title = NSLocalizedString(@"line2",@"word");
-    }
-    else if(index == 2){
-        self.navigationItem.title = NSLocalizedString(@"line3",@"word");
-    }
-}
+
 //Creates page view
 - (LinesCollectionViewController *)viewControllerAtIndex:(NSUInteger)index
 {
@@ -77,8 +98,6 @@ NSArray *station;
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
     currentIndex = [((LinesCollectionViewController*) viewController) pageIndex];
-    [self changeNavigationTitle:currentIndex];
-
     if (currentIndex == 0) {
         return nil;
     }
@@ -92,7 +111,6 @@ NSArray *station;
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
     currentIndex = [((LinesCollectionViewController*) viewController) pageIndex];
-    [self changeNavigationTitle:currentIndex];
     currentIndex++;
     if (currentIndex == 3) {
         return nil;

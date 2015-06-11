@@ -1,266 +1,122 @@
-/* Class = "IBUILabel"; text = "Login"; ObjectID = "189-hT-MYi"; */
-"189-hT-MYi.text" = "Είσοδος";
 
-/* Class = "IBUILabel"; text = "Soon"; ObjectID = "1T0-Gu-Jjr"; */
-"1T0-Gu-Jjr.text" = "Σύντομα";
+/* Class = "UITableViewSection"; headerTitle = "Email"; ObjectID = "0pP-hu-eb0"; */
+"0pP-hu-eb0.headerTitle" = "Email";
 
-/* Class = "IBUILabel"; text = "CineMetro"; ObjectID = "1vY-nk-4C6"; */
-"1vY-nk-4C6.text" = "CineMetro";
+/* Class = "UILabel"; text = "Email"; ObjectID = "4bO-PH-Dpp"; */
+"4bO-PH-Dpp.text" = "Email";
 
-/* Class = "IBUITextField"; placeholder = "Username"; ObjectID = "1wD-F6-Igz"; */
-"1wD-F6-Igz.placeholder" = "Username";
+/* Class = "UILabel"; text = "Categories"; ObjectID = "7C1-v3-EOI"; */
+"7C1-v3-EOI.text" = "Κατηγορίες";
 
-/* Class = "IBUILabel"; text = "Create New Account"; ObjectID = "261-R0-g54"; */
-"261-R0-g54.text" = "Δημιουργία Λογαριασμού";
-
-/* Class = "IBUIButton"; normalTitle = "About"; ObjectID = "2ef-NK-vV9"; */
-"2ef-NK-vV9.normalTitle" = "Σχετικά";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "bTY-IH-fuj"; */
-"bTY-IH-fuj.text" = "Φωτογραφίες";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "yMv-bI-HvP"; */
-"yMv-bI-HvP.text" = "Φωτογραφίες";
-
-/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "3wQ-9G-J0d"; */
-"3wQ-9G-J0d.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "6nV-TF-d5z"; */
-"6nV-TF-d5z.text" = "Label";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "6qp-2v-BVI"; */
-"6qp-2v-BVI.text" = "Label";
-
-
-
-/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "71W-IK-XET"; */
-"71W-IK-XET.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
-
-/* Class = "IBUILabel"; text = "Email : "; ObjectID = "7bO-vM-HB9"; */
-"7bO-vM-HB9.text" = "Email : ";
-
-/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "8Sv-dA-JRY"; */
-"8Sv-dA-JRY.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
-
-/* Class = "IBUILabel"; text = "Show Map Station Data"; ObjectID = "ALj-sS-2wZ"; */
-"ALj-sS-2wZ.text" = "Show Map Station Data";
-
-/* Class = "IBUILabel"; text = " /  6"; ObjectID = "Ak1-Ct-MFY"; */
-"Ak1-Ct-MFY.text" = " /  6";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "Aoj-em-Fh4"; */
-"Aoj-em-Fh4.text" = "Label";
-
-/* Class = "IBUILabel"; text = "Points : "; ObjectID = "AwB-DR-FYX"; */
-"AwB-DR-FYX.text" = "Πόντοι : ";
-
-/* Class = "IBUINavigationItem"; title = "Home"; ObjectID = "CnT-2d-9IJ"; */
-"CnT-2d-9IJ.title" = "";
-
-/* Class = "IBUITextField"; placeholder = "Password"; ObjectID = "E1n-rs-Dgu"; */
-"E1n-rs-Dgu.placeholder" = "Password";
-
-/* Class = "IBUILabel"; text = "Red Line : "; ObjectID = "Ee5-R7-1P7"; */
-"Ee5-R7-1P7.text" = "Kόκκινη Γραμμή : ";
-
-/* Class = "IBUILabel"; text = "Άδειες "; ObjectID = "FIL-VT-FZP"; */
-"FIL-VT-FZP.text" = "Άδειες ";
-
-/* Class = "IBUITextField"; placeholder = "Passsword"; ObjectID = "FUg-EC-AvE"; */
-"FUg-EC-AvE.placeholder" = "Passsword";
-
-/* Class = "IBUILabel"; text = "CineMetro"; ObjectID = "HrV-Cy-ukw"; */
-"HrV-Cy-ukw.text" = "CineMetro";
-
-/* Class = "IBUILabel"; text = " /  8"; ObjectID = "IuH-3p-QDa"; */
-"IuH-3p-QDa.text" = " /  8";
-
-/* Class = "IBUILabel"; text = "CineMetro"; ObjectID = "KwP-ql-o9E"; */
-"KwP-ql-o9E.text" = "CineMetro";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "Mbc-ep-OL5"; */
-"Mbc-ep-OL5.text" = "Label";
-
-/* Class = "IBUIBarButtonItem"; title = "Rate"; ObjectID = "Mwz-GD-7r2"; */
-"Mwz-GD-7r2.title" = "Βαθμολογήστε το";
-
-/* Class = "IBUILabel"; text = "Green Line : "; ObjectID = "NTU-Ek-nnz"; */
-"NTU-Ek-nnz.text" = "Πράσινη Γραμμή : ";
-
-/* Class = "IBUITabBarItem"; title = "Red Line"; ObjectID = "NUQ-Vq-nJi"; */
-"NUQ-Vq-nJi.title" = "Κόκκινη Γραμμή";
-
-/* Class = "IBUIButton"; normalTitle = "Log Out"; ObjectID = "O93-cU-edO"; */
-"O93-cU-edO.normalTitle" = "Log Out";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "PB4-gb-L4a"; */
-"PB4-gb-L4a.text" = "Label";
-
-/* Class = "IBUITextField"; placeholder = "Email"; ObjectID = "Pwj-r8-9fT"; */
-"Pwj-r8-9fT.placeholder" = "Email";
-
-/* Class = "IBUILabel"; text = "Stations Unlocked : "; ObjectID = "QeY-LX-rWq"; */
-"QeY-LX-rWq.text" = "Αξιολογημένες Στάσεις : ";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "QjB-Nj-J3r"; */
-"QjB-Nj-J3r.text" = "Label";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "Swd-8B-I7D"; */
-"Swd-8B-I7D.text" = "Label";
-
-/* Class = "IBUIButton"; normalTitle = "Login"; ObjectID = "VDX-4Z-9hG"; */
-"VDX-4Z-9hG.normalTitle" = "Login";
-
-/* Class = "IBUINavigationItem"; title = "Navigation"; ObjectID = "VaG-AI-vlh"; */
-"VaG-AI-vlh.title" = "Πλοήγηση";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "VvR-Vu-iHK"; */
-"VvR-Vu-iHK.text" = "Label";
-
-/* Class = "IBUILabel"; text = "George Haristos"; ObjectID = "WGu-gJ-jbu"; */
-"WGu-gJ-jbu.text" = "George Haristos";
-
-/* Class = "IBUILabel"; text = "Title"; ObjectID = "XGk-TS-3pH"; */
-"XGk-TS-3pH.text" = "Title";
-
-/* Class = "IBUILabel"; text = "Blue Line : "; ObjectID = "Z4j-dH-Vr1"; */
-"Z4j-dH-Vr1.text" = "Μπλέ Γραμμή : ";
-
-/* Class = "IBUILabel"; text = "Total : "; ObjectID = "aKl-d3-jx0"; */
-"aKl-d3-jx0.text" = "Σύνολο : ";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "bG5-Dd-2Oq"; */
-"bG5-Dd-2Oq.text" = "Label";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "bKi-NP-eRF"; */
-"bKi-NP-eRF.text" = "Label";
-
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "dOU-LY-BXD"; */
-"dOU-LY-BXD.text" = "Label";
-
-/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "ee3-nk-PJH"; */
-"ee3-nk-PJH.normalTitle" = "Άκυρο";
-
-/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "fAS-UG-Cvd"; */
-"fAS-UG-Cvd.normalTitle" = "Άκυρο";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "ir6-uO-ExA"; */
-"ir6-uO-ExA.text" = "Πληροφορίες";
-
-/* Class = "IBUILabel"; text = "Προγραμματιστής  "; ObjectID = "fVP-y5-oXE"; */
-"fVP-y5-oXE.text" = "Προγραμματιστής  ";
-
-/* Class = "IBUINavigationItem"; title = "About"; ObjectID = "hwI-e9-RFb"; */
-"hwI-e9-RFb.title" = "Σχετικά";
-
-/* Class = "IBUIBarButtonItem"; title = "Profile"; ObjectID = "izI-d6-cCF"; */
-"NOA-Ea-848.title" = "Προφίλ";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "jDC-98-ktb"; */
-"jDC-98-ktb.text" = "Label";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "jU2-bM-5iu"; */
-"jU2-bM-5iu.text" = "Label";
-
-/* Class = "IBUILabel"; text = "v 1.0"; ObjectID = "kcj-Lr-J9b"; */
-"kcj-Lr-J9b.text" = "v 1.0";
-
-/* Class = "IBUIButton"; normalTitle = "Lines"; ObjectID = "kdV-sb-6ii"; */
-"kdV-sb-6ii.normalTitle" = "Γραμμές";
-
-/* Class = "IBUITableViewSection"; headerTitle = "Γλώσσα"; ObjectID = "iHg-wJ-BKX"; */
-"iHg-wJ-BKX.headerTitle" = "Συνολικοί Πόντοι";
-
-/* Class = "IBUILabel"; text = "Red Line : "; ObjectID = "KOv-ve-P4F"; */
-"KOv-ve-P4F.text" = "Κόκκινη Γραμμή : ";
-
-/* Class = "IBUILabel"; text = "Blue Line : "; ObjectID = "CqE-rZ-4tr"; */
-"CqE-rZ-4tr.text" = "Μπλέ Γραμμή : ";
-
-/* Class = "IBUILabel"; text = "Green Line : "; ObjectID = "fae-Ot-UPM"; */
-"fae-Ot-UPM.text" = "Πράσινη Γραμμή : ";
-
-/* Class = "IBUITableViewSection"; headerTitle = "Γλώσσα"; ObjectID = "vAO-Xg-tx6"; */
-"vAO-Xg-tx6.headerTitle" = "Βαθμολογημένες Στάσεις";
-
-
-/* Class = "IBUIButton"; normalTitle = "Lines"; ObjectID = "9jS-Kf-9ng"; */
-"9jS-Kf-9ng.normalTitle" = "Γραμμές";
-
-
-/* Class = "IBUIBarButtonItem"; title = "Rate"; ObjectID = "lgw-wR-jbP"; */
-"lgw-wR-jbP.title" = "Βαθμολογήστε";
-
-/* Class = "IBUILabel"; text = "Επικοινωνία  "; ObjectID = "mlN-ip-7UX"; */
-"mlN-ip-7UX.text" = "Επικοινωνία  ";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "o4b-Eh-Zgt"; */
-"o4b-Eh-Zgt.text" = "Label";
-
-/* Class = "IBUINavigationItem"; title = "Lines"; ObjectID = "oNA-oD-L7i"; */
-"oNA-oD-L7i.title" = "Γραμμές";
-
-/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "qSq-td-eK0"; */
-"qSq-td-eK0.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
-
-/* Class = "IBUILabel"; text = "Έκδοση  "; ObjectID = "qa5-5Z-ha7"; */
-"qa5-5Z-ha7.text" = "Έκδοση  ";
-
-/* Class = "IBUIButton"; normalTitle = "Send Email"; ObjectID = "qab-B0-msV"; */
-"qab-B0-msV.normalTitle" = "Στείλτε Email";
-
-/* Class = "IBUIButton"; normalTitle = "Thessaloniki International Film Festival"; ObjectID = "rbH-4a-2g3"; */
-"rbH-4a-2g3.normalTitle" = "Σχετικά Με Φεστιβάλ";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "ljW-1L-j1R"; */
-"ljW-1L-j1R.text" = "Χάρτης";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "oft-Sx-7lf"; */
-"oft-Sx-7lf.text" = "Χάρτης";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "nLq-Oi-dmi"; */
-"nLq-Oi-dmi.text" = "Χάρτης";
-
-/* Class = "IBUITabBarItem"; title = "Green Line"; ObjectID = "sLo-Er-z5V"; */
-"sLo-Er-z5V.title" = "Πράσινη Γραμμή";
-
-/* Class = "IBUIBarButtonItem"; title = "Settings"; ObjectID = "si6-Ax-lzK"; */
-"si6-Ax-lzK.title" = "Ρυθμίσεις";
-
-/* Class = "IBUIButton"; normalTitle = "Directions"; ObjectID = "snE-ey-u6j"; */
-"snE-ey-u6j.normalTitle" = "Directions";
-
-/* Class = "IBUINavigationItem"; title = "Profile"; ObjectID = "LRi-yF-deD"; */
-"LRi-yF-deD.title" = "Προφίλ";
-
-/* Class = "IBUIButton"; normalTitle = "Create"; ObjectID = "uZF-pP-K45"; */
-"uZF-pP-K45.normalTitle" = "Δημιουργία";
-
-/* Class = "IBUIButton"; normalTitle = "Navigation"; ObjectID = "wIw-Ul-11C"; */
-"wIw-Ul-11C.normalTitle" = "Πλοήγηση";
-
-/* Class = "IBUIButton"; normalTitle = "Update"; ObjectID = "wql-3i-ECn"; */
-"wql-3i-ECn.normalTitle" = "Ανανέωση";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "yGp-hw-JsV"; */
-"yGp-hw-JsV.text" = "Label";
-
-/* Class = "IBUILabel"; text = "Title"; ObjectID = "ytf-OK-cjh"; */
-"ytf-OK-cjh.text" = "Title";
-
-/* Class = "IBUITabBarItem"; title = "Blue Line"; ObjectID = "zcJ-cJ-ymF"; */
-"zcJ-cJ-ymF.title" = "Μπλέ Γραμμή";
-
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "jjR-nJ-7gm"; */
-"jjR-nJ-7gm.text" = "Φεστιβάλ Κινηματογράφου Θεσσαλονίκης";
-"JQC-rl-GYR.segmentTitles[0]"= "Σκηνοθέτης";
-"JQC-rl-GYR.segmentTitles[1]"= "Ηθοποιοί";
-
+/* Class = "UIButton"; normalTitle = "Navigation"; ObjectID = "8PD-2M-lEa"; */
 "8PD-2M-lEa.normalTitle" = "Χάρτης";
 
+/* Class = "UILabel"; text = "tap for 3 seconds to show or hide list of stations"; ObjectID = "8gW-zF-bpa"; */
+"8gW-zF-bpa.text" = "tap for 3 seconds to show or hide list of stations";
+
+/* Class = "UINavigationItem"; title = "CineMetro Thess"; ObjectID = "CnT-2d-9IJ"; */
+"CnT-2d-9IJ.title" = "CineMetro Thess";
+
+/* Class = "UILabel"; text = "Blue Line : "; ObjectID = "CqE-rZ-4tr"; */
+"CqE-rZ-4tr.text" = "Μπλέ Γραμμή : ";
+
+/* Class = "UILabel"; text = "Red Line : "; ObjectID = "FZS-aQ-7jy"; */
+"FZS-aQ-7jy.text" = "Κόκκινη Γραμμή : ";
+
+/* Class = "UILabel"; text = "CineMetro Tutorial "; ObjectID = "IdD-Rd-C0q"; */
+"IdD-Rd-C0q.text" = "CineMetro Tutorial ";
+
+/* Class = "UILabel"; text = "Red Line : "; ObjectID = "KOv-ve-P4F"; */
+"KOv-ve-P4F.text" = "Κόκκινη Γραμμή : ";
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "LRi-yF-deD"; */
+"LRi-yF-deD.title" = "Προφίλ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QVS-6n-hmp"; */
+"QVS-6n-hmp.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Swd-8B-I7D"; */
+"Swd-8B-I7D.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "VUM-rw-jkK"; */
+"VUM-rw-jkK.normalTitle" = "Εγγραφή";
+
+/* Class = "UINavigationItem"; title = "Navigation"; ObjectID = "VaG-AI-vlh"; */
+"VaG-AI-vlh.title" = "Χάρτης";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Vcx-ZT-qkC"; */
+"Vcx-ZT-qkC.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Password Verification"; ObjectID = "VzJ-CH-Idu"; */
+"VzJ-CH-Idu.placeholder" = "Επικύρωση Κωδικού";
+
+/* Class = "UILabel"; text = "Categories"; ObjectID = "WFr-Xh-Ffr"; */
+"WFr-Xh-Ffr.text" = "Κατηγορίες";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Z98-xi-1p3"; */
+"Z98-xi-1p3.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "ZKb-mO-dzM"; */
+"ZKb-mO-dzM.normalTitle" = "Εγγραφή";
+
+/* Class = "UIButton"; normalTitle = "Lines"; ObjectID = "eUO-OP-atq"; */
 "eUO-OP-atq.normalTitle" = "Γραμμές";
 
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "eVD-qF-urF"; */
+"eVD-qF-urF.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eW1-Vo-uPn"; */
+"eW1-Vo-uPn.text" = "Label";
+
+/* Class = "UILabel"; text = "Green Line : "; ObjectID = "fae-Ot-UPM"; */
+"fae-Ot-UPM.text" = "Πράσινη Γραμμή : ";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "fbZ-ON-3Yq"; */
+"fbZ-ON-3Yq.normalTitle" = "Είσοδος";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "gKn-cn-TiT"; */
+"gKn-cn-TiT.placeholder" = "Κωδικός";
+
+/* Class = "UILabel"; text = "Red Line : "; ObjectID = "hnf-AW-HRs"; */
+"hnf-AW-HRs.text" = "Κόκκινη Γραμμή : ";
+
+/* Class = "UITableViewSection"; headerTitle = "Points"; ObjectID = "iHg-wJ-BKX"; */
+"iHg-wJ-BKX.headerTitle" = "Πόντοι";
+
+/* Class = "UILabel"; text = "Info"; ObjectID = "ir6-uO-ExA"; */
+"ir6-uO-ExA.text" = "Πληροφορίες";
+
+/* Class = "UIBarButtonItem"; title = "Log out"; ObjectID = "m0w-1S-aab"; */
+"m0w-1S-aab.title" = "Έξοδος";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "mIN-hV-hHG"; */
+"mIN-hV-hHG.text" = "Πόντοι";
+
+/* Class = "UILabel"; text = "Red Line : "; ObjectID = "mcL-y3-ZpB"; */
+"mcL-y3-ZpB.text" = "Κόκκινη Γραμμή : ";
+
+/* Class = "UIButton"; normalTitle = "About"; ObjectID = "mgH-b4-k29"; */
 "mgH-b4-k29.normalTitle" = "Σχετικά";
 
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "qDi-Fo-UTA"; */
+"qDi-Fo-UTA.placeholder" = "Κωδικός";
 
+/* Class = "UILabel"; text = "Label"; ObjectID = "qfT-sS-LPX"; */
+"qfT-sS-LPX.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tpr-eJ-C3Z"; */
+"tpr-eJ-C3Z.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "tzN-Pq-wIu"; */
+"tzN-Pq-wIu.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uJ0-ke-ZdO"; */
+"uJ0-ke-ZdO.text" = "Label";
+
+/* Class = "UITableViewSection"; headerTitle = "Rated Stations"; ObjectID = "vAO-Xg-tx6"; */
+"vAO-Xg-tx6.headerTitle" = "Σταθμοί που βαθμολογήθηκαν";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wWZ-Pp-gff"; */
+"wWZ-Pp-gff.text" = "Label";
+
+"DN8-NP-CVC.text" = "Βαθμολογήστε την στάση";

@@ -7,9 +7,9 @@
 */
 "filmFestival" = "The Thessaloniki International Film Festival is the top film festival of South Eastern Europe, the presentation platform for the year's Greek productions, and the primary and oldest festival in the Balkans for the creations of emerging film makers from all over the world. Founded in 1960 as the Week of Greek Cinema, it became international in 1992, including a Competition Section for feature length films by emerging directors presenting their first or second film.Since then, the Thessaloniki International Film Festival, constantly evolving, has claimed and achieved a constantly increasing international scope, presenting the most groundbreaking independent productions from the entire world, and developing activities for international film industry professionals. Since the mid 1990s, the Thessaloniki International Film Festival, going beyond the borders set for decades by its centerpiece November edition, has become an organization with continuously increasing cultural activities throughout the year.Through its new form and activities, the Thessaloniki International Film Festival has established close collaborations with various local, national, regional and international film institutions, cultural, educational and social organizations, as well as embassies and cultural agencies from other countries." ;
 
-"about1"="Cine Metro is an application for mobile phones and tablets, which is designed and developed voluntarily by a student group of the Informatics Department of the Aristotle University of Thessaloniki, under the guidance of professor Athena Vakali, in collaboration with Dr Angeliki Milonaki (journalist, film historian) and Yannis Grosdanis (journalist, film critic).The students joining the developers team are George Haristos who developed and desinged the iOS app and for the Android app Vaena Paraskeyi,Kaltimiridou Efrosini,Paniskaki Kyriaki,Papazoglou Christos-Panagiwtis and Sirtari Chariklia.";
+"about1"="Cine Metro is an application for mobile phones and tablets, which is designed and developed voluntarily by a student group of the Informatics Department of the Aristotle University of Thessaloniki, under the guidance of professor Athena Vakali, in collaboration with Dr Angeliki Milonaki (journalist, film historian) and Yannis Grosdanis (journalist, film critic).The students joining the developers team are George Haristos who developed and desinged the iOS app and for the Android app Vaena Paraskevi,Kaltimiridou Effrosyni,Paniskaki Kyriaki,Papazoglou Christos-Panagiotis and Syrtari Charikleia.";
 "about2"="The application is an educational tool aiming at informing as well as familiarizing the public about Thessaloniki’s rich cinematic history through a modern navigation experience in the city. Various city’s landmarks, which are linked to films shot in Thessaloniki, will be used as “stations”, where citizens can step by in order to see what’s available (e.g. photos, texts, videos, podcasts, etc).";
-"about3"="Image rights are held by the respective copyright owners as indicated in the app.";
+"about3"="Image rights are held by the respective copyright owners as indicated in the app. Photographs used in the application are kindly granted exclusively for educational purposes by the archives of the Thessaloniki International Film Festival , Finos Films and Theo Angelopoulos Society.";
 
 "line1" = "Cinemas";
 "line2" = "Movies";
@@ -18,8 +18,9 @@
 "station" = "Station";
 "successfullLogin" = "Successfull Login";
 "wronguser" = "Wrong Username Or Password";
+"emailInvalid" = "Email is not valid";
 "fillcreateAccount" = "Please fill Username and Password Fields";
-"calculatedistances" = "Calculating Distances ...";
+"calculatedistances" = "Calculating Directions ...";
 "login" = "Log In";
 "usernameExists" = "Username already exists";
 "navigationTitle" = "Navigation";
@@ -48,6 +49,7 @@
 "red" = "Red Line";
 "green" = "Green Line";
 "blue" = "Blue Line";
+"noline" = "No Line";
 "cancel" = "Cancel";
 "thankyou" = "Thank You";
 "enableLocation" = "Please Enable Location Services and Internet Connection to Show Route of Line";
@@ -61,3 +63,11 @@
 "actors" = "Actors";
 "info" = "Info";
 "factors" = "Factors";
+"swipeLines" = "Swipe left or right to change category";
+"tapGestureMap" = "Tap for 3 seconds to show or hide list of stations";
+"exitTutorial" = "Exit Tutorial ? ";
+"yes" = "Yes";
+"no" = "No";
+"profile" = "Profile";
+"passwordDouble" = "Passwords are not the same";
+"logoutMessage" = "Logged out";

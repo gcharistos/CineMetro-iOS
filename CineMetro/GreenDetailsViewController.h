@@ -10,23 +10,15 @@
 #import <UIKit/UIKit.h>
 #import "RatingViewController.h"
 #import <MapKit/MapKit.h>
-#import "LicenseViewController.h"
 
-@interface GreenDetailsViewController : UIViewController<UIActionSheetDelegate,UIAlertViewDelegate,UIScrollViewDelegate,MKMapViewDelegate>{
+@interface GreenDetailsViewController : UIViewController<UIActionSheetDelegate,UIAlertViewDelegate,UIScrollViewDelegate,MKMapViewDelegate,CLLocationManagerDelegate>{
     IBOutlet UIScrollView *scroller;
     
 }
+@property (weak, nonatomic) IBOutlet UIImageView *imageview;
 @property NSDictionary *station;
 @property NSInteger indexPath;
 @property (strong,nonatomic) RatingViewController *popViewController;
-- (IBAction)rateButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *theaterTitle;
-@property (weak, nonatomic) IBOutlet UILabel *previousYear;
-@property (weak, nonatomic) IBOutlet UILabel *nextYear;
-@property (weak, nonatomic) IBOutlet UILabel *currentYear;
-@property (weak, nonatomic) IBOutlet UIButton *backButton;
-@property (weak, nonatomic) IBOutlet UIButton *forwardButton;
-- (IBAction)backButtonPressed:(id)sender;
-- (IBAction)forwardButtonPressed:(id)sender;
-@property (weak, nonatomic) IBOutlet MKMapView *mapview;
+
 @end

@@ -6,11 +6,9 @@
 	<array>
 		<dict>
 			<key>GrText</key>
-			<string>Η 1η κινηματογραφική προβολή στην Θεσσαλονίκη έγινε εδώ το 1897, στο καφέ «Η Τουρκία». 
-
-Στην ευρύτερη περιοχή της πλατείας χτίστηκαν αρκετά σινεμά όπως: Σπλέντιντ (μετέπειτα Ίλιον), Πάνθεον, Αττικόν και Ολύμπιον (στη σημερινή οδό Μοναστηρίου), καθώς αργότερα και τα πορνό σινεμά της πλατείας. </string>
+			<string>Η 1η κινηματογραφική προβολή στην Θεσσαλονίκη έγινε εδώ το 1897, στο καφέ «Η Τουρκία». Στην ευρύτερη περιοχή της πλατείας χτίστηκαν αρκετά σινεμά όπως: Σπλέντιντ (μετέπειτα Ίλιον), Πάνθεον, Αττικόν και Ολύμπιον (στη σημερινή οδό Μοναστηρίου), καθώς αργότερα και τα πορνό σινεμά της πλατείας. Η μνήμη των λαϊκών σινεμάδων του  Βαρδαρίου («των αγιασμένων τόπων» όπως αναφέρει) διασώζεται περίτεχνα απο τις αφηγήσεις στα πεζογραφήματα του συγγραφέα Γ. Ιωάννου αλλά και σε πίνακες του ζωγράφου Λουκά Βενετούλια με θέμα το αστικό τοπίο της Πλατείας.</string>
 			<key>EnText</key>
-			<string>The first film screening was held at  the“Turkey” caffé in 1897. Many cinemas have been developed around Vardaris square: Cinema “Splendind” (which was renamed “Ilion”), “Pantheon”, “Atticon” and “Olympion (at Monastiriou Street), together with the porn cinemas of the square.</string>
+			<string>The first film screening was held at  the «Turkey» caffé in 1897. Many cinemas have been developed around Vardaris square: Cinema «Splendind» (which was renamed «Ilion»), «Pantheon», «Atticon» and «Olympion» (at Monastiriou Street), together with the porn cinemas of the square.</string>
 			<key>Title</key>
 			<string>1η Στάση</string>
 			<key>GrSubtitle</key>
@@ -23,23 +21,19 @@
 			<string>40.641142</string>
 			<key>Images</key>
 			<array>
-				<string>red01.jpg</string>
 				<string>red02.jpg</string>
+				<string>red01.jpg</string>
 			</array>
 		</dict>
 		<dict>
 			<key>EnText</key>
-			<string>The sea front is one of the most filmed spots of the city centre. The Cinema Museum is located inside the port, together with Thessaloniki Cinemateque, as well as with the four modern festival venues at the port’s warehouse.</string>
+			<string>The sea front is one of the most filmed spots of the city centre.The Cinema Museum is located inside the port, together with Thessaloniki Cinemateque, as well as with the four modern festival venues at the port’s warehouse.</string>
 			<key>GrText</key>
-			<string>Μια από τις πιο κινηματογραφικές και κινηματογραφημένες γωνιές του κέντρου. 
-
-Στο λιμάνι λειτουργεί σήμερα το Μουσείο Κινηματογράφου και η Ταινιοθήκη Θεσσαλονίκης, όπως και οι τέσσερις αίθουσες προβολών του φεστιβάλ.
-
-Ταινίες που γυρίστηκαν εδώ (ενδεικτική αναφορά): Το Λιβάδι που δακρύζει, Ταξίδι στα Κύθηρα, Τοπίο στην Ομίχλη, Ο Κλοιός.</string>
+			<string>Μια από τις πιο κινηματογραφικές και κινηματογραφημένες γωνιές του κέντρου. Στο λιμάνι λειτουργεί σήμερα το Μουσείο Κινηματογράφου και η Ταινιοθήκη Θεσσαλονίκης, όπως και οι τέσσερις αίθουσες προβολών του φεστιβάλ.Ταινίες που γυρίστηκαν εδώ (ενδεικτική αναφορά): «Το Λιβάδι που δακρύζει», «Ταξίδι στα Κύθηρα», «Τοπίο στην Ομίχλη», «Ο Κλοιός».</string>
 			<key>Title</key>
 			<string>2η Στάση</string>
 			<key>GrSubtitle</key>
-			<string>Παλιά παραλία (Λιμάνι)</string>
+			<string>Παραλία 1 (Λιμάνι)</string>
 			<key>EnSubtitle</key>
 			<string>Sea front (The port)</string>
 			<key>Latitude</key>
@@ -48,25 +42,20 @@
 			<string>22.935431</string>
 			<key>Images</key>
 			<array>
-				<string>red12.jpg</string>
 				<string>red13.jpg</string>
+				<string>red12.jpg</string>
 				<string>red14.jpg</string>
 			</array>
 		</dict>
 		<dict>
 			<key>GrText</key>
-			<string>Στην Λεωφόρο Νίκης δημιουργείται η πρώτη κινηματογραφική αίθουσα στα Βαλκάνια, το Ολύμπια (1903). 
-
-Εδώ λειτουργεί από το 1911 ο κινηματογράφος Πατέ με ταινίες της ομώνυμης εταιρείας παραγωγής.
-
-Ταινίες που γυρίστηκαν στην Παραλία (ενδεικτική αναφορά): Η Αιωνιότητα και μια Ημερά, Ρ20, Όλα είναι δρόμος.
-</string>
+			<string>Στην Λεωφόρο Νίκης δημιουργείται η πρώτη κινηματογραφική αίθουσα στα Βαλκάνια, το Ολύμπια (1903). Εδώ λειτουργεί από το 1911 ο κινηματογράφος Πατέ με ταινίες της ομώνυμης γαλλικής εταιρείας παραγωγής. Ελληνικές ταινίες που γυρίστηκαν στην Παραλία (ενδεικτική αναφορά): «Μια αιωνιότητα και μια μέρα», «Ρ20», «Όλα είναι δρόμος».</string>
 			<key>EnText</key>
-			<string>The first cinema in the Balkans, the cinema theatre “Olympia” (1903), is situated in Leoforos Nikis Str. The sea front appears to be an ideal place for cinemas, like “Pathé” cinema (1911), run by the namesake film company, and the boat cinema “Koursal”.</string>
+			<string>The first cinema in the Balkans, the cinema theatre «Olympia» (1903), is situated in Leoforos Nikis Str. The sea front appears to be an ideal place for cinemas, like «Pathé» cinema (1911), run by the namesake film company, and the boat cinema «Koursal».</string>
 			<key>Title</key>
 			<string>3η Στάση</string>
 			<key>GrSubtitle</key>
-			<string>Παλιά Παραλία (Λεωφόρος Νίκης)</string>
+			<string>Παραλία 2(Λεωφόρος Νίκης)</string>
 			<key>EnSubtitle</key>
 			<string>Sea front (Leoforos Nikis Str.)</string>
 			<key>Latitude</key>
@@ -84,15 +73,9 @@
 		</dict>
 		<dict>
 			<key>GrText</key>
-			<string>Κατά τη δεκαετία του ’50 η πλατεία μετρούσε 6 θερινά σινεμά (Ρεξ, Ηλύσια, Ελληνίς, Αιγαίο, Ρίο και Ζέφυρος). 
-
-Εδώ βρίσκεται και σήμερα η σημερινή έδρα του Φεστιβάλ Κινηματογράφου Θεσσαλονίκης, το κινηματοθέατρο Ολύμπιον. 
-
-Μοναδικό στο είδος του επίσης το πλωτό θερινό σινεμά με την ονομασία Κουρσάλ (ή κατ΄άλλους Τζερουσαλέμ) που λειτούρησε μεσοπολεμικά με βάση του την Παλιά Παραλία της πόλης.
-
-Ταινίες που γυρίστηκαν εδώ (ενδεικτική αναφορά): Η Αιωνιότητα και μια Ημέρα, Φανέλα με το 9, Γεννέθλια Πόλη, Ατσίδας.</string>
+			<string>Κατά τη δεκαετία του ’50 η πλατεία μετρούσε 6 θερινά σινεμά (Ρεξ, Ηλύσια, Ελληνίς, Αιγαίο, Ρίο και Ζέφυρος). Εδώ βρίσκεται και σήμερα η σημερινή έδρα του Φεστιβάλ Κινηματογράφου Θεσσαλονίκης, το κινηματοθέατρο Ολύμπιον. Μοναδικό στο είδος του επίσης το πλωτό θερινό σινεμά με την ονομασία Κουρσάλ (ή κατ’ άλλους Τζερουσαλέμ) που λειτούργησε μεσοπολεμικά με βάση του την παλιά παραλία της πόλης. Ταινίες που γυρίστηκαν εδώ (ενδεικτική αναφορά): «Μια αιωνιότητα και μια μέρα», «Η φανέλα με το 9», «Γενέθλια πόλη», «Ο ατσίδας».</string>
 			<key>EnText</key>
-			<string>During the 1950s, Aristotelous Square hosted 6 open air cinemas (“Rex”, “Ilissia”, “Ellinis”, “Aegean”, “Rio” and “Zefyros”). Today, the Olympion Theatre, located in the middle of Aristotelous Square, is the main venue of the Thessaloniki International Film Festival.</string>
+			<string>During the 1950s, Aristotelous Square hosted 6 open air cinemas («Rex», «Ilissia», «Ellinis», «Aegean», «Rio» and «Zefyros»). Today, the Olympion Theatre, located in the middle of Aristotelous Square, is the main venue of the Thessaloniki International Film Festival.</string>
 			<key>Title</key>
 			<string>4η Στάση</string>
 			<key>GrSubtitle</key>
@@ -105,23 +88,17 @@
 			<string>22.941331</string>
 			<key>Images</key>
 			<array>
-				<string>red31.jpg</string>
 				<string>red32.jpg</string>
+				<string>red31.jpg</string>
 				<string>red33.jpg</string>
 				<string>red34.jpg</string>
 			</array>
 		</dict>
 		<dict>
 			<key>GrText</key>
-			<string>Μια περιοχή με πολλούς κινηματογράφους: Διονύσια (Αγίας Σοφίας), Έσπερος και Ριβολί (Αλ.Σβώλου), Μακεδονικόν (Φιλ.Εταιρείας) . 
-
-Εδώ λειτούργησε στη δεκαετία του ’50 παράρτημα Θεσσαλονίκης της κινηματογραφικής σχολής Σταυράκου. 
-
-Κατά την δεκαετία του &apos;80 τα βιντεοκλαμπ στο κέντρο αλλά και στις γειτονίες της πόλης αποτέλεσαν εναλλακτικό σημείο συνάντησης των σινεφιλ. 
-
-Στην πορεία του χρόνου η βιντεοκασσέτα αντικαταστάθηκε απο το dvd και το blue-ray. Στην ίδια περιοχή (Οδός Α. Σβώλου) διατηρούνται ακόμη δύο απο τα -κάποτε αμέτρητα – βιντεο/dvd club της πόλης (AZA και Seven Film Gallery)</string>
+			<string>Μια περιοχή με πολλούς κινηματογράφους: Διονύσια (Αγίας Σοφίας), Έσπερος και Ριβολί (Αλ.Σβώλου), Μακεδονικόν (Φιλ.Εταιρείας) . Εδώ λειτούργησε στη δεκαετία του ’50 παράρτημα Θεσσαλονίκης της κινηματογραφικής σχολής Σταυράκου. Κατά τη δεκαετία του &apos;80 τα βιντεοκλαμπ στο κέντρο αλλά και στις γειτονιές της πόλης αποτέλεσαν εναλλακτικό σημείο συνάντησης των σινεφιλ. Στην πορεία του χρόνου η βιντεοκασσέτα αντικαταστάθηκε απο το dvd και το blue-ray. Στην ίδια περιοχή (Οδός Α. Σβώλου) διατηρούνται ακόμη δύο απο τα -κάποτε αμέτρητα – βιντεο/dvd club της πόλης (AZA και Seven Film Gallery). </string>
 			<key>EnText</key>
-			<string>An area with many cinema theatres, such as “Dionysia” (in Aghias Sofias Str.), “Esperos” and “Rivoli” (in Alexandrou Svolou Str.), Makedonikon (in Filikis Eterias Str.). The Stavrakos Film School operated its subsidiary film school in Thessaloniki, which was located in the same area.</string>
+			<string>An area with many cinema theatres, such as «Dionysia» (in Aghias Sofias Str.), «Esperos» and «Rivoli» (in Alexandrou Svolou Str.), Makedonikon (in Filikis Eterias Str.). The Stavrakos Film School operated its subsidiary film school in Thessaloniki, which was located in the same area.</string>
 			<key>Title</key>
 			<string>5η Στάση</string>
 			<key>GrSubtitle</key>
@@ -141,23 +118,15 @@
 		</dict>
 		<dict>
 			<key>GrText</key>
-			<string>Στο κέντρο της Θεσσαλονίκης υπήρξαν αρκετοί κινηματογράφοι που για χρόνια αποτέλεσαν σημείο αναφοράς στην καθημερινότητα της πόλης τόσο λόγω της αρχιτεκτονικής όσο και λόγω της αναφοράς τους μέσα σε αυτήν.
-Ενδεικτική αναφορά μερικών που αφορούν την ευρύτερη περιοχή: Ηλύσια, Ναυαρίνο, Έλση, Κλειώ, Ριβολί, Θυμέλη, Φαργκάνη. 
-
-Οι κινηματογράφοι αλλά και τα κάφε-μπαρ του κέντρου της πόλης αποτέλεσαν, από την δεκαετία του &apos;80 και έπειτα, σημείο συνάντησης των φανατικών κινηματογραφόφιλων με τα κινηματογραφικά free press της Θεσσαλονίκης (Εξώστης, Φιξ Καρέ, Παράλλαξη, κλπ).
-O Εξώστης υπήρξε πανελλαδικά το πρώτο free press. Κυκλοφόρησε το 1987.
-Στα σινεμά της περιοχής κατά τις δεκαετίες του &apos;80 και &apos;90 διοργανώθηκαν αρκετές πρωτότυπες προβολές, μεταμεσονύκτιες και κινηματογραφικών λεσχών.</string>
+			<string>Στο κέντρο της Θεσσαλονίκης υπήρξαν αρκετοί κινηματογράφοι που για χρόνια αποτέλεσαν σημείο αναφοράς στην καθημερινότητα της πόλης τόσο λόγω της αρχιτεκτονικής όσο και λόγω της αναφοράς τους μέσα σε αυτήν. Ενδεικτική αναφορά μερικών σινεμά που αφορούν την ευρύτερη περιοχή: Ηλύσια, Ναυαρίνο, Έλση, Κλειώ, Ριβολί, Θυμέλη, Φαργκάνη. Οι κινηματογράφοι αλλά και τα κάφε-μπαρ του κέντρου της πόλης αποτέλεσαν, από την δεκαετία του &apos;80 και έπειτα, σημείο συνάντησης των φανατικών κινηματογραφόφιλων με τα κινηματογραφικά free press της Θεσσαλονίκης (Εξώστης, Φιξ Καρέ, Παράλλαξη, κλπ). O Εξώστης υπήρξε πανελλαδικά το πρώτο free press. Κυκλοφόρησε το 1987. Στα σινεμά της περιοχής κατά τις δεκαετίες του &apos;80 και &apos;90 διοργανώθηκαν αρκετές πρωτότυπες προβολές, μεταμεσονύκτιες και κινηματογραφικών λεσχών.</string>
 			<key>EnText</key>
-			<string>Many cinema theatres at the city centre (Ilyssia, Navarinon, Elsi, Kleo, Rivoli, Thimeli, Fargani) have functioned both as architectural landmarks of Thessaloniki as well as venues of its everyday life 
-Cinema theatres, together with coffee shops and bars, have been celebrated haunts for both film lovers and cinema free press magazines, such as Exostis, Fix Carre, Parallaxi etc.
-Exostis, which was first published in 1987, has been the first free press magazine in Greece.
-Cinemas of the city centre have hosted various special screenings, midnight screenings and film clubs during the 1980’s and the 1990’s.</string>
+			<string>Many cinema theatres at the city centre (Ilyssia, Navarinon, Elsi, Kleo, Rivoli, Thimeli, Fargani) have functioned both as architectural landmarks of Thessaloniki as well as venues of its everyday life. Cinema theatres, together with coffee shops and bars, have been celebrated haunts for both film lovers and cinema free press magazines, such as Exostis, Fix Carre, Parallaxi etc. Exostis, which was first published in 1987, has been the first free press magazine in Greece. Cinemas of the city centre have hosted various special screenings, midnight screenings and film clubs during the 1980’s and the 1990’s.</string>
 			<key>Title</key>
 			<string>6η Στάση</string>
 			<key>GrSubtitle</key>
-			<string>Κέντρο (Καμάρα -Ναυαρίνο)</string>
+			<string>Κέντρο 2 (Καμάρα -Ναυαρίνο)</string>
 			<key>EnSubtitle</key>
-			<string>City Centre (Kamara – Navarinon)</string>
+			<string>City centre 2 (Kamara-Navarinon)</string>
 			<key>Latitude</key>
 			<string>40.6319738</string>
 			<key>Longitude</key>
@@ -171,31 +140,23 @@ Cinemas of the city centre have hosted various special screenings, midnight scre
 		</dict>
 		<dict>
 			<key>GrText</key>
-			<string>Από το 1905 ο κήπος του Λευκού Πύργου φιλοξενούσε αίθουσα κινηματογράφου. 
-
-Εδώ βρίσκεται η Εταιρεία Μακεδονικών Σπουδών, παλιά έδρα του Φεστιβάλ Κινηματογράφου Θεσσαλονίκης και τα σινεμά Παλλάς (σημερινή έδρα της ΚΟΘ) και Αλέξανδρος. 
-
-Στην ΕΜΣ φιλοξενήθηκε για αρκετά χρόνια το Φεστιβάλ Κινηματογράφου Θεσσαλονίκης. 
-
-Στον Αλέξανδρο φιλουξενούνται κάθε Οκτώβριο οι προβολές του Thessaloniki International Short Film Festival (TISFF).
-
-Η Νέα Παραλία, όπως και ο Λευκός Πύργος αποτέλεσαν επίσης εξαιρετικό σκηνικό φόντο για αρκετές ταινίες του παλιού αλλά και του νέου ελληνικού κινηματογράφου (ενδεικτική αναφορά): Ο Φάκελος Πολκ στον αέρα, Κάτι να καίει, Το βλέμμα του Οδυσσέα, Η Αιωνιότητα και μια Ημέρα, Το Λιβάδι που δακρύζει, Γεννέθλια Πόλη, Παρένθεση, Χώμα και Νερό</string>
+			<string>Από το 1905 ο κήπος του Λευκού Πύργου φιλοξενούσε αίθουσα κινηματογράφου. Εδώ βρίσκεται η Εταιρεία Μακεδονικών Σπουδών (ΕΜΣ), παλιά έδρα του Φεστιβάλ Κινηματογράφου Θεσσαλονίκης και τα σινεμά Παλλάς (σημερινή έδρα της ΚΟΘ) και Αλέξανδρος. Στην ΕΜΣ φιλοξενήθηκε για αρκετά χρόνια το Φεστιβάλ Κινηματογράφου Θεσσαλονίκης. Στον Αλέξανδρο φιλοξενούνται κάθε Οκτώβριο οι προβολές του Thessaloniki International Short Film Festival (TISFF). Η Νέα Παραλία, όπως και ο Λευκός Πύργος, αποτέλεσαν επίσης εξαιρετικό σκηνικό φόντο για αρκετές ταινίες του παλιού αλλά και του νέου ελληνικού κινηματογράφου (ενδεικτική αναφορά): «Ο φάκελος Πολκ στον αέρα», «Κάτι να καίει», «Το βλέμμα του Οδυσσέα», «Μια αιωνιότητα και μια μέρα», «Το Λιβάδι που δακρύζει», «Γενέθλια πόλη», «Παρένθεση», «Χώμα και νερό».</string>
 			<key>EnText</key>
-			<string>In 1905 the White Tower’s garden hosted an open air cinema. Opposite to it, there was the EMS building, the main venue of the Society of Macedonian Studies, as well as the cinema theatres “Pallas” (now operating as Thessaloniki State Symphony Orchestra’s concert hall) and “Alexandros”.</string>
+			<string>In 1905 the White Tower’s garden hosted an open air cinema. Opposite to it, there was the EMS building, the main venue of the Society of Macedonian Studies, as well as the cinema theatres «Pallas» (now operating as Thessaloniki State Symphony Orchestra’s concert hall) and «Alexandros».</string>
 			<key>Title</key>
 			<string>7η Στάση</string>
 			<key>GrSubtitle</key>
-			<string>Λευκός Πύργος -Νέα Παραλία</string>
+			<string>Λευκός Πύργος </string>
 			<key>EnSubtitle</key>
-			<string>The White Tower -New Sea front</string>
+			<string>The White Tower</string>
 			<key>Latitude</key>
 			<string>40.62638</string>
 			<key>Longitude</key>
 			<string>22.948306</string>
 			<key>Images</key>
 			<array>
-				<string>red51.jpg</string>
 				<string>red52.jpg</string>
+				<string>red51.jpg</string>
 				<string>red53.jpg</string>
 			</array>
 		</dict>
@@ -205,6 +166,10 @@ Cinemas of the city centre have hosted various special screenings, midnight scre
 	<key>GrName</key>
 	<string>Τα σινεμά της πόλης </string>
 	<key>EnName</key>
-	<string>Cinema Theatres Of The City</string>
+	<string>The cinemas of Thessaloniki</string>
+	<key>GrCategory</key>
+	<string>Σινεμά</string>
+	<key>EnCategory</key>
+	<string>Cinemas</string>
 </dict>
 </plist>

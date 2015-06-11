@@ -1,0 +1,123 @@
+
+/* Class = "UITableViewSection"; headerTitle = "Email"; ObjectID = "0pP-hu-eb0"; */
+"0pP-hu-eb0.headerTitle" = "Email";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "18q-2c-BOD"; */
+"18q-2c-BOD.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "1wD-F6-Igz"; */
+"1wD-F6-Igz.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "4bO-PH-Dpp"; */
+"4bO-PH-Dpp.text" = "Email";
+
+/* Class = "UILabel"; text = "Categories"; ObjectID = "7C1-v3-EOI"; */
+"7C1-v3-EOI.text" = "Κατηγορίες";
+
+/* Class = "UIButton"; normalTitle = "Navigation"; ObjectID = "8PD-2M-lEa"; */
+"8PD-2M-lEa.normalTitle" = "Χάρτης";
+
+/* Class = "UILabel"; text = "tap for 3 seconds to show or hide list of stations"; ObjectID = "8gW-zF-bpa"; */
+"8gW-zF-bpa.text" = "tap for 3 seconds to show or hide list of stations";
+
+/* Class = "UILabel"; text = "CineMetro Tutorial "; ObjectID = "95O-f5-Sjr"; */
+"95O-f5-Sjr.text" = "CineMetro Tutorial ";
+
+/* Class = "UINavigationItem"; title = "CineMetro Thess"; ObjectID = "CnT-2d-9IJ"; */
+"CnT-2d-9IJ.title" = "CineMetro Thess";
+
+/* Class = "UILabel"; text = "Blue Line : "; ObjectID = "CqE-rZ-4tr"; */
+"CqE-rZ-4tr.text" = "Μπλέ Γραμμή : ";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "E1n-rs-Dgu"; */
+"E1n-rs-Dgu.placeholder" = "Κωδικός";
+
+/* Class = "UILabel"; text = "Red Line : "; ObjectID = "FZS-aQ-7jy"; */
+"FZS-aQ-7jy.text" = "Κόκκινη Γραμμή : ";
+
+/* Class = "UILabel"; text = "Red Line : "; ObjectID = "KOv-ve-P4F"; */
+"KOv-ve-P4F.text" = "Κόκκινη Γραμμή : ";
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "LRi-yF-deD"; */
+"LRi-yF-deD.title" = "Προφίλ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QVS-6n-hmp"; */
+"QVS-6n-hmp.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "Rkn-ez-A4b"; */
+"Rkn-ez-A4b.normalTitle" = "Εγγραφή";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "RxS-yA-cwK"; */
+"RxS-yA-cwK.placeholder" = "Κωδικός";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Swd-8B-I7D"; */
+"Swd-8B-I7D.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "VDX-4Z-9hG"; */
+"VDX-4Z-9hG.normalTitle" = "Είσοδος";
+
+/* Class = "UINavigationItem"; title = "Navigation"; ObjectID = "VaG-AI-vlh"; */
+"VaG-AI-vlh.title" = "Χάρτης";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Vcx-ZT-qkC"; */
+"Vcx-ZT-qkC.text" = "Label";
+
+/* Class = "UILabel"; text = "Categories"; ObjectID = "WFr-Xh-Ffr"; */
+"WFr-Xh-Ffr.text" = "Κατηγορίες";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Z98-xi-1p3"; */
+"Z98-xi-1p3.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Lines"; ObjectID = "eUO-OP-atq"; */
+"eUO-OP-atq.normalTitle" = "Γραμμές";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eW1-Vo-uPn"; */
+"eW1-Vo-uPn.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Password Verification"; ObjectID = "ekL-IB-NPe"; */
+"ekL-IB-NPe.placeholder" = "Επικύρωση κωδικού";
+
+/* Class = "UILabel"; text = "Green Line : "; ObjectID = "fae-Ot-UPM"; */
+"fae-Ot-UPM.text" = "Πράσινη Γραμμή : ";
+
+/* Class = "UILabel"; text = "Red Line : "; ObjectID = "hnf-AW-HRs"; */
+"hnf-AW-HRs.text" = "Κόκκινη Γραμμή : ";
+
+/* Class = "UITableViewSection"; headerTitle = "Points"; ObjectID = "iHg-wJ-BKX"; */
+"iHg-wJ-BKX.headerTitle" = "Πόντοι";
+
+/* Class = "UILabel"; text = "Info"; ObjectID = "ir6-uO-ExA"; */
+"ir6-uO-ExA.text" = "Πληροφορίες";
+
+/* Class = "UIBarButtonItem"; title = "Log out"; ObjectID = "m0w-1S-aab"; */
+"m0w-1S-aab.title" = "Έξοδος";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "mIN-hV-hHG"; */
+"mIN-hV-hHG.text" = "Πόντοι";
+
+/* Class = "UILabel"; text = "Red Line : "; ObjectID = "mcL-y3-ZpB"; */
+"mcL-y3-ZpB.text" = "Κόκκινη Γραμμή : ";
+
+/* Class = "UIButton"; normalTitle = "About"; ObjectID = "mgH-b4-k29"; */
+"mgH-b4-k29.normalTitle" = "Σχετικά";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qfT-sS-LPX"; */
+"qfT-sS-LPX.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "rGT-L0-NHU"; */
+"rGT-L0-NHU.normalTitle" = "Εγγραφή";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tpr-eJ-C3Z"; */
+"tpr-eJ-C3Z.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uJ0-ke-ZdO"; */
+"uJ0-ke-ZdO.text" = "Label";
+
+"pz5-hx-mif.text" = "Βαθμολογήστε την στάση";
+
+
+/* Class = "UITableViewSection"; headerTitle = "Rated Stations"; ObjectID = "vAO-Xg-tx6"; */
+"vAO-Xg-tx6.headerTitle" = "";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wWZ-Pp-gff"; */
+"wWZ-Pp-gff.text" = "Label";

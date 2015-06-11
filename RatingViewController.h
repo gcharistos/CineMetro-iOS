@@ -7,21 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TQStarRatingView.h"
 
-@interface RatingViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIView *popUpView;
-@property (weak, nonatomic) IBOutlet UIImageView *star1;
-@property (weak, nonatomic) IBOutlet UIImageView *star2;
-@property (weak, nonatomic) IBOutlet UIImageView *star3;
-@property (weak, nonatomic) IBOutlet UIImageView *star4;
+@interface RatingViewController : UIViewController<UIGestureRecognizerDelegate,StarRatingViewDelegate,UIAlertViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *star5;
 
-- (void)showInView:(UIView *)aView  withController:(UIViewController *)controller withArray:(NSArray *)array  atIndexPath:(NSInteger)indexPath withName:(NSString *)name withname:(NSString *)aname  animated:(BOOL)animated;
+
 - (IBAction)okButtonPressed:(id)sender;
-@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *stars;
 - (IBAction)cancelButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *okbutton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+
+@property (strong, nonatomic)  TQStarRatingView *ratingView;
+-(void)initializeView:(NSInteger)counter :(NSString *)tablen :(NSMutableArray *)array :(NSString *)linepo;
 
 @end
