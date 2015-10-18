@@ -17,9 +17,7 @@ int counter;
 
 
 @property (nonatomic,strong) NSString *word;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *aboutButton;
 -(void)LogOut;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *profileButton;
 -(void) saveProfile;
 -(void)showLogout;
 -(void)showLogIn;

@@ -10,7 +10,7 @@
 #import "LinesPageViewController.h"
 #import "HeaderCollectionView.h"
 
-@interface LinesCollectionViewController : UICollectionViewController<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate,UINavigationControllerDelegate>
+@interface LinesCollectionViewController : UICollectionViewController<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate>
 @property NSUInteger pageIndex;
 @property LinesPageViewController *parentcontroller;
 @end

@@ -28,8 +28,6 @@
 @synthesize word;
 BOOL startFlag;
 NSArray *array;
-@synthesize profileButton;
-@synthesize aboutButton;
 int flag;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -77,13 +75,9 @@ int flag;
     // Set ContentView in SideBar
     [self.sideBar setContentViewInSideBar:tableView];
     
-
+   
 
     locale = [[[NSBundle mainBundle] preferredLocalizations]objectAtIndex:0];
-    UIFont * font = [UIFont boldSystemFontOfSize:20];
-    NSDictionary * attributes = @{NSFontAttributeName: font};
-    [profileButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
-    [aboutButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *retrieveUser = [userDefaults objectForKey:@"User"];
     NSString *flagstatus = [userDefaults objectForKey:@"flag"];

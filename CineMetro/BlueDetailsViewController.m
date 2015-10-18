@@ -174,13 +174,13 @@ NSMutableArray *points;
     [scroller addSubview:mapview];
     // -- END --
     // ADD SHARE BUTTON TO SCROLLVIEW
-    UIButton *fbbutton = [[UIButton alloc]initWithFrame:CGRectMake(5,10,40, 40)];
-    [fbbutton setImage:[UIImage imageNamed:@"fb.png"] forState:UIControlStateNormal] ;
-    [fbbutton addTarget:self action:@selector(facebookButton) forControlEvents:UIControlEventTouchUpInside];
-    [scroller addSubview:fbbutton];
+   // UIButton *fbbutton = [[UIButton alloc]initWithFrame:CGRectMake(5,10,40, 40)];
+   // [fbbutton setImage:[UIImage imageNamed:@"fb.png"] forState:UIControlStateNormal] ;
+   // [fbbutton addTarget:self action:@selector(facebookButton) forControlEvents:UIControlEventTouchUpInside];
+   // [scroller addSubview:fbbutton];
     // -- END --
     // ADD SHARE BUTTON TO SCROLLVIEW
-    UIButton *twitterbutton = [[UIButton alloc]initWithFrame:CGRectMake(55,10,40, 40)];
+    UIButton *twitterbutton = [[UIButton alloc]initWithFrame:CGRectMake(5,10,40, 40)];
     [twitterbutton setImage:[UIImage imageNamed:@"twitter.png"] forState:UIControlStateNormal] ;
     [twitterbutton addTarget:self action:@selector(twitterButton) forControlEvents:UIControlEventTouchUpInside];
     [scroller addSubview:twitterbutton];
@@ -344,7 +344,7 @@ NSMutableArray *points;
             }
         }
         else{
-            int tempCount = indexPath.row-1;
+            long tempCount = indexPath.row-1;
             
 
             imageview.image = [UIImage imageNamed:[[actors objectAtIndex:tempCount]objectForKey:@"Icon"]];

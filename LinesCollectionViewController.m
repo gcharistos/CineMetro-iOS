@@ -27,14 +27,13 @@ UIColor *lineColor;
 UIButton *previousButton;
 UIButton *nextButton;
 NSDictionary *db;
-static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     selectedIndex = -1;
     self.collectionView.delegate = self;
-
+    self.collectionView.dataSource = self;
 }
 
 
@@ -73,10 +72,17 @@ static NSString * const reuseIdentifier = @"Cell";
         title = positionString;
         [titles addObject:title];
     }
+   
+    [self.collectionView.collectionViewLayout invalidateLayout];
+
     [self.collectionView reloadData];
     
 }
-
+- (void)refershControlAction:(UIRefreshControl *)refreshControl {
+    [self.collectionView reloadData];
+    //Don't forget to stop the refreshing animation after data reloads.
+    [refreshControl endRefreshing];
+}
 
 
 -(void)nextButtonTapped:(UITapGestureRecognizer *)sender{
@@ -105,7 +111,17 @@ static NSString * const reuseIdentifier = @"Cell";
     return titles.count;
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [collectionView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    return CGSizeMake(collectionView.frame.size.width,180);
+}
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+     NSString * const reuseIdentifier = @"Cell";
+
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
 
     UIImage *image;
@@ -118,21 +134,31 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     UIImageView *imageview = (UIImageView *)[cell viewWithTag:105];
     UILabel *label = (UILabel *)[cell viewWithTag:106];
+   
+
     if([locale isEqualToString:@"el"]){
          NSString *labelText = [NSString stringWithFormat:@"%@\n%@",[titles objectAtIndex:indexPath.row],[[station objectAtIndex:indexPath.row]objectForKey:@"GrSubtitle"]];
         label.text = labelText;
+
+
     }
     else if([locale isEqualToString:@"en"]){
         NSString *labelText = [NSString stringWithFormat:@"%@\n%@",[titles objectAtIndex:indexPath.row],[[station objectAtIndex:indexPath.row]objectForKey:@"EnSubtitle"]];
         label.text = labelText;
+
     }
     label.textColor = lineColor;
     imageview.image = image;
+    
+
    // adjust cell width with frame width
 
     
     if ( IDIOM != IPAD ) {
                  cell.frame = CGRectMake(0,indexPath.row*185+100,self.view.frame.size.width,180);
+    }
+    else{
+        cell.frame = CGRectMake(self.view.frame.size.width/4,indexPath.row*185+100,self.view.frame.size.width/2,180);
     }
 
     
@@ -140,37 +166,54 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionReusableView *reusableview = nil;
+    UICollectionReusableView *headerview ;
+    if(kind == UICollectionElementKindSectionHeader){
+        
     
-    if (kind == UICollectionElementKindSectionHeader) {
-        HeaderCollectionView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+    
+    HeaderCollectionView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        UILabel * title = [[UILabel alloc]initWithFrame:CGRectMake(0,50,headerView.frame.size.width,50)];
+        UILabel * category = [[UILabel alloc]initWithFrame:CGRectMake(0,0,headerView.frame.size.width,50)];
+        headerView.backgroundColor = lineColor;
         if([locale isEqualToString:@"el"]){
-            NSString *labelText = [db objectForKey:@"GrName"];
-            headerView.title.text = labelText;
-            headerView.title.backgroundColor = lineColor;
-            headerView.category.text = [db objectForKey:@"GrCategory"];
-            headerView.category.backgroundColor = lineColor;
-            headerView.category.layer.borderColor = [UIColor blackColor].CGColor;
-            headerView.category.layer.borderWidth = 5.0;
+            title.text = [db objectForKey:@"GrName"];
+            [title setTextAlignment:NSTextAlignmentCenter];
+            title.textColor = [UIColor whiteColor];
+            title.backgroundColor = lineColor;
+            title.font = [UIFont systemFontOfSize:20];
+            category.text = [db objectForKey:@"GrCategory"];
+            category.textColor = [UIColor whiteColor];
+            category.font = [UIFont boldSystemFontOfSize:32];
+            category.backgroundColor = lineColor;
+            [category setTextAlignment:NSTextAlignmentCenter];
+            category.layer.borderColor = [UIColor blackColor].CGColor;
+            category.layer.borderWidth = 5.0;
 
         }
         else if([locale isEqualToString:@"en"]){
-            NSString *labelText = [db objectForKey:@"EnName"];
-            headerView.title.text = labelText;
-            headerView.title.backgroundColor = lineColor;
-            headerView.category.text = [db objectForKey:@"EnCategory"];
-            headerView.category.backgroundColor = lineColor;
-            headerView.category.layer.borderColor = [UIColor blackColor].CGColor;
-            headerView.category.layer.borderWidth = 5.0;
+            title.text = [db objectForKey:@"EnName"];
+            title.textColor = [UIColor whiteColor];
+            [title setTextAlignment:NSTextAlignmentCenter];
+            title.backgroundColor = lineColor;
+            title.font = [UIFont systemFontOfSize:20];
+            category.text = [db objectForKey:@"EnCategory"];
+            category.textColor = [UIColor whiteColor];
+            category.backgroundColor = lineColor;
+            category.font = [UIFont boldSystemFontOfSize:32];
+            [category setTextAlignment:NSTextAlignmentCenter];
+            category.layer.borderColor = [UIColor blackColor].CGColor;
+            category.layer.borderWidth = 5.0;
         }
+        [headerView addSubview:title];
+        [headerView addSubview:category];
         
+        headerview = headerView;
         
-        
-
-
-        reusableview = headerView;
     }
-    return reusableview;
+
+    
+    
+    return headerview;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

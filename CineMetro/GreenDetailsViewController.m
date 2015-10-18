@@ -165,10 +165,10 @@ UIButton *ratebutton;
         [scroller addSubview:mapview];
         // -- END --
         // ADD SHARE BUTTON TO SCROLLVIEW
-        UIButton *fbbutton = [[UIButton alloc]initWithFrame:CGRectMake(5,10,40, 40)];
-        [fbbutton setImage:[UIImage imageNamed:@"fb.png"] forState:UIControlStateNormal] ;
-        [fbbutton addTarget:self action:@selector(facebookButton) forControlEvents:UIControlEventTouchUpInside];
-        [scroller addSubview:fbbutton];
+      //  UIButton *fbbutton = [[UIButton alloc]initWithFrame:CGRectMake(5,10,40, 40)];
+       // [fbbutton setImage:[UIImage imageNamed:@"fb.png"] forState:UIControlStateNormal] ;
+       // [fbbutton addTarget:self action:@selector(facebookButton) forControlEvents:UIControlEventTouchUpInside];
+       // [scroller addSubview:fbbutton];
         // -- END --
         // ADD SHARE BUTTON TO SCROLLVIEW
         UIButton *twitterbutton = [[UIButton alloc]initWithFrame:CGRectMake(55,10,40, 40)];
@@ -409,6 +409,8 @@ UIButton *ratebutton;
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
+    images = nil;
+
 }
 
 
